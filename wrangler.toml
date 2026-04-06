@@ -1,7 +1,8 @@
 name = "pocoapoke"
+main = "functions/index.ts"
 compatibility_date = "2024-03-01"
 
-kv_namespaces = [
-  { binding = "POKEMON", id = "943d6ab3c1a14516a1ad7be1ad9b75c5" },
-  { binding = "MASTER", id = "f60c0590e9364fdd9627113751a70aa8" }
-]
+[[d1_databases]]
+binding = "DB"
+database_name = "pocoapoke_db"
+database_id = "pocoapoke_db"

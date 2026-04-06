@@ -1,0 +1,164 @@
+# 📘 pocoapoke 開発：再開用スナップショット（詳細版）
+
+## ================================
+## 1. 現在の開発方針（確定）
+## ================================
+- Cloudflare Pages Functions（Python）は使用しない。
+- Cloudflare Workers（TypeScript）で API を構築する方針に確定。
+- ローカル開発は `wrangler dev` を使用。
+- D1（SQLite）は Workers dev のローカル DB を使用。
+- フロントエンドは React（Vite）で動作。
+- API とフロントはローカルで連携済み。
+
+---
+
+## ================================
+## 2. 現在のディレクトリ構成（正しい形）
+## ================================
+```
+pocoapoke/
+├─ wrangler.toml
+├─ functions/
+│   ├─ index.ts
+│   └─ getPokemonData.ts
+├─ schema.sql
+└─ frontend/
+```
+
+---
+
+## ================================
+## 3. wrangler.toml の D1 設定（重要）
+## ================================
+Workers dev がローカル DB を生成するために必要。
+
+```
+name = "pocoapoke"
+main = "functions/index.ts"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "pocoapoke_db"
+database_id = "pocoapoke_db"
+```
+
+- `binding = "DB"` → env.DB として参照される
+- `database_id = "pocoapoke_db"` → ローカル DB の識別子
+- `database_name = "pocoapoke_db"` → Cloudflare 上の DB 名（任意）
+
+---
+
+## ================================
+## 4. schema.sql（DB の構造）
+## ================================
+作成されるテーブルは以下の3つ：
+
+### master_code
+- id, class, code, label, value, created_at, updated_at, deleted_at
+
+### pokemon_ms
+- id, number, name, specialty1, specialty2, environment, favorite1〜favorite6, created_at, updated_at, deleted_at
+- specialty1〜favorite6 は master_code.id を参照
+
+### pokemon_status
+- id, poke_id, status_code, place_code, today_wish, created_at, updated_at, deleted_at
+- 外部キーは pokemon_ms.id と master_code.id
+
+---
+
+## ================================
+## 5. ローカル DB の状態
+## ================================
+- Workers dev 用の SQLite は `.wrangler/state/v3/d1/` に自動生成される。
+- schema.sql を実行済みで、`pokemon_ms` テーブルが存在する状態。
+- `/getPokemonData` にアクセスすると JSON が返る。
+
+---
+
+## ================================
+## 6. API の現状（TypeScript）
+## ================================
+
+### functions/getPokemonData.ts
+```ts
+export async function getPokemonData(env) {
+  const { results } = await env.DB
+    .prepare("SELECT * FROM pokemon_ms")
+    .all();
+
+  return results;
+}
+```
+
+### functions/index.ts
+```ts
+import { getPokemonData } from "./getPokemonData";
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+
+    if (url.pathname === "/getPokemonData") {
+      const data = await getPokemonData(env);
+
+      return new Response(JSON.stringify(data), {
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      });
+    }
+
+    return new Response("Not Found", { status: 404 });
+  },
+};
+```
+
+---
+
+## ================================
+## 7. フロント側の現状（React）
+## ================================
+- API から JSON を取得して state に格納できている。
+- テーブル表示は最低限動作している。
+- 次のステップは **テーブルレイアウトの整形**。
+
+---
+
+## ================================
+## 8. 次回のタスク（続き）
+## ================================
+
+### 🎯 次にやること
+1. React 側でテーブル表示を整える  
+   - カラム幅調整  
+   - スタイル調整  
+   - 表示順の最適化  
+   - 必要なら Bootstrap 導入  
+
+2. 必要なら API の追加  
+   - POST / UPDATE / DELETE  
+
+3. seed（初期データ投入）ファイルの作成  
+   - master_code  
+   - pokemon_ms  
+   - pokemon_status  
+
+---
+
+## ================================
+## 9. 次回の開始ポイント（最短で再開）
+## ================================
+1. `npx wrangler dev` を起動  
+2. ブラウザで  
+   ```
+   http://127.0.0.1:8787/getPokemonData
+   ```
+   を開く  
+3. JSON が返ることを確認  
+4. React 側のテーブル整形へ進む
+
+---
+
+# 🔚 END OF SNAPSHOT

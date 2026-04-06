@@ -1,0 +1,155 @@
+■ClaudeFlare周りについて
+◎ClaudeFlare Workers
+　ClaudeFlareが用意してくれるサーバの代わり。
+　自分でレンタルサーバー借りなくても、Cloudflare 上でプログラム（API）が動かせる。
+　他ぼサーバ提供サービスとの違いとして、無料枠が大きく個人開発レベルならタダで動かせる
+◎ClaudeFlare Pages
+　静的サイト+APIをまとめて管理できるサービス
+　※普通なら別々で管理して連携しないといけないところをまとめることができる(ドメインも同じ)
+　特徴としてfunction配下に置いたコードをAPIとして動かすことができる(=中身はWorkersと同じエンジンで動く)
+　ただしwindowsでのローカル開発では不安定
+◎Vite
+　ClaudeFlareとは無関係の「フロントエンド専用のローカル開発サーバー」(開発ツール)
+　Pagesがローカル環境ではうまく動かせないので代わりに使う
+◎Miniflare
+　Workers をローカルで動かすためのエンジン
+　Pagesのfunctionsでやりたいことを、ローカルではMiniflare(= Workers dev)で代用する
+
+ローカル：
+  フロント → Vite
+  API → Workers dev（Miniflare）
+
+本番：
+  Pages にまとめてデプロイ
+
+
+■フロント開発
+C:\Users\User\my_apps\pocoapoke\frontend> npm run dev を実行
+※ http://localhost:5173
+
+■API開発
+C:\Users\User\my_apps\pocoapoke> wrangler pages dev frontend を実行
+C:\Users\User\my_apps\pocoapoke> npx wrangler pages dev ./frontend を実行
+※ http://127.0.0.1:8788
+・起動コマンド
+  wrangler dev -> Workersモード(Workers dev(Miniflare))
+  wrangler pages dev -> Pagesモード
+
+両方を起動した状態であればフロント⇔APIの疎通確認が可能
+
+wrangler d1 execute pocoapoke --local --file=./pokemon_ms.sql
+
+Workers用D1実行コマンド
+npx wrangler d1 execute pocoapoke_db --file=schema.sql
+
+
+■D1へテーブル追加
+1. schema.sql にテーブルの構造を追加
+2. C:\Users\User\my_apps\pocoapoke> で↓を実行(ローカルD1に適用)
+   wrangler d1 execute pocoapoke --local --file=./schema.sql
+3. C:\Users\User\my_apps\pocoapoke> で↓を実行(本番D1に適用)
+   wrangler d1 execute pocoapoke --file=./schema.sql
+
+■D1からテーブル削除
+1. drop.sql を作成
+   DROP TABLE IF EXISTS test_name;
+2. C:\Users\User\my_apps\pocoapoke> で↓を実行しローカル、本番に適用
+   wrangler d1 execute pocoapoke --local --file=./drop.sql
+   wrangler d1 execute pocoapoke --file=./drop.sql
+
+■カラム追加
+1. alter.sql を作成
+   ALTER TABLE pokemon_ms ADD COLUMN description TEXT;
+2. C:\Users\User\my_apps\pocoapoke> で↓を実行しローカル、本番に適用
+   wrangler d1 execute pocoapoke --local --file=./alter.sql
+   wrangler d1 execute pocoapoke --file=./alter.sql
+
+// INSERT文ひな形
+INSERT INTO master_code (class, value, created_at)
+VALUES
+  ('specialty', 'fire', datetime('now')),
+  ('specialty', 'water', datetime('now')),
+  ('specialty', 'grass', datetime('now')),
+  ('status', 'active', datetime('now')),
+  ('status', 'sleep', datetime('now')),
+  ('place', 'home', datetime('now')),
+  ('place', 'field', datetime('now'));
+
+INSERT INTO pokemon_ms (name, specialty, created_at)
+VALUES
+  ('Pikachu', 1, datetime('now')),  -- specialty = fire
+  ('Squirtle', 2, datetime('now')); -- specialty = water
+
+INSERT INTO pokemon_status (poke_id, status_code, place_code, created_at)
+VALUES
+  (1, 4, 6, datetime('now')),  -- Pikachu, active, home
+  (2, 5, 7, datetime('now'));  -- Squirtle, sleep, field
+
+
+import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
+
+export default {
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+
+    // /test は API として処理
+    if (url.pathname === "/test") {
+      await env.POKEMON.put("test", "hello world");
+      const value = await env.POKEMON.get("test");
+      return new Response(value);
+    }
+
+    // 静的ファイル（React）を返す
+    try {
+      return await getAssetFromKV(
+        { request, waitUntil: ctx.waitUntil.bind(ctx) },
+        { ASSET_NAMESPACE: env.ASSETS }
+      );
+    } catch (e) {
+      return new Response("Not found", { status: 404 });
+    }
+  }
+}
+
+
+// wrangler.toml
+name = "pocoapoke"
+compatibility_date = "2024-03-01"
+
+pages_build_output_dir = "frontend/dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "pocoapoke"
+database_id = "8ab074f8-09c5-4b3e-a446-d9d16c21a5df"
+
+
+【プロジェクト概要】
+- Cloudflare でゲーム進捗管理アプリを作成中
+- フロント：React + Vite
+- バックエンド：Cloudflare Functions（Workers）
+- DB：D1
+
+【問題】
+- Windows で Pages dev が壊れており、静的ファイルと Functions が正しく動かない
+- そのためローカルで API が動かず、フロントから fetch が失敗していた
+
+【理解したこと】
+- Workers = Cloudflare のサーバー
+- Pages = 静的サイト + API をまとめて公開できるサービス
+- Pages Functions の中身は Workers と同じ
+- Vite = フロントをローカルで動かすツール
+- Miniflare = Workers をローカルで動かすエンジン
+- wrangler dev = Miniflare を使って Workers をローカルで動かすコマンド
+
+【ローカル開発の最適解】
+- フロント：Vite（5173）
+- API：Workers dev（Miniflare）（8787）
+- Pages dev は使わない（Windows で壊れるため）
+
+【次にやるべきこと】
+1. プロジェクトルートに wrangler.toml を置く
+2. Workers 用に設定する
+3. `npx wrangler dev` で API を起動
+4. `npm run dev` でフロントを起動
+5. フロントの API URL を 8787 に向ける
