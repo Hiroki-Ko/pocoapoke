@@ -12,7 +12,7 @@ function Index() {
       specialty1: string | null;
       specialty2: string | null;
       environment: string | null;
-      favorites: string[] | null;
+      favorites: string[];
       created_at: string;
       updated_at: string | null;
     };
