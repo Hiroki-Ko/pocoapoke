@@ -162,3 +162,127 @@ export default {
 ---
 
 # 🔚 END OF SNAPSHOT
+
+
+
+pocoapoke 開発：再開用スナップショット（最新版）
+================================
+1. 現在の開発状況（確定）
+================================
+フロント：React（Vite）
+
+API：Cloudflare Workers（TypeScript）
+
+DB：Cloudflare D1（ローカル & 本番）
+
+ローカル開発は npx wrangler dev
+
+フロントと API の連携はローカルで動作済み
+
+本番 D1 にテーブルとデータが存在することを確認済み（Console で SELECT OK）
+
+================================
+2. 現在の問題点（今回判明した重要ポイント）
+================================
+❗ Cloudflare Pages Functions が 本番 DB を参照していない
+Pages Functions は env.production を読まない
+
+wrangler.toml のデフォルト設定が「ローカル DB」になっていた
+
+そのため、本番環境でもローカル用の仮想 DB を参照していた
+
+→ フロントにデータが表示されなかった原因はこれ
+
+❗ ローカル DB と Pages Functions のローカル DB は別物
+.wrangler/state/v3/d1/ に複数の SQLite が生成される
+
+あなたが「ローカル DB にデータがある」と確認した DB と
+Pages Functions が参照している DB は一致しない可能性が高い
+
+================================
+3. 次回やるべき修正（最重要）
+================================
+✔ wrangler.toml を本番 DB に統一する
+toml
+name = "pocoapoke"
+main = "functions/index.ts"
+compatibility_date = "2024-03-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "pocoapoke"
+database_id = "8ab074f8-09c5-4b3e-a446-d9d16c21a5df"
+env.production ブロックは削除
+
+Pages Functions はデフォルト環境しか読まないため
+
+✔ Cloudflare Pages の Functions 設定で D1 をバインド
+Cloudflare Dashboard → Pages → プロジェクト →
+Settings → Functions → D1 Bindings
+
+Binding name: DB
+
+Database: pocoapoke
+
+これで本番 API が本番 DB を参照するようになる。
+
+================================
+4. DB の状態（本番）
+================================
+テーブル数：3（master_code / pokemon_ms / pokemon_status）
+
+データ：master_code / pokemon_ms に投入済み（Console で SELECT OK）
+
+つまり DB 側は問題なし
+
+あとは API が正しい DB を参照すればフロントに表示される
+
+================================
+5. API の現状
+================================
+functions/getPokemonData.ts
+JOIN 版に改修済み（specialty1_label など）
+
+favorites は配列化して返す方向で進行中
+
+functions/index.ts
+/getPokemonData は正常に動作
+
+CORS 設定も OK
+
+================================
+6. フロントの現状
+================================
+React でテーブル表示は動作
+
+MasterSelect コンポーネントも作成済み
+
+masterCodes の型修正も完了
+
+favorites の map 表示も動作
+
+次は UI の整形フェーズ
+
+================================
+7. 次回の開始ポイント（最短で再開）
+================================
+wrangler.toml を本番 DB に統一
+
+Cloudflare Pages の Functions 設定で D1 をバインド
+
+デプロイ
+
+フロントを開いてデータが表示されることを確認
+
+React 側の UI 整形へ進む
+
+================================
+8. 補足（今回の学び）
+================================
+Cloudflare Pages Functions は env.production を読まない
+
+wrangler.toml のデフォルト設定が本番にも適用される
+
+ローカル DB と Pages Functions のローカル DB は別物
+
+本番 DB にデータが入っていても、API が参照していなければ表示されない
