@@ -1,9 +1,10 @@
 // functions/getMasterCode.ts
-import { MASTER_CLASS } from "./constants";
+import { MASTER_CLASS } from "../src/constants";
 
-export async function getMasterCode(env) {
+export async function onRequestGet(context) {
+  const { env } = context;
 
-    const { results } = await env.DB
+  const { results } = await env.DB
     .prepare(`
         SELECT id, class, code, label
         FROM master_code
@@ -12,27 +13,28 @@ export async function getMasterCode(env) {
         ORDER BY class, id
     `)
     .bind(
-        MASTER_CLASS.SPECIALTY,
-        MASTER_CLASS.ENVIRONMENT,
-        MASTER_CLASS.FAVORITE
+      MASTER_CLASS.SPECIALTY,
+      MASTER_CLASS.ENVIRONMENT,
+      MASTER_CLASS.FAVORITE
     )
     .all();
 
+  const grouped = {};
 
-    // class ごとにまとめる
-    const grouped = {};
-
-    for (const row of results) {
-        if (!grouped[row.class]) {
-            grouped[row.class] = [];
-        }
-        grouped[row.class].push({
-            id: row.id,
-            code: row.code,
-            label: row.label,
-        });
+  for (const row of results) {
+    if (!grouped[row.class]) {
+      grouped[row.class] = [];
     }
+    grouped[row.class].push({
+      id: row.id,
+      code: row.code,
+      label: row.label,
+    });
+  }
 
-    return grouped;
+  return Response.json(grouped, {
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
+  });
 }
-

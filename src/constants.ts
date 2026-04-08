@@ -1,4 +1,4 @@
-// frontend/src/constants/master.ts
+// src/constants.ts
 export const MASTER_CLASS = {
   SPECIALTY: "specialty",
   ENVIRONMENT: "environment",
