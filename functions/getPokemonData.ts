@@ -1,5 +1,8 @@
 // functions/getPokemonData.ts
-export async function getPokemonData(env) {
+
+export async function onRequestGet(context) {
+  const { env } = context;
+
   const { results } = await env.DB
     .prepare(`
       SELECT
@@ -28,29 +31,30 @@ export async function getPokemonData(env) {
     `)
     .all();
 
-    // ここで配列に変換
-    const mapped = results.map((row) => {
+  const mapped = results.map((row) => {
     const favorites = [
-        row.favorite1_label,
-        row.favorite2_label,
-        row.favorite3_label,
-        row.favorite4_label,
-        row.favorite5_label,
-        row.favorite6_label,
+      row.favorite1_label,
+      row.favorite2_label,
+      row.favorite3_label,
+      row.favorite4_label,
+      row.favorite5_label,
+      row.favorite6_label,
     ].filter((v) => v != null);
 
     return {
-        id: row.id,
-        number: row.number,
-        name: row.name,
-        specialty1: row.specialty1_label,
-        specialty2: row.specialty2_label,
-        environment: row.environment_label,
-        favorites,
+      id: row.id,
+      number: row.number,
+      name: row.name,
+      specialty1: row.specialty1_label,
+      specialty2: row.specialty2_label,
+      environment: row.environment_label,
+      favorites,
     };
-    });
+  });
 
-    return mapped;
-
+  return Response.json(mapped, {
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
+  });
 }
-
