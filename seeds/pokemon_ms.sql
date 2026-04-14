@@ -1,4 +1,5 @@
 -- PokemonMs INSERT
+DELETE FROM pokemon_ms;
 INSERT INTO pokemon_ms 
   (
     number,
@@ -14,7 +15,7 @@ VALUES
   (
     1,
     'フシギダネ',
-    (SELECT id FROM master_code WHERE class='specialty' AND code=1),
+    (SELECT id FROM master_code WHERE class='specialty' AND code=2),
     null,
     (SELECT id FROM master_code WHERE class='environment' AND code=5),
     null, null, null, null, null,

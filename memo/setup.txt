@@ -1,0 +1,111 @@
+① Cloudflare Pages + Functions + D1 でアプリを動かしたい
+● 目的
+React（Vite）フロント
+
+Cloudflare Pages Functions（API）
+
+Cloudflare D1（DB）
+を使って 本番でもローカルでも同じ挙動で動くアプリを作る。
+
+② ローカル環境の問題：wrangler3 が Pages Functions を正しく動かさない
+● 状況
+Windows + wrangler3
+
+wrangler pages dev を実行すると
+/api/ が勝手に生える（Workers fallback）
+
+Functions が無視され、CORS や Unexpected token '<' が発生
+
+ローカルと本番の挙動が一致しない
+
+● 原因
+wrangler3 は Pages Functions のローカル実行が不安定
+
+Windows では特にクラッシュしやすい
+
+● 解決
+wrangler4 にアップデート
+
+npx wrangler pages dev で起動
+
+Functions が正しく認識されるようになった
+
+③ functions/constants.ts が “Function として誤認識” されていた
+● 状況
+functions/ 内に constants.ts を置いていた
+
+Cloudflare Pages は functions/ 内の全ファイルをルートとして扱う
+
+onRequestGet が無いファイルがあると Functions 全体が壊れる
+
+● 影響
+Functions が無効化
+
+Workers fallback が有効化
+
+/api/getMasterCode が生える
+
+HTML が返り JSON.parse が爆死
+
+CORS に見える
+
+● 解決
+constants.ts を src/ に移動
+
+import パスを修正
+
+④ ローカル D1 にテーブルが無い → API が 500 → CORS に見える
+● 状況
+ローカル D1 は .wrangler/state/v3/d1/ に別 DB が作られる
+
+本番の SQL はローカルに反映されない
+
+ローカルで SELECT すると「no such table」
+
+● 影響
+Functions が 500 を返す
+
+ブラウザは CORS エラーに見える
+
+● 解決
+schema.sql / master_code.sql / pokemon_ms.sql を
+--local で流してローカル DB を構築
+
+⑤ 本番の API_BASE が “/” になっていた
+● 状況
+.env.production の API_BASE が /
+
+fetch が //getPokemonData になる
+
+ブラウザは https://getPokemonData にアクセスしようとする
+
+● 影響
+ERR_NAME_NOT_RESOLVED
+
+API が存在しないように見える
+
+● 解決
+API_BASE を空文字に修正
+
+⑥ 本番 Functions が 404 → 実は D1 が 500 を返していた
+● 状況
+本番で /getPokemonData が 404
+
+しかし Functions はデプロイされている
+
+● 原因
+本番 D1 にデータが重複していた
+
+外部キー制約で DELETE が失敗
+
+SELECT が内部でエラー
+
+Cloudflare Pages は 500 を 404 に書き換える仕様
+
+● 解決
+外部キーの依存関係に従って
+pokemon_ms → master_code の順で DELETE
+
+SQL を再投入
+
+本番表示が成功

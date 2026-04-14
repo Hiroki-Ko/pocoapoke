@@ -1,4 +1,5 @@
 -- MasterCodes INSERT
+DELETE FROM master_code;
 INSERT INTO master_code (class, code, label, value, created_at)
 VALUES
   ('specialty', 1,  'もやす',     'burn',         datetime('now')),

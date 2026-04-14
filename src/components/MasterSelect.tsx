@@ -1,5 +1,4 @@
 // src/components/MasterSelect.tsx
-// import { MASTER_CLASS } from "../constants";
 
 type Props = {
   className: string; // "specialty" など
@@ -16,7 +15,7 @@ export function MasterSelect({
   value,
   onChange,
 }: Props) {
-  const items = masterCodes[className] ?? [];
+  const items = masterCodes?.[className] ?? [];
 
   return (
     <div>

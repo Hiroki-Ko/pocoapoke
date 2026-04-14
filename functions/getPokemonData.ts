@@ -1,60 +1,67 @@
 // functions/getPokemonData.ts
+export async function onRequestGet({ env }) {
+  const db = env.DB;
 
-export async function onRequestGet(context) {
-  const { env } = context;
-
-  const { results } = await env.DB
+  // ① ポケモン本体だけ取得（JOIN を消して高速化）
+  const { results: pokemon } = await db
     .prepare(`
       SELECT
-        p.id,
-        p.number,
-        p.name,
-        s1.label AS specialty1_label,
-        s2.label AS specialty2_label,
-        e1.label AS environment_label,
-        f1.label AS favorite1_label,
-        f2.label AS favorite2_label,
-        f3.label AS favorite3_label,
-        f4.label AS favorite4_label,
-        f5.label AS favorite5_label,
-        f6.label AS favorite6_label
-      FROM pokemon_ms p
-      LEFT JOIN master_code s1 ON p.specialty1 = s1.id
-      LEFT JOIN master_code s2 ON p.specialty2 = s2.id
-      LEFT JOIN master_code e1 ON p.environment = e1.id
-      LEFT JOIN master_code f1 ON p.favorite1 = f1.id
-      LEFT JOIN master_code f2 ON p.favorite2 = f2.id
-      LEFT JOIN master_code f3 ON p.favorite3 = f3.id
-      LEFT JOIN master_code f4 ON p.favorite4 = f4.id
-      LEFT JOIN master_code f5 ON p.favorite5 = f5.id
-      LEFT JOIN master_code f6 ON p.favorite6 = f6.id
+        id,
+        number,
+        name,
+        specialty1,
+        specialty2,
+        environment,
+        favorite1,
+        favorite2,
+        favorite3,
+        favorite4,
+        favorite5,
+        favorite6
+      FROM pokemon_ms
     `)
     .all();
 
-  const mapped = results.map((row) => {
+  // ② master_code を一括取得（JOIN より圧倒的に速い）
+  const { results: master } = await db
+    .prepare(`
+      SELECT id, code, label
+      FROM master_code
+    `)
+    .all();
+
+  // ③ Map 化（高速参照）
+  const masterMap = new Map(master.map((m) => [m.id, m]));
+
+  // ④ JS 側で整形（SQLite の JSON_OBJECT より速い）
+  const mapped = pokemon.map((p) => {
     const favorites = [
-      row.favorite1_label,
-      row.favorite2_label,
-      row.favorite3_label,
-      row.favorite4_label,
-      row.favorite5_label,
-      row.favorite6_label,
-    ].filter((v) => v != null);
+      p.favorite1,
+      p.favorite2,
+      p.favorite3,
+      p.favorite4,
+      p.favorite5,
+      p.favorite6,
+    ]
+      .filter(Boolean)
+      .map((id) => masterMap.get(id));
 
     return {
-      id: row.id,
-      number: row.number,
-      name: row.name,
-      specialty1: row.specialty1_label,
-      specialty2: row.specialty2_label,
-      environment: row.environment_label,
+      id: p.id,
+      number: p.number,
+      name: p.name,
+      specialty1: masterMap.get(p.specialty1) || null,
+      specialty2: masterMap.get(p.specialty2) || null,
+      environment: masterMap.get(p.environment) || null,
       favorites,
     };
   });
 
-  return Response.json(mapped, {
+  // ⑤ CORS を必ず付ける（ローカル & 本番で必要）
+  return new Response(JSON.stringify(mapped), {
     headers: {
-      "Access-Control-Allow-Origin": "*"
-    }
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
   });
 }
