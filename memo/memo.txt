@@ -42,6 +42,17 @@ wrangler d1 execute pocoapoke --local --file=./pokemon_ms.sql
 Workers用D1実行コマンド
 npx wrangler d1 execute pocoapoke_db --file=schema.sql
 
+D1からのexport文
+・ローカルD1(Miniflare)
+npx wrangler d1 execute pocoapoke --command "SELECT * FROM master_code" --json > public/masterCodes.json
+・本番D1
+npx wrangler d1 execute pocoapoke --remote --command "SELECT * FROM master_code" --json > public/masterCodes.json
+・UTF-8からBOMを削除
+Get-Content public/masterCodes.json | Set-Content -Encoding utf8 public/masterCodes_fixed.json
+Move-Item -Force public/masterCodes_fixed.json public/masterCodes.json
+
+npx wrangler d1 execute pocoapoke --command "SELECT class, json_group_array(json_object('id', id, 'code', code, 'label', label)) AS items FROM master_code GROUP BY class;" --json > public/masterCodes.json
+
 
 ■D1へテーブル追加
 1. schema.sql にテーブルの構造を追加

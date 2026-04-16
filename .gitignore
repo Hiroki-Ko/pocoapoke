@@ -28,6 +28,7 @@ node_modules/
 
 # Vite build output
 dist/
+public/
 
 # Cloudflare Wrangler
 .wrangler/

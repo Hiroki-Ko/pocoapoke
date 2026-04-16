@@ -1,4 +1,4 @@
-// src/pages/PokemonList.tsx
+// /pocoapoke/src/pages/PokemonList.tsx
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../lib/api";
@@ -19,15 +19,13 @@ export default function PokemonList() {
       updated_at: string | null;
     };
 
-    type MasterItem = {
-      id: number;
-      code: number;
-      label: string;
-    }
-    type Master = Record<string, MasterItem[]>;
+    // type MasterItem = {
+    //   id: number;
+    //   code: number;
+    //   label: string;
+    // }
+    // type Master = Record<string, MasterItem[]>;
 
-    // const { data: masterCodes } = useMasterCodes();
-    // console.log(masterCodes);
     const { data: masterCodes, isLoading } = useMasterCodes();
 
     const [pokemonData, setPokemonData] = useState<Pokemon[]>([]);
@@ -43,7 +41,7 @@ export default function PokemonList() {
       selectedSpecialty == null ||
       [pokemon.specialty1, pokemon.specialty2]
         .filter(Boolean)
-        .some(s => s.id === selectedSpecialty);
+        .some((s) => s!.id === selectedSpecialty);
 
     const matchEnvironment = (pokemon: Pokemon) =>
       selectedEnvironment == null ||
@@ -51,7 +49,7 @@ export default function PokemonList() {
 
     const matchFavorite = (pokemon: Pokemon) =>
       selectedFavorite == null ||
-      pokemon.favorites.some(f => f.id === selectedFavorite);
+      pokemon.favorites.some((f) => f.id === selectedFavorite);
 
     useEffect(() => {
       api.get('/getPokemonData')
@@ -73,7 +71,7 @@ export default function PokemonList() {
     // フィルタリング
     useEffect(() => {
       setDispPokemonData(
-        pokemonData.filter(p =>
+        pokemonData.filter((p) =>
           matchSpecialty(p) &&
           matchEnvironment(p) &&
           matchFavorite(p)
@@ -81,7 +79,7 @@ export default function PokemonList() {
       );
     }, [selectedSpecialty, selectedEnvironment, selectedFavorite, pokemonData]);
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading || !masterCodes) return <div>Loading...</div>;
 
     return (
       <div>

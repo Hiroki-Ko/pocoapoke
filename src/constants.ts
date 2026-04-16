@@ -1,4 +1,4 @@
-// src/constants.ts
+// /pocoapoke/src/constants.ts
 export const MASTER_CLASS = {
   SPECIALTY: "specialty",
   ENVIRONMENT: "environment",
