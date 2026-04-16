@@ -4,15 +4,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Chip, Stack, Typography } from "@mui/material";
 import { MASTER_CLASS } from "../constants";
-import { MasterSelect } from "../components/MasterSelect";
 import { useMasterCodes } from "../api/useMasterCodes";
 import { useNextNumber } from "../api/useNextNumber";
-
-// type Props = {
-//     masterCodes: Record<string, { id: number; code: number; label: string }[]>;
-//     value: number | null;
-//     onChange: (value: number | null) => void;
-// }
 
 export default function PokemonRegister () {
   const { data: masterCodes, isLoading } = useMasterCodes();
