@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Chip, Stack, Typography } from "@mui/material";
+import { Snackbar, Alert } from "@mui/material";
 import { MASTER_CLASS } from "../constants";
 import { useMasterCodes } from "../api/useMasterCodes";
 import { useNextNumber } from "../api/useNextNumber";
@@ -18,6 +19,7 @@ export default function PokemonRegister () {
   const [specialty2, setSpecialty2] = useState<number | null>(null);
   const [environment, setEnvironment] = useState<number | null>(null);
   const [favorites, setFavorites] = useState<number[]>([]);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
   const navigate = useNavigate();
 
   const toggleFavorite = (id: number) => {
@@ -34,7 +36,7 @@ export default function PokemonRegister () {
 
   const handleSubmit = async () => {
     const payload = {
-      number: 1, // TODO: 本当は入力 or 自動採番
+      number: number, // TODO: 本当は入力 or 自動採番
       name,
       specialty1,
       specialty2,
@@ -48,7 +50,10 @@ export default function PokemonRegister () {
     });
 
     const json = await res.json();
-    console.log("register result:", json);
+    // console.log("register result:", json);
+    if (json.success) {
+      setOpenSnackbar(true);
+    }
   };
 
   return (
@@ -63,6 +68,7 @@ export default function PokemonRegister () {
             onClick={() => setNumber(nextNumber)}
           />
         )}
+        <TextField label="番号" onChange={(e) => setNumber(e.target.value)}></TextField>
       </Stack>
 
       <TextField
@@ -129,6 +135,17 @@ export default function PokemonRegister () {
         登録
       </Button>
       <button onClick={() => navigate("/")}>list</button>
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={3000}
+        onClose={() => setOpenSnackbar(false)}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+      >
+        <Alert severity="success" variant="filled">
+          登録しました！
+        </Alert>
+      </Snackbar>
+
     </div>
   );
 }

@@ -69,6 +69,11 @@ npx wrangler d1 execute pocoapoke --command "SELECT class, json_group_array(json
 2. C:\Users\User\my_apps\pocoapoke> で↓を実行しローカル、本番に適用
    wrangler d1 execute pocoapoke --local --file=./drop.sql
    wrangler d1 execute pocoapoke --file=./drop.sql
+・テーブルの状況確認
+npx wrangler d1 execute pocoapoke --remote --command "SELECT name FROM sqlite_master WHERE type='table';"
+・指定のテーブルを削除
+npx wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS pokemon_ms;DROP TABLE IF EXISTS master_code;DROP TABLE IF EXISTS pokemon_status;"
+
 
 ■カラム追加
 1. alter.sql を作成
