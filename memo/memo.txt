@@ -32,8 +32,11 @@ C:\Users\User\my_apps\pocoapoke> wrangler pages dev frontend を実行
 C:\Users\User\my_apps\pocoapoke> npx wrangler pages dev ./frontend を実行
 ※ http://127.0.0.1:8788
 ・起動コマンド
-  wrangler dev -> Workersモード(Workers dev(Miniflare))
-  wrangler pages dev -> Pagesモード
+  wrangler dev -> Workersモード(Workers dev(Miniflare)) 今回の開発では使わない
+  wrangler pages dev -> Pagesモードのベース
+  ★ npx wrangler pages dev dist
+    wranglerをAPI専用として起動->npm run dev側でデータの取得をしつつHMRを動かせる
+    ※distを付けたことでdistを静的ファイルとして配信することを宣言
 
 両方を起動した状態であればフロント⇔APIの疎通確認が可能
 
@@ -104,40 +107,6 @@ VALUES
   (2, 5, 7, datetime('now'));  -- Squirtle, sleep, field
 
 
-import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
-
-export default {
-  async fetch(request, env, ctx) {
-    const url = new URL(request.url);
-
-    // /test は API として処理
-    if (url.pathname === "/test") {
-      await env.POKEMON.put("test", "hello world");
-      const value = await env.POKEMON.get("test");
-      return new Response(value);
-    }
-
-    // 静的ファイル（React）を返す
-    try {
-      return await getAssetFromKV(
-        { request, waitUntil: ctx.waitUntil.bind(ctx) },
-        { ASSET_NAMESPACE: env.ASSETS }
-      );
-    } catch (e) {
-      return new Response("Not found", { status: 404 });
-    }
-  }
-}
-
-// pocoapoke/package.json
-{
-  "dependencies": {
-    "@cloudflare/kv-asset-handler": "^0.4.2"
-  },
-  "devDependencies": {
-    "wrangler": "^4.79.0"
-  }
-}
 
 
 // wrangler.toml
@@ -188,3 +157,12 @@ database_id = "8ab074f8-09c5-4b3e-a446-d9d16c21a5df"
 3. `npx wrangler dev` で API を起動
 4. `npm run dev` でフロントを起動
 5. フロントの API URL を 8787 に向ける
+
+==========================================
+React Query(ライブラリ)
+プロパティ	 説明
+data	      取得したデータ（成功時）
+isLoading	  初回ロード中
+isFetching	再フェッチ中（初回も含む）
+error	      エラー内容
+refetch	    手動で再フェッチする関数

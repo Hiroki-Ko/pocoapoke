@@ -52,20 +52,13 @@ export default function PokemonList() {
       pokemon.favorites.some((f) => f.id === selectedFavorite);
 
     useEffect(() => {
-      api.get('/getPokemonData')
+      api.get('/api/getPokemonData')
         .then((json) => {
             console.log(json);
             setPokemonData(json);
             setDispPokemonData(json);
           })
         .catch(console.error);
-      
-      // api.get('/getMasterCode')
-      //    .then((json) => {
-      //       console.log(json);
-      //       setMasterCodes(json);
-      //    })
-      //   .catch(console.error);
     }, []);
 
     // フィルタリング
@@ -92,9 +85,7 @@ export default function PokemonList() {
               <th>得意なこと1</th>
               <th>得意なこと2</th>
               <th>好きな環境</th>
-              {[1,2,3,4,5,6].map((n) => (
-                <th key={n}>好きなもの{n}</th>
-              ))}
+              <th>好きなもの</th>
             </tr>
           </thead>
           <tbody>

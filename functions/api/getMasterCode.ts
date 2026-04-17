@@ -1,5 +1,5 @@
 // /pocoapoke/functions/getMasterCode.ts
-import { MASTER_CLASS } from "../src/constants";
+import { MASTER_CLASS } from "../../src/constants";
 
 export async function onRequestGet(context) {
   const { env } = context;

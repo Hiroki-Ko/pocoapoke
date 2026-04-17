@@ -15,7 +15,7 @@ export const useMasterCodes = () => {
     queryKey: ["masterCodes"],
     queryFn: async () => {
       // const res = await fetch("/masterCodes.json");
-      const res = await fetch("/getMasterCode");
+      const res = await fetch("/api/getMasterCode");
       if (!res.ok) throw new Error("failed to fetch masterCodes");
       console.log(res)
       return res.json();

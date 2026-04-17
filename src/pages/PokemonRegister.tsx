@@ -10,7 +10,7 @@ import { useNextNumber } from "../api/useNextNumber";
 
 export default function PokemonRegister () {
   const { data: masterCodes, isLoading } = useMasterCodes();
-  const { data: nextNumberData } = useNextNumber();
+  const { data: nextNumberData, refetch: refetchNextNumber } = useNextNumber();
   const nextNumber = nextNumberData?.next ?? null;
 
   const [number, setNumber] = useState<number | null>(null);
@@ -80,7 +80,7 @@ export default function PokemonRegister () {
       environment,
       favorites, // [1, 5, 7] のような id 配列
     };
-    const res = await fetch("/registerPokemon", {
+    const res = await fetch("/api/registerPokemon", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -89,8 +89,8 @@ export default function PokemonRegister () {
     const json = await res.json();
     // console.log("register result:", json);
     if (json.success) {
+      await refetchNextNumber();  // numberの更新
       setOpenSnackbar(true);
-      resetChoices();
     }
   };
 
@@ -98,6 +98,9 @@ export default function PokemonRegister () {
     console.log(nextNumber);
     if (nextNumber && number === null) {
       setNumber(nextNumber)
+    }
+    if (openSnackbar) {
+      resetChoices();
     }
   }, [nextNumber]);
 
