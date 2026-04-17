@@ -1,6 +1,6 @@
 // /pocoapoke/src/pages/PokemonRegister.tsx
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Chip, Stack, Typography } from "@mui/material";
 import { Snackbar, Alert } from "@mui/material";
@@ -19,6 +19,7 @@ export default function PokemonRegister () {
   const [specialty2, setSpecialty2] = useState<number | null>(null);
   const [environment, setEnvironment] = useState<number | null>(null);
   const [favorites, setFavorites] = useState<number[]>([]);
+  const [isManual, setIsManual] = useState(false);
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const navigate = useNavigate();
 
@@ -34,9 +35,45 @@ export default function PokemonRegister () {
   const environmentItems = masterCodes[MASTER_CLASS.ENVIRONMENT] ?? [];
   const favoriteItems = masterCodes[MASTER_CLASS.FAVORITE] ?? [];
 
+  // resetボタン押下
+  const resetChoices = () => {
+    console.log(nextNumber);
+    setNumber(nextNumber);
+    setName("");
+    setSpecialty1(null);
+    setSpecialty2(null);
+    setEnvironment(null);
+    setFavorites([]);
+  };
+  // Chip をクリックしたとき
+  const handleChipClick = () => {
+    // Chip を選択 → 手入力モード OFF
+    setIsManual(false);
+    setNumber(nextNumber);
+  };
+
+  // Chip の選択解除（＝手入力モードへ）
+  const handleChipUnselect = () => {
+    setIsManual(true);
+    setNumber(null);
+  };
+
   const handleSubmit = async () => {
+    // バリデーション
+    if (typeof number !== "number" || isNaN(number)) {
+      alert("番号は数値で入力してください");
+      
+      // manual_number を空にする
+      const input = document.getElementById("manual_number") as HTMLInputElement;
+      if (input) input.value = "";
+
+      // Chip の値に戻す
+      setNumber(nextNumber);
+
+      return;
+    }
     const payload = {
-      number: number, // TODO: 本当は入力 or 自動採番
+      number: number,
       name,
       specialty1,
       specialty2,
@@ -53,14 +90,16 @@ export default function PokemonRegister () {
     // console.log("register result:", json);
     if (json.success) {
       setOpenSnackbar(true);
-      setNumber(useNextNumber());
-      setName("");
-      setSpecialty1("");
-      setSpecialty2("");
-      setEnvironment("");
-      setFavorites([]);
+      resetChoices();
     }
   };
+
+  useEffect(() => {
+    console.log(nextNumber);
+    if (nextNumber && number === null) {
+      setNumber(nextNumber)
+    }
+  }, [nextNumber]);
 
   return (
     <div>
@@ -71,10 +110,35 @@ export default function PokemonRegister () {
           <Chip
             label={nextNumber}
             color={number === nextNumber ? "primary" : "default"}
-            onClick={() => setNumber(nextNumber)}
+            onClick={() => {
+              if (isManual) {
+                // 手入力モード → Chip を選択し直す
+                handleChipClick();
+              } else {
+                // Chip モード → Chip を解除して手入力へ
+                handleChipUnselect();
+              }
+            }}
           />
         )}
-        <TextField label="番号" onChange={(e) => setNumber(e.target.value)}></TextField>
+        {/* 手入力モードのときだけ表示 */}
+        {isManual && (
+            <TextField
+              id="manual_number"
+              label="番号"
+              value={number ?? ""}
+              onChange={(e) => {
+                const value = e.target.value;
+                if (value === "") {
+                  setNumber(null);
+                  return;
+                }
+                // 数値に変換
+                const num = Number(value);
+                setNumber(isNaN(num) ? null : num);
+              }}>
+            </TextField>
+        )}
       </Stack>
 
       <TextField
@@ -141,6 +205,7 @@ export default function PokemonRegister () {
         登録
       </Button>
       <button onClick={() => navigate("/")}>list</button>
+      <button onClick={() => resetChoices()}>reset</button>
       <Snackbar
         open={openSnackbar}
         autoHideDuration={3000}
