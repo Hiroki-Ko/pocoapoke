@@ -53,6 +53,12 @@ export default function PokemonRegister () {
     // console.log("register result:", json);
     if (json.success) {
       setOpenSnackbar(true);
+      setNumber(useNextNumber());
+      setName("");
+      setSpecialty1("");
+      setSpecialty2("");
+      setEnvironment("");
+      setFavorites([]);
     }
   };
 
