@@ -55,8 +55,8 @@ export default function PokemonList() {
       api.get('/api/getPokemonData')
         .then((json) => {
             console.log(json);
-            setPokemonData(json);
-            setDispPokemonData(json);
+            setPokemonData(json.pokemon);
+            setDispPokemonData(json.pokemon);
           })
         .catch(console.error);
     }, []);
@@ -126,6 +126,7 @@ export default function PokemonList() {
           onChange={setSelectedFavorite}
         />
         <button onClick={() => navigate("/register")}>register</button>
+        <button onClick={() => navigate("/progress")}>progress</button>
       </div>
     );
 }

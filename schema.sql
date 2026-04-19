@@ -39,15 +39,16 @@ CREATE TABLE pokemon_ms (
 
 CREATE TABLE pokemon_status (
   id          INTEGER PRIMARY KEY AUTOINCREMENT,
-  poke_id     INTEGER NOT NULL,
+  poke_id     INTEGER NOT NULL UNIQUE,
   status_code INTEGER NOT NULL,
   place_code  INTEGER NOT NULL,
-  today_wish  BOOLEAN NOT NULL,
+  today_wish  INTEGER NOT NULL,
   created_at  TEXT,
   updated_at  TEXT,
   deleted_at  TEXT,
 
   FOREIGN KEY (poke_id) REFERENCES pokemon_ms(id),
   FOREIGN KEY (status_code) REFERENCES master_code(id),
-  FOREIGN KEY (place_code) REFERENCES master_code(id)
+  FOREIGN KEY (place_code) REFERENCES master_code(id),
+  FOREIGN KEY (today_wish) REFERENCES master_code(id)
 );

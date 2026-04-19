@@ -16,7 +16,7 @@ export async function onRequestPost(context) {
   const fav = [...favorites];
   while (fav.length < 6) fav.push(null);
 
-  await env.DB.prepare(
+  const result = await env.DB.prepare(
     `
       INSERT INTO pokemon_ms (
         number,
@@ -49,6 +49,30 @@ export async function onRequestPost(context) {
       fav[5]
     )
     .run();
+
+  // 新しく作られた pokemon_ms.id を取得
+  const newId = result.lastInsertRowId;
+
+  // 2. pokemon_status を INSERT（1対1）
+  await env.DB.prepare(`
+      INSERT INTO pokemon_status (
+        poke_id,
+        status_code,
+        place_code,
+        today_wish,
+        created_at
+      )
+      VALUES (
+        ?, 
+        (SELECT id FROM master_code WHERE class='evaluation' AND code=1),
+        (SELECT id FROM master_code WHERE class='place' AND code=1),
+        (SELECT id FROM master_code WHERE class='wish' AND code=0),
+        datetime('now')
+      )
+    `)
+    .bind(newId)
+    .run();
+
 
   return Response.json({ success: true });
 }

@@ -1,4 +1,4 @@
-// src/api/usePokemonData.ts
+// /pocoapoke/src/api/usePokemonData.ts
 import { useQuery } from "@tanstack/react-query";
 
 export function usePokemonData() {
@@ -6,8 +6,9 @@ export function usePokemonData() {
     queryKey: ["pokemonData"],
     queryFn: async () => {
       const res = await fetch("/api/getPokemonData");
-      return res.json();
+      const json = await res.json();
+      return json;
     },
-    staleTime: 1000 * 60 * 5, // 5分キャッシュ
+    staleTime: 1000 * 60 * 5,
   });
 }
