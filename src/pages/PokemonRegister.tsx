@@ -153,7 +153,7 @@ export default function PokemonRegister () {
       />
 
       <Typography variant="subtitle1">得意なこと1</Typography>
-      <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mb: 2 }}>
+      <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mb: 2, width: "100%" }}>
         {specialtyItems.map((m) => (
           <Chip
             key={m.id}
@@ -161,12 +161,20 @@ export default function PokemonRegister () {
             color={specialty1 === m.id ? "primary" : "default"}
             variant={specialty1 === m.id ? "filled" : "outlined"}
             onClick={() => setSpecialty1(specialty1 === m.id ? null : m.id)}
+            sx={{
+              backgroundColor: specialty1 === m.id ? "#1976d2" : "#fff",
+              color: specialty1 === m.id ? "#fff" : "#000",
+              borderColor: "#ccc",
+              "&:hover": {
+                backgroundColor: specialty1 === m.id ? "#115293" : "#f0f0f0",
+              }
+            }}
           />
         ))}
       </Stack>
 
       <Typography variant="subtitle1">得意なこと2</Typography>
-      <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mb: 2 }}>
+      <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mb: 2, width: "100%" }}>
         {specialtyItems.map((m) => (
           <Chip
             key={m.id}
@@ -174,6 +182,14 @@ export default function PokemonRegister () {
             color={specialty2 === m.id ? "primary" : "default"}
             variant={specialty2 === m.id ? "filled" : "outlined"}
             onClick={() => setSpecialty2(specialty2 === m.id ? null : m.id)}
+            sx={{
+              backgroundColor: specialty1 === m.id ? "#1976d2" : "#fff",
+              color: specialty1 === m.id ? "#fff" : "#000",
+              borderColor: "#ccc",
+              "&:hover": {
+                backgroundColor: specialty1 === m.id ? "#115293" : "#f0f0f0",
+              }
+            }}
           />
         ))}
       </Stack>
@@ -187,6 +203,14 @@ export default function PokemonRegister () {
             color={environment === m.id ? "primary" : "default"}
             variant={environment === m.id ? "filled" : "outlined"}
             onClick={() => setEnvironment(environment === m.id ? null : m.id)}
+            sx={{
+              backgroundColor: specialty1 === m.id ? "#1976d2" : "#fff",
+              color: specialty1 === m.id ? "#fff" : "#000",
+              borderColor: "#ccc",
+              "&:hover": {
+                backgroundColor: specialty1 === m.id ? "#115293" : "#f0f0f0",
+              }
+            }}
           />
         ))}
       </Stack>
@@ -200,6 +224,14 @@ export default function PokemonRegister () {
             color={favorites.includes(m.id) ? "primary" : "default"}
             variant={favorites.includes(m.id) ? "filled" : "outlined"}
             onClick={() => toggleFavorite(m.id)}
+            sx={{
+              backgroundColor: specialty1 === m.id ? "#1976d2" : "#fff",
+              color: specialty1 === m.id ? "#fff" : "#000",
+              borderColor: "#ccc",
+              "&:hover": {
+                backgroundColor: specialty1 === m.id ? "#115293" : "#f0f0f0",
+              }
+            }}
           />
         ))}
       </Stack>
@@ -207,7 +239,6 @@ export default function PokemonRegister () {
       <Button variant="contained" sx={{ mt: 2 }} onClick={handleSubmit}>
         登録
       </Button>
-      <button onClick={() => navigate("/")}>list</button>
       <button onClick={() => resetChoices()}>reset</button>
       <Snackbar
         open={openSnackbar}
@@ -219,7 +250,6 @@ export default function PokemonRegister () {
           登録しました！
         </Alert>
       </Snackbar>
-
     </div>
   );
 }

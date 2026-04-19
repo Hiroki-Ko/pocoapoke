@@ -65,84 +65,85 @@ export default function PokemonProgress() {
     return (
         <div>
             <h2>Pokemon Progress</h2>
-            <table border={1}>
-                <thead>
-                <tr>
-                    <th><button onClick={() => allClear()}></button></th>
-                    <th>なまえ</th>
-                    <th>住んでる街</th>
-                    <th>住みごこち</th>
-                    <th>欲しいもの</th>
-                </tr>
-                </thead>
-                <tbody>
-                {pokemonData.map((p) => (
-                    <tr key={p.id} className={finished.includes(p.id) ? "finished-row" : ""}>
-                    <td>
-                      <input
-                        type="checkbox"
-                        checked={finished.includes(p.id)}
-                        onChange={() => wishFinished(p.id)}
-                      />
-                    </td>
-                    <td>{p.name}</td>
-                    <td>
-                        <select
-                            value={p.status.place_code?.id}
-                            onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'place_code')}
-                        >
-                        {master.place?.map((m) => (
-                            <option key={m.id} value={m.id}>
-                            {m.label}
-                            </option>
-                        ))}
-                        </select>
-                    </td>
-                    <td>
-                        <select
-                          value={p.status.status_code?.id}
-                          onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'status_code')}
-                        >
-                        {master.evaluation?.map((m) => (
-                            <option key={m.id} value={m.id}>
-                            {m.label}
-                            </option>
-                        ))}
-                        </select>
-                    </td>
-                    <td>
-                        <select
-                          value={p.status.today_wish?.id}
-                          onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'today_wish')}
-                        >
-                          <optgroup label="欲しいもの">
-                            {master.wish?.map((m) => (
-                              <option key={m.id} value={m.id}>{m.label}</option>
-                            ))}
-                          </optgroup>
-
-                          <optgroup label="環境">
-                            {master.environment?.map((m) => (
-                              <option key={m.id} value={m.id}>{m.label}</option>
-                            ))}
-                          </optgroup>
-
-                          <optgroup label="カテゴリ">
-                            {master.category?.map((m) => (
-                              <option key={m.id} value={m.id}>{m.label}</option>
-                            ))}
-                          </optgroup>
-                        </select>
-                    </td>
-
-                    {p.favorites.map((fav, i) => (
-                        <td key={i}>{fav?.label}</td>
-                    ))}
+            <div className="table-wrapper">
+                <table border={1}>
+                    <thead>
+                    <tr>
+                        <th><button onClick={() => allClear()}></button></th>
+                        <th>なまえ</th>
+                        <th>住んでる街</th>
+                        <th>住みごこち</th>
+                        <th>欲しいもの</th>
                     </tr>
-                ))}
-                </tbody>
-            </table>
-            <button onClick={() => navigate("/")}>list</button>
+                    </thead>
+                    <tbody>
+                    {pokemonData.map((p) => (
+                        <tr key={p.id} className={finished.includes(p.id) ? "finished-row" : ""}>
+                        <td>
+                          <input
+                            type="checkbox"
+                            checked={finished.includes(p.id)}
+                            onChange={() => wishFinished(p.id)}
+                          />
+                        </td>
+                        <td>{p.name}</td>
+                        <td>
+                            <select
+                                value={p.status.place_code?.id}
+                                onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'place_code')}
+                            >
+                            {master.place?.map((m) => (
+                                <option key={m.id} value={m.id}>
+                                {m.label}
+                                </option>
+                            ))}
+                            </select>
+                        </td>
+                        <td>
+                            <select
+                              value={p.status.status_code?.id}
+                              onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'status_code')}
+                            >
+                            {master.evaluation?.map((m) => (
+                                <option key={m.id} value={m.id}>
+                                {m.label}
+                                </option>
+                            ))}
+                            </select>
+                        </td>
+                        <td>
+                            <select
+                              value={p.status.today_wish?.id}
+                              onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'today_wish')}
+                            >
+                              <optgroup label="欲しいもの">
+                                {master.wish?.map((m) => (
+                                  <option key={m.id} value={m.id}>{m.label}</option>
+                                ))}
+                              </optgroup>
+
+                              <optgroup label="環境">
+                                {master.environment?.map((m) => (
+                                  <option key={m.id} value={m.id}>{m.label}</option>
+                                ))}
+                              </optgroup>
+
+                              <optgroup label="カテゴリ">
+                                {master.category?.map((m) => (
+                                  <option key={m.id} value={m.id}>{m.label}</option>
+                                ))}
+                              </optgroup>
+                            </select>
+                        </td>
+
+                        {p.favorites.map((fav, i) => (
+                            <td key={i}>{fav?.label}</td>
+                        ))}
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

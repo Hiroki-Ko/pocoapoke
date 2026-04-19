@@ -77,32 +77,34 @@ export default function PokemonList() {
     return (
       <div>
         <h2>Pokemon List</h2>
-        <table border={1}>
-          <thead>
-            <tr>
-              <th>No.</th>
-              <th>なまえ</th>
-              <th>得意なこと1</th>
-              <th>得意なこと2</th>
-              <th>好きな環境</th>
-              <th>好きなもの</th>
-            </tr>
-          </thead>
-          <tbody>
-            {dispPokemonData.map((p) => (
-              <tr key={p.id}>
-                <td>{p.number}</td>
-                <td>{p.name}</td>
-                <td>{p.specialty1?.label}</td>
-                <td>{p.specialty2?.label}</td>
-                <td>{p.environment?.label}</td>
-                {p.favorites.map((fav, i) => (
-                  <td key={i}>{fav?.label}</td>
+          <div className="table-wrapper">
+            <table border={1}>
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>なまえ</th>
+                  <th>得意なこと1</th>
+                  <th>得意なこと2</th>
+                  <th>好きな環境</th>
+                  <th>好きなもの</th>
+                </tr>
+              </thead>
+              <tbody>
+                {dispPokemonData.map((p) => (
+                  <tr key={p.id}>
+                    <td>{p.number}</td>
+                    <td>{p.name}</td>
+                    <td>{p.specialty1?.label}</td>
+                    <td>{p.specialty2?.label}</td>
+                    <td>{p.environment?.label}</td>
+                    {p.favorites.map((fav, i) => (
+                      <td key={i}>{fav?.label}</td>
+                    ))}
+                  </tr>
                 ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+              </tbody>
+            </table>
+        </div>
         
         <MasterSelect
           className={MASTER_CLASS.SPECIALTY}
@@ -125,8 +127,6 @@ export default function PokemonList() {
           value={selectedFavorite}
           onChange={setSelectedFavorite}
         />
-        <button onClick={() => navigate("/register")}>register</button>
-        <button onClick={() => navigate("/progress")}>progress</button>
       </div>
     );
 }
