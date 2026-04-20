@@ -39,21 +39,5 @@ export function MasterSelect({
         ))}
       </Stack>
     </div>
-    // <div>
-    //   <label>{label}</label>
-    //   <select
-    //     value={value ?? ""}
-    //     onChange={(e) =>
-    //       onChange(e.target.value ? Number(e.target.value) : null)
-    //     }
-    //   >
-    //     <option value="">選択してください</option>
-    //     {items.map((m) => (
-    //       <option key={m.id} value={m.id}>
-    //         {m.label}
-    //       </option>
-    //     ))}
-    //   </select>
-    // </div>
   );
 }

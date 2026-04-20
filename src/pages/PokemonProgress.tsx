@@ -86,7 +86,9 @@ export default function PokemonProgress() {
                             onChange={() => wishFinished(p.id)}
                           />
                         </td>
+                        {/* 名前 */}
                         <td>{p.name}</td>
+                        {/* 住んでる街 */}
                         <td>
                             <select
                                 value={p.status.place_code?.id}
@@ -99,6 +101,7 @@ export default function PokemonProgress() {
                             ))}
                             </select>
                         </td>
+                        {/* 住みごこち */}
                         <td>
                             <select
                               value={p.status.status_code?.id}
@@ -111,6 +114,7 @@ export default function PokemonProgress() {
                             ))}
                             </select>
                         </td>
+                        {/* 欲しいもの */}
                         <td>
                             <select
                               value={p.status.today_wish?.id}
