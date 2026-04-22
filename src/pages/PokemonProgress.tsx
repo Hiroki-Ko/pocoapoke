@@ -20,14 +20,14 @@ export default function PokemonProgress() {
       created_at: string;
       updated_at: string | null;
     };
-    const [wish, setWish] = useState<boolean>(false);
     const navigate = useNavigate();
     const queryClient = useQueryClient();
-    const { data, isLoading, isError } = usePokemonData();
-    const [finished, setFinished] = useState<number[]>([]);
+    const [wish, setWish] = useState<boolean>(false);
     const [view, setView] = useState<boolean>(false);
     const [selectedPlace, setSelectedPlace] = useState<number | null>(null);
+    const [finished, setFinished] = useState<number[]>([]);
     const [dispPokemonData, setDispPokemonData] = useState<Pokemon[]>([]);
+    const { data, isLoading, isError } = usePokemonData();
 
     if (isLoading) return <div>読み込み中...</div>;
     if (isError) return <div>データ取得に失敗しました</div>;
@@ -92,7 +92,7 @@ export default function PokemonProgress() {
       // フィルタリング
       setDispPokemonData(
         pokemonData.filter((p) =>
-          (p.status?.place_code?.id ?? null) === selectedPlace
+          (p.status?.place_code ?? null) === selectedPlace
         )
       );
     }, [selectedPlace, pokemonData]);
