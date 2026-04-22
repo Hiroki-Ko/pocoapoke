@@ -9,7 +9,7 @@ export async function onRequestGet(context) {
         SELECT id, class, code, label
         FROM master_code
         WHERE deleted_at IS NULL
-        AND class IN (?, ?, ?)
+        AND class IN (?, ?, ?, ?)
         ORDER BY class, id
     `)
     .bind(

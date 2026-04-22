@@ -105,6 +105,13 @@ wrangler d1 execute pocoapoke --remote --file=./seeds/pokemon_status.sql
   wrangler d1 execute pocoapoke --local --file=./seeds/pokemon_status.sql
 
 account_id = "feff80e44f13f37bef46133f206d30ac"
+API Token
+Account ID: feff80e44f13f37bef46133f206d30ac
+Your API Token: cfat_Z0m6Pgrs7oaMbQkPeUleTAtQYxvyt6wRaIxS9e7ra317b708
+Example Usage
+curl -X GET "https://api.cloudflare.com/client/v4/accounts/feff80e44f13f37bef46133f206d30ac/tokens/verify" \
+     -H "Authorization: Bearer cfat_Z0m6Pgrs7oaMbQkPeUleTAtQYxvyt6wRaIxS9e7ra317b708"
+wrangler login --api-token cfat_Z0m6Pgrs7oaMbQkPeUleTAtQYxvyt6wRaIxS9e7ra317b708
 
 ■D1へテーブル追加
 1. schema.sql にテーブルの構造を追加
