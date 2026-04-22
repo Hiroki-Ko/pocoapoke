@@ -119,9 +119,10 @@ export default function PokemonProgress() {
                         {/* 住んでる街 */}
                         <td>
                             <select
-                                value={p.status.place_code?.id}
+                                value={p.status?.place_code?.id}
                                 onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'place_code')}
                             >
+                            <option value="">未設定</option>
                             {master.place?.map((m) => (
                                 <option key={m.id} value={m.id}>
                                 {m.label}
@@ -132,7 +133,7 @@ export default function PokemonProgress() {
                         {/* 住みごこち */}
                         <td>
                             <select
-                              value={p.status.status_code?.id}
+                              value={p.status?.status_code?.id}
                               onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'status_code')}
                             >
                             {master.evaluation?.map((m) => (
@@ -145,7 +146,7 @@ export default function PokemonProgress() {
                         {/* 欲しいもの */}
                         <td>
                             <select
-                              value={p.status.today_wish?.id}
+                              value={p.status?.today_wish?.id}
                               onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'today_wish')}
                             >
                               <optgroup label="欲しいもの">
