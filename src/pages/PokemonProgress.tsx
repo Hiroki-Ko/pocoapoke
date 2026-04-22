@@ -7,19 +7,20 @@ import { usePokemonData } from '../api/usePokemonData';
 import { MasterSelect } from "../components/MasterSelect";
 import { MASTER_CLASS } from "../constants";
 
+type Pokemon = {
+  id: number;
+  number: number;
+  name: string;
+  specialty1: { id: number; label: string } | null;
+  specialty2: { id: number; label: string } | null;
+  environment: { id: number; label: string } | null;
+  favorites: { id: number; label: string }[] | null;
+  status: { status_code: number; place_code: number; today_wish: number; } | null;
+  created_at: string;
+  updated_at: string | null;
+};
+
 export default function PokemonProgress() {
-    type Pokemon = {
-      id: number;
-      number: number;
-      name: string;
-      specialty1: { id: number; label: string } | null;
-      specialty2: { id: number; label: string } | null;
-      environment: { id: number; label: string } | null;
-      favorites: { id: number; label: string }[] | null;
-      status: { status_code: number; place_code: number; today_wish: number; } | null;
-      created_at: string;
-      updated_at: string | null;
-    };
     const navigate = useNavigate();
     const queryClient = useQueryClient();
     const [wish, setWish] = useState<boolean>(false);
@@ -29,17 +30,29 @@ export default function PokemonProgress() {
     const [dispPokemonData, setDispPokemonData] = useState<Pokemon[]>([]);
     const { data, isLoading, isError } = usePokemonData();
 
+    // data が未取得の場合は空配列/空オブジェクトで初期化
+    const pokemonData: Pokemon[] = data?.pokemon ?? [];
+    const master = data?.master ?? {};
+
+    // view=true の場合、全て表示
+    const invisibleCol = view ? 6 : 1;
+
+    useEffect(() => {
+      console.log(selectedPlace)
+      if (selectedPlace === null) {
+        setDispPokemonData(pokemonData);
+      } else {
+        setDispPokemonData(
+          pokemonData.filter((p) => 
+            (p.status?.place_code?.id ?? null) === selectedPlace
+          )
+        );
+      }
+    }, [selectedPlace, pokemonData]);
+
     if (isLoading) return <div>読み込み中...</div>;
     if (isError) return <div>データ取得に失敗しました</div>;
     if (!data) return <div>読み込み中...</div>;
-    const pokemonData: Pokemon[] = data.pokemon;
-    const master = data.master;
-    const wishList = [
-      ...(master.wish ?? []),
-      ...(master.environment ?? []),
-      ...(master.category ?? [])
-    ];
-
 
     const changePokemonStatus = async (
       pokemonId: Number,
@@ -47,7 +60,6 @@ export default function PokemonProgress() {
       field: String
     ) => {
         console.log(`${field} change ${pokemonId} ${masterId}`);
-        // 対象のステータスを更新
         await fetch("/api/updateStatus", {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -57,45 +69,24 @@ export default function PokemonProgress() {
             master_id: masterId
           })
         });
-
         queryClient.invalidateQueries(["pokemonData"]);
         console.log("saved:", field, masterId);
-    }
+    };
 
     const wishFinished = (pokemonId: Number) => {
-        // 対象の行をグレーアウト
         setFinished((prev) =>
           prev.includes(pokemonId)
-            ? prev.filter((id) => id !== pokemonId) // 解除
-            : [...prev, pokemonId] // 完了
+            ? prev.filter((id) => id !== pokemonId)
+            : [...prev, pokemonId]
         );
-    }
+    };
 
     const allClear = async () => {
-        // 全てのチェックボックスをクリア(false)
         setFinished([]);
-        // 全ての「欲しいもの」(today_wish)を None に変更
         await fetch("/api/clearAllWish", { method: "POST" });
         queryClient.invalidateQueries(["pokemonData"]);
         console.log('checkbox all clear!!');
-    }
-
-    // view=true の場合、全て表示
-    const invisibleCol = view ? 6 : 1;
-
-    useEffect(() => {
-      // 初期状態に戻す（全件表示）
-      if (selectedPlace === null) {
-        setDispPokemonData(pokemonData);
-        return;
-      }
-      // フィルタリング
-      setDispPokemonData(
-        pokemonData.filter((p) =>
-          (p.status?.place_code ?? null) === selectedPlace
-        )
-      );
-    }, [selectedPlace, pokemonData]);
+    };
 
     return (
         <div>
@@ -144,7 +135,7 @@ export default function PokemonProgress() {
                         {/* 住んでる街 */}
                         <td>
                             <select
-                                value={p.status?.place_code ?? ""}
+                                value={p.status?.place_code?.id ?? ""}
                                 onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'place_code')}
                             >
                             <option value="">未設定</option>
@@ -158,7 +149,7 @@ export default function PokemonProgress() {
                         {/* 住みごこち */}
                         <td>
                             <select
-                              value={p.status?.status_code ?? ""}
+                              value={p.status?.status_code?.id ?? ""}
                               onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'status_code')}
                             >
                             {master.evaluation?.map((m) => (
@@ -171,7 +162,7 @@ export default function PokemonProgress() {
                         {/* 欲しいもの */}
                         <td>
                             <select
-                              value={p.status?.today_wish}
+                              value={p.status?.today_wish?.id}
                               onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'today_wish')}
                             >
                               <optgroup label="欲しいもの">
@@ -179,13 +170,11 @@ export default function PokemonProgress() {
                                   <option key={m.id} value={m.id}>{m.label}</option>
                                 ))}
                               </optgroup>
-
                               <optgroup label="環境">
                                 {master.environment?.map((m) => (
                                   <option key={m.id} value={m.id}>{m.label}</option>
                                 ))}
                               </optgroup>
-
                               <optgroup label="カテゴリ">
                                 {master.category?.map((m) => (
                                   <option key={m.id} value={m.id}>{m.label}</option>
@@ -214,5 +203,5 @@ export default function PokemonProgress() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
