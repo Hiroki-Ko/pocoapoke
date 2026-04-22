@@ -16,6 +16,7 @@ export async function onRequestGet(context) {
       MASTER_CLASS.SPECIALTY,
       MASTER_CLASS.ENVIRONMENT,
       MASTER_CLASS.FAVORITE
+      MASTER_CLASS.PLACE
     )
     .all();
 

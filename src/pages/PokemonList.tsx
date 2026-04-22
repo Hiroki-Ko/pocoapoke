@@ -160,12 +160,13 @@ export default function PokemonList() {
           value={selectedFavorite}
           onChange={setSelectedFavorite}
         />
+        {/* スクロールボタン */}
         <div className="scroll-buttons">
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            ↑
+            ▲
           </button>
           <button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}>
-            ↓
+            ▼
           </button>
         </div>
       </div>

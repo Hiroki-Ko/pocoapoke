@@ -1,9 +1,11 @@
 // /pocoapoke/src/pages/PokemonProgress.tsx
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useQueryClient } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
 import { usePokemonData } from '../api/usePokemonData';
+import { MasterSelect } from "../components/MasterSelect";
+import { MASTER_CLASS } from "../constants";
 
 export default function PokemonProgress() {
     type Pokemon = {
@@ -24,6 +26,8 @@ export default function PokemonProgress() {
     const { data, isLoading, isError } = usePokemonData();
     const [finished, setFinished] = useState<number[]>([]);
     const [view, setView] = useState<boolean>(false);
+    const [selectedPlace, setSelectedPlace] = useState<number | null>(null);
+    const [dispPokemonData, setDispPokemonData] = useState<Pokemon[]>([]);
 
     if (isLoading) return <div>読み込み中...</div>;
     if (isError) return <div>データ取得に失敗しました</div>;
@@ -77,7 +81,21 @@ export default function PokemonProgress() {
     }
 
     // view=true の場合、全て表示
-    const invisibleCol = view ? 6 : 1; 
+    const invisibleCol = view ? 6 : 1;
+
+    useEffect(() => {
+      // 初期状態に戻す（全件表示）
+      if (selectedPlace === null) {
+        setDispPokemonData(pokemonData);
+        return;
+      }
+      // フィルタリング
+      setDispPokemonData(
+        pokemonData.filter((p) =>
+          (p.status?.place_code?.id ?? null) === selectedPlace
+        )
+      );
+    }, [selectedPlace, pokemonData]);
 
     return (
         <div>
@@ -85,6 +103,13 @@ export default function PokemonProgress() {
               <title>Pokemon Progress</title>
             </Helmet>
             <h2>Pokemon Progress</h2>
+            <MasterSelect
+              className={MASTER_CLASS.PLACE}
+              label="好きなもの"
+              masterCodes={master}
+              value={selectedPlace}
+              onChange={setSelectedPlace}
+            />
             <div className="table-wrapper">
                 <table border={1} className={view ? "table-wide" : ""}>
                     <thead>
@@ -105,7 +130,7 @@ export default function PokemonProgress() {
                     </tr>
                     </thead>
                     <tbody>
-                    {pokemonData.map((p) => (
+                    {dispPokemonData.map((p) => (
                         <tr key={p.id} className={finished.includes(p.id) ? "finished-row" : ""}>
                         <td className="checkbox-cell">
                           <input
@@ -183,10 +208,10 @@ export default function PokemonProgress() {
                 </table>
                 <div className="scroll-buttons">
                   <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                    ↑
+                    ▲
                   </button>
                   <button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}>
-                    ↓
+                    ▼
                   </button>
                 </div>
             </div>
