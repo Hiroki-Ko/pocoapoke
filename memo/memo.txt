@@ -69,7 +69,39 @@ npx wrangler d1 execute pocoapoke --command "SELECT class, json_group_array(json
 3. ローカルに本番のデータを入れる
   wrangler d1 execute pocoapoke --local --file=./prod_dump.sql
 
-INSERT INTO master_code (class, code, label, value, created_at) VALUES ('wish', 1, 'None', 'none', datetime('now'));
+
+  wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS pokemon_status"
+  wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS pokemon_ms"
+  wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS master_code"
+  wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS d1_migrations"
+  wrangler d1 execute pocoapoke --remote --command "DELETE FROM sqlite_sequence"
+  wrangler d1 execute pocoapoke --remote --file=./seeds/schema.sql
+  wrangler d1 execute pocoapoke --remote --file=./seeds/master_code.sql
+  node seeds/seed_pokemon_ms.cjs --remote
+  wrangler d1 execute pocoapoke --remote --file=./seeds/pokemon_status.sql
+■初期データ登録
+1. ローカルのデータを削除
+  wrangler d1 execute pocoapoke --local --command "DROP TABLE IF EXISTS pokemon_status"
+  wrangler d1 execute pocoapoke --local --command "DROP TABLE IF EXISTS pokemon_ms"
+  wrangler d1 execute pocoapoke --local --command "DROP TABLE IF EXISTS master_code"
+  wrangler d1 execute pocoapoke --local --command "DROP TABLE IF EXISTS d1_migrations"
+  wrangler d1 execute pocoapoke --local --command "DELETE FROM sqlite_sequence"
+2. schema.sql を実行。テーブル構成を反映。
+  wrangler d1 execute pocoapoke --local --file=./seeds/schema.sql
+3. MasterCodesを登録
+  wrangler d1 execute pocoapoke --local --file=./seeds/master_code.sql
+4. Pokemon_msを登録
+  # ローカルD1
+  node seeds/seed_pokemon_ms.cjs
+  # リモートD1
+  node seeds/seed_pokemon_ms.cjs --remote
+  構成）
+  pokemon_ms.json を直接参照
+  master_code.sql からラベル→codeのマッピングを自動構築
+  1件ずつ小さなSQLファイルを生成して wrangler d1 execute --file で実行（SQLITE_TOOBIG 回避）
+5. Pokemon_Statusを登録
+  wrangler d1 execute pocoapoke --local --file=./seeds/pokemon_status.sql
+
 
 ■D1へテーブル追加
 1. schema.sql にテーブルの構造を追加

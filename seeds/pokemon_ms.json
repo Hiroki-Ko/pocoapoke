@@ -1,0 +1,5728 @@
+[
+  {
+    "category": "main",
+    "number": 1,
+    "local_number": null,
+    "name": "フシギダネ",
+    "specialty": [
+      "さいばい"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "やわらかい",
+      "キュート",
+      "水を感じる",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 2,
+    "local_number": null,
+    "name": "フシギソウ",
+    "specialty": [
+      "さいばい"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "やわらかい",
+      "キュート",
+      "花ざかり",
+      "カラフル",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 3,
+    "local_number": null,
+    "name": "フシギバナ",
+    "specialty": [
+      "さいばい",
+      "ちらかす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "やわらかい",
+      "キュート",
+      "花ざかり",
+      "ゴージャス",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 4,
+    "local_number": null,
+    "name": "ヒトカゲ",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "木製",
+      "かたい",
+      "トレーニングできる",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 5,
+    "local_number": null,
+    "name": "リザード",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "木製",
+      "かたい",
+      "トレーニングできる",
+      "乗りもの",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 6,
+    "local_number": null,
+    "name": "リザードン",
+    "specialty": [
+      "もやす",
+      "そらをとぶ"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "風を感じる",
+      "木製",
+      "トレーニングできる",
+      "ゴージャス",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 7,
+    "local_number": null,
+    "name": "ゼニガメ",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "せいけつ",
+      "キズをいやす",
+      "キュート",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 8,
+    "local_number": null,
+    "name": "カメール",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "せいけつ",
+      "キズをいやす",
+      "トレーニングできる",
+      "かたい",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 9,
+    "local_number": null,
+    "name": "カメックス",
+    "specialty": [
+      "うるおす",
+      "とりひき"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "せいけつ",
+      "キズをいやす",
+      "トレーニングできる",
+      "ゴージャス",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 10,
+    "local_number": null,
+    "name": "ポッポ",
+    "specialty": [
+      "そらをとぶ",
+      "さがしもの"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "風を感じる",
+      "見て楽しむ",
+      "自然を感じる",
+      "あそびば",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 11,
+    "local_number": null,
+    "name": "ピジョン",
+    "specialty": [
+      "そらをとぶ",
+      "さがしもの"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "風を感じる",
+      "見て楽しむ",
+      "自然を感じる",
+      "食べものそっくり",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 12,
+    "local_number": null,
+    "name": "ピジョット",
+    "specialty": [
+      "そらをとぶ",
+      "きをきる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "風を感じる",
+      "木製",
+      "自然を感じる",
+      "ゴージャス",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 13,
+    "local_number": null,
+    "name": "ナゾノクサ",
+    "specialty": [
+      "さいばい"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "土を感じる",
+      "やわらかい",
+      "花ざかり",
+      "水を感じる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 14,
+    "local_number": null,
+    "name": "クサイハナ",
+    "specialty": [
+      "さいばい"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "土を感じる",
+      "やわらかい",
+      "花ざかり",
+      "ゴミ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 15,
+    "local_number": null,
+    "name": "ラフレシア",
+    "specialty": [
+      "さいばい",
+      "ちらかす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "土を感じる",
+      "やわらかい",
+      "花ざかり",
+      "カラフル",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 16,
+    "local_number": null,
+    "name": "キレイハナ",
+    "specialty": [
+      "さいばい",
+      "もりあげる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "花ざかり",
+      "あそびば",
+      "キュート",
+      "音が鳴る",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 17,
+    "local_number": null,
+    "name": "パラス",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "見て楽しむ",
+      "土を感じる",
+      "食べものそっくり",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 18,
+    "local_number": null,
+    "name": "パラセクト",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "見て楽しむ",
+      "土を感じる",
+      "フシギ",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 19,
+    "local_number": null,
+    "name": "コンパン",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "見て楽しむ",
+      "難しそうなもの",
+      "文字がある",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 20,
+    "local_number": null,
+    "name": "モルフォン",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "見て楽しむ",
+      "風を感じる",
+      "花ざかり",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 21,
+    "local_number": null,
+    "name": "マダツボミ",
+    "specialty": [
+      "さいばい",
+      "ちらかす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "土を感じる",
+      "水を感じる",
+      "花ざかり",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 22,
+    "local_number": null,
+    "name": "ウツドン",
+    "specialty": [
+      "さいばい",
+      "ちらかす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "土を感じる",
+      "カラフル",
+      "花ざかり",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 23,
+    "local_number": null,
+    "name": "ウツボット",
+    "specialty": [
+      "さいばい",
+      "きをきる"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "土を感じる",
+      "カラフル",
+      "花ざかり",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 24,
+    "local_number": null,
+    "name": "ヤドン",
+    "specialty": [
+      "うるおす",
+      "あくび"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "せいけつ",
+      "フシギ",
+      "やわらかい",
+      "キズをいやす",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 25,
+    "local_number": null,
+    "name": "ヤドラン",
+    "specialty": [
+      "うるおす",
+      "とりひき"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "せいけつ",
+      "フシギ",
+      "みんなで使う",
+      "キズをいやす",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 26,
+    "local_number": null,
+    "name": "ヤドキング",
+    "specialty": [
+      "うるおす",
+      "テレポート"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "せいけつ",
+      "フシギ",
+      "みんなで使う",
+      "キズをいやす",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 27,
+    "local_number": null,
+    "name": "コイル",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "メタリック",
+      "キラキラしてる",
+      "かたい",
+      "みんなで使う",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 28,
+    "local_number": null,
+    "name": "レアコイル",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "メタリック",
+      "キラキラしてる",
+      "あつまり",
+      "みんなで使う",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 29,
+    "local_number": null,
+    "name": "ジバコイル",
+    "specialty": [
+      "はつでん",
+      "リサイクル"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "メタリック",
+      "ゴージャス",
+      "あつまり",
+      "かたい",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 30,
+    "local_number": null,
+    "name": "イワーク",
+    "specialty": [
+      "つぶす",
+      "じならし"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "石づくり",
+      "土を感じる",
+      "四角い",
+      "ほっそり",
+      "トレーニングできる",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 31,
+    "local_number": null,
+    "name": "ハガネール",
+    "specialty": [
+      "つぶす",
+      "じならし"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "メタリック",
+      "土を感じる",
+      "石づくり",
+      "ほっそり",
+      "かたい",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 32,
+    "local_number": null,
+    "name": "カラカラ",
+    "specialty": [
+      "けんちく"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "土を感じる",
+      "けんせつ",
+      "トレーニングできる",
+      "ほっそり",
+      "みんなで使う",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 33,
+    "local_number": null,
+    "name": "ガラガラ",
+    "specialty": [
+      "けんちく"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "土を感じる",
+      "けんせつ",
+      "トレーニングできる",
+      "ほっそり",
+      "ゴージャス",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 34,
+    "local_number": null,
+    "name": "バルキー",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "みんなで使う",
+      "布仕立て",
+      "石づくり",
+      "まんまる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 35,
+    "local_number": null,
+    "name": "サワムラー",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "みんなで使う",
+      "布仕立て",
+      "石づくり",
+      "まんまる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 36,
+    "local_number": null,
+    "name": "エビワラー",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "みんなで使う",
+      "布仕立て",
+      "石づくり",
+      "まんまる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 37,
+    "local_number": null,
+    "name": "カポエラー",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "みんなで使う",
+      "布仕立て",
+      "石づくり",
+      "まんまる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 38,
+    "local_number": null,
+    "name": "ドガース",
+    "specialty": [
+      "リサイクル"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ゴミ",
+      "あつまり",
+      "難しそうなもの",
+      "やわらかい",
+      "ゆれる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 39,
+    "local_number": null,
+    "name": "マタドガス",
+    "specialty": [
+      "リサイクル"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ゴミ",
+      "あつまり",
+      "難しそうなもの",
+      "やわらかい",
+      "ゆれる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 40,
+    "local_number": null,
+    "name": "モンジャラ",
+    "specialty": [
+      "さいばい",
+      "ちらかす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "水を感じる",
+      "あつまり",
+      "花ざかり",
+      "ほっそり",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 41,
+    "local_number": null,
+    "name": "モジャンボ(はかせ)",
+    "specialty": [
+      "かんてい"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "難しそうなもの",
+      "文字がある",
+      "フシギ",
+      "みんなで使う",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 41,
+    "local_number": null,
+    "name": "モジャンボ",
+    "specialty": [
+      "さいばい",
+      "ちらかす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "水を感じる",
+      "あつまり",
+      "花ざかり",
+      "見て楽しむ",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 42,
+    "local_number": null,
+    "name": "ストライク",
+    "specialty": [
+      "きをきる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "風を感じる",
+      "木製",
+      "とがっている",
+      "トレーニングできる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 43,
+    "local_number": null,
+    "name": "ハッサム",
+    "specialty": [
+      "きをきる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "メタリック",
+      "木製",
+      "かたい",
+      "トレーニングできる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 44,
+    "local_number": null,
+    "name": "カイロス",
+    "specialty": [
+      "きをきる",
+      "けんちく"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "花ざかり",
+      "とがっている",
+      "トレーニングできる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 45,
+    "local_number": null,
+    "name": "コイキング",
+    "specialty": [
+      "なし"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "みんなで使う",
+      "乗りもの",
+      "ゆれる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 46,
+    "local_number": null,
+    "name": "ギャラドス",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "風を感じる",
+      "せいけつ",
+      "ほっそり",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 47,
+    "local_number": null,
+    "name": "メタモン",
+    "specialty": [
+      "なし"
+    ],
+    "environment": "なし",
+    "favorites": [
+      "なし"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 48,
+    "local_number": null,
+    "name": "ホーホー",
+    "specialty": [
+      "とりひき",
+      "そらをとぶ"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "やわらかい",
+      "風を感じる",
+      "布仕立て",
+      "ゆれる",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 49,
+    "local_number": null,
+    "name": "ヨルノズク",
+    "specialty": [
+      "とりひき",
+      "そらをとぶ"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "やわらかい",
+      "風を感じる",
+      "文字がある",
+      "いれもの",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 50,
+    "local_number": null,
+    "name": "ヘラクロス",
+    "specialty": [
+      "きをきる",
+      "けんちく"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "花ざかり",
+      "食べものそっくり",
+      "トレーニングできる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 51,
+    "local_number": null,
+    "name": "バルビート",
+    "specialty": [
+      "もりあげる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "キラキラしてる",
+      "キュート",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 52,
+    "local_number": null,
+    "name": "イルミーゼ",
+    "specialty": [
+      "もりあげる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "キラキラしてる",
+      "キュート",
+      "みんなで使う",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 53,
+    "local_number": null,
+    "name": "ゴクリン",
+    "specialty": [
+      "しゅうのう"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "キュート",
+      "食べものそっくり",
+      "まんまる",
+      "いれもの",
+      "カラフル",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 54,
+    "local_number": null,
+    "name": "マルノーム",
+    "specialty": [
+      "しゅうのう"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "ゴミ",
+      "食べものそっくり",
+      "まんまる",
+      "いれもの",
+      "カラフル",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 55,
+    "local_number": null,
+    "name": "サボネア",
+    "specialty": [
+      "さいばい"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "自然を感じる",
+      "花ざかり",
+      "キュート",
+      "まんまる",
+      "とがっている",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 56,
+    "local_number": null,
+    "name": "ノクタス",
+    "specialty": [
+      "さいばい",
+      "ちらかす"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "自然を感じる",
+      "風を感じる",
+      "ゴージャス",
+      "キラキラしてる",
+      "とがっている",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 57,
+    "local_number": null,
+    "name": "ミツハニー",
+    "specialty": [
+      "ちらかす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "風を感じる",
+      "木製",
+      "あつまり",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 58,
+    "local_number": null,
+    "name": "ビークイン",
+    "specialty": [
+      "ミツあつめ",
+      "さがしもの"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "風を感じる",
+      "木製",
+      "あつまり",
+      "難しそうなもの",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 59,
+    "local_number": null,
+    "name": "カラナクシ(にしのうみ)",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "せいけつ",
+      "カラフル",
+      "いれもの",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 59,
+    "local_number": null,
+    "name": "カラナクシ(ひがしのうみ)",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "せいけつ",
+      "カラフル",
+      "いれもの",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 60,
+    "local_number": null,
+    "name": "トリトドン(にしのうみ)",
+    "specialty": [
+      "うるおす",
+      "とりひき"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "土を感じる",
+      "海を感じる",
+      "せいけつ",
+      "いれもの",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 60,
+    "local_number": null,
+    "name": "トリトドン(ひがしのうみ)",
+    "specialty": [
+      "うるおす",
+      "とりひき"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "土を感じる",
+      "海を感じる",
+      "せいけつ",
+      "いれもの",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 61,
+    "local_number": null,
+    "name": "フワンテ",
+    "specialty": [
+      "ゆめしま"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "風を感じる",
+      "キュート",
+      "まんまる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 62,
+    "local_number": null,
+    "name": "フワライド",
+    "specialty": [
+      "そらをとぶ",
+      "しわける"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "風を感じる",
+      "ゆれる",
+      "まわる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 63,
+    "local_number": null,
+    "name": "モグリュー",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "土を感じる",
+      "石づくり",
+      "自然を感じる",
+      "見て楽しむ",
+      "とがっている",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 64,
+    "local_number": null,
+    "name": "ドリュウズ",
+    "specialty": [
+      "さがしもの",
+      "きをきる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "土を感じる",
+      "メタリック",
+      "トレーニングできる",
+      "見て楽しむ",
+      "とがっている",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 65,
+    "local_number": null,
+    "name": "ドッコラー",
+    "specialty": [
+      "けんちく"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "けんせつ",
+      "木製",
+      "ほっそり",
+      "四角い",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 66,
+    "local_number": null,
+    "name": "ドテッコツ",
+    "specialty": [
+      "けんちく"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "けんせつ",
+      "メタリック",
+      "ほっそり",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 67,
+    "local_number": null,
+    "name": "ローブシン",
+    "specialty": [
+      "けんちく",
+      "つぶす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "けんせつ",
+      "石づくり",
+      "ほっそり",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 68,
+    "local_number": null,
+    "name": "ヒトモシ",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "炎を感じる",
+      "ゆれる",
+      "四角い",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 69,
+    "local_number": null,
+    "name": "ランプラー",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "炎を感じる",
+      "ゆれる",
+      "いれもの",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 70,
+    "local_number": null,
+    "name": "シャンデラ",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "炎を感じる",
+      "ゆれる",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 71,
+    "local_number": null,
+    "name": "キバゴ",
+    "specialty": [
+      "きをきる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "炎を感じる",
+      "ゴージャス",
+      "土を感じる",
+      "かたい",
+      "とがっている",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 72,
+    "local_number": null,
+    "name": "オノンド",
+    "specialty": [
+      "きをきる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "炎を感じる",
+      "ゴージャス",
+      "土を感じる",
+      "トレーニングできる",
+      "とがっている",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 73,
+    "local_number": null,
+    "name": "オノノクス",
+    "specialty": [
+      "きをきる",
+      "ちらかす"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "炎を感じる",
+      "ゴージャス",
+      "土を感じる",
+      "トレーニングできる",
+      "とがっている",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 74,
+    "local_number": null,
+    "name": "ヌメラ",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "ゴージャス",
+      "自然を感じる",
+      "せいけつ",
+      "キズをいやす",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 75,
+    "local_number": null,
+    "name": "ヌメイル",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "ゴージャス",
+      "やわらかい",
+      "せいけつ",
+      "キズをいやす",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 76,
+    "local_number": null,
+    "name": "ヌメルゴン",
+    "specialty": [
+      "うるおす",
+      "とりひき"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "ゴージャス",
+      "トレーニングできる",
+      "せいけつ",
+      "キズをいやす",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 77,
+    "local_number": null,
+    "name": "ウッウ",
+    "specialty": [
+      "そらをとぶ",
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "風を感じる",
+      "水を感じる",
+      "海を感じる",
+      "ほっそり",
+      "食べものそっくり",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 78,
+    "local_number": null,
+    "name": "ピチュー",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "ガラス入り",
+      "キュート",
+      "花ざかり",
+      "布仕立て",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 79,
+    "local_number": null,
+    "name": "ピカチュウ(うすいろ)",
+    "specialty": [
+      "はっこう"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "ガラス入り",
+      "キュート",
+      "キズをいやす",
+      "文字がある",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 79,
+    "local_number": null,
+    "name": "ピカチュウ",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "ガラス入り",
+      "みんなで使う",
+      "まんまる",
+      "乗りもの",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 80,
+    "local_number": null,
+    "name": "ライチュウ",
+    "specialty": [
+      "はつでん",
+      "もりあげる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "ガラス入り",
+      "みんなで使う",
+      "まんまる",
+      "あそびば",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 81,
+    "local_number": null,
+    "name": "ズバット",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "風を感じる",
+      "木製",
+      "音が鳴る",
+      "難しそうなもの",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 82,
+    "local_number": null,
+    "name": "ゴルバット",
+    "specialty": [
+      "さがしもの",
+      "きをきる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "風を感じる",
+      "木製",
+      "音が鳴る",
+      "難しそうなもの",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 83,
+    "local_number": null,
+    "name": "クロバット",
+    "specialty": [
+      "さがしもの",
+      "きをきる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "風を感じる",
+      "木製",
+      "ゴミ",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 84,
+    "local_number": null,
+    "name": "ニャース",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "すずしい",
+    "favorites": [
+      "いれもの",
+      "みんなで使う",
+      "キラキラしてる",
+      "ガラス入り",
+      "ゴージャス",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 85,
+    "local_number": null,
+    "name": "ペルシアン",
+    "specialty": [
+      "とりひき",
+      "さがしもの"
+    ],
+    "environment": "すずしい",
+    "favorites": [
+      "いれもの",
+      "みんなで使う",
+      "キラキラしてる",
+      "見て楽しむ",
+      "ゴージャス",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 86,
+    "local_number": null,
+    "name": "コダック",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "フシギ",
+      "難しそうなもの",
+      "キズをいやす",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 87,
+    "local_number": null,
+    "name": "ゴルダック",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "フシギ",
+      "難しそうなもの",
+      "とがっている",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 88,
+    "local_number": null,
+    "name": "ガーディ",
+    "specialty": [
+      "もやす",
+      "さがしもの"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "風を感じる",
+      "文字がある",
+      "花ざかり",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 89,
+    "local_number": null,
+    "name": "ウインディ",
+    "specialty": [
+      "もやす",
+      "さがしもの"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "風を感じる",
+      "見て楽しむ",
+      "シンボル",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 90,
+    "local_number": null,
+    "name": "カモネギ",
+    "specialty": [
+      "きをきる",
+      "けんちく"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "やわらかい",
+      "風を感じる",
+      "木製",
+      "ほっそり",
+      "トレーニングできる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 91,
+    "local_number": null,
+    "name": "ベトベター",
+    "specialty": [
+      "ちらかす"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ゴミ",
+      "ブキミ",
+      "あつまり",
+      "キラキラしてる",
+      "いれもの",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 92,
+    "local_number": null,
+    "name": "ベトベトン",
+    "specialty": [
+      "ちらかす"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ゴミ",
+      "ブキミ",
+      "あつまり",
+      "キラキラしてる",
+      "カラフル",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 93,
+    "local_number": null,
+    "name": "ゴース",
+    "specialty": [
+      "しわける",
+      "とりひき"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "ゴミ",
+      "いれもの",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 94,
+    "local_number": null,
+    "name": "ゴースト",
+    "specialty": [
+      "しわける",
+      "とりひき"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "ゴミ",
+      "ゆれる",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 95,
+    "local_number": null,
+    "name": "ゲンガー",
+    "specialty": [
+      "しわける",
+      "とりひき"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "ゴミ",
+      "乗りもの",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 96,
+    "local_number": null,
+    "name": "ビリリダマ",
+    "specialty": [
+      "はつでん",
+      "ばくはつ"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "キラキラしてる",
+      "まんまる",
+      "カラフル",
+      "まわる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 97,
+    "local_number": null,
+    "name": "マルマイン",
+    "specialty": [
+      "はつでん",
+      "ばくはつ"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "キラキラしてる",
+      "まんまる",
+      "あそびば",
+      "まわる",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 98,
+    "local_number": null,
+    "name": "タマタマ",
+    "specialty": [
+      "さいばい",
+      "テレポート"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "フシギ",
+      "あつまり",
+      "見て楽しむ",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 99,
+    "local_number": null,
+    "name": "ナッシー",
+    "specialty": [
+      "さいばい",
+      "テレポート"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "フシギ",
+      "あつまり",
+      "見て楽しむ",
+      "木製",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 100,
+    "local_number": null,
+    "name": "ピンプク",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "布仕立て",
+      "キズをいやす",
+      "まんまる",
+      "いれもの",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 101,
+    "local_number": null,
+    "name": "ラッキー",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "布仕立て",
+      "キズをいやす",
+      "まんまる",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 102,
+    "local_number": null,
+    "name": "ハピナス",
+    "specialty": [
+      "とりひき",
+      "ちらかす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "布仕立て",
+      "キズをいやす",
+      "まんまる",
+      "みんなで使う",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 103,
+    "local_number": null,
+    "name": "エレキッド",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "ガラス入り",
+      "キュート",
+      "まんまる",
+      "まわる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 104,
+    "local_number": null,
+    "name": "エレブー",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "ガラス入り",
+      "炎を感じる",
+      "とがっている",
+      "トレーニングできる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 105,
+    "local_number": null,
+    "name": "エレキブル",
+    "specialty": [
+      "はつでん",
+      "つぶす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "ガラス入り",
+      "炎を感じる",
+      "かたい",
+      "トレーニングできる",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 106,
+    "local_number": null,
+    "name": "ラプラス",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "せいけつ",
+      "見て楽しむ",
+      "キズをいやす",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 107,
+    "local_number": null,
+    "name": "ゴンベ",
+    "specialty": [
+      "じならし"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "やわらかい",
+      "自然を感じる",
+      "食べものそっくり",
+      "ゆれる",
+      "みんなで使う",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 108,
+    "local_number": null,
+    "name": "カビゴン(こけむし)",
+    "specialty": [
+      "くいしんぼ"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "布仕立て",
+      "食べものそっくり",
+      "見て楽しむ",
+      "フシギ",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 108,
+    "local_number": null,
+    "name": "カビゴン",
+    "specialty": [
+      "とりひき",
+      "じならし"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "やわらかい",
+      "布仕立て",
+      "食べものそっくり",
+      "ゆれる",
+      "乗りもの",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 109,
+    "local_number": null,
+    "name": "イトマル",
+    "specialty": [
+      "ちらかす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "ゴミ",
+      "乗りもの",
+      "カラフル",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 110,
+    "local_number": null,
+    "name": "アリアドス",
+    "specialty": [
+      "ちらかす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "ゴミ",
+      "乗りもの",
+      "カラフル",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 111,
+    "local_number": null,
+    "name": "メリープ",
+    "specialty": [
+      "はつでん",
+      "ちらかす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "キラキラしてる",
+      "ガラス入り",
+      "キュート",
+      "布仕立て",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 112,
+    "local_number": null,
+    "name": "モココ",
+    "specialty": [
+      "はつでん",
+      "ちらかす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "キラキラしてる",
+      "ガラス入り",
+      "キュート",
+      "乗りもの",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 113,
+    "local_number": null,
+    "name": "デンリュウ",
+    "specialty": [
+      "はつでん",
+      "とりひき"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "キラキラしてる",
+      "ガラス入り",
+      "キュート",
+      "花ざかり",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 114,
+    "local_number": null,
+    "name": "ルリリ",
+    "specialty": [
+      "うるおす",
+      "もりあげる"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "キュート",
+      "せいけつ",
+      "キズをいやす",
+      "乗りもの",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 115,
+    "local_number": null,
+    "name": "マリル",
+    "specialty": [
+      "うるおす",
+      "もりあげる"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "キュート",
+      "せいけつ",
+      "まんまる",
+      "シンボル",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 116,
+    "local_number": null,
+    "name": "マリルリ",
+    "specialty": [
+      "うるおす",
+      "けんちく"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "キュート",
+      "けんせつ",
+      "ゆれる",
+      "シンボル",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 117,
+    "local_number": null,
+    "name": "ウパー(パルデア)",
+    "specialty": [
+      "ちらかす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "ゴミ",
+      "土を感じる",
+      "石づくり",
+      "せいけつ",
+      "みんなで使う",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 118,
+    "local_number": null,
+    "name": "ドオー",
+    "specialty": [
+      "ちらかす",
+      "じならし"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "ゴミ",
+      "土を感じる",
+      "水を感じる",
+      "せいけつ",
+      "まんまる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 119,
+    "local_number": null,
+    "name": "ドーブル(ペインター)",
+    "specialty": [
+      "ペイント"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "布仕立て",
+      "フシギ",
+      "カラフル",
+      "キラキラしてる",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 120,
+    "local_number": null,
+    "name": "アチャモ",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "キュート",
+      "いれもの",
+      "花ざかり",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 121,
+    "local_number": null,
+    "name": "ワカシャモ",
+    "specialty": [
+      "もやす",
+      "けんちく"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "トレーニングできる",
+      "いれもの",
+      "けんせつ",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 122,
+    "local_number": null,
+    "name": "バシャーモ",
+    "specialty": [
+      "もやす",
+      "けんちく"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "ゴージャス",
+      "トレーニングできる",
+      "いれもの",
+      "けんせつ",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 123,
+    "local_number": null,
+    "name": "キャモメ",
+    "specialty": [
+      "うるおす",
+      "そらをとぶ"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "風を感じる",
+      "せいけつ",
+      "海を感じる",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 124,
+    "local_number": null,
+    "name": "ペリッパー",
+    "specialty": [
+      "うるおす",
+      "そらをとぶ"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "風を感じる",
+      "せいけつ",
+      "海を感じる",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 125,
+    "local_number": null,
+    "name": "マクノシタ",
+    "specialty": [
+      "けんちく",
+      "じならし"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "けんせつ",
+      "布仕立て",
+      "まんまる",
+      "木製",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 126,
+    "local_number": null,
+    "name": "ハリテヤマ",
+    "specialty": [
+      "けんちく",
+      "じならし"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "けんせつ",
+      "布仕立て",
+      "まんまる",
+      "乗りもの",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 127,
+    "local_number": null,
+    "name": "アブソル",
+    "specialty": [
+      "きをきる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "やわらかい",
+      "風を感じる",
+      "文字がある",
+      "難しそうなもの",
+      "トレーニングできる",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 128,
+    "local_number": null,
+    "name": "ポッチャマ",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "風を感じる",
+      "せいけつ",
+      "いれもの",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 129,
+    "local_number": null,
+    "name": "ポッタイシ",
+    "specialty": [
+      "うるおす",
+      "とりひき"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "風を感じる",
+      "せいけつ",
+      "いれもの",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 130,
+    "local_number": null,
+    "name": "エンペルト",
+    "specialty": [
+      "うるおす",
+      "とりひき"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "メタリック",
+      "せいけつ",
+      "文字がある",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 131,
+    "local_number": null,
+    "name": "タブンネ",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "布仕立て",
+      "キズをいやす",
+      "キュート",
+      "まんまる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 132,
+    "local_number": null,
+    "name": "ヤブクロン",
+    "specialty": [
+      "リサイクル"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "ゴミ",
+      "いれもの",
+      "難しそうなもの",
+      "キラキラしてる",
+      "あつまり",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 133,
+    "local_number": null,
+    "name": "ダストダス",
+    "specialty": [
+      "リサイクル",
+      "ちらかす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "ゴミ",
+      "いれもの",
+      "難しそうなもの",
+      "キラキラしてる",
+      "あつまり",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 134,
+    "local_number": null,
+    "name": "ゾロア",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "キラキラしてる",
+      "ゴージャス",
+      "ガラス入り",
+      "キュート",
+      "みんなで使う",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 135,
+    "local_number": null,
+    "name": "ゾロアーク",
+    "specialty": [
+      "とりひき",
+      "きをきる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "キラキラしてる",
+      "ゴージャス",
+      "ガラス入り",
+      "フシギ",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 136,
+    "local_number": null,
+    "name": "チラーミィ",
+    "specialty": [
+      "しわける"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "布仕立て",
+      "乗りもの",
+      "キュート",
+      "せいけつ",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 137,
+    "local_number": null,
+    "name": "チラチーノ",
+    "specialty": [
+      "しわける",
+      "リサイクル"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "布仕立て",
+      "乗りもの",
+      "キュート",
+      "せいけつ",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 138,
+    "local_number": null,
+    "name": "アゴジムシ",
+    "specialty": [
+      "きをきる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "電気で動く",
+      "見て楽しむ",
+      "土を感じる",
+      "いれもの",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 139,
+    "local_number": null,
+    "name": "デンジムシ",
+    "specialty": [
+      "はつでん",
+      "きをきる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "電気で動く",
+      "見て楽しむ",
+      "ガラス入り",
+      "四角い",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 140,
+    "local_number": null,
+    "name": "クワガノン",
+    "specialty": [
+      "はつでん",
+      "きをきる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "電気で動く",
+      "トレーニングできる",
+      "ガラス入り",
+      "風を感じる",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 141,
+    "local_number": null,
+    "name": "ミミッキュ",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "キュート",
+      "電気で動く",
+      "布仕立て",
+      "みんなで使う",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 142,
+    "local_number": null,
+    "name": "パモ",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "キラキラしてる",
+      "キュート",
+      "ガラス入り",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 143,
+    "local_number": null,
+    "name": "パモット",
+    "specialty": [
+      "はつでん",
+      "つぶす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "キラキラしてる",
+      "トレーニングできる",
+      "ガラス入り",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 144,
+    "local_number": null,
+    "name": "パーモット",
+    "specialty": [
+      "はつでん",
+      "つぶす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "いれもの",
+      "キラキラしてる",
+      "トレーニングできる",
+      "キズをいやす",
+      "みんなで使う",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 145,
+    "local_number": null,
+    "name": "シャリタツ(たれたすがた)",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "みんなで使う",
+      "まわる",
+      "四角い",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 145,
+    "local_number": null,
+    "name": "シャリタツ(そったすがた)",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "みんなで使う",
+      "ほっそり",
+      "あつまり",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 145,
+    "local_number": null,
+    "name": "シャリタツ(のびたすがた)",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "みんなで使う",
+      "文字がある",
+      "いれもの",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 146,
+    "local_number": null,
+    "name": "アーボ",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ゴミ",
+      "見て楽しむ",
+      "自然を感じる",
+      "ほっそり",
+      "まわる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 147,
+    "local_number": null,
+    "name": "アーボック",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ゴミ",
+      "見て楽しむ",
+      "自然を感じる",
+      "ほっそり",
+      "まわる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 148,
+    "local_number": null,
+    "name": "ピィ",
+    "specialty": [
+      "もりあげる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "キュート",
+      "まんまる",
+      "カラフル",
+      "キズをいやす",
+      "乗りもの",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 149,
+    "local_number": null,
+    "name": "ピッピ",
+    "specialty": [
+      "もりあげる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "キュート",
+      "あそびば",
+      "花ざかり",
+      "キズをいやす",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 150,
+    "local_number": null,
+    "name": "ピクシー",
+    "specialty": [
+      "もりあげる",
+      "とりひき"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "キュート",
+      "あそびば",
+      "花ざかり",
+      "キズをいやす",
+      "みんなで使う",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 151,
+    "local_number": null,
+    "name": "ププリン",
+    "specialty": [
+      "もりあげる"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "やわらかい",
+      "キュート",
+      "あそびば",
+      "キズをいやす",
+      "音が鳴る",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 152,
+    "local_number": null,
+    "name": "プリン",
+    "specialty": [
+      "もりあげる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "キュート",
+      "あそびば",
+      "キズをいやす",
+      "ゆれる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 153,
+    "local_number": null,
+    "name": "プクリン",
+    "specialty": [
+      "もりあげる",
+      "とりひき"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "キュート",
+      "あそびば",
+      "キズをいやす",
+      "みんなで使う",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 154,
+    "local_number": null,
+    "name": "ディグダ",
+    "specialty": [
+      "もりあげる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "土を感じる",
+      "あそびば",
+      "キュート",
+      "みんなで使う",
+      "ほっそり",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 155,
+    "local_number": null,
+    "name": "ダグトリオ",
+    "specialty": [
+      "もりあげる",
+      "つぶす"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "土を感じる",
+      "あそびば",
+      "あつまり",
+      "みんなで使う",
+      "ほっそり",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 156,
+    "local_number": null,
+    "name": "ワンリキー",
+    "specialty": [
+      "けんちく",
+      "しわける"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "けんせつ",
+      "石づくり",
+      "かたい",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 157,
+    "local_number": null,
+    "name": "ゴーリキー",
+    "specialty": [
+      "けんちく",
+      "しわける"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "けんせつ",
+      "石づくり",
+      "かたい",
+      "みんなで使う",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 158,
+    "local_number": null,
+    "name": "カイリキー",
+    "specialty": [
+      "けんちく",
+      "しわける"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "トレーニングできる",
+      "けんせつ",
+      "石づくり",
+      "かたい",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 159,
+    "local_number": null,
+    "name": "イシツブテ",
+    "specialty": [
+      "つぶす"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "まわる",
+      "まんまる",
+      "トレーニングできる",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 160,
+    "local_number": null,
+    "name": "ゴローン",
+    "specialty": [
+      "つぶす"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "まわる",
+      "まんまる",
+      "トレーニングできる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 161,
+    "local_number": null,
+    "name": "ゴローニャ",
+    "specialty": [
+      "つぶす",
+      "とりひき"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "まわる",
+      "まんまる",
+      "トレーニングできる",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 162,
+    "local_number": null,
+    "name": "ブビィ",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "見て楽しむ",
+      "キュート",
+      "ゆれる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 163,
+    "local_number": null,
+    "name": "ブーバー",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "電気で動く",
+      "かたい",
+      "トレーニングできる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 164,
+    "local_number": null,
+    "name": "ブーバーン",
+    "specialty": [
+      "もやす",
+      "つぶす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "電気で動く",
+      "かたい",
+      "トレーニングできる",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 165,
+    "local_number": null,
+    "name": "ウソハチ",
+    "specialty": [
+      "じならし"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "自然を感じる",
+      "木製",
+      "まんまる",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 166,
+    "local_number": null,
+    "name": "ウソッキー",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "自然を感じる",
+      "木製",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 167,
+    "local_number": null,
+    "name": "ヤミカラス",
+    "specialty": [
+      "とりひき",
+      "そらをとぶ"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "キラキラしてる",
+      "風を感じる",
+      "みんなで使う",
+      "ゴージャス",
+      "布仕立て",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 168,
+    "local_number": null,
+    "name": "ドンカラス",
+    "specialty": [
+      "とりひき",
+      "そらをとぶ"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "キラキラしてる",
+      "風を感じる",
+      "ブキミ",
+      "文字がある",
+      "ガラス入り",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 169,
+    "local_number": null,
+    "name": "ヨーギラス",
+    "specialty": [
+      "つぶす",
+      "じならし"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "石づくり",
+      "土を感じる",
+      "ゴージャス",
+      "キラキラしてる",
+      "食べものそっくり",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 170,
+    "local_number": null,
+    "name": "サナギラス",
+    "specialty": [
+      "つぶす",
+      "じならし"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "ゴージャス",
+      "キラキラしてる",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 171,
+    "local_number": null,
+    "name": "バンギラス",
+    "specialty": [
+      "つぶす",
+      "じならし"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "ゴージャス",
+      "キラキラしてる",
+      "トレーニングできる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 172,
+    "local_number": null,
+    "name": "ハスボー",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "自然を感じる",
+      "せいけつ",
+      "いれもの",
+      "音が鳴る",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 173,
+    "local_number": null,
+    "name": "ハスブレロ",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "自然を感じる",
+      "せいけつ",
+      "いれもの",
+      "音が鳴る",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 174,
+    "local_number": null,
+    "name": "ルンパッパ",
+    "specialty": [
+      "うるおす",
+      "もりあげる"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "自然を感じる",
+      "あそびば",
+      "いれもの",
+      "音が鳴る",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 175,
+    "local_number": null,
+    "name": "クチート",
+    "specialty": [
+      "とりひき",
+      "けんちく"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "メタリック",
+      "キュート",
+      "カラフル",
+      "食べものそっくり",
+      "みんなで使う",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 176,
+    "local_number": null,
+    "name": "コータス",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "メタリック",
+      "かたい",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 177,
+    "local_number": null,
+    "name": "コロボーシ",
+    "specialty": [
+      "もりあげる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "音が鳴る",
+      "カラフル",
+      "見て楽しむ",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 178,
+    "local_number": null,
+    "name": "コロトック",
+    "specialty": [
+      "もりあげる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "音が鳴る",
+      "カラフル",
+      "見て楽しむ",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 179,
+    "local_number": null,
+    "name": "ペラップ",
+    "specialty": [
+      "もりあげる",
+      "そらをとぶ"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "風を感じる",
+      "布仕立て",
+      "ほっそり",
+      "あそびば",
+      "音が鳴る",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 180,
+    "local_number": null,
+    "name": "リオル",
+    "specialty": [
+      "けんちく"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "トレーニングできる",
+      "布仕立て",
+      "けんせつ",
+      "あつまり",
+      "見て楽しむ",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 181,
+    "local_number": null,
+    "name": "ルカリオ",
+    "specialty": [
+      "けんちく"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "トレーニングできる",
+      "メタリック",
+      "けんせつ",
+      "難しそうなもの",
+      "キズをいやす",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 182,
+    "local_number": null,
+    "name": "ロトム(ステレオ)",
+    "specialty": [
+      "DJ"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "キラキラしてる",
+      "ガラス入り",
+      "音が鳴る",
+      "みんなで使う",
+      "四角い",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 183,
+    "local_number": null,
+    "name": "メラルバ",
+    "specialty": [
+      "もやす",
+      "ちらかす"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "自然を感じる",
+      "炎を感じる",
+      "とがっている",
+      "木製",
+      "シンボル",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 184,
+    "local_number": null,
+    "name": "ウルガモス",
+    "specialty": [
+      "もやす",
+      "ちらかす"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "自然を感じる",
+      "炎を感じる",
+      "文字がある",
+      "木製",
+      "シンボル",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 185,
+    "local_number": null,
+    "name": "モクロー",
+    "specialty": [
+      "さいばい"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "風を感じる",
+      "いれもの",
+      "まわる",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 186,
+    "local_number": null,
+    "name": "フクスロー",
+    "specialty": [
+      "さいばい",
+      "きをきる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "風を感じる",
+      "ほっそり",
+      "せいけつ",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 187,
+    "local_number": null,
+    "name": "ジュナイパー",
+    "specialty": [
+      "さいばい",
+      "きをきる"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "自然を感じる",
+      "ブキミ",
+      "木製",
+      "風を感じる",
+      "文字がある",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 188,
+    "local_number": null,
+    "name": "ヒバニー",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "やわらかい",
+      "みんなで使う",
+      "とがっている",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 189,
+    "local_number": null,
+    "name": "ラビフット",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "あそびば",
+      "みんなで使う",
+      "いれもの",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 190,
+    "local_number": null,
+    "name": "エースバーン",
+    "specialty": [
+      "もやす",
+      "もりあげる"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "あそびば",
+      "みんなで使う",
+      "まんまる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 191,
+    "local_number": null,
+    "name": "ホシガリス",
+    "specialty": [
+      "さがしもの",
+      "もりあげる"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "やわらかい",
+      "木製",
+      "見て楽しむ",
+      "食べものそっくり",
+      "まんまる",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 192,
+    "local_number": null,
+    "name": "ヨクバリス(シェフ)",
+    "specialty": [
+      "パーティー"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "やわらかい",
+      "メタリック",
+      "みんなで使う",
+      "食べものそっくり",
+      "ゴージャス",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 193,
+    "local_number": null,
+    "name": "タンドン",
+    "specialty": [
+      "もやす",
+      "しわける"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "石づくり",
+      "炎を感じる",
+      "かたい",
+      "メタリック",
+      "乗りもの",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 194,
+    "local_number": null,
+    "name": "トロッゴン",
+    "specialty": [
+      "もやす",
+      "しわける"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "石づくり",
+      "炎を感じる",
+      "かたい",
+      "メタリック",
+      "乗りもの",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 195,
+    "local_number": null,
+    "name": "セキタンザン",
+    "specialty": [
+      "もやす",
+      "しわける"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "石づくり",
+      "炎を感じる",
+      "かたい",
+      "メタリック",
+      "乗りもの",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 196,
+    "local_number": null,
+    "name": "エレズン",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "電気で動く",
+      "キラキラしてる",
+      "音が鳴る",
+      "ガラス入り",
+      "ゴミ",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 197,
+    "local_number": null,
+    "name": "ストリンダー(ハイ)",
+    "specialty": [
+      "はつでん",
+      "もりあげる"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "電気で動く",
+      "あそびば",
+      "音が鳴る",
+      "ほっそり",
+      "とがっている",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 197,
+    "local_number": null,
+    "name": "ストリンダー(ロー)",
+    "specialty": [
+      "はつでん",
+      "もりあげる"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "電気で動く",
+      "あそびば",
+      "音が鳴る",
+      "ほっそり",
+      "とがっている",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 198,
+    "local_number": null,
+    "name": "パピモッチ",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "キュート",
+      "見て楽しむ",
+      "やわらかい",
+      "炎を感じる",
+      "文字がある",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 199,
+    "local_number": null,
+    "name": "バウッツェル",
+    "specialty": [
+      "さがしもの",
+      "とりひき"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "キュート",
+      "見て楽しむ",
+      "みんなで使う",
+      "炎を感じる",
+      "食べものそっくり",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 200,
+    "local_number": null,
+    "name": "カルボウ",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "フシギ",
+      "トレーニングできる",
+      "ゴージャス",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 201,
+    "local_number": null,
+    "name": "グレンアルマ",
+    "specialty": [
+      "もやす",
+      "とりひき"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "フシギ",
+      "トレーニングできる",
+      "ゴージャス",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 202,
+    "local_number": null,
+    "name": "ソウブレイズ",
+    "specialty": [
+      "もやす",
+      "とりひき"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "ブキミ",
+      "フシギ",
+      "ゴージャス",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 203,
+    "local_number": null,
+    "name": "キラーメ",
+    "specialty": [
+      "ちらかす"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "ゴミ",
+      "キラキラしてる",
+      "難しそうなもの",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 204,
+    "local_number": null,
+    "name": "キラフロル",
+    "specialty": [
+      "ちらかす"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "ゴミ",
+      "キラキラしてる",
+      "難しそうなもの",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 205,
+    "local_number": null,
+    "name": "コレクレー",
+    "specialty": [
+      "コレクター"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "メタリック",
+      "フシギ",
+      "キラキラしてる",
+      "難しそうなもの",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 206,
+    "local_number": null,
+    "name": "サーフゴー",
+    "specialty": [
+      "コレクター"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "ブキミ",
+      "メタリック",
+      "フシギ",
+      "キラキラしてる",
+      "難しそうなもの",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 207,
+    "local_number": null,
+    "name": "ロコン",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "やわらかい",
+      "キュート",
+      "まんまる",
+      "花ざかり",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 208,
+    "local_number": null,
+    "name": "キュウコン",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "やわらかい",
+      "見て楽しむ",
+      "ゴージャス",
+      "花ざかり",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 209,
+    "local_number": null,
+    "name": "ニョロモ",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "せいけつ",
+      "まんまる",
+      "乗りもの",
+      "まわる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 210,
+    "local_number": null,
+    "name": "ニョロゾ",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "せいけつ",
+      "自然を感じる",
+      "トレーニングできる",
+      "まわる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 211,
+    "local_number": null,
+    "name": "ニョロボン",
+    "specialty": [
+      "うるおす",
+      "けんちく"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "せいけつ",
+      "けんせつ",
+      "トレーニングできる",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 212,
+    "local_number": null,
+    "name": "ニョロトノ",
+    "specialty": [
+      "うるおす",
+      "もりあげる"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "あそびば",
+      "音が鳴る",
+      "あつまり",
+      "みんなで使う",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 213,
+    "local_number": null,
+    "name": "ケーシィ",
+    "specialty": [
+      "テレポート"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "フシギ",
+      "ゆれる",
+      "メタリック",
+      "やわらかい",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 214,
+    "local_number": null,
+    "name": "ユンゲラー",
+    "specialty": [
+      "テレポート"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "フシギ",
+      "ゆれる",
+      "メタリック",
+      "いれもの",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 215,
+    "local_number": null,
+    "name": "フーディン",
+    "specialty": [
+      "テレポート",
+      "とりひき"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "フシギ",
+      "ゆれる",
+      "メタリック",
+      "文字がある",
+      "見て楽しむ",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 216,
+    "local_number": null,
+    "name": "マネネ",
+    "specialty": [
+      "しわける"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "フシギ",
+      "キュート",
+      "乗りもの",
+      "あそびば",
+      "カラフル",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 217,
+    "local_number": null,
+    "name": "バリヤード",
+    "specialty": [
+      "しわける",
+      "けんちく"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "フシギ",
+      "キュート",
+      "乗りもの",
+      "ゆれる",
+      "見て楽しむ",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 218,
+    "local_number": null,
+    "name": "ポリゴン",
+    "specialty": [
+      "リサイクル"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "フシギ",
+      "四角い",
+      "けんせつ",
+      "カラフル",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 219,
+    "local_number": null,
+    "name": "ポリゴン2",
+    "specialty": [
+      "リサイクル"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "フシギ",
+      "まんまる",
+      "けんせつ",
+      "カラフル",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 220,
+    "local_number": null,
+    "name": "ポリゴンZ",
+    "specialty": [
+      "レアもの"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "フシギ",
+      "布仕立て",
+      "見て楽しむ",
+      "カラフル",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 221,
+    "local_number": null,
+    "name": "ミニリュウ",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "炎を感じる",
+      "せいけつ",
+      "キュート",
+      "ほっそり",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 222,
+    "local_number": null,
+    "name": "ハクリュー",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "炎を感じる",
+      "せいけつ",
+      "ガラス入り",
+      "ほっそり",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 223,
+    "local_number": null,
+    "name": "カイリュー",
+    "specialty": [
+      "うるおす",
+      "そらをとぶ"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "炎を感じる",
+      "風を感じる",
+      "せいけつ",
+      "シンボル",
+      "花ざかり",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 224,
+    "local_number": null,
+    "name": "ヒノアラシ",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "布仕立て",
+      "ほっそり",
+      "メタリック",
+      "乗りもの",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 225,
+    "local_number": null,
+    "name": "マグマラシ",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "布仕立て",
+      "ほっそり",
+      "メタリック",
+      "乗りもの",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 226,
+    "local_number": null,
+    "name": "バクフーン",
+    "specialty": [
+      "もやす",
+      "とりひき"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "布仕立て",
+      "ほっそり",
+      "メタリック",
+      "乗りもの",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 227,
+    "local_number": null,
+    "name": "ムウマ",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "キラキラしてる",
+      "カラフル",
+      "見て楽しむ",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 228,
+    "local_number": null,
+    "name": "ムウマージ",
+    "specialty": [
+      "しわける",
+      "とりひき"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "音が鳴る",
+      "ゆれる",
+      "みんなで使う",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 229,
+    "local_number": null,
+    "name": "キリンリキ",
+    "specialty": [
+      "しわける"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "やわらかい",
+      "フシギ",
+      "乗りもの",
+      "見て楽しむ",
+      "ほっそり",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 230,
+    "local_number": null,
+    "name": "リキキリン",
+    "specialty": [
+      "しわける",
+      "さがしもの"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "やわらかい",
+      "フシギ",
+      "乗りもの",
+      "見て楽しむ",
+      "ほっそり",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 231,
+    "local_number": null,
+    "name": "ラルトス",
+    "specialty": [
+      "テレポート"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "フシギ",
+      "キュート",
+      "キズをいやす",
+      "見て楽しむ",
+      "シンボル",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 232,
+    "local_number": null,
+    "name": "キルリア",
+    "specialty": [
+      "テレポート"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "フシギ",
+      "キュート",
+      "キズをいやす",
+      "見て楽しむ",
+      "シンボル",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 233,
+    "local_number": null,
+    "name": "サーナイト",
+    "specialty": [
+      "テレポート",
+      "とりひき"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "フシギ",
+      "ゴージャス",
+      "キズをいやす",
+      "見て楽しむ",
+      "シンボル",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 234,
+    "local_number": null,
+    "name": "エルレイド",
+    "specialty": [
+      "テレポート",
+      "けんちく"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "フシギ",
+      "トレーニングできる",
+      "キズをいやす",
+      "けんせつ",
+      "布仕立て",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 235,
+    "local_number": null,
+    "name": "プラスル",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "ガラス入り",
+      "やわらかい",
+      "キュート",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 236,
+    "local_number": null,
+    "name": "マイナン",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "ガラス入り",
+      "やわらかい",
+      "キュート",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 237,
+    "local_number": null,
+    "name": "ナックラー",
+    "specialty": [
+      "じならし",
+      "ちらかす"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "土を感じる",
+      "かたい",
+      "フシギ",
+      "見て楽しむ",
+      "トレーニングできる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 238,
+    "local_number": null,
+    "name": "ビブラーバ",
+    "specialty": [
+      "じならし",
+      "そらをとぶ"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "土を感じる",
+      "炎を感じる",
+      "自然を感じる",
+      "ゴージャス",
+      "音が鳴る",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 239,
+    "local_number": null,
+    "name": "フライゴン",
+    "specialty": [
+      "じならし",
+      "そらをとぶ"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "土を感じる",
+      "炎を感じる",
+      "自然を感じる",
+      "石づくり",
+      "木製",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 240,
+    "local_number": null,
+    "name": "チルット",
+    "specialty": [
+      "ちらかす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "風を感じる",
+      "キュート",
+      "見て楽しむ",
+      "せいけつ",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 241,
+    "local_number": null,
+    "name": "チルタリス",
+    "specialty": [
+      "ちらかす",
+      "そらをとぶ"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "風を感じる",
+      "キュート",
+      "見て楽しむ",
+      "音が鳴る",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 242,
+    "local_number": null,
+    "name": "ヨマワル",
+    "specialty": [
+      "しわける"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "乗りもの",
+      "ガラス入り",
+      "布仕立て",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 243,
+    "local_number": null,
+    "name": "サマヨール",
+    "specialty": [
+      "しわける"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "乗りもの",
+      "やわらかい",
+      "いれもの",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 244,
+    "local_number": null,
+    "name": "ヨノワール",
+    "specialty": [
+      "しわける",
+      "とりひき"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "ブキミ",
+      "フシギ",
+      "乗りもの",
+      "みんなで使う",
+      "いれもの",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 245,
+    "local_number": null,
+    "name": "ダンバル",
+    "specialty": [
+      "リサイクル"
+    ],
+    "environment": "すずしい",
+    "favorites": [
+      "メタリック",
+      "フシギ",
+      "かたい",
+      "難しそうなもの",
+      "石づくり",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 246,
+    "local_number": null,
+    "name": "メタング",
+    "specialty": [
+      "リサイクル"
+    ],
+    "environment": "すずしい",
+    "favorites": [
+      "メタリック",
+      "フシギ",
+      "かたい",
+      "難しそうなもの",
+      "石づくり",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 247,
+    "local_number": null,
+    "name": "メタグロス",
+    "specialty": [
+      "リサイクル",
+      "つぶす"
+    ],
+    "environment": "すずしい",
+    "favorites": [
+      "メタリック",
+      "フシギ",
+      "かたい",
+      "トレーニングできる",
+      "ゴージャス",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 248,
+    "local_number": null,
+    "name": "ツタージャ",
+    "specialty": [
+      "さいばい",
+      "ちらかす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "水を感じる",
+      "ゆれる",
+      "キラキラしてる",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 249,
+    "local_number": null,
+    "name": "ジャノビー",
+    "specialty": [
+      "さいばい",
+      "ちらかす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "水を感じる",
+      "せいけつ",
+      "キラキラしてる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 250,
+    "local_number": null,
+    "name": "ジャローダ",
+    "specialty": [
+      "さいばい",
+      "ちらかす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "自然を感じる",
+      "木製",
+      "水を感じる",
+      "いれもの",
+      "ほっそり",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 251,
+    "local_number": null,
+    "name": "ケロマツ",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "せいけつ",
+      "見て楽しむ",
+      "いれもの",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 252,
+    "local_number": null,
+    "name": "ゲコガシラ",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "せいけつ",
+      "見て楽しむ",
+      "トレーニングできる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 253,
+    "local_number": null,
+    "name": "ゲッコウガ",
+    "specialty": [
+      "うるおす",
+      "きをきる"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "せいけつ",
+      "キラキラしてる",
+      "トレーニングできる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 254,
+    "local_number": null,
+    "name": "デデンネ",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "キュート",
+      "見て楽しむ",
+      "みんなで使う",
+      "食べものそっくり",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 255,
+    "local_number": null,
+    "name": "オンバット",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "風を感じる",
+      "炎を感じる",
+      "見て楽しむ",
+      "ゴージャス",
+      "食べものそっくり",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 256,
+    "local_number": null,
+    "name": "オンバーン",
+    "specialty": [
+      "さがしもの",
+      "そらをとぶ"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "風を感じる",
+      "炎を感じる",
+      "見て楽しむ",
+      "あそびば",
+      "食べものそっくり",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 257,
+    "local_number": null,
+    "name": "ココガラ",
+    "specialty": [
+      "きをきる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "風を感じる",
+      "キラキラしてる",
+      "いれもの",
+      "ほっそり",
+      "木製",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 258,
+    "local_number": null,
+    "name": "アオガラス",
+    "specialty": [
+      "きをきる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "風を感じる",
+      "キラキラしてる",
+      "いれもの",
+      "ほっそり",
+      "木製",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 259,
+    "local_number": null,
+    "name": "アーマーガア",
+    "specialty": [
+      "きをきる",
+      "そらをとぶ"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "風を感じる",
+      "メタリック",
+      "キラキラしてる",
+      "いれもの",
+      "木製",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 260,
+    "local_number": null,
+    "name": "ドラメシヤ",
+    "specialty": [
+      "しわける",
+      "さがしもの"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "炎を感じる",
+      "ブキミ",
+      "乗りもの",
+      "フシギ",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 261,
+    "local_number": null,
+    "name": "ドロンチ",
+    "specialty": [
+      "しわける",
+      "さがしもの"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "炎を感じる",
+      "ブキミ",
+      "乗りもの",
+      "フシギ",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 262,
+    "local_number": null,
+    "name": "ドラパルト",
+    "specialty": [
+      "しわける",
+      "さがしもの"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "炎を感じる",
+      "ブキミ",
+      "乗りもの",
+      "フシギ",
+      "みんなで使う",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 263,
+    "local_number": null,
+    "name": "ニャオハ",
+    "specialty": [
+      "さいばい"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "花ざかり",
+      "いれもの",
+      "カラフル",
+      "キュート",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 264,
+    "local_number": null,
+    "name": "ニャローテ",
+    "specialty": [
+      "さいばい"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "花ざかり",
+      "とがっている",
+      "カラフル",
+      "キュート",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 265,
+    "local_number": null,
+    "name": "マスカーニャ",
+    "specialty": [
+      "さいばい",
+      "もりあげる"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "花ざかり",
+      "キラキラしてる",
+      "ゴージャス",
+      "キュート",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 266,
+    "local_number": null,
+    "name": "カイデン",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "風を感じる",
+      "海を感じる",
+      "あつまり",
+      "難しそうなもの",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 267,
+    "local_number": null,
+    "name": "タイカイデン",
+    "specialty": [
+      "はつでん",
+      "そらをとぶ"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "風を感じる",
+      "海を感じる",
+      "あつまり",
+      "ほっそり",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 268,
+    "local_number": null,
+    "name": "カヌチャン",
+    "specialty": [
+      "けんちく"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "キュート",
+      "メタリック",
+      "けんせつ",
+      "食べものそっくり",
+      "トレーニングできる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 269,
+    "local_number": null,
+    "name": "ナカヌチャン",
+    "specialty": [
+      "けんちく"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "キュート",
+      "メタリック",
+      "けんせつ",
+      "みんなで使う",
+      "トレーニングできる",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 270,
+    "local_number": null,
+    "name": "デカヌチャン(おやかた)",
+    "specialty": [
+      "しょくにん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "キュート",
+      "メタリック",
+      "けんせつ",
+      "四角い",
+      "トレーニングできる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 271,
+    "local_number": null,
+    "name": "プテラ",
+    "specialty": [
+      "そらをとぶ"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "石づくり",
+      "風を感じる",
+      "かたい",
+      "キラキラしてる",
+      "まわる",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 272,
+    "local_number": null,
+    "name": "ズガイドス",
+    "specialty": [
+      "つぶす"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "ゆれる",
+      "みんなで使う",
+      "トレーニングできる",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 273,
+    "local_number": null,
+    "name": "ラムパルド",
+    "specialty": [
+      "つぶす"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "メタリック",
+      "ゴージャス",
+      "トレーニングできる",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 274,
+    "local_number": null,
+    "name": "タテトプス",
+    "specialty": [
+      "つぶす"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "メタリック",
+      "ゴージャス",
+      "まんまる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 275,
+    "local_number": null,
+    "name": "トリデプス",
+    "specialty": [
+      "つぶす",
+      "ちらかす"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "メタリック",
+      "ゴージャス",
+      "トレーニングできる",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 276,
+    "local_number": null,
+    "name": "チゴラス",
+    "specialty": [
+      "つぶす"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "炎を感じる",
+      "ゴージャス",
+      "トレーニングできる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 277,
+    "local_number": null,
+    "name": "ガチゴラス",
+    "specialty": [
+      "つぶす",
+      "ちらかす"
+    ],
+    "environment": "乾そうしている",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "炎を感じる",
+      "ゴージャス",
+      "トレーニングできる",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 278,
+    "local_number": null,
+    "name": "アマルス",
+    "specialty": [
+      "つぶす"
+    ],
+    "environment": "すずしい",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "キラキラしてる",
+      "みんなで使う",
+      "いれもの",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 279,
+    "local_number": null,
+    "name": "アマルルガ",
+    "specialty": [
+      "つぶす",
+      "ちらかす"
+    ],
+    "environment": "すずしい",
+    "favorites": [
+      "石づくり",
+      "かたい",
+      "キラキラしてる",
+      "音が鳴る",
+      "シンボル",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 280,
+    "local_number": null,
+    "name": "イーブイ",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "やわらかい",
+      "石づくり",
+      "キュート",
+      "文字がある",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 281,
+    "local_number": null,
+    "name": "シャワーズ",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "せいけつ",
+      "キュート",
+      "花ざかり",
+      "見て楽しむ",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 282,
+    "local_number": null,
+    "name": "サンダース",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "キラキラしてる",
+      "キュート",
+      "ガラス入り",
+      "とがっている",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 283,
+    "local_number": null,
+    "name": "ブースター",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "木製",
+      "キュート",
+      "メタリック",
+      "乗りもの",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 284,
+    "local_number": null,
+    "name": "エーフィ",
+    "specialty": [
+      "しわける"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "フシギ",
+      "風を感じる",
+      "キュート",
+      "難しそうなもの",
+      "見て楽しむ",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 285,
+    "local_number": null,
+    "name": "ブラッキー",
+    "specialty": [
+      "さがしもの"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "キラキラしてる",
+      "ゴージャス",
+      "キュート",
+      "文字がある",
+      "見て楽しむ",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 286,
+    "local_number": null,
+    "name": "リーフィア",
+    "specialty": [
+      "さいばい"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "自然を感じる",
+      "花ざかり",
+      "キュート",
+      "布仕立て",
+      "キズをいやす",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 287,
+    "local_number": null,
+    "name": "グレイシア",
+    "specialty": [
+      "とりひき"
+    ],
+    "environment": "すずしい",
+    "favorites": [
+      "水を感じる",
+      "キラキラしてる",
+      "キュート",
+      "ガラス入り",
+      "みんなで使う",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 288,
+    "local_number": null,
+    "name": "ニンフィア",
+    "specialty": [
+      "もりあげる"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "キュート",
+      "自然を感じる",
+      "布仕立て",
+      "音が鳴る",
+      "まんまる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 289,
+    "local_number": null,
+    "name": "カイオーガ",
+    "specialty": [
+      "なし"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "ゴージャス",
+      "キラキラしてる",
+      "ガラス入り",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 290,
+    "local_number": null,
+    "name": "ライコウ",
+    "specialty": [
+      "はつでん"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "風を感じる",
+      "キラキラしてる",
+      "ガラス入り",
+      "ゴージャス",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 291,
+    "local_number": null,
+    "name": "エンテイ",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "石づくり",
+      "シンボル",
+      "トレーニングできる",
+      "ゴージャス",
+      "にがい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 292,
+    "local_number": null,
+    "name": "スイクン",
+    "specialty": [
+      "うるおす"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "水を感じる",
+      "海を感じる",
+      "せいけつ",
+      "見て楽しむ",
+      "キズをいやす",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 293,
+    "local_number": null,
+    "name": "ボルケニオン",
+    "specialty": [
+      "もやす"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "水を感じる",
+      "石づくり",
+      "いれもの",
+      "シンボル",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 294,
+    "local_number": null,
+    "name": "フリーザー",
+    "specialty": [
+      "そらをとぶ"
+    ],
+    "environment": "すずしい",
+    "favorites": [
+      "水を感じる",
+      "風を感じる",
+      "キラキラしてる",
+      "シンボル",
+      "ゴージャス",
+      "すっぱい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 295,
+    "local_number": null,
+    "name": "サンダー",
+    "specialty": [
+      "そらをとぶ"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "電気で動く",
+      "風を感じる",
+      "ガラス入り",
+      "シンボル",
+      "ゴージャス",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 296,
+    "local_number": null,
+    "name": "ファイヤー",
+    "specialty": [
+      "そらをとぶ"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "風を感じる",
+      "石づくり",
+      "シンボル",
+      "ゴージャス",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 297,
+    "local_number": null,
+    "name": "ルギア",
+    "specialty": [
+      "なし"
+    ],
+    "environment": "うるおっている",
+    "favorites": [
+      "フシギ",
+      "風を感じる",
+      "水を感じる",
+      "海を感じる",
+      "シンボル",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 298,
+    "local_number": null,
+    "name": "ホウオウ",
+    "specialty": [
+      "なし"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "炎を感じる",
+      "木製",
+      "風を感じる",
+      "自然を感じる",
+      "シンボル",
+      "からい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 299,
+    "local_number": null,
+    "name": "ミュウツー",
+    "specialty": [
+      "テレポート"
+    ],
+    "environment": "くらい",
+    "favorites": [
+      "フシギ",
+      "見て楽しむ",
+      "文字がある",
+      "難しそうなもの",
+      "石づくり",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "main",
+    "number": 300,
+    "local_number": null,
+    "name": "ミュウ",
+    "specialty": [
+      "テレポート"
+    ],
+    "environment": "あたたかい",
+    "favorites": [
+      "フシギ",
+      "見て楽しむ",
+      "ゴージャス",
+      "難しそうなもの",
+      "あそびば",
+      "あまい"
+    ]
+  },
+  {
+    "category": "ex",
+    "number": null,
+    "local_number": 1,
+    "name": "ハネッコ",
+    "specialty": [
+      "さいばい"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "自然を感じる",
+      "風を感じる",
+      "花ざかり",
+      "ゆれる",
+      "あまい"
+    ]
+  },
+  {
+    "category": "ex",
+    "number": null,
+    "local_number": 2,
+    "name": "ポポッコ",
+    "specialty": [
+      "さいばい"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "自然を感じる",
+      "風を感じる",
+      "花ざかり",
+      "まわる",
+      "しぶい"
+    ]
+  },
+  {
+    "category": "ex",
+    "number": null,
+    "local_number": 3,
+    "name": "ワタッコ",
+    "specialty": [
+      "さいばい",
+      "ちらかす"
+    ],
+    "environment": "あかるい",
+    "favorites": [
+      "やわらかい",
+      "自然を感じる",
+      "風を感じる",
+      "花ざかり",
+      "まんまる",
+      "すっぱい"
+    ]
+  }
+]
