@@ -1,0 +1,7 @@
+name = "pocoapoke"
+compatibility_date = "2024-03-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "pocoapoke"
+database_id = "8ab074f8-09c5-4b3e-a446-d9d16c21a5df"
