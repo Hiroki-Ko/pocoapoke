@@ -104,6 +104,7 @@ wrangler d1 execute pocoapoke --remote --file=./seeds/pokemon_status.sql
 5. Pokemon_Statusを登録
   wrangler d1 execute pocoapoke --local --file=./seeds/pokemon_status.sql
 
+account_id = "feff80e44f13f37bef46133f206d30ac"
 
 ■D1へテーブル追加
 1. schema.sql にテーブルの構造を追加
