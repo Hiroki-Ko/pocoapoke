@@ -16,7 +16,7 @@ export default function PokemonProgress() {
       specialty2: { id: number; label: string } | null;
       environment: { id: number; label: string } | null;
       favorites: { id: number; label: string }[] | null;
-      status: { status_code: number; place_code: nubmer; today_wish: number; } | null;
+      status: { status_code: number; place_code: number; today_wish: number; } | null;
       created_at: string;
       updated_at: string | null;
     };
@@ -32,7 +32,7 @@ export default function PokemonProgress() {
     if (isLoading) return <div>読み込み中...</div>;
     if (isError) return <div>データ取得に失敗しました</div>;
     if (!data) return <div>読み込み中...</div>;
-    const pokemonData: Pokemon = data.pokemon;
+    const pokemonData: Pokemon[] = data.pokemon;
     const master = data.master;
     const wishList = [
       ...(master.wish ?? []),
@@ -144,7 +144,7 @@ export default function PokemonProgress() {
                         {/* 住んでる街 */}
                         <td>
                             <select
-                                value={p.status?.place_code?.id}
+                                value={p.status?.place_code ?? ""}
                                 onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'place_code')}
                             >
                             <option value="">未設定</option>
@@ -158,7 +158,7 @@ export default function PokemonProgress() {
                         {/* 住みごこち */}
                         <td>
                             <select
-                              value={p.status?.status_code?.id}
+                              value={p.status?.status_code ?? ""}
                               onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'status_code')}
                             >
                             {master.evaluation?.map((m) => (
@@ -171,7 +171,7 @@ export default function PokemonProgress() {
                         {/* 欲しいもの */}
                         <td>
                             <select
-                              value={p.status?.today_wish?.id}
+                              value={p.status?.today_wish}
                               onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'today_wish')}
                             >
                               <optgroup label="欲しいもの">
@@ -194,13 +194,19 @@ export default function PokemonProgress() {
                             </select>
                         </td>
                         {/* 好きなもの */}
-                        {p.favorites.map((fav, i) => {
+                        {/* {p.favorites.map((fav, i) => {
                             // view=falseのときは五味(index=5)のみ表示
                             if (!view && i != 5) return;
                             return (
                               <td key={i}>{fav?.label}</td>
                             )
                           })
+                        } */}
+                        {p.favorites
+                          .filter((_, i) => view || i === 5)
+                          .map((fav, i) => (
+                            <td key={i}>{fav?.label}</td>
+                          ))
                         }
                         </tr>
                     ))}
