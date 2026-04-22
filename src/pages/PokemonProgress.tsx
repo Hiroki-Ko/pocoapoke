@@ -194,16 +194,8 @@ export default function PokemonProgress() {
                             </select>
                         </td>
                         {/* 好きなもの */}
-                        {/* {p.favorites.map((fav, i) => {
-                            // view=falseのときは五味(index=5)のみ表示
-                            if (!view && i != 5) return;
-                            return (
-                              <td key={i}>{fav?.label}</td>
-                            )
-                          })
-                        } */}
                         {p.favorites
-                          .filter((_, i) => view || i === 5)
+                          ?.filter((_, i) => view || i === 5)
                           .map((fav, i) => (
                             <td key={i}>{fav?.label}</td>
                           ))
