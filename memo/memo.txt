@@ -70,15 +70,15 @@ npx wrangler d1 execute pocoapoke --command "SELECT class, json_group_array(json
   wrangler d1 execute pocoapoke --local --file=./prod_dump.sql
 
 
-  wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS pokemon_status"
-  wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS pokemon_ms"
-  wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS master_code"
-  wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS d1_migrations"
-  wrangler d1 execute pocoapoke --remote --command "DELETE FROM sqlite_sequence"
-  wrangler d1 execute pocoapoke --remote --file=./seeds/schema.sql
-  wrangler d1 execute pocoapoke --remote --file=./seeds/master_code.sql
-  node seeds/seed_pokemon_ms.cjs --remote
-  wrangler d1 execute pocoapoke --remote --file=./seeds/pokemon_status.sql
+wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS pokemon_status"
+wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS pokemon_ms"
+wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS master_code"
+wrangler d1 execute pocoapoke --remote --command "DROP TABLE IF EXISTS d1_migrations"
+wrangler d1 execute pocoapoke --remote --command "DELETE FROM sqlite_sequence"
+wrangler d1 execute pocoapoke --remote --file=./seeds/schema.sql
+wrangler d1 execute pocoapoke --remote --file=./seeds/master_code.sql
+node seeds/seed_pokemon_ms.cjs --remote
+wrangler d1 execute pocoapoke --remote --file=./seeds/pokemon_status.sql
 ■初期データ登録
 1. ローカルのデータを削除
   wrangler d1 execute pocoapoke --local --command "DROP TABLE IF EXISTS pokemon_status"
@@ -99,6 +99,8 @@ npx wrangler d1 execute pocoapoke --command "SELECT class, json_group_array(json
   pokemon_ms.json を直接参照
   master_code.sql からラベル→codeのマッピングを自動構築
   1件ずつ小さなSQLファイルを生成して wrangler d1 execute --file で実行（SQLITE_TOOBIG 回避）
+  node seeds/seed_pokemon_ms.cjs --remote --start=273
+  --startオプションで指定したN件目から投入が可能
 5. Pokemon_Statusを登録
   wrangler d1 execute pocoapoke --local --file=./seeds/pokemon_status.sql
 

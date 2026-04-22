@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { api } from "../lib/api";
 import { MasterSelect } from "../components/MasterSelect";
 import { MASTER_CLASS } from "../constants";
@@ -77,9 +78,12 @@ export default function PokemonList() {
 
     return (
       <div>
+        <Helmet>
+          <title>Pokemon List</title>
+        </Helmet>
         <h2>Pokemon List</h2>
           <div className="table-wrapper">
-            <table border={1}>
+            <table border={1} className="table-wide">
               <thead>
                 <tr>
                   <th>No.</th>
@@ -87,7 +91,7 @@ export default function PokemonList() {
                   <th>得意なこと1</th>
                   <th>得意なこと2</th>
                   <th>好きな環境</th>
-                  <th>好きなもの</th>
+                  <th colSpan={6}>好きなもの</th>
                 </tr>
               </thead>
               <tbody>
@@ -156,6 +160,14 @@ export default function PokemonList() {
           value={selectedFavorite}
           onChange={setSelectedFavorite}
         />
+        <div className="scroll-buttons">
+          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            ↑
+          </button>
+          <button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}>
+            ↓
+          </button>
+        </div>
       </div>
     );
 }

@@ -15,6 +15,10 @@ const os = require('os');
 const isRemote = process.argv.includes('--remote');
 const remoteFlag = isRemote ? '--remote' : '--local';
 
+// --start=N で途中から再開可能（DELETEはスキップ）
+const startArg = process.argv.find(a => a.startsWith('--start='));
+const startIndex = startArg ? parseInt(startArg.split('=')[1]) : 0;
+
 const data = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'pokemon_ms.json'), 'utf8')
 );
@@ -54,27 +58,46 @@ function escape(str) {
 
 function runSqlFile(filePath) {
   execSync(
-    `wrangler d1 execute pocoapoke ${remoteFlag} --file="${filePath}"`,
+    `wrangler d1 execute pocoapoke ${remoteFlag} --yes --file="${filePath}"`,
     { stdio: 'pipe' }
   );
 }
 
+function runSqlFileWithRetry(filePath, maxRetries = 5, delayMs = 3000) {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      runSqlFile(filePath);
+      return;
+    } catch (e) {
+      if (attempt === maxRetries) throw e;
+      process.stdout.write(`\n  [retry ${attempt}/${maxRetries - 1}] waiting ${delayMs}ms...`);
+      // 同期的にスリープ
+      const end = Date.now() + delayMs;
+      while (Date.now() < end) { /* busy wait */ }
+    }
+  }
+}
+
 const tmpDir = os.tmpdir();
 
-// DELETE
-console.log('Deleting existing pokemon_ms records...');
-const delFile = path.join(tmpDir, '_poke_delete.sql');
-fs.writeFileSync(delFile, 'DELETE FROM pokemon_ms;\n', 'utf8');
-execSync(
-  `wrangler d1 execute pocoapoke ${remoteFlag} --file="${delFile}"`,
-  { stdio: 'inherit' }
-);
-
+// DELETE（--start 指定時はスキップ）
+if (startIndex === 0) {
+  console.log('Deleting existing pokemon_ms records...');
+  const delFile = path.join(tmpDir, '_poke_delete.sql');
+  fs.writeFileSync(delFile, 'DELETE FROM pokemon_ms;\n', 'utf8');
+  execSync(
+    `wrangler d1 execute pocoapoke ${remoteFlag} --yes --file="${delFile}"`,
+    { stdio: 'inherit' }
+  );
+  fs.unlinkSync(delFile);
+} else {
+  console.log(`Resuming from index ${startIndex} (skipping DELETE)...`);
+}
 // INSERT: BATCH_SIZE件ずつまとめてファイル実行
 const BATCH_SIZE = 1;
 let count = 0;
 
-for (let i = 0; i < data.length; i += BATCH_SIZE) {
+for (let i = startIndex; i < data.length; i += BATCH_SIZE) {
   const batch = data.slice(i, i + BATCH_SIZE);
   const lines = [];
 
@@ -116,17 +139,17 @@ for (let i = 0; i < data.length; i += BATCH_SIZE) {
   fs.writeFileSync(tmpFile, lines.join('\n') + '\n', 'utf8');
 
   try {
-    runSqlFile(tmpFile);
+    runSqlFileWithRetry(tmpFile);
     count += batch.length;
-    process.stdout.write(`\r  ${count}/${data.length} inserted...`);
+    process.stdout.write(`\r  ${count + startIndex}/${data.length} inserted...`);
   } catch (e) {
-    console.error(`\nError at batch starting index ${i}:`);
+    console.error(`\nFailed after retries at index ${i}:`);
     console.error(lines[0]);
+    console.error(`\nResume with: node seeds/seed_pokemon_ms.cjs ${isRemote ? '--remote' : ''} --start=${i}`);
     throw e;
   } finally {
-    fs.unlinkSync(tmpFile);
+    if (fs.existsSync(tmpFile)) fs.unlinkSync(tmpFile);
   }
 }
 
-fs.unlinkSync(delFile);
 console.log(`\nDone! ${count} records inserted.`);

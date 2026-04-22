@@ -2,19 +2,33 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useQueryClient } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import { usePokemonData } from '../api/usePokemonData';
 
 export default function PokemonProgress() {
+    type Pokemon = {
+      id: number;
+      number: number;
+      name: string;
+      specialty1: { id: number; label: string } | null;
+      specialty2: { id: number; label: string } | null;
+      environment: { id: number; label: string } | null;
+      favorites: { id: number; label: string }[] | null;
+      status: { status_code: number; place_code: nubmer; today_wish: number; } | null;
+      created_at: string;
+      updated_at: string | null;
+    };
     const [wish, setWish] = useState<boolean>(false);
     const navigate = useNavigate();
     const queryClient = useQueryClient();
     const { data, isLoading, isError } = usePokemonData();
     const [finished, setFinished] = useState<number[]>([]);
+    const [view, setView] = useState<boolean>(false);
 
     if (isLoading) return <div>読み込み中...</div>;
     if (isError) return <div>データ取得に失敗しました</div>;
     if (!data) return <div>読み込み中...</div>;
-    const pokemonData = data.pokemon;
+    const pokemonData: Pokemon = data.pokemon;
     const master = data.master;
     const wishList = [
       ...(master.wish ?? []),
@@ -62,24 +76,38 @@ export default function PokemonProgress() {
         console.log('checkbox all clear!!');
     }
 
+    // view=true の場合、全て表示
+    const invisibleCol = view ? 6 : 1; 
+
     return (
         <div>
+            <Helmet>
+              <title>Pokemon Progress</title>
+            </Helmet>
             <h2>Pokemon Progress</h2>
             <div className="table-wrapper">
-                <table border={1}>
+                <table border={1} className={view ? "table-wide" : ""}>
                     <thead>
                     <tr>
-                        <th><button onClick={() => allClear()}></button></th>
+                        <th className="checkbox-cell">
+                          <button onClick={() => allClear()}></button>
+                        </th>
                         <th>なまえ</th>
                         <th>住んでる街</th>
                         <th>住みごこち</th>
                         <th>欲しいもの</th>
+                        <th
+                          colSpan={invisibleCol}
+                          onClick={() => setView(!view)}
+                        >
+                            好きなもの
+                        </th>
                     </tr>
                     </thead>
                     <tbody>
                     {pokemonData.map((p) => (
                         <tr key={p.id} className={finished.includes(p.id) ? "finished-row" : ""}>
-                        <td>
+                        <td className="checkbox-cell">
                           <input
                             type="checkbox"
                             checked={finished.includes(p.id)}
@@ -139,14 +167,27 @@ export default function PokemonProgress() {
                               </optgroup>
                             </select>
                         </td>
-
-                        {p.favorites.map((fav, i) => (
-                            <td key={i}>{fav?.label}</td>
-                        ))}
+                        {/* 好きなもの */}
+                        {p.favorites.map((fav, i) => {
+                            // view=falseのときは五味(index=5)のみ表示
+                            if (!view && i != 5) return;
+                            return (
+                              <td key={i}>{fav?.label}</td>
+                            )
+                          })
+                        }
                         </tr>
                     ))}
                     </tbody>
                 </table>
+                <div className="scroll-buttons">
+                  <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                    ↑
+                  </button>
+                  <button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}>
+                    ↓
+                  </button>
+                </div>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { TextField, Button, Chip, Stack, Typography, Box } from "@mui/material";
 import { Snackbar, Alert } from "@mui/material";
 import { MASTER_CLASS } from "../constants";
@@ -106,6 +107,9 @@ export default function PokemonRegister () {
 
   return (
     <div>
+      <Helmet>
+        <title>Register Pokemon</title>
+      </Helmet>
       <h2>Register Pokemon</h2>
       <div>
           <Typography variant="subtitle1">番号</Typography>
