@@ -1,6 +1,5 @@
 // /pocoapoke/src/pages/PokemonList.tsx
 import { useEffect, useState } from "react";
-import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { api } from "../lib/api";
@@ -111,48 +110,20 @@ export default function PokemonList() {
             </table>
         </div>
         
-        <Box
-          sx={{
-              mb: 2,
-              maxHeight: 140,          // ← 少し余裕を持たせる
-              overflowY: "auto",
-              borderRadius: 1,
-              border: "1px solid #ddd",
-              p: 1,
-              bgcolor: "#ffffff",
-              display: "flex",
-              alignItems: "flex-start", // ← スクロールバーが上に寄らない
-          }}
-        >
-          <MasterSelect
-            className={MASTER_CLASS.SPECIALTY}
-            label="得意なこと"
-            masterCodes={masterCodes}
-            value={selectedSpecialty}
-            onChange={setSelectedSpecialty}
-          />
-        </Box>
-        <Box
-          sx={{
-              mb: 2,
-              maxHeight: 140,          // ← 少し余裕を持たせる
-              overflowY: "auto",
-              borderRadius: 1,
-              border: "1px solid #ddd",
-              p: 1,
-              bgcolor: "#ffffff",
-              display: "flex",
-              alignItems: "flex-start", // ← スクロールバーが上に寄らない
-          }}
-        >
-          <MasterSelect
-            className={MASTER_CLASS.ENVIRONMENT}
-            label="好きな環境"
-            masterCodes={masterCodes}
-            value={selectedEnvironment}
-            onChange={setSelectedEnvironment}
-          />
-        </Box>
+        <MasterSelect
+          className={MASTER_CLASS.SPECIALTY}
+          label="得意なこと"
+          masterCodes={masterCodes}
+          value={selectedSpecialty}
+          onChange={setSelectedSpecialty}
+        />
+        <MasterSelect
+          className={MASTER_CLASS.ENVIRONMENT}
+          label="好きな環境"
+          masterCodes={masterCodes}
+          value={selectedEnvironment}
+          onChange={setSelectedEnvironment}
+        />
         <MasterSelect
           className={MASTER_CLASS.FAVORITE}
           label="好きなもの"
