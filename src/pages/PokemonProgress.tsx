@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useQueryClient } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
 import { usePokemonData } from '../api/usePokemonData';
+import type { Master } from "../api/useMasterCodes";
 import { MasterSelect } from "../components/MasterSelect";
 import { MASTER_CLASS } from "../constants";
 
@@ -11,11 +12,15 @@ type Pokemon = {
   id: number;
   number: number;
   name: string;
-  specialty1: { id: number; label: string } | null;
-  specialty2: { id: number; label: string } | null;
-  environment: { id: number; label: string } | null;
-  favorites: { id: number; label: string }[] | null;
-  status: { status_code: number; place_code: number; today_wish: number; } | null;
+  specialty1: Master | null;
+  specialty2: Master | null;
+  environment: Master | null;
+  favorites: Master[] | null;
+  status: {
+    status_code: Master | null;
+    place_code: Master | null;
+    today_wish: Master | null;
+  } | null;
   created_at: string;
   updated_at: string | null;
 };
@@ -25,14 +30,17 @@ export default function PokemonProgress() {
     const queryClient = useQueryClient();
     const [wish, setWish] = useState<boolean>(false);
     const [view, setView] = useState<boolean>(false);
+    const [sortAsc, setSortAsc] = useState<boolean>(true);
     const [selectedPlace, setSelectedPlace] = useState<number | null>(null);
+    const [activePokemonId, setActivePokemonId] = useState<number | null>(null);
     const [finished, setFinished] = useState<number[]>([]);
     const [dispPokemonData, setDispPokemonData] = useState<Pokemon[]>([]);
     const { data, isLoading, isError } = usePokemonData();
+    
 
     // data が未取得の場合は空配列/空オブジェクトで初期化
     const pokemonData: Pokemon[] = data?.pokemon ?? [];
-    const master = data?.master ?? {};
+    const master: Master = data?.master ?? {};
 
     // view=true の場合、全て表示
     const invisibleCol = view ? 6 : 1;
@@ -73,6 +81,17 @@ export default function PokemonProgress() {
         console.log("saved:", field, masterId);
     };
 
+    const sortStatus = () => {
+        setDispPokemonData((prev) =>
+          [...prev].sort((a, b) => {
+            const aCode = a.status?.status_code?.id ?? 0;
+            const bCode = b.status?.status_code?.id ?? 0;
+            return sortAsc ? aCode - bCode : bCode - aCode;
+          })
+        );
+        setSortAsc(!sortAsc);
+    };
+
     const wishFinished = (pokemonId: Number) => {
         setFinished((prev) =>
           prev.includes(pokemonId)
@@ -111,7 +130,7 @@ export default function PokemonProgress() {
                         </th>
                         <th>なまえ</th>
                         <th>住んでる街</th>
-                        <th>住みごこち</th>
+                        <th onClick={() => sortStatus()}>住みごこち</th>
                         <th>欲しいもの</th>
                         <th
                           colSpan={invisibleCol}
@@ -149,7 +168,14 @@ export default function PokemonProgress() {
                         </td>
                         {/* 住みごこち */}
                         <td>
+                            {activePokemonId === p.id && (
+                              <div style={{ fontWeight: "bold", marginBottom: "4px" }}>
+                                {p.name}
+                              </div>
+                            )}
                             <select
+                              onFocus={() => setActivePokemonId(p.id)}
+                              onBlur={() => setActivePokemonId(null)}
                               value={p.status?.status_code?.id ?? ""}
                               onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'status_code')}
                             >

@@ -12,26 +12,17 @@ export default function PokemonList() {
       id: number;
       number: number;
       name: string;
-      specialty1: { id: number; label: string } | null;
-      specialty2: { id: number; label: string } | null;
-      environment: { id: number; label: string } | null;
-      favorites: { id: number; label: string }[];
+      specialty1: Master | null;
+      specialty2: Master | null;
+      environment: Master | null;
+      favorites: Master[] | null;
       created_at: string;
       updated_at: string | null;
     };
 
-    // type MasterItem = {
-    //   id: number;
-    //   code: number;
-    //   label: string;
-    // }
-    // type Master = Record<string, MasterItem[]>;
-
     const { data: masterCodes, isLoading } = useMasterCodes();
-
     const [pokemonData, setPokemonData] = useState<Pokemon[]>([]);
     const [dispPokemonData, setDispPokemonData] = useState<Pokemon[]>([]);
-    // const [masterCodes, setMasterCodes] = useState<Master>({});
     const [selectedSpecialty, setSelectedSpecialty] = useState<number | null>(null);
     const [selectedEnvironment, setSelectedEnvironment] = useState<number | null>(null);
     const [selectedFavorite, setSelectedFavorite] = useState<number | null>(null);
