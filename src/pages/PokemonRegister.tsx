@@ -264,25 +264,39 @@ export default function PokemonRegister () {
       </Box>
 
       <Typography variant="subtitle1">好きなもの</Typography>
-      <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mb: 2 }}>
-        {favoriteItems.map((m) => (
-          <Chip
-            key={m.id}
-            label={m.label}
-            color={favorites.includes(m.id) ? "primary" : "default"}
-            variant={favorites.includes(m.id) ? "filled" : "outlined"}
-            onClick={() => toggleFavorite(m.id)}
-            sx={{
-              backgroundColor: favorites.includes(m.id) ? "#1976d2" : "#fff",
-              color: favorites.includes(m.id) ? "#fff" : "#000",
-              borderColor: "#ccc",
-              "&:hover": {
-                backgroundColor: favorites.includes(m.id) ? "#115293" : "#f0f0f0",
-              }
-            }}
-          />
-        ))}
-      </Stack>
+      <Box
+        sx={{
+            mb: 2,
+            maxHeight: 140,          // ← 少し余裕を持たせる
+            overflowY: "auto",
+            borderRadius: 1,
+            border: "1px solid #ddd",
+            p: 1,
+            bgcolor: "#ffffff",
+            display: "flex",
+            alignItems: "flex-start", // ← スクロールバーが上に寄らない
+        }}
+      >
+          <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mb: 2 }}>
+            {favoriteItems.map((m) => (
+              <Chip
+                key={m.id}
+                label={m.label}
+                color={favorites.includes(m.id) ? "primary" : "default"}
+                variant={favorites.includes(m.id) ? "filled" : "outlined"}
+                onClick={() => toggleFavorite(m.id)}
+                sx={{
+                  backgroundColor: favorites.includes(m.id) ? "#1976d2" : "#fff",
+                  color: favorites.includes(m.id) ? "#fff" : "#000",
+                  borderColor: "#ccc",
+                  "&:hover": {
+                    backgroundColor: favorites.includes(m.id) ? "#115293" : "#f0f0f0",
+                  }
+                }}
+              />
+            ))}
+          </Stack>
+      </Box>
 
       <Button variant="contained" sx={{ mt: 2 }} onClick={handleSubmit}>
         登録

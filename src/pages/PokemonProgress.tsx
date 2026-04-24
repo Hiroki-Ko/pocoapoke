@@ -94,9 +94,10 @@ export default function PokemonProgress() {
               <title>Pokemon Progress</title>
             </Helmet>
             <h2>Pokemon Progress</h2>
+            <h3>住ポケ数 : {dispPokemonData.length}</h3>
             <MasterSelect
               className={MASTER_CLASS.PLACE}
-              label="好きなもの"
+              label="住んでる街"
               masterCodes={master}
               value={selectedPlace}
               onChange={setSelectedPlace}
