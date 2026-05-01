@@ -4,6 +4,7 @@ export const MASTER_CLASS = {
   ENVIRONMENT: "environment",
   FAVORITE: "favorite",
   PLACE: "place",
+  EVALUATION: "evaluation",
 } as const;
 
 export type MasterClass = (typeof MASTER_CLASS)[keyof typeof MASTER_CLASS];

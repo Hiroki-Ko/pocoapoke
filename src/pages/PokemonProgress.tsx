@@ -1,12 +1,13 @@
 // /pocoapoke/src/pages/PokemonProgress.tsx
 import { useEffect, useState } from 'react';
-import { useNavigate } from "react-router-dom";
 import { useQueryClient } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
 import { usePokemonData } from '../api/usePokemonData';
 import type { Master } from "../api/useMasterCodes";
 import { MasterSelect } from "../components/MasterSelect";
 import { MASTER_CLASS } from "../constants";
+import ClearIcon from "@mui/icons-material/Clear";
+import { Chip, Box } from "@mui/material";
 
 type Pokemon = {
   id: number;
@@ -17,7 +18,7 @@ type Pokemon = {
   environment: Master | null;
   favorites: Master[] | null;
   status: {
-    status_code: Master | null;
+    status_code: Master[] | null;
     place_code: Master | null;
     today_wish: Master | null;
   } | null;
@@ -26,13 +27,11 @@ type Pokemon = {
 };
 
 export default function PokemonProgress() {
-    const navigate = useNavigate();
     const queryClient = useQueryClient();
-    const [wish, setWish] = useState<boolean>(false);
     const [view, setView] = useState<boolean>(false);
-    const [sortAsc, setSortAsc] = useState<boolean>(true);
+    const [sortMode, setSortMode] = useState<"none" | "asc" | "desc">("none");
     const [selectedPlace, setSelectedPlace] = useState<number | null>(null);
-    const [activePokemonId, setActivePokemonId] = useState<number | null>(null);
+    const [selectedEvalution, setSelectedEvalution] = useState<number[]>([]);
     const [finished, setFinished] = useState<number[]>([]);
     const [dispPokemonData, setDispPokemonData] = useState<Pokemon[]>([]);
     const { data, isLoading, isError } = usePokemonData();
@@ -44,19 +43,40 @@ export default function PokemonProgress() {
 
     // view=true の場合、全て表示
     const invisibleCol = view ? 6 : 1;
+    const isFiltering = selectedPlace !== null || (selectedEvalution && selectedEvalution.length > 0);
+    const evalColors: Record<number, string> = {
+      1: "#FF4D4D",   // 最高
+      2: "#FF8C42",   // めちゃイイ
+      3: "#FFD93D",   // ちょっといい
+      4: "#6BCB77",   // ふつう
+      5: "#4D96FF",   // びみょう
+      6: "#BFBFBF",   // すみかなし
+    };
+
 
     useEffect(() => {
-      console.log(selectedPlace)
-      if (selectedPlace === null) {
-        setDispPokemonData(pokemonData);
-      } else {
-        setDispPokemonData(
-          pokemonData.filter((p) => 
-            (p.status?.place_code?.id ?? null) === selectedPlace
-          )
-        );
+      // 1. フィルタ
+      let list = pokemonData.filter((p) => {
+        const placeId = p.status?.place_code?.id;
+        const evalId = p.status?.status_code?.id ?? -1;
+
+        const matchPlace = !selectedPlace || placeId === selectedPlace;
+        const matchEval = selectedEvalution.length === 0 || selectedEvalution.includes(evalId);
+
+        return matchPlace && matchEval;
+      });
+
+      // 2. ソート
+      if (sortMode === "asc") {
+        list.sort((a, b) => (a.status?.status_code?.id ?? 0) - (b.status?.status_code?.id ?? 0));
+      } else if (sortMode === "desc") {
+        list.sort((a, b) => (b.status?.status_code?.id ?? 0) - (a.status?.status_code?.id ?? 0));
       }
-    }, [selectedPlace, pokemonData]);
+
+      // 3. 反映
+      setDispPokemonData(list);
+    }, [pokemonData, selectedPlace, selectedEvalution, sortMode]);
+
 
     if (isLoading) return <div>読み込み中...</div>;
     if (isError) return <div>データ取得に失敗しました</div>;
@@ -81,15 +101,13 @@ export default function PokemonProgress() {
         console.log("saved:", field, masterId);
     };
 
+    // ソート
     const sortStatus = () => {
-        setDispPokemonData((prev) =>
-          [...prev].sort((a, b) => {
-            const aCode = a.status?.status_code?.id ?? 0;
-            const bCode = b.status?.status_code?.id ?? 0;
-            return sortAsc ? aCode - bCode : bCode - aCode;
-          })
-        );
-        setSortAsc(!sortAsc);
+        setSortMode((prev) => {
+          if (prev === "none") return "asc";
+          if (prev === "asc") return "desc";
+          return "none";
+        });
     };
 
     const wishFinished = (pokemonId: Number) => {
@@ -107,6 +125,11 @@ export default function PokemonProgress() {
         console.log('checkbox all clear!!');
     };
 
+    const filterClear = () => {
+      setSelectedPlace(null);
+      setSelectedEvalution([]);
+    }
+
     return (
         <div>
             <Helmet>
@@ -114,13 +137,85 @@ export default function PokemonProgress() {
             </Helmet>
             <h2>Pokemon Progress</h2>
             <h3>住ポケ数 : {dispPokemonData.length}</h3>
-            <MasterSelect
-              className={MASTER_CLASS.PLACE}
-              label="住んでる街"
-              masterCodes={master}
-              value={selectedPlace}
-              onChange={setSelectedPlace}
-            />
+            <Box sx={{
+              display: "flex",
+              gap: 1,
+              overflowX: "auto",
+              py: 1,
+              mb: 1,
+              "&::-webkit-scrollbar": { height: "6px" },
+            }}>
+                {master.evaluation.map((m) => {
+                  const count = dispPokemonData.filter(
+                    (p) => p.status?.status_code?.id === m.id
+                  ).length;
+                  if (count == 0) return;
+
+                  return (
+                    <Box
+                      key={m.id}
+                      sx={{
+                        px: 1.2,
+                        py: 0.3,
+                        borderRadius: "12px",
+                        bgcolor: evalColors[m.code],
+                        color: "#fff",
+                        whiteSpace: "nowrap",
+                        fontSize: "0.85rem",
+                        fontWeight: "bold",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {m.label}{" "}
+                      <span style={{
+                          background: "rgba(255,255,255,0.85)",
+                          color: "#000",
+                          padding: "0 6px",
+                          borderRadius: "8px",
+                          fontWeight: 900,
+                        }}
+                      >
+                        {count}
+                      </span> 匹
+                    </Box>
+                  );
+                })}
+            </Box>
+            <Box sx={{ mb: 1 }}>
+                <MasterSelect
+                  className={MASTER_CLASS.PLACE}
+                  label="住んでる街"
+                  masterCodes={master}
+                  value={selectedPlace}
+                  onChange={setSelectedPlace}
+                />
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                    <MasterSelect
+                      className={MASTER_CLASS.EVALUATION}
+                      label="住みごこち"
+                      masterCodes={master}
+                      value={selectedEvalution}
+                      onChange={setSelectedEvalution}
+                    />
+                    {isFiltering && 
+                        (<Chip
+                          label="解除"
+                          onClick={filterClear}
+                          color="secondary"
+                          variant="outlined"
+                          icon={<ClearIcon />}
+                          sx={{
+                              ml: 1,
+                              fontWeight: "bold",
+                              cursor: "pointer",
+                              height: 28,
+                              flexShrink: 0,
+                              marginRight: "15px"
+                          }}
+                        />)
+                    }
+                </Box>
+            </Box>
             <div className="table-wrapper">
                 <table border={1} className={view ? "table-wide" : ""}>
                     <thead>
@@ -130,7 +225,11 @@ export default function PokemonProgress() {
                         </th>
                         <th>なまえ</th>
                         <th>住んでる街</th>
-                        <th onClick={() => sortStatus()}>住みごこち</th>
+                        <th onClick={() => sortStatus()}>
+                            住みごこち
+                            {sortMode === "asc" && " ▲"}
+                            {sortMode === "desc" && " ▼"}
+                        </th>
                         <th>欲しいもの</th>
                         <th
                           colSpan={invisibleCol}
@@ -168,14 +267,7 @@ export default function PokemonProgress() {
                         </td>
                         {/* 住みごこち */}
                         <td>
-                            {activePokemonId === p.id && (
-                              <div style={{ fontWeight: "bold", marginBottom: "4px" }}>
-                                {p.name}
-                              </div>
-                            )}
                             <select
-                              onFocus={() => setActivePokemonId(p.id)}
-                              onBlur={() => setActivePokemonId(null)}
                               value={p.status?.status_code?.id ?? ""}
                               onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'status_code')}
                             >
