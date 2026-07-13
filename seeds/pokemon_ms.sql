@@ -3433,5 +3433,16 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=5),
     (SELECT id FROM master_code WHERE class='favorite' AND code=47), (SELECT id FROM master_code WHERE class='favorite' AND code=23), (SELECT id FROM master_code WHERE class='favorite' AND code=12), (SELECT id FROM master_code WHERE class='favorite' AND code=33), (SELECT id FROM master_code WHERE class='favorite' AND code=39), (SELECT id FROM master_code WHERE class='favorite' AND code=4),
     datetime('now')
+  ),
+  (
+    'ex',
+    null,
+    4,
+    'ヤミラミ',
+    (SELECT id FROM master_code WHERE class='specialty' AND code=2),
+    (SELECT id FROM master_code WHERE class='specialty' AND code=14),
+    (SELECT id FROM master_code WHERE class='environment' AND code=5),
+    (SELECT id FROM master_code WHERE class='favorite' AND code=47), (SELECT id FROM master_code WHERE class='favorite' AND code=23), (SELECT id FROM master_code WHERE class='favorite' AND code=12), (SELECT id FROM master_code WHERE class='favorite' AND code=33), (SELECT id FROM master_code WHERE class='favorite' AND code=39), (SELECT id FROM master_code WHERE class='favorite' AND code=4),
+    datetime('now')
   )
 ;
