@@ -1,10 +1,12 @@
-// /pocoapoke/functions/registerPokemon.ts
+// /pocoapoke/functions/api/registerPokemon.ts
 export async function onRequestPost(context) {
   const { env, request } = context;
   const body = await request.json();
 
   const {
+    category,
     number,
+    localNumber,
     name,
     specialty1,
     specialty2,
@@ -12,14 +14,27 @@ export async function onRequestPost(context) {
     favorites,
   } = body;
 
+  // サーバーサイドバリデーション
+  if (!name || String(name).trim() === "") {
+    return Response.json({ success: false, error: "名前は必須です" }, { status: 400 });
+  }
+  if (!specialty1) {
+    return Response.json({ success: false, error: "得意なこと1は必須です" }, { status: 400 });
+  }
+  if (!environment) {
+    return Response.json({ success: false, error: "好きな環境は必須です" }, { status: 400 });
+  }
+
   // favorites は最大6件に揃える
-  const fav = [...favorites];
+  const fav = Array.isArray(favorites) ? [...favorites] : [];
   while (fav.length < 6) fav.push(null);
 
   const result = await env.DB.prepare(
     `
       INSERT INTO pokemon_ms (
+        category,
         number,
+        local_number,
         name,
         specialty1,
         specialty2,
@@ -32,14 +47,16 @@ export async function onRequestPost(context) {
         favorite6,
         created_at
       )
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
     `
   )
     .bind(
-      number,
+      category ?? "main",
+      number ?? null,
+      localNumber ?? null,
       name,
       specialty1,
-      specialty2,
+      specialty2 ?? null,
       environment,
       fav[0],
       fav[1],
@@ -53,7 +70,7 @@ export async function onRequestPost(context) {
   // 新しく作られた pokemon_ms.id を取得
   const newId = result.lastInsertRowId;
 
-  // 2. pokemon_status を INSERT（1対1）
+  // pokemon_status を INSERT（1対1）
   await env.DB.prepare(`
       INSERT INTO pokemon_status (
         poke_id,
@@ -63,7 +80,7 @@ export async function onRequestPost(context) {
         created_at
       )
       VALUES (
-        ?, 
+        ?,
         (SELECT id FROM master_code WHERE class='evaluation' AND code=1),
         (SELECT id FROM master_code WHERE class='place' AND code=1),
         (SELECT id FROM master_code WHERE class='wish' AND code=0),
@@ -72,7 +89,6 @@ export async function onRequestPost(context) {
     `)
     .bind(newId)
     .run();
-
 
   return Response.json({ success: true });
 }

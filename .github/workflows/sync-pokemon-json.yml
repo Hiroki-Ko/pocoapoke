@@ -1,0 +1,50 @@
+# GitHub Actions: pokemon_ms.json の自動同期
+#
+# 【このファイルの役割】
+# 毎月1日の朝9時（日本時間）に自動で実行され、
+# 本番データベースのポケモンデータを seeds/pokemon_ms.json に反映してコミットします。
+# 手元のPCを起動していなくても、GitHubのサーバーが自動でやってくれます。
+#
+# 【手動実行する場合】
+# GitHub のリポジトリページ → Actions タブ → 「Sync pokemon_ms.json」→ Run workflow
+
+name: Sync pokemon_ms.json
+
+on:
+  # 毎月1日 00:00 UTC = 日本時間 09:00 に自動実行
+  schedule:
+    - cron: "0 0 1 * *"
+  # GitHub の画面から手動実行もできる
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. リポジトリのコードをダウンロード
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      # 2. Node.js をセットアップ
+      - name: Node.js のセットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # 3. 本番APIからデータを取得して JSON を更新
+      - name: pokemon_ms.json を同期
+        env:
+          SYNC_API_BASE: ${{ vars.SYNC_API_BASE }}
+        run: node scripts/sync-pokemon-json.cjs "$SYNC_API_BASE"
+
+      # 4. 変更があればコミット＆プッシュ（変更がなければスキップ）
+      - name: 変更をコミット
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add seeds/pokemon_ms.json
+          git diff --staged --quiet && echo "変更なし、スキップします" || (
+            git commit -m "chore: sync pokemon_ms.json from production DB" &&
+            git push
+          )

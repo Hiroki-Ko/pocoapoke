@@ -1,13 +1,15 @@
-// functions/getPokemonData.ts
+// functions/api/getPokemonData.ts
 export async function onRequestGet({ env }) {
   const db = env.DB;
 
-  // ① ポケモン本体だけ取得（JOIN を消して高速化）
+  // ① ポケモン本体だけ取得
   const { results: pokemon } = await db
     .prepare(`
       SELECT
         id,
+        category,
         number,
+        local_number,
         name,
         specialty1,
         specialty2,
@@ -33,8 +35,8 @@ export async function onRequestGet({ env }) {
       FROM pokemon_status
     `)
     .all();
-  
-  // ② master_code を一括取得（JOIN より圧倒的に速い）
+
+  // ③ master_code を一括取得
   const { results: master } = await db
     .prepare(`
       SELECT id, code, label, class
@@ -49,11 +51,11 @@ export async function onRequestGet({ env }) {
     return acc;
   }, {});
 
-  // ③ Map 化（高速参照）
+  // Map 化（高速参照）
   const masterMap = new Map(master.map((m) => [m.id, m]));
   const statusMap = new Map(status.map((s) => [s.poke_id, s]));
 
-  // ④ JS 側で整形（SQLite の JSON_OBJECT より速い）
+  // JS 側で整形
   const mapped = pokemon.map((p) => {
     const favorites = [
       p.favorite1,
@@ -67,10 +69,12 @@ export async function onRequestGet({ env }) {
       .map((id) => masterMap.get(id));
 
     const st = statusMap.get(p.id);
-    
+
     return {
       id: p.id,
+      category: p.category,
       number: p.number,
+      local_number: p.local_number,
       name: p.name,
       specialty1: masterMap.get(p.specialty1) || null,
       specialty2: masterMap.get(p.specialty2) || null,
@@ -86,10 +90,9 @@ export async function onRequestGet({ env }) {
     };
   });
 
-  // ⑤ CORS を必ず付ける（ローカル & 本番で必要）
   return new Response(JSON.stringify({
-      pokemon: mapped,
-      master: masterByClass
+    pokemon: mapped,
+    master: masterByClass,
   }), {
     headers: {
       "Content-Type": "application/json",
