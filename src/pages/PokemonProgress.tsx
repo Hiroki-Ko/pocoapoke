@@ -18,7 +18,7 @@ type Pokemon = {
   environment: Master | null;
   favorites: Master[] | null;
   status: {
-    status_code: Master[] | null;
+    status_code: Master | null;
     place_code: Master | null;
     today_wish: Master | null;
   } | null;
@@ -97,7 +97,7 @@ export default function PokemonProgress() {
             master_id: masterId
           })
         });
-        queryClient.invalidateQueries(["pokemonData"]);
+        queryClient.invalidateQueries({ queryKey: ["pokemonData"] });
         console.log("saved:", field, masterId);
     };
 
@@ -121,7 +121,7 @@ export default function PokemonProgress() {
     const allClear = async () => {
         setFinished([]);
         await fetch("/api/clearAllWish", { method: "POST" });
-        queryClient.invalidateQueries(["pokemonData"]);
+        queryClient.invalidateQueries({ queryKey: ["pokemonData"] });
         console.log('checkbox all clear!!');
     };
 

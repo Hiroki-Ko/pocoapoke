@@ -95,6 +95,7 @@ VALUES
   ('place', 3, 'ゴツゴツやま',     'mountain',   datetime('now')),
   ('place', 4, 'キラキラうきしま', 'island',     datetime('now')),
   ('place', 5, 'まっさらな街',     'city',       datetime('now')),
+  ('place', 6, 'ブクブクうみぞこ',  'oceanfloor', datetime('now')),
   ('evaluation', 0, '未登録',       'none',   datetime('now')),
   ('evaluation', 1, '最高',         'best',   datetime('now')),
   ('evaluation', 2, 'めちゃイイ',   'good',   datetime('now')),
