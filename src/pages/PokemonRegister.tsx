@@ -211,7 +211,7 @@ export default function PokemonRegister() {
       {/* カテゴリ / 番号 / なまえ */}
       <Box sx={{ mb: 3 }}>
         <Box sx={sectionTitleSx}>
-          <Box sx={{ display: "grid", gridTemplateColumns: "140px 120px 1fr", columnGap: "32px" }}>
+          <Box sx={{ display: "grid", gridTemplateColumns: "190px 120px 220px", columnGap: "32px" }}>
             <Typography variant="subtitle1">カテゴリ</Typography>
             <Typography
               variant="subtitle1"
@@ -220,10 +220,10 @@ export default function PokemonRegister() {
             >
               番号
             </Typography>
-            <Typography variant="subtitle1">なまえ</Typography>
+            <Typography variant="subtitle1" sx={{ textAlign: "center" }}>なまえ</Typography>
           </Box>
         </Box>
-        <Box sx={{ display: "grid", gridTemplateColumns: "140px 120px 1fr", columnGap: "32px", alignItems: "center", px: 1.5 }}>
+        <Box sx={{ display: "grid", gridTemplateColumns: "190px 120px 220px", columnGap: "32px", alignItems: "center", px: 1.5 }}>
           {/* カテゴリ */}
           <Stack direction="row" spacing={1} sx={{ alignItems: "center", flexWrap: "wrap" }}>
             {CATEGORY_OPTIONS.map((opt) => (
@@ -293,7 +293,7 @@ export default function PokemonRegister() {
           </Stack>
 
           {/* なまえ */}
-          <Stack direction="row" sx={{ alignItems: "center" }}>
+          <Stack direction="row" sx={{ alignItems: "center", justifyContent: "center" }}>
             <TextField
               size="small"
               value={name}
