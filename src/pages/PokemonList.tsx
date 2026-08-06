@@ -6,6 +6,7 @@ import { api } from "../lib/api";
 import { MasterSelect } from "../components/MasterSelect";
 import { MASTER_CLASS } from "../constants";
 import { useMasterCodes } from "../api/useMasterCodes";
+import { defaultPokemonCompare } from "../lib/pokemonOrder";
 
 export default function PokemonList() {
     type Pokemon = {
@@ -74,6 +75,9 @@ export default function PokemonList() {
         matchEnvironment(p) &&
         matchFavorite(p)
       );
+
+      // 通常表示順: 本編(番号) → EX(ローカル番号) → DLC(ローカル番号)
+      list = [...list].sort(defaultPokemonCompare);
 
       if (nameSortMode === "reverse") {
         list = [...list].reverse();

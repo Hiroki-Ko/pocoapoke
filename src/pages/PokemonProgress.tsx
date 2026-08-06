@@ -8,10 +8,13 @@ import { MasterSelect } from "../components/MasterSelect";
 import { MASTER_CLASS } from "../constants";
 import ClearIcon from "@mui/icons-material/Clear";
 import { Chip, Box } from "@mui/material";
+import { defaultPokemonCompare } from "../lib/pokemonOrder";
 
 type Pokemon = {
   id: number;
-  number: number;
+  category: string;
+  number: number | null;
+  local_number: number | null;
   name: string;
   specialty1: Master | null;
   specialty2: Master | null;
@@ -67,6 +70,9 @@ export default function PokemonProgress() {
 
         return matchPlace && matchEval;
       });
+
+      // 通常表示順: 本編(番号) → EX(ローカル番号) → DLC(ローカル番号)
+      list = [...list].sort(defaultPokemonCompare);
 
       // 2. ソート（住みごこち）
       if (sortMode === "asc") {

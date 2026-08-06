@@ -33,6 +33,7 @@ VALUES
   ('specialty', 28, 'しょくにん', 'craftsman',    datetime('now')),
   ('specialty', 29, 'ばくはつ',   'bomb',         datetime('now')),
   ('specialty', 30, 'レアもの',   'rare',         datetime('now')),
+  ('specialty', 31, 'みがく',     'polish',       datetime('now')),
   ('environment', 0, 'なし',          'none',        datetime('now')),
   ('environment', 1, 'あたたかい',    'warm',        datetime('now')),
   ('environment', 2, 'すずしい',      'cool',        datetime('now')),

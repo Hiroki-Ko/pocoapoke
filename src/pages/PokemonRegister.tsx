@@ -253,6 +253,7 @@ export default function PokemonRegister() {
                   id="manual_number"
                   size="small"
                   sx={{ width: 100 }}
+                  slotProps={{ htmlInput: { inputMode: "numeric", pattern: "[0-9]*" } }}
                   value={number ?? ""}
                   onChange={(e) => {
                     const value = e.target.value;
@@ -278,6 +279,7 @@ export default function PokemonRegister() {
                 id="manual_local_number"
                 size="small"
                 sx={{ width: 100 }}
+                slotProps={{ htmlInput: { inputMode: "numeric", pattern: "[0-9]*" } }}
                 value={localNumber ?? ""}
                 onChange={(e) => {
                   const value = e.target.value;
