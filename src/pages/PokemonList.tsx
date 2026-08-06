@@ -10,7 +10,9 @@ import { useMasterCodes } from "../api/useMasterCodes";
 export default function PokemonList() {
     type Pokemon = {
       id: number;
-      number: number;
+      category: string;
+      number: number | null;
+      local_number: number | null;
       name: string;
       specialty1: Master | null;
       specialty2: Master | null;
@@ -20,12 +22,24 @@ export default function PokemonList() {
       updated_at: string | null;
     };
 
+    type NameSortMode = "none" | "reverse" | "asc" | "desc";
+
     const { data: masterCodes, isLoading } = useMasterCodes();
     const [pokemonData, setPokemonData] = useState<Pokemon[]>([]);
     const [dispPokemonData, setDispPokemonData] = useState<Pokemon[]>([]);
     const [selectedSpecialty, setSelectedSpecialty] = useState<number | null>(null);
     const [selectedEnvironment, setSelectedEnvironment] = useState<number | null>(null);
     const [selectedFavorite, setSelectedFavorite] = useState<number | null>(null);
+    const [nameSortMode, setNameSortMode] = useState<NameSortMode>("none");
+
+    const cycleNameSort = () => {
+      setNameSortMode((prev) => {
+        if (prev === "none") return "reverse";
+        if (prev === "reverse") return "asc";
+        if (prev === "asc") return "desc";
+        return "none";
+      });
+    };
 
     const navigate = useNavigate();
 
@@ -53,16 +67,24 @@ export default function PokemonList() {
         .catch(console.error);
     }, []);
 
-    // フィルタリング
+    // フィルタリング・ソート
     useEffect(() => {
-      setDispPokemonData(
-        pokemonData.filter((p) =>
-          matchSpecialty(p) &&
-          matchEnvironment(p) &&
-          matchFavorite(p)
-        )
+      let list = pokemonData.filter((p) =>
+        matchSpecialty(p) &&
+        matchEnvironment(p) &&
+        matchFavorite(p)
       );
-    }, [selectedSpecialty, selectedEnvironment, selectedFavorite, pokemonData]);
+
+      if (nameSortMode === "reverse") {
+        list = [...list].reverse();
+      } else if (nameSortMode === "asc") {
+        list = [...list].sort((a, b) => a.name.localeCompare(b.name, "ja"));
+      } else if (nameSortMode === "desc") {
+        list = [...list].sort((a, b) => b.name.localeCompare(a.name, "ja"));
+      }
+
+      setDispPokemonData(list);
+    }, [selectedSpecialty, selectedEnvironment, selectedFavorite, pokemonData, nameSortMode]);
 
     if (isLoading || !masterCodes) return <div>Loading...</div>;
 
@@ -77,7 +99,11 @@ export default function PokemonList() {
               <thead>
                 <tr>
                   <th>No.</th>
-                  <th>なまえ</th>
+                  <th onClick={cycleNameSort} style={{ cursor: "pointer" }}>
+                    なまえ
+                    {nameSortMode === "asc" && " ▲"}
+                    {nameSortMode === "desc" && " ▼"}
+                  </th>
                   <th>得意なこと1</th>
                   <th>得意なこと2</th>
                   <th>好きな環境</th>
@@ -87,7 +113,7 @@ export default function PokemonList() {
               <tbody>
                 {dispPokemonData.map((p) => (
                   <tr key={p.id}>
-                    <td>{p.number}</td>
+                    <td>{p.number ?? `${p.category.toUpperCase()}${p.local_number ?? ""}`}</td>
                     <td>{p.name}</td>
                     <td>{p.specialty1?.label}</td>
                     <td>{p.specialty2?.label}</td>

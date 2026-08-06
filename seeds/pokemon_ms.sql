@@ -1,5 +1,6 @@
 -- PokemonMs INSERT
 DELETE FROM pokemon_ms;
+
 INSERT INTO pokemon_ms
   (
     category,
@@ -232,7 +233,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=5),
     (SELECT id FROM master_code WHERE class='favorite' AND code=23), (SELECT id FROM master_code WHERE class='favorite' AND code=45), (SELECT id FROM master_code WHERE class='favorite' AND code=41), (SELECT id FROM master_code WHERE class='favorite' AND code=12), (SELECT id FROM master_code WHERE class='favorite' AND code=33), (SELECT id FROM master_code WHERE class='favorite' AND code=5),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     21,
@@ -452,7 +467,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=5),
     (SELECT id FROM master_code WHERE class='favorite' AND code=23), (SELECT id FROM master_code WHERE class='favorite' AND code=40), (SELECT id FROM master_code WHERE class='favorite' AND code=7), (SELECT id FROM master_code WHERE class='favorite' AND code=33), (SELECT id FROM master_code WHERE class='favorite' AND code=36), (SELECT id FROM master_code WHERE class='favorite' AND code=4),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     41,
@@ -513,7 +542,7 @@ VALUES
     45,
     null,
     'コイキング',
-    null,
+    (SELECT id FROM master_code WHERE class='specialty' AND code=0),
     null,
     (SELECT id FROM master_code WHERE class='environment' AND code=3),
     (SELECT id FROM master_code WHERE class='favorite' AND code=40), (SELECT id FROM master_code WHERE class='favorite' AND code=10), (SELECT id FROM master_code WHERE class='favorite' AND code=42), (SELECT id FROM master_code WHERE class='favorite' AND code=32), (SELECT id FROM master_code WHERE class='favorite' AND code=48), (SELECT id FROM master_code WHERE class='favorite' AND code=1),
@@ -535,7 +564,7 @@ VALUES
     47,
     null,
     'メタモン',
-    null,
+    (SELECT id FROM master_code WHERE class='specialty' AND code=0),
     null,
     (SELECT id FROM master_code WHERE class='environment' AND code=0),
     null, null, null, null, null, null,
@@ -672,7 +701,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=3),
     (SELECT id FROM master_code WHERE class='favorite' AND code=40), (SELECT id FROM master_code WHERE class='favorite' AND code=10), (SELECT id FROM master_code WHERE class='favorite' AND code=25), (SELECT id FROM master_code WHERE class='favorite' AND code=15), (SELECT id FROM master_code WHERE class='favorite' AND code=9), (SELECT id FROM master_code WHERE class='favorite' AND code=4),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     59,
@@ -892,7 +935,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=3),
     (SELECT id FROM master_code WHERE class='favorite' AND code=12), (SELECT id FROM master_code WHERE class='favorite' AND code=40), (SELECT id FROM master_code WHERE class='favorite' AND code=10), (SELECT id FROM master_code WHERE class='favorite' AND code=36), (SELECT id FROM master_code WHERE class='favorite' AND code=26), (SELECT id FROM master_code WHERE class='favorite' AND code=5),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     78,
@@ -1112,7 +1169,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=5),
     (SELECT id FROM master_code WHERE class='favorite' AND code=28), (SELECT id FROM master_code WHERE class='favorite' AND code=18), (SELECT id FROM master_code WHERE class='favorite' AND code=39), (SELECT id FROM master_code WHERE class='favorite' AND code=15), (SELECT id FROM master_code WHERE class='favorite' AND code=38), (SELECT id FROM master_code WHERE class='favorite' AND code=5),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     97,
@@ -1332,7 +1403,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=3),
     (SELECT id FROM master_code WHERE class='favorite' AND code=40), (SELECT id FROM master_code WHERE class='favorite' AND code=17), (SELECT id FROM master_code WHERE class='favorite' AND code=25), (SELECT id FROM master_code WHERE class='favorite' AND code=39), (SELECT id FROM master_code WHERE class='favorite' AND code=24), (SELECT id FROM master_code WHERE class='favorite' AND code=4),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     116,
@@ -1552,7 +1637,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=6),
     (SELECT id FROM master_code WHERE class='favorite' AND code=18), (SELECT id FROM master_code WHERE class='favorite' AND code=20), (SELECT id FROM master_code WHERE class='favorite' AND code=14), (SELECT id FROM master_code WHERE class='favorite' AND code=35), (SELECT id FROM master_code WHERE class='favorite' AND code=42), (SELECT id FROM master_code WHERE class='favorite' AND code=2),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     136,
@@ -1772,7 +1871,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=5),
     (SELECT id FROM master_code WHERE class='favorite' AND code=47), (SELECT id FROM master_code WHERE class='favorite' AND code=17), (SELECT id FROM master_code WHERE class='favorite' AND code=6), (SELECT id FROM master_code WHERE class='favorite' AND code=16), (SELECT id FROM master_code WHERE class='favorite' AND code=42), (SELECT id FROM master_code WHERE class='favorite' AND code=4),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     154,
@@ -1992,7 +2105,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=3),
     (SELECT id FROM master_code WHERE class='favorite' AND code=40), (SELECT id FROM master_code WHERE class='favorite' AND code=23), (SELECT id FROM master_code WHERE class='favorite' AND code=25), (SELECT id FROM master_code WHERE class='favorite' AND code=9), (SELECT id FROM master_code WHERE class='favorite' AND code=11), (SELECT id FROM master_code WHERE class='favorite' AND code=5),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     174,
@@ -2212,7 +2339,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=1),
     (SELECT id FROM master_code WHERE class='favorite' AND code=8), (SELECT id FROM master_code WHERE class='favorite' AND code=37), (SELECT id FROM master_code WHERE class='favorite' AND code=13), (SELECT id FROM master_code WHERE class='favorite' AND code=44), (SELECT id FROM master_code WHERE class='favorite' AND code=32), (SELECT id FROM master_code WHERE class='favorite' AND code=4),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     194,
@@ -2432,7 +2573,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=3),
     (SELECT id FROM master_code WHERE class='favorite' AND code=40), (SELECT id FROM master_code WHERE class='favorite' AND code=6), (SELECT id FROM master_code WHERE class='favorite' AND code=11), (SELECT id FROM master_code WHERE class='favorite' AND code=7), (SELECT id FROM master_code WHERE class='favorite' AND code=42), (SELECT id FROM master_code WHERE class='favorite' AND code=4),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     213,
@@ -2652,7 +2807,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=5),
     (SELECT id FROM master_code WHERE class='favorite' AND code=35), (SELECT id FROM master_code WHERE class='favorite' AND code=17), (SELECT id FROM master_code WHERE class='favorite' AND code=16), (SELECT id FROM master_code WHERE class='favorite' AND code=41), (SELECT id FROM master_code WHERE class='favorite' AND code=24), (SELECT id FROM master_code WHERE class='favorite' AND code=1),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     233,
@@ -2872,7 +3041,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=3),
     (SELECT id FROM master_code WHERE class='favorite' AND code=40), (SELECT id FROM master_code WHERE class='favorite' AND code=10), (SELECT id FROM master_code WHERE class='favorite' AND code=25), (SELECT id FROM master_code WHERE class='favorite' AND code=41), (SELECT id FROM master_code WHERE class='favorite' AND code=30), (SELECT id FROM master_code WHERE class='favorite' AND code=2),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     253,
@@ -3092,7 +3275,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=4),
     (SELECT id FROM master_code WHERE class='favorite' AND code=8), (SELECT id FROM master_code WHERE class='favorite' AND code=13), (SELECT id FROM master_code WHERE class='favorite' AND code=48), (SELECT id FROM master_code WHERE class='favorite' AND code=42), (SELECT id FROM master_code WHERE class='favorite' AND code=30), (SELECT id FROM master_code WHERE class='favorite' AND code=2),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     273,
@@ -3274,7 +3471,7 @@ VALUES
     289,
     null,
     'カイオーガ',
-    null,
+    (SELECT id FROM master_code WHERE class='specialty' AND code=0),
     null,
     (SELECT id FROM master_code WHERE class='environment' AND code=3),
     (SELECT id FROM master_code WHERE class='favorite' AND code=40), (SELECT id FROM master_code WHERE class='favorite' AND code=10), (SELECT id FROM master_code WHERE class='favorite' AND code=20), (SELECT id FROM master_code WHERE class='favorite' AND code=18), (SELECT id FROM master_code WHERE class='favorite' AND code=14), (SELECT id FROM master_code WHERE class='favorite' AND code=3),
@@ -3312,7 +3509,21 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=3),
     (SELECT id FROM master_code WHERE class='favorite' AND code=40), (SELECT id FROM master_code WHERE class='favorite' AND code=10), (SELECT id FROM master_code WHERE class='favorite' AND code=25), (SELECT id FROM master_code WHERE class='favorite' AND code=41), (SELECT id FROM master_code WHERE class='favorite' AND code=16), (SELECT id FROM master_code WHERE class='favorite' AND code=4),
     datetime('now')
-  ),
+  );
+
+INSERT INTO pokemon_ms
+  (
+    category,
+    number,
+    local_number,
+    name,
+    specialty1,
+    specialty2,
+    environment,
+    favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+    created_at
+  )
+VALUES
   (
     'main',
     293,
@@ -3362,7 +3573,7 @@ VALUES
     297,
     null,
     'ルギア',
-    null,
+    (SELECT id FROM master_code WHERE class='specialty' AND code=0),
     null,
     (SELECT id FROM master_code WHERE class='environment' AND code=3),
     (SELECT id FROM master_code WHERE class='favorite' AND code=35), (SELECT id FROM master_code WHERE class='favorite' AND code=12), (SELECT id FROM master_code WHERE class='favorite' AND code=40), (SELECT id FROM master_code WHERE class='favorite' AND code=10), (SELECT id FROM master_code WHERE class='favorite' AND code=24), (SELECT id FROM master_code WHERE class='favorite' AND code=3),
@@ -3373,7 +3584,7 @@ VALUES
     298,
     null,
     'ホウオウ',
-    null,
+    (SELECT id FROM master_code WHERE class='specialty' AND code=0),
     null,
     (SELECT id FROM master_code WHERE class='environment' AND code=1),
     (SELECT id FROM master_code WHERE class='favorite' AND code=37), (SELECT id FROM master_code WHERE class='favorite' AND code=45), (SELECT id FROM master_code WHERE class='favorite' AND code=12), (SELECT id FROM master_code WHERE class='favorite' AND code=23), (SELECT id FROM master_code WHERE class='favorite' AND code=24), (SELECT id FROM master_code WHERE class='favorite' AND code=2),
@@ -3444,5 +3655,5 @@ VALUES
     (SELECT id FROM master_code WHERE class='environment' AND code=5),
     (SELECT id FROM master_code WHERE class='favorite' AND code=47), (SELECT id FROM master_code WHERE class='favorite' AND code=23), (SELECT id FROM master_code WHERE class='favorite' AND code=12), (SELECT id FROM master_code WHERE class='favorite' AND code=33), (SELECT id FROM master_code WHERE class='favorite' AND code=39), (SELECT id FROM master_code WHERE class='favorite' AND code=4),
     datetime('now')
-  )
-;
+  );
+

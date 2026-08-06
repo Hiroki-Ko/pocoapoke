@@ -15,6 +15,9 @@ export async function onRequestPost(context) {
   } = body;
 
   // サーバーサイドバリデーション
+  if (!["main", "ex", "dlc"].includes(category)) {
+    return Response.json({ success: false, error: "categoryが不正です" }, { status: 400 });
+  }
   if (!name || String(name).trim() === "") {
     return Response.json({ success: false, error: "名前は必須です" }, { status: 400 });
   }
@@ -24,6 +27,19 @@ export async function onRequestPost(context) {
   if (!environment) {
     return Response.json({ success: false, error: "好きな環境は必須です" }, { status: 400 });
   }
+  if (category === "main") {
+    if (typeof number !== "number" || Number.isNaN(number)) {
+      return Response.json({ success: false, error: "番号は必須です" }, { status: 400 });
+    }
+  } else {
+    if (typeof localNumber !== "number" || Number.isNaN(localNumber)) {
+      return Response.json({ success: false, error: "番号(ローカル)は必須です" }, { status: 400 });
+    }
+  }
+
+  // category に応じて number / local_number の片方は必ず null にする
+  const finalNumber = category === "main" ? number : null;
+  const finalLocalNumber = category === "main" ? null : localNumber;
 
   // favorites は最大6件に揃える
   const fav = Array.isArray(favorites) ? [...favorites] : [];
@@ -51,9 +67,9 @@ export async function onRequestPost(context) {
     `
   )
     .bind(
-      category ?? "main",
-      number ?? null,
-      localNumber ?? null,
+      category,
+      finalNumber,
+      finalLocalNumber,
       name,
       specialty1,
       specialty2 ?? null,
@@ -68,7 +84,7 @@ export async function onRequestPost(context) {
     .run();
 
   // 新しく作られた pokemon_ms.id を取得
-  const newId = result.lastInsertRowId;
+  const newId = result.meta.last_row_id;
 
   // pokemon_status を INSERT（1対1）
   await env.DB.prepare(`
@@ -81,8 +97,8 @@ export async function onRequestPost(context) {
       )
       VALUES (
         ?,
-        (SELECT id FROM master_code WHERE class='evaluation' AND code=1),
-        (SELECT id FROM master_code WHERE class='place' AND code=1),
+        (SELECT id FROM master_code WHERE class='evaluation' AND code=0),
+        (SELECT id FROM master_code WHERE class='place' AND code=0),
         (SELECT id FROM master_code WHERE class='wish' AND code=0),
         datetime('now')
       )

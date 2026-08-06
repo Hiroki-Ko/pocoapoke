@@ -1,6 +1,6 @@
 export async function onRequestGet({ env }) {
   const { results } = await env.DB
-    .prepare("SELECT MAX(number) AS max FROM pokemon_ms")
+    .prepare("SELECT MAX(number) AS max FROM pokemon_ms WHERE category = 'main'")
     .all();
 
   const next = (results[0]?.max ?? 0) + 1;

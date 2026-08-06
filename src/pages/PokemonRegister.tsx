@@ -4,51 +4,103 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { TextField, Button, Chip, Stack, Typography, Box } from "@mui/material";
 import { Snackbar, Alert } from "@mui/material";
-import { MASTER_CLASS } from "../constants";
+import { MASTER_CLASS, POKEMON_CATEGORY, type PokemonCategory } from "../constants";
 import { useMasterCodes } from "../api/useMasterCodes";
 import { useNextNumber } from "../api/useNextNumber";
+import { useNextLocalNumber } from "../api/useNextLocalNumber";
+
+const CATEGORY_OPTIONS: { value: PokemonCategory; label: string }[] = [
+  { value: POKEMON_CATEGORY.DLC, label: "DLC" },
+  { value: POKEMON_CATEGORY.EX, label: "EX" },
+  { value: POKEMON_CATEGORY.MAIN, label: "本編" },
+];
+
+// 好きなもの: 五味(あまい〜にがい, code1-5)は favorite6 専用、それ以外(code6+)は favorite1-5
+const TASTE_CODE_MIN = 1;
+const TASTE_CODE_MAX = 5;
+
+// フィールドの区切りはタイトル行全体への薄い色付けで表現する（枠線は使わない）
+const sectionTitleSx = {
+  display: "block",
+  width: "100%",
+  bgcolor: "#eef2f7",
+  px: 1.5,
+  py: 1,
+  borderRadius: 1,
+  mb: 1,
+};
 
 export default function PokemonRegister() {
   const { data: masterCodes, isLoading } = useMasterCodes();
+
+  // 今後基本的に main を選ぶことは想定していないため初期値は dlc
+  const [category, setCategory] = useState<PokemonCategory>(POKEMON_CATEGORY.DLC);
+
   const { data: nextNumberData, refetch: refetchNextNumber } = useNextNumber();
   const nextNumber = nextNumberData?.next ?? null;
+  const { data: nextLocalNumberData, refetch: refetchNextLocalNumber } = useNextLocalNumber(category);
+  const nextLocalNumber = nextLocalNumberData?.next ?? null;
 
   const [number, setNumber] = useState<number | null>(null);
+  const [localNumber, setLocalNumber] = useState<number | null>(null);
   const [name, setName] = useState("");
   const [specialty1, setSpecialty1] = useState<number | null>(null);
   const [specialty2, setSpecialty2] = useState<number | null>(null);
   const [environment, setEnvironment] = useState<number | null>(null);
-  const [favorites, setFavorites] = useState<number[]>([]);
+  const [favorites, setFavorites] = useState<number[]>([]); // 五味以外の好きなもの（最大5件、favorite1-5）
+  const [taste, setTaste] = useState<number | null>(null); // 五味（favorite6）
   const [isManual, setIsManual] = useState(false);
+  const [isManualLocal, setIsManualLocal] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // nextNumber が取得できたら初期値としてセット
+  const isMain = category === POKEMON_CATEGORY.MAIN;
+
+  // nextNumber が取得できたら初期値としてセット（本編のみ）
   useEffect(() => {
-    if (nextNumber !== null && number === null) {
+    if (isMain && !isManual && nextNumber !== null && number === null) {
       setNumber(nextNumber);
     }
-  }, [nextNumber]);
+  }, [nextNumber, isMain]);
+
+  // nextLocalNumber が取得できたら初期値としてセット（EX/DLCのみ）
+  useEffect(() => {
+    if (!isMain && !isManualLocal && nextLocalNumber !== null && localNumber === null) {
+      setLocalNumber(nextLocalNumber);
+    }
+  }, [nextLocalNumber, isMain]);
 
   const toggleFavorite = (id: number) => {
-    setFavorites((prev) =>
-      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id],
-    );
+    setFavorites((prev) => {
+      if (prev.includes(id)) return prev.filter((x) => x !== id);
+      if (prev.length >= 5) return prev; // favorite1-5 の5枠まで
+      return [...prev, id];
+    });
+  };
+
+  const toggleTaste = (id: number) => {
+    setTaste((prev) => (prev === id ? null : id));
+  };
+
+  const handleCategoryChange = (next: PokemonCategory) => {
+    setCategory(next);
+    setIsManual(false);
+    setIsManualLocal(false);
+    setNumber(null);
+    setLocalNumber(null);
   };
 
   const resetChoices = () => {
-    setNumber(nextNumber);
     setName("");
     setSpecialty1(null);
     setSpecialty2(null);
     setEnvironment(null);
     setFavorites([]);
+    setTaste(null);
     setIsManual(false);
-  };
-
-  const handleChipClick = () => {
-    setIsManual(false);
-    setNumber(nextNumber);
+    setIsManualLocal(false);
+    setNumber(isMain ? nextNumber : null);
+    setLocalNumber(isMain ? null : nextLocalNumber);
   };
 
   const handleChipUnselect = () => {
@@ -56,13 +108,40 @@ export default function PokemonRegister() {
     setNumber(null);
   };
 
+  const handleLocalChipUnselect = () => {
+    setIsManualLocal(true);
+    setLocalNumber(null);
+  };
+
+  // 番号タイトルクリックでテキストボックス→ボタンに戻す
+  const handleNumberTitleClick = () => {
+    if (isMain) {
+      if (isManual) {
+        setIsManual(false);
+        setNumber(nextNumber);
+      }
+    } else if (isManualLocal) {
+      setIsManualLocal(false);
+      setLocalNumber(nextLocalNumber);
+    }
+  };
+
   const handleSubmit = async () => {
     // クライアントサイドバリデーション
-    if (typeof number !== "number" || isNaN(number)) {
-      setErrorMessage("番号は数値で入力してください");
-      setNumber(nextNumber);
-      setIsManual(false);
-      return;
+    if (isMain) {
+      if (typeof number !== "number" || isNaN(number)) {
+        setErrorMessage("番号は数値で入力してください");
+        setNumber(nextNumber);
+        setIsManual(false);
+        return;
+      }
+    } else {
+      if (typeof localNumber !== "number" || isNaN(localNumber)) {
+        setErrorMessage("番号(ローカル)は数値で入力してください");
+        setLocalNumber(nextLocalNumber);
+        setIsManualLocal(false);
+        return;
+      }
     }
     if (!name.trim()) {
       setErrorMessage("名前は必須です");
@@ -77,15 +156,20 @@ export default function PokemonRegister() {
       return;
     }
 
+    // favorite1-5: 五味以外の好きなもの（不足分はnullで埋める） / favorite6: 五味
+    const favoritesSlots = [...favorites];
+    while (favoritesSlots.length < 5) favoritesSlots.push(null);
+    favoritesSlots.push(taste);
+
     const payload = {
-      category: "main",
-      number,
-      localNumber: null,
+      category,
+      number: isMain ? number : null,
+      localNumber: isMain ? null : localNumber,
       name,
       specialty1,
       specialty2,
       environment,
-      favorites,
+      favorites: favoritesSlots,
     };
 
     const res = await fetch("/api/registerPokemon", {
@@ -96,7 +180,11 @@ export default function PokemonRegister() {
 
     const json = await res.json();
     if (json.success) {
-      await refetchNextNumber();
+      if (isMain) {
+        await refetchNextNumber();
+      } else {
+        await refetchNextLocalNumber();
+      }
       setSuccessMessage(true);
       resetChoices();
     } else {
@@ -107,8 +195,11 @@ export default function PokemonRegister() {
   if (isLoading || !masterCodes) return <div>Loading...</div>;
 
   const specialtyItems = masterCodes[MASTER_CLASS.SPECIALTY] ?? [];
+  const specialty1Items = specialtyItems.filter((m) => m.code !== 0); // 得意なこと1に「なし」は不要
   const environmentItems = masterCodes[MASTER_CLASS.ENVIRONMENT] ?? [];
-  const favoriteItems = masterCodes[MASTER_CLASS.FAVORITE] ?? [];
+  const allFavoriteItems = masterCodes[MASTER_CLASS.FAVORITE] ?? [];
+  const tasteItems = allFavoriteItems.filter((m) => m.code >= TASTE_CODE_MIN && m.code <= TASTE_CODE_MAX);
+  const otherFavoriteItems = allFavoriteItems.filter((m) => m.code > TASTE_CODE_MAX);
 
   return (
     <div>
@@ -117,56 +208,106 @@ export default function PokemonRegister() {
       </Helmet>
       <h2>Register Pokemon</h2>
 
-      {/* 番号 */}
-      <div>
-        <Typography variant="subtitle1">番号</Typography>
-        <Stack direction="row" spacing={1} sx={{ mb: 2, alignItems: "center" }}>
-          {nextNumber && (
-            <Chip
-              label={nextNumber}
-              color={number === nextNumber ? "primary" : "default"}
-              onClick={() => {
-                if (isManual) {
-                  handleChipClick();
-                } else {
-                  handleChipUnselect();
-                }
-              }}
-            />
-          )}
-          {isManual && (
-            <TextField
-              id="manual_number"
-              label="番号"
-              value={number ?? ""}
-              onChange={(e) => {
-                const value = e.target.value;
-                if (value === "") {
-                  setNumber(null);
-                  return;
-                }
-                const num = Number(value);
-                setNumber(isNaN(num) ? null : num);
-              }}
-            />
-          )}
-        </Stack>
-      </div>
+      {/* カテゴリ / 番号 / なまえ */}
+      <Box sx={{ mb: 3 }}>
+        <Box sx={sectionTitleSx}>
+          <Box sx={{ display: "grid", gridTemplateColumns: "140px 120px 1fr", columnGap: "32px" }}>
+            <Typography variant="subtitle1">カテゴリ</Typography>
+            <Typography
+              variant="subtitle1"
+              onClick={handleNumberTitleClick}
+              sx={{ textAlign: "center", cursor: (isManual || isManualLocal) ? "pointer" : "default" }}
+            >
+              番号
+            </Typography>
+            <Typography variant="subtitle1">なまえ</Typography>
+          </Box>
+        </Box>
+        <Box sx={{ display: "grid", gridTemplateColumns: "140px 120px 1fr", columnGap: "32px", alignItems: "center", px: 1.5 }}>
+          {/* カテゴリ */}
+          <Stack direction="row" spacing={1} sx={{ alignItems: "center", flexWrap: "wrap" }}>
+            {CATEGORY_OPTIONS.map((opt) => (
+              <Chip
+                key={opt.value}
+                label={opt.label}
+                color={category === opt.value ? "primary" : "default"}
+                variant={category === opt.value ? "filled" : "outlined"}
+                onClick={() => handleCategoryChange(opt.value)}
+              />
+            ))}
+          </Stack>
 
-      {/* なまえ */}
-      <TextField
-        label="なまえ"
-        fullWidth
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        sx={{ mb: 3 }}
-      />
+          {/* 番号 */}
+          <Stack direction="row" spacing={1} sx={{ alignItems: "center", justifyContent: "center" }}>
+            {isMain ? (
+              !isManual ? (
+                nextNumber && (
+                  <Chip
+                    label={nextNumber}
+                    color={number === nextNumber ? "primary" : "default"}
+                    onClick={handleChipUnselect}
+                  />
+                )
+              ) : (
+                <TextField
+                  id="manual_number"
+                  size="small"
+                  sx={{ width: 100 }}
+                  value={number ?? ""}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (value === "") {
+                      setNumber(null);
+                      return;
+                    }
+                    const num = Number(value);
+                    setNumber(isNaN(num) ? null : num);
+                  }}
+                />
+              )
+            ) : !isManualLocal ? (
+              nextLocalNumber && (
+                <Chip
+                  label={nextLocalNumber}
+                  color={localNumber === nextLocalNumber ? "primary" : "default"}
+                  onClick={handleLocalChipUnselect}
+                />
+              )
+            ) : (
+              <TextField
+                id="manual_local_number"
+                size="small"
+                sx={{ width: 100 }}
+                value={localNumber ?? ""}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  if (value === "") {
+                    setLocalNumber(null);
+                    return;
+                  }
+                  const num = Number(value);
+                  setLocalNumber(isNaN(num) ? null : num);
+                }}
+              />
+            )}
+          </Stack>
+
+          {/* なまえ */}
+          <Stack direction="row" sx={{ alignItems: "center" }}>
+            <TextField
+              size="small"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </Stack>
+        </Box>
+      </Box>
 
       {/* 得意なこと1 */}
-      <Typography variant="subtitle1">得意なこと1</Typography>
-      <Box sx={{ mb: 2, maxHeight: 140, overflowY: "auto", borderRadius: 1, border: "1px solid #ddd", p: 1, bgcolor: "#ffffff", display: "flex", alignItems: "flex-start" }}>
-        <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ width: "100%" }}>
-          {specialtyItems.map((m) => (
+      <Typography variant="subtitle1" sx={sectionTitleSx}>得意なこと1</Typography>
+      <Box sx={{ mb: 2, px: 1.5 }}>
+        <Stack direction="row" sx={{ width: "100%", flexWrap: "wrap", gap: 1 }}>
+          {specialty1Items.map((m) => (
             <Chip
               key={m.id}
               label={m.label}
@@ -185,9 +326,9 @@ export default function PokemonRegister() {
       </Box>
 
       {/* 得意なこと2 */}
-      <Typography variant="subtitle1">得意なこと2</Typography>
-      <Box sx={{ mb: 2, maxHeight: 140, overflowY: "auto", borderRadius: 1, border: "1px solid #ddd", p: 1, bgcolor: "#ffffff", display: "flex", alignItems: "flex-start" }}>
-        <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ width: "100%" }}>
+      <Typography variant="subtitle1" sx={sectionTitleSx}>得意なこと2</Typography>
+      <Box sx={{ mb: 2, px: 1.5 }}>
+        <Stack direction="row" sx={{ width: "100%", flexWrap: "wrap", gap: 1 }}>
           {specialtyItems.map((m) => (
             <Chip
               key={m.id}
@@ -207,9 +348,9 @@ export default function PokemonRegister() {
       </Box>
 
       {/* 好きな環境 */}
-      <Typography variant="subtitle1">好きな環境</Typography>
-      <Box sx={{ mb: 2, maxHeight: 140, overflowY: "auto", borderRadius: 1, border: "1px solid #ddd", p: 1, bgcolor: "#ffffff", display: "flex", alignItems: "flex-start" }}>
-        <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ width: "100%" }}>
+      <Typography variant="subtitle1" sx={sectionTitleSx}>好きな環境</Typography>
+      <Box sx={{ mb: 2, px: 1.5 }}>
+        <Stack direction="row" sx={{ width: "100%", flexWrap: "wrap", gap: 1 }}>
           {environmentItems.map((m) => (
             <Chip
               key={m.id}
@@ -228,22 +369,44 @@ export default function PokemonRegister() {
         </Stack>
       </Box>
 
-      {/* 好きなもの */}
-      <Typography variant="subtitle1">好きなもの</Typography>
-      <Box sx={{ mb: 2, maxHeight: 140, overflowY: "auto", borderRadius: 1, border: "1px solid #ddd", p: 1, bgcolor: "#ffffff", display: "flex", alignItems: "flex-start" }}>
-        <Stack direction="row" spacing={1} flexWrap="wrap" sx={{ mb: 2 }}>
-          {favoriteItems.map((m) => (
+      {/* 好きなもの（五味は favorite6 用に同フィールド内で分けて表示） */}
+      <Typography variant="subtitle1" sx={sectionTitleSx}>好きなもの</Typography>
+      <Box sx={{ mb: 2, px: 1.5 }}>
+        <Stack direction="row" sx={{ width: "100%", flexWrap: "wrap", gap: 1 }}>
+          {otherFavoriteItems.map((m) => {
+            const selected = favorites.includes(m.id);
+            const disabled = !selected && favorites.length >= 5;
+            return (
+              <Chip
+                key={m.id}
+                label={m.label}
+                color={selected ? "primary" : "default"}
+                variant={selected ? "filled" : "outlined"}
+                disabled={disabled}
+                onClick={() => toggleFavorite(m.id)}
+                sx={{
+                  backgroundColor: selected ? "#1976d2" : "#fff",
+                  color: selected ? "#fff" : "#000",
+                  borderColor: "#ccc",
+                  "&:hover": { backgroundColor: selected ? "#115293" : "#f0f0f0" },
+                }}
+              />
+            );
+          })}
+        </Stack>
+        <Stack direction="row" sx={{ width: "100%", flexWrap: "wrap", gap: 1, mt: 1 }}>
+          {tasteItems.map((m) => (
             <Chip
               key={m.id}
               label={m.label}
-              color={favorites.includes(m.id) ? "primary" : "default"}
-              variant={favorites.includes(m.id) ? "filled" : "outlined"}
-              onClick={() => toggleFavorite(m.id)}
+              color={taste === m.id ? "primary" : "default"}
+              variant={taste === m.id ? "filled" : "outlined"}
+              onClick={() => toggleTaste(m.id)}
               sx={{
-                backgroundColor: favorites.includes(m.id) ? "#1976d2" : "#fff",
-                color: favorites.includes(m.id) ? "#fff" : "#000",
+                backgroundColor: taste === m.id ? "#1976d2" : "#fff",
+                color: taste === m.id ? "#fff" : "#000",
                 borderColor: "#ccc",
-                "&:hover": { backgroundColor: favorites.includes(m.id) ? "#115293" : "#f0f0f0" },
+                "&:hover": { backgroundColor: taste === m.id ? "#115293" : "#f0f0f0" },
               }}
             />
           ))}

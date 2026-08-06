@@ -30,6 +30,7 @@ export default function PokemonProgress() {
     const queryClient = useQueryClient();
     const [view, setView] = useState<boolean>(false);
     const [sortMode, setSortMode] = useState<"none" | "asc" | "desc">("none");
+    const [nameSortMode, setNameSortMode] = useState<"none" | "reverse" | "asc" | "desc">("none");
     const [selectedPlace, setSelectedPlace] = useState<number | null>(null);
     const [selectedEvalution, setSelectedEvalution] = useState<number[]>([]);
     const [finished, setFinished] = useState<number[]>([]);
@@ -45,6 +46,7 @@ export default function PokemonProgress() {
     const invisibleCol = view ? 6 : 1;
     const isFiltering = selectedPlace !== null || (selectedEvalution && selectedEvalution.length > 0);
     const evalColors: Record<number, string> = {
+      0: "#E0E0E0",   // 未登録
       1: "#FF4D4D",   // 最高
       2: "#FF8C42",   // めちゃイイ
       3: "#FFD93D",   // ちょっといい
@@ -66,16 +68,25 @@ export default function PokemonProgress() {
         return matchPlace && matchEval;
       });
 
-      // 2. ソート
+      // 2. ソート（住みごこち）
       if (sortMode === "asc") {
         list.sort((a, b) => (a.status?.status_code?.id ?? 0) - (b.status?.status_code?.id ?? 0));
       } else if (sortMode === "desc") {
         list.sort((a, b) => (b.status?.status_code?.id ?? 0) - (a.status?.status_code?.id ?? 0));
       }
 
+      // 2b. ソート（なまえ）
+      if (nameSortMode === "reverse") {
+        list = [...list].reverse();
+      } else if (nameSortMode === "asc") {
+        list = [...list].sort((a, b) => a.name.localeCompare(b.name, "ja"));
+      } else if (nameSortMode === "desc") {
+        list = [...list].sort((a, b) => b.name.localeCompare(a.name, "ja"));
+      }
+
       // 3. 反映
       setDispPokemonData(list);
-    }, [pokemonData, selectedPlace, selectedEvalution, sortMode]);
+    }, [pokemonData, selectedPlace, selectedEvalution, sortMode, nameSortMode]);
 
 
     if (isLoading) return <div>読み込み中...</div>;
@@ -101,10 +112,22 @@ export default function PokemonProgress() {
         console.log("saved:", field, masterId);
     };
 
-    // ソート
+    // ソート（住みごこち）
     const sortStatus = () => {
+        setNameSortMode("none");
         setSortMode((prev) => {
           if (prev === "none") return "asc";
+          if (prev === "asc") return "desc";
+          return "none";
+        });
+    };
+
+    // ソート（なまえ）
+    const cycleNameSort = () => {
+        setSortMode("none");
+        setNameSortMode((prev) => {
+          if (prev === "none") return "reverse";
+          if (prev === "reverse") return "asc";
           if (prev === "asc") return "desc";
           return "none";
         });
@@ -159,7 +182,7 @@ export default function PokemonProgress() {
                         py: 0.3,
                         borderRadius: "12px",
                         bgcolor: evalColors[m.code],
-                        color: "#fff",
+                        color: m.code === 0 ? "#000" : "#fff",
                         whiteSpace: "nowrap",
                         fontSize: "0.85rem",
                         fontWeight: "bold",
@@ -223,7 +246,11 @@ export default function PokemonProgress() {
                         <th className="checkbox-cell">
                           <button onClick={() => allClear()}></button>
                         </th>
-                        <th>なまえ</th>
+                        <th onClick={() => cycleNameSort()} style={{ cursor: "pointer" }}>
+                            なまえ
+                            {nameSortMode === "asc" && " ▲"}
+                            {nameSortMode === "desc" && " ▼"}
+                        </th>
                         <th>住んでる街</th>
                         <th onClick={() => sortStatus()}>
                             住みごこち
