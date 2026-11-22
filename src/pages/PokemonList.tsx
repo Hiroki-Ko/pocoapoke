@@ -118,7 +118,13 @@ export default function PokemonList() {
                 {dispPokemonData.map((p) => (
                   <tr key={p.id}>
                     <td>{p.number ?? `${p.category.toUpperCase()}${p.local_number ?? ""}`}</td>
-                    <td>{p.name}</td>
+                    <td
+                      className="name-link"
+                      title="タップして編集"
+                      onClick={() => navigate(`/edit/${p.id}`)}
+                    >
+                      {p.name}
+                    </td>
                     <td>{p.specialty1?.label}</td>
                     <td>{p.specialty2?.label}</td>
                     <td>{p.environment?.label}</td>

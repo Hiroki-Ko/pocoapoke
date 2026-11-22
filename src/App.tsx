@@ -12,6 +12,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<PokemonList />} />
           <Route path="register" element={<PokemonRegister />} />
+          <Route path="edit/:id" element={<PokemonRegister key="edit" />} />
           <Route path="progress" element={<PokemonProgress />} />
         </Route>
       </Routes>

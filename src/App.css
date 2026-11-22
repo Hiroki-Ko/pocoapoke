@@ -343,3 +343,14 @@ th.checkbox-cell {
     min-width: auto !important;
   }
 }
+
+/* 一覧: なまえクリックで編集画面へ */
+td.name-link {
+  cursor: pointer;
+  color: #1976d2;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+td.name-link:hover {
+  background-color: #eef2f7;
+}

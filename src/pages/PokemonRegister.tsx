@@ -1,6 +1,8 @@
 // /pocoapoke/src/pages/PokemonRegister.tsx
 
 import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useQueryClient } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
 import { TextField, Button, Chip, Stack, Typography, Box } from "@mui/material";
 import { Snackbar, Alert } from "@mui/material";
@@ -30,8 +32,35 @@ const sectionTitleSx = {
   mb: 1,
 };
 
+// 編集時に読み込んだ元データ（リセット・カテゴリ戻し用）
+type LoadedPokemon = {
+  id: number;
+  category: PokemonCategory;
+  number: number | null;
+  local_number: number | null;
+  name: string;
+  specialty1: number;
+  specialty2: number | null;
+  environment: number;
+  favorite1: number | null;
+  favorite2: number | null;
+  favorite3: number | null;
+  favorite4: number | null;
+  favorite5: number | null;
+  favorite6: number | null;
+};
+
 export default function PokemonRegister() {
   const { data: masterCodes, isLoading } = useMasterCodes();
+  const queryClient = useQueryClient();
+  const navigate = useNavigate();
+
+  // /edit/:id で開かれた場合は編集モード
+  const { id: idParam } = useParams();
+  const editId = idParam ? Number(idParam) : null;
+  const isEdit = editId !== null;
+  const [original, setOriginal] = useState<LoadedPokemon | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   // 今後基本的に main を選ぶことは想定していないため初期値は dlc
   const [category, setCategory] = useState<PokemonCategory>(POKEMON_CATEGORY.DLC);
@@ -70,6 +99,51 @@ export default function PokemonRegister() {
     }
   }, [nextLocalNumber, isMain]);
 
+  // 読み込んだデータをフォームに反映する
+  const applyOriginal = (p: LoadedPokemon) => {
+    setCategory(p.category);
+    // 編集時は番号をテキストボックスで表示（既存の番号を保持するため）
+    setIsManual(p.category === POKEMON_CATEGORY.MAIN);
+    setIsManualLocal(p.category !== POKEMON_CATEGORY.MAIN);
+    setNumber(p.number);
+    setLocalNumber(p.local_number);
+    setName(p.name);
+    setSpecialty1(p.specialty1);
+    setSpecialty2(p.specialty2);
+    setEnvironment(p.environment);
+    setFavorites(
+      [p.favorite1, p.favorite2, p.favorite3, p.favorite4, p.favorite5].filter(
+        (v): v is number => v != null
+      )
+    );
+    setTaste(p.favorite6);
+  };
+
+  // 編集モード: 対象ポケモンを取得
+  useEffect(() => {
+    if (!isEdit) return;
+    if (!Number.isInteger(editId) || editId! <= 0) {
+      setLoadError("IDが不正です");
+      return;
+    }
+    let cancelled = false;
+    fetch(`/api/getPokemon?id=${editId}`)
+      .then((res) => res.json())
+      .then((json) => {
+        if (cancelled) return;
+        if (json.success) {
+          setOriginal(json.pokemon);
+          applyOriginal(json.pokemon);
+        } else {
+          setLoadError(json.error ?? "読み込みに失敗しました");
+        }
+      })
+      .catch(() => !cancelled && setLoadError("読み込みに失敗しました"));
+    return () => {
+      cancelled = true;
+    };
+  }, [editId]);
+
   const toggleFavorite = (id: number) => {
     setFavorites((prev) => {
       if (prev.includes(id)) return prev.filter((x) => x !== id);
@@ -83,6 +157,15 @@ export default function PokemonRegister() {
   };
 
   const handleCategoryChange = (next: PokemonCategory) => {
+    // 編集中に元のカテゴリへ戻した場合は元の番号を復元する
+    if (isEdit && original && next === original.category) {
+      setCategory(next);
+      setIsManual(next === POKEMON_CATEGORY.MAIN);
+      setIsManualLocal(next !== POKEMON_CATEGORY.MAIN);
+      setNumber(original.number);
+      setLocalNumber(original.local_number);
+      return;
+    }
     setCategory(next);
     setIsManual(false);
     setIsManualLocal(false);
@@ -91,6 +174,11 @@ export default function PokemonRegister() {
   };
 
   const resetChoices = () => {
+    // 編集モードでは読み込んだ値に戻す
+    if (isEdit) {
+      if (original) applyOriginal(original);
+      return;
+    }
     setName("");
     setSpecialty1(null);
     setSpecialty2(null);
@@ -157,11 +245,12 @@ export default function PokemonRegister() {
     }
 
     // favorite1-5: 五味以外の好きなもの（不足分はnullで埋める） / favorite6: 五味
-    const favoritesSlots = [...favorites];
+    const favoritesSlots: (number | null)[] = [...favorites];
     while (favoritesSlots.length < 5) favoritesSlots.push(null);
     favoritesSlots.push(taste);
 
     const payload = {
+      ...(isEdit ? { id: editId } : {}),
       category,
       number: isMain ? number : null,
       localNumber: isMain ? null : localNumber,
@@ -172,14 +261,36 @@ export default function PokemonRegister() {
       favorites: favoritesSlots,
     };
 
-    const res = await fetch("/api/registerPokemon", {
+    const res = await fetch(isEdit ? "/api/updatePokemon" : "/api/registerPokemon", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
 
     const json = await res.json();
-    if (json.success) {
+    if (json.success && isEdit) {
+      // 一覧・採番のキャッシュを破棄して最新を取り直させる
+      queryClient.invalidateQueries({ queryKey: ["pokemonData"] });
+      queryClient.invalidateQueries({ queryKey: ["nextNumber"] });
+      queryClient.invalidateQueries({ queryKey: ["nextLocalNumber"] });
+      setOriginal({
+        ...(original as LoadedPokemon),
+        category,
+        number: isMain ? number : null,
+        local_number: isMain ? null : localNumber,
+        name: name.trim(),
+        specialty1: specialty1!,
+        specialty2,
+        environment: environment!,
+        favorite1: favoritesSlots[0],
+        favorite2: favoritesSlots[1],
+        favorite3: favoritesSlots[2],
+        favorite4: favoritesSlots[3],
+        favorite5: favoritesSlots[4],
+        favorite6: favoritesSlots[5],
+      });
+      setSuccessMessage(true);
+    } else if (json.success) {
       if (isMain) {
         await refetchNextNumber();
       } else {
@@ -188,11 +299,19 @@ export default function PokemonRegister() {
       setSuccessMessage(true);
       resetChoices();
     } else {
-      setErrorMessage(json.error ?? "登録に失敗しました");
+      setErrorMessage(json.error ?? (isEdit ? "更新に失敗しました" : "登録に失敗しました"));
     }
   };
 
-  if (isLoading || !masterCodes) return <div>Loading...</div>;
+  if (loadError) {
+    return (
+      <div>
+        <p>{loadError}</p>
+        <Button onClick={() => navigate("/")}>一覧に戻る</Button>
+      </div>
+    );
+  }
+  if (isLoading || !masterCodes || (isEdit && !original)) return <div>Loading...</div>;
 
   const specialtyItems = masterCodes[MASTER_CLASS.SPECIALTY] ?? [];
   const specialty1Items = specialtyItems.filter((m) => m.code !== 0); // 得意なこと1に「なし」は不要
@@ -204,9 +323,9 @@ export default function PokemonRegister() {
   return (
     <div>
       <Helmet>
-        <title>Register Pokemon</title>
+        <title>{isEdit ? "Edit Pokemon" : "Register Pokemon"}</title>
       </Helmet>
-      <h2>Register Pokemon</h2>
+      <h2>{isEdit ? `Edit Pokemon（${original?.name}）` : "Register Pokemon"}</h2>
 
       {/* カテゴリ / 番号 / なまえ */}
       <Box sx={{ mb: 3 }}>
@@ -416,11 +535,16 @@ export default function PokemonRegister() {
       </Box>
 
       <Button variant="contained" sx={{ mt: 2 }} onClick={handleSubmit}>
-        登録
+        {isEdit ? "更新" : "登録"}
       </Button>
       <Button sx={{ mt: 2, ml: 1 }} onClick={resetChoices}>
         リセット
       </Button>
+      {isEdit && (
+        <Button sx={{ mt: 2, ml: 1 }} onClick={() => navigate("/")}>
+          一覧に戻る
+        </Button>
+      )}
 
       {/* 成功メッセージ */}
       <Snackbar
@@ -430,7 +554,7 @@ export default function PokemonRegister() {
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
       >
         <Alert severity="success" variant="filled">
-          登録しました！
+          {isEdit ? "更新しました！" : "登録しました！"}
         </Alert>
       </Snackbar>
 
