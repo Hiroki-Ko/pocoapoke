@@ -114,10 +114,13 @@ export default function PokemonRegister() {
     };
   }, [editId, isEdit]);
 
-  const patch = (p: Partial<FormState>) => {
-    if ("number" in p) setAutoNumber(false);
-    setState((s) => ({ ...s, ...p }));
+  const patch = (p: Partial<FormState>) => setState((s) => ({ ...s, ...p }));
+  // 次の空き番号ボタンをタップ → 手入力（空欄から）
+  const manualNumber = () => {
+    setAutoNumber(false);
+    setState((s) => ({ ...s, number: null }));
   };
+  const autoNumberAgain = () => setAutoNumber(true);
 
   const changeCategory = (c: PokemonCategory) => {
     // 編集中に元のカテゴリへ戻したら元の番号を復元
@@ -221,7 +224,17 @@ export default function PokemonRegister() {
       {isLoading || !master || (isEdit && !original) ? (
         <p className="p-6 text-center text-sub">読み込み中…</p>
       ) : (
-        <PokemonForm isEdit={isEdit} iconId={editId ?? -1} master={master} state={state} onChange={patch} onCategory={changeCategory} />
+        <PokemonForm
+          isEdit={isEdit}
+          iconId={editId ?? -1}
+          master={master}
+          state={state}
+          autoNumber={autoNumber}
+          onChange={patch}
+          onCategory={changeCategory}
+          onManualNumber={manualNumber}
+          onAutoNumber={autoNumberAgain}
+        />
       )}
       <div className="fixed inset-x-0 bottom-[calc(3.5rem+env(safe-area-inset-bottom))] z-20 mx-auto flex max-w-md gap-2 border-t border-line bg-white px-2.5 py-2">
         {isEdit ? (

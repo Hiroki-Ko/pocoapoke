@@ -33,8 +33,11 @@ type Props = {
   iconId: number;
   master: Master;
   state: FormState;
+  autoNumber: boolean; // true: 次の空き番号をボタンで表示 / false: 手入力欄
   onChange: (patch: Partial<FormState>) => void;
   onCategory: (c: PokemonCategory) => void;
+  onManualNumber: () => void;
+  onAutoNumber: () => void;
 };
 
 function Card({ title, note, children }: { title: string; note?: ReactNode; children: ReactNode }) {
@@ -51,7 +54,7 @@ function Card({ title, note, children }: { title: string; note?: ReactNode; chil
 
 const sub = "mt-2 mb-1 text-[11px] font-bold text-sub";
 
-export function PokemonForm({ isEdit, iconId, master, state, onChange, onCategory }: Props) {
+export function PokemonForm({ isEdit, iconId, master, state, autoNumber, onChange, onCategory, onManualNumber, onAutoNumber }: Props) {
   const specialty = master[MASTER_CLASS.SPECIALTY] ?? [];
   const environments = (master[MASTER_CLASS.ENVIRONMENT] ?? []).filter((m) => m.code !== 0);
   const favorites = master[MASTER_CLASS.FAVORITE] ?? [];
@@ -86,16 +89,36 @@ export function PokemonForm({ isEdit, iconId, master, state, onChange, onCategor
               ))}
             </div>
             <div className="flex gap-1.5">
-              <input
-                aria-label="番号"
-                inputMode="numeric"
-                value={state.number ?? ""}
-                onChange={(e) => {
-                  const v = e.target.value.trim();
-                  onChange({ number: v === "" || Number.isNaN(Number(v)) ? null : Number(v) });
-                }}
-                className="w-16 rounded-lg border border-slate-300 px-2 py-2 text-center text-sm"
-              />
+              {autoNumber ? (
+                // 次の空き番号。図鑑番号順に出会えないこともあるので、タップで手入力に切り替えられる
+                <button
+                  type="button"
+                  onClick={onManualNumber}
+                  aria-label={`次の番号 ${state.number ?? ""}（タップで手入力）`}
+                  className="w-16 shrink-0 rounded-lg border border-brand/40 bg-sky-50 py-2 text-center text-sm font-bold text-brand"
+                >
+                  {state.number ?? "…"} <span className="text-[10px]">✎</span>
+                </button>
+              ) : (
+                <div className="relative w-16 shrink-0">
+                  <input
+                    aria-label="番号"
+                    inputMode="numeric"
+                    autoFocus={!isEdit}
+                    value={state.number ?? ""}
+                    onChange={(e) => {
+                      const v = e.target.value.trim();
+                      onChange({ number: v === "" || Number.isNaN(Number(v)) ? null : Number(v) });
+                    }}
+                    className="w-full rounded-lg border border-slate-300 px-2 py-2 text-center text-sm"
+                  />
+                  {!isEdit && (
+                    <button type="button" onClick={onAutoNumber} className="absolute -bottom-4 left-0 w-full text-center text-[10px] font-bold text-brand">
+                      自動
+                    </button>
+                  )}
+                </div>
+              )}
               <input
                 aria-label="なまえ"
                 placeholder="なまえ"
