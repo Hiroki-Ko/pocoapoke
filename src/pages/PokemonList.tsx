@@ -1,172 +1,122 @@
 // /pocoapoke/src/pages/PokemonList.tsx
-import { useEffect, useState } from "react";
+// ポケモン一覧（見る専用）: 街ごとの住民数、好きな環境・好きなもの・得意なことで絞り込み、似た好みを探す
+import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { api } from "../lib/api";
-import { MasterSelect } from "../components/MasterSelect";
-import { MASTER_CLASS } from "../constants";
-import { useMasterCodes } from "../api/useMasterCodes";
+import { usePokemonData } from "../api/usePokemonData";
+import { AppHeader } from "../components/AppHeader";
+import { ListCard } from "../components/ListCard";
+import { FilterSheet } from "../components/FilterSheet";
+import { SimilarSheet } from "../components/SimilarSheet";
 import { defaultPokemonCompare } from "../lib/pokemonOrder";
+import { townCode } from "../lib/progress";
+import type { MasterItem, Pokemon } from "../types";
+
+type FilterKey = "env" | "fav" | "sp";
+const FILTERS: { key: FilterKey; label: string }[] = [
+  { key: "env", label: "好きな環境" },
+  { key: "fav", label: "好きなもの" },
+  { key: "sp", label: "得意なこと" },
+];
 
 export default function PokemonList() {
-    type Pokemon = {
-      id: number;
-      category: string;
-      number: number | null;
-      local_number: number | null;
-      name: string;
-      specialty1: Master | null;
-      specialty2: Master | null;
-      environment: Master | null;
-      favorites: Master[] | null;
-      created_at: string;
-      updated_at: string | null;
-    };
+  const { data, isLoading, isError } = usePokemonData();
+  const navigate = useNavigate();
+  const [town, setTown] = useState<number | null>(null);
+  const [filter, setFilter] = useState<Record<FilterKey, number | null>>({ env: null, fav: null, sp: null });
+  const [sheet, setSheet] = useState<FilterKey | null>(null);
+  const [similarId, setSimilarId] = useState<number | null>(null);
 
-    type NameSortMode = "none" | "reverse" | "asc" | "desc";
+  const all = data?.pokemon ?? [];
+  const master = data?.master ?? {};
+  const towns = [...(master.place ?? [])].filter((m) => m.code !== 0).sort((a, b) => a.code - b.code);
+  const favById = useMemo(() => new Map((master.favorite ?? []).map((m) => [m.id, m])), [master.favorite]);
+  const options: Record<FilterKey, MasterItem[]> = {
+    env: (master.environment ?? []).filter((m) => m.code !== 0),
+    fav: (master.favorite ?? []).filter((m) => m.code > 5), // 味(1〜5)と「なし」以外
+    sp: (master.specialty ?? []).filter((m) => m.code !== 0),
+  };
+  const labelOf = (k: FilterKey, id: number) => options[k].find((m) => m.id === id)?.label ?? "";
 
-    const { data: masterCodes, isLoading } = useMasterCodes();
-    const [pokemonData, setPokemonData] = useState<Pokemon[]>([]);
-    const [dispPokemonData, setDispPokemonData] = useState<Pokemon[]>([]);
-    const [selectedSpecialty, setSelectedSpecialty] = useState<number | null>(null);
-    const [selectedEnvironment, setSelectedEnvironment] = useState<number | null>(null);
-    const [selectedFavorite, setSelectedFavorite] = useState<number | null>(null);
-    const [nameSortMode, setNameSortMode] = useState<NameSortMode>("none");
+  const matches = (p: Pokemon) =>
+    (town === null || townCode(p) === town) &&
+    (filter.env === null || p.environment?.id === filter.env) &&
+    (filter.fav === null || p.favorite_ids.slice(0, 5).includes(filter.fav)) &&
+    (filter.sp === null || p.specialty1?.id === filter.sp || p.specialty2?.id === filter.sp);
+  const list = all.filter(matches).sort(defaultPokemonCompare);
+  const similarTarget = all.find((p) => p.id === similarId) ?? null;
 
-    const cycleNameSort = () => {
-      setNameSortMode((prev) => {
-        if (prev === "none") return "reverse";
-        if (prev === "reverse") return "asc";
-        if (prev === "asc") return "desc";
-        return "none";
-      });
-    };
+  const chip = (active: boolean) =>
+    `shrink-0 rounded-full border px-3 py-1.5 text-[13px] ${active ? "border-brand bg-brand font-bold text-white" : "border-black/10 bg-white"}`;
 
-    const navigate = useNavigate();
-
-    const matchSpecialty = (pokemon: Pokemon) =>
-      selectedSpecialty == null ||
-      [pokemon.specialty1, pokemon.specialty2]
-        .filter(Boolean)
-        .some((s) => s!.id === selectedSpecialty);
-
-    const matchEnvironment = (pokemon: Pokemon) =>
-      selectedEnvironment == null ||
-      pokemon.environment?.id === selectedEnvironment;
-
-    const matchFavorite = (pokemon: Pokemon) =>
-      selectedFavorite == null ||
-      pokemon.favorites.some((f) => f.id === selectedFavorite);
-
-    useEffect(() => {
-      api.get('/api/getPokemonData')
-        .then((json) => {
-            console.log(json);
-            setPokemonData(json.pokemon);
-            setDispPokemonData(json.pokemon);
-          })
-        .catch(console.error);
-    }, []);
-
-    // フィルタリング・ソート
-    useEffect(() => {
-      let list = pokemonData.filter((p) =>
-        matchSpecialty(p) &&
-        matchEnvironment(p) &&
-        matchFavorite(p)
-      );
-
-      // 通常表示順: 本編(番号) → EX(ローカル番号) → DLC(ローカル番号)
-      list = [...list].sort(defaultPokemonCompare);
-
-      if (nameSortMode === "reverse") {
-        list = [...list].reverse();
-      } else if (nameSortMode === "asc") {
-        list = [...list].sort((a, b) => a.name.localeCompare(b.name, "ja"));
-      } else if (nameSortMode === "desc") {
-        list = [...list].sort((a, b) => b.name.localeCompare(a.name, "ja"));
-      }
-
-      setDispPokemonData(list);
-    }, [selectedSpecialty, selectedEnvironment, selectedFavorite, pokemonData, nameSortMode]);
-
-    if (isLoading || !masterCodes) return <div>Loading...</div>;
-
-    return (
-      <div>
-        <Helmet>
-          <title>Pokemon List</title>
-        </Helmet>
-        <h2>Pokemon List</h2>
-          <div className="table-wrapper">
-            <table border={1} className="table-wide">
-              <thead>
-                <tr>
-                  <th>No.</th>
-                  <th onClick={cycleNameSort} style={{ cursor: "pointer" }}>
-                    なまえ
-                    {nameSortMode === "asc" && " ▲"}
-                    {nameSortMode === "desc" && " ▼"}
-                  </th>
-                  <th>得意なこと1</th>
-                  <th>得意なこと2</th>
-                  <th>好きな環境</th>
-                  <th colSpan={6}>好きなもの</th>
-                </tr>
-              </thead>
-              <tbody>
-                {dispPokemonData.map((p) => (
-                  <tr key={p.id}>
-                    <td>{p.number ?? `${p.category.toUpperCase()}${p.local_number ?? ""}`}</td>
-                    <td
-                      className="name-link"
-                      title="タップして編集"
-                      onClick={() => navigate(`/edit/${p.id}`)}
-                    >
-                      {p.name}
-                    </td>
-                    <td>{p.specialty1?.label}</td>
-                    <td>{p.specialty2?.label}</td>
-                    <td>{p.environment?.label}</td>
-                    {p.favorites.map((fav, i) => (
-                      <td key={i}>{fav?.label}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-        </div>
-        
-        <MasterSelect
-          className={MASTER_CLASS.SPECIALTY}
-          label="得意なこと"
-          masterCodes={masterCodes}
-          value={selectedSpecialty}
-          onChange={setSelectedSpecialty}
-        />
-        <MasterSelect
-          className={MASTER_CLASS.ENVIRONMENT}
-          label="好きな環境"
-          masterCodes={masterCodes}
-          value={selectedEnvironment}
-          onChange={setSelectedEnvironment}
-        />
-        <MasterSelect
-          className={MASTER_CLASS.FAVORITE}
-          label="好きなもの"
-          masterCodes={masterCodes}
-          value={selectedFavorite}
-          onChange={setSelectedFavorite}
-        />
-        {/* スクロールボタン */}
-        <div className="scroll-buttons">
-          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            ▲
+  return (
+    <div>
+      <Helmet>
+        <title>ポケモン一覧 | pocoapoke</title>
+      </Helmet>
+      <AppHeader title="ポケモン一覧" subtitle="好きなもの・住んでる街をチェック" count={list.length}>
+        <div className="no-scrollbar -mx-3 mt-2 flex gap-1.5 overflow-x-auto px-3 pb-0.5">
+          <button type="button" className={chip(town === null)} onClick={() => setTown(null)}>
+            すべて<small className="ml-1 font-extrabold opacity-75">{all.length}</small>
           </button>
-          <button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}>
-            ▼
-          </button>
+          {towns.map((t) => (
+            <button key={t.id} type="button" className={chip(town === t.code)} onClick={() => setTown(t.code)}>
+              {t.label}
+              <small className="ml-1 font-extrabold opacity-75">{all.filter((p) => townCode(p) === t.code).length}</small>
+            </button>
+          ))}
         </div>
+      </AppHeader>
+
+      <div className="no-scrollbar sticky top-0 z-20 flex gap-1.5 overflow-x-auto border-b border-line bg-white px-3 py-2">
+        {FILTERS.map(({ key, label }) => {
+          const v = filter[key];
+          return (
+            <button
+              key={key}
+              type="button"
+              onClick={() => (v === null ? setSheet(key) : setFilter({ ...filter, [key]: null }))}
+              className={`shrink-0 rounded-full border px-2.5 py-1.5 text-xs font-bold ${v === null ? "border-line bg-white" : "border-brand bg-sky-50 text-brand"}`}
+            >
+              {v === null ? `${label} ▾` : `${label}：${labelOf(key, v)} ✕`}
+            </button>
+          );
+        })}
       </div>
-    );
+
+      {isLoading && <p className="p-6 text-center text-sub">読み込み中…</p>}
+      {isError && <p className="p-6 text-center text-red-600">データを読み込めませんでした</p>}
+      {data && list.length === 0 && <p className="p-6 text-center text-sub">条件に合うポケモンはいません</p>}
+
+      {list.map((p) => (
+        <ListCard
+          key={p.id}
+          pokemon={p}
+          favById={favById}
+          highlight={filter}
+          onOpen={() => navigate(`/edit/${p.id}`)}
+          onSimilar={() => setSimilarId(p.id)}
+        />
+      ))}
+
+      <FilterSheet
+        open={sheet !== null}
+        title={FILTERS.find((f) => f.key === sheet)?.label ?? ""}
+        items={sheet ? options[sheet] : []}
+        selected={sheet ? filter[sheet] : null}
+        onSelect={(id) => {
+          if (sheet) setFilter({ ...filter, [sheet]: id });
+          setSheet(null);
+        }}
+        onClose={() => setSheet(null)}
+      />
+      <SimilarSheet
+        target={similarTarget}
+        all={all}
+        favById={favById}
+        onOpen={(id) => navigate(`/edit/${id}`)}
+        onClose={() => setSimilarId(null)}
+      />
+    </div>
+  );
 }
