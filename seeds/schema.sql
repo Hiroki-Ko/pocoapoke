@@ -24,6 +24,7 @@ CREATE TABLE pokemon_ms (
   favorite4    INTEGER,
   favorite5    INTEGER,
   favorite6    INTEGER,
+  show_in_progress INTEGER NOT NULL DEFAULT 1, -- 住みごこち画面に表示するか
   created_at   TEXT,
   updated_at   TEXT,
   deleted_at   TEXT,
@@ -45,6 +46,9 @@ CREATE TABLE pokemon_status (
   status_code INTEGER NOT NULL,
   place_code  INTEGER NOT NULL,
   today_wish  INTEGER NOT NULL,
+  cared_on    TEXT,    -- 最後にお世話した日（ゲーム日付 YYYY-MM-DD）
+  wish_favorite INTEGER, -- 今日の欲しいもの（master_code favorite の id）
+  wish_on     TEXT,    -- 欲しいものを入力した日（ゲーム日付）
   created_at  TEXT,
   updated_at  TEXT,
   deleted_at  TEXT,
@@ -52,5 +56,6 @@ CREATE TABLE pokemon_status (
   FOREIGN KEY (poke_id) REFERENCES pokemon_ms(id),
   FOREIGN KEY (status_code) REFERENCES master_code(id),
   FOREIGN KEY (place_code) REFERENCES master_code(id),
-  FOREIGN KEY (today_wish) REFERENCES master_code(id)
+  FOREIGN KEY (today_wish) REFERENCES master_code(id),
+  FOREIGN KEY (wish_favorite) REFERENCES master_code(id)
 );

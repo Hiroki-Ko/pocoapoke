@@ -13,7 +13,9 @@ export async function onRequestGet({ env, request }) {
       SELECT
         id, category, number, local_number, name,
         specialty1, specialty2, environment,
-        favorite1, favorite2, favorite3, favorite4, favorite5, favorite6
+        favorite1, favorite2, favorite3, favorite4, favorite5, favorite6,
+        show_in_progress,
+        (SELECT place_code FROM pokemon_status WHERE poke_id = pokemon_ms.id) AS place_code
       FROM pokemon_ms
       WHERE id = ?
     `)

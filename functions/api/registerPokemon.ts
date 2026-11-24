@@ -1,4 +1,5 @@
 // /pocoapoke/functions/api/registerPokemon.ts
+import { isMasterOf } from "../lib/status";
 export async function onRequestPost(context) {
   const { env, request } = context;
   const body = await request.json();
@@ -12,6 +13,8 @@ export async function onRequestPost(context) {
     specialty2,
     environment,
     favorites,
+    placeCode,
+    showInProgress,
   } = body;
 
   // サーバーサイドバリデーション
@@ -35,6 +38,13 @@ export async function onRequestPost(context) {
     if (typeof localNumber !== "number" || Number.isNaN(localNumber)) {
       return Response.json({ success: false, error: "番号(ローカル)は必須です" }, { status: 400 });
     }
+  }
+
+  if (placeCode !== undefined && !(await isMasterOf(env.DB, placeCode, "place"))) {
+    return Response.json({ success: false, error: "住んでる街が不正です" }, { status: 400 });
+  }
+  if (showInProgress !== undefined && typeof showInProgress !== "boolean") {
+    return Response.json({ success: false, error: "showInProgressが不正です" }, { status: 400 });
   }
 
   // category に応じて number / local_number の片方は必ず null にする
@@ -61,9 +71,10 @@ export async function onRequestPost(context) {
         favorite4,
         favorite5,
         favorite6,
+        show_in_progress,
         created_at
       )
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
     `
   )
     .bind(
@@ -79,7 +90,8 @@ export async function onRequestPost(context) {
       fav[2],
       fav[3],
       fav[4],
-      fav[5]
+      fav[5],
+      showInProgress === false ? 0 : 1
     )
     .run();
 
@@ -98,12 +110,12 @@ export async function onRequestPost(context) {
       VALUES (
         ?,
         (SELECT id FROM master_code WHERE class='evaluation' AND code=0),
-        (SELECT id FROM master_code WHERE class='place' AND code=0),
+        COALESCE(?, (SELECT id FROM master_code WHERE class='place' AND code=0)),
         (SELECT id FROM master_code WHERE class='wish' AND code=0),
         datetime('now')
       )
     `)
-    .bind(newId)
+    .bind(newId, placeCode ?? null)
     .run();
 
   return Response.json({ success: true });

@@ -19,7 +19,8 @@ export async function onRequestGet({ env }) {
         favorite3,
         favorite4,
         favorite5,
-        favorite6
+        favorite6,
+        show_in_progress
       FROM pokemon_ms
     `)
     .all();
@@ -31,7 +32,10 @@ export async function onRequestGet({ env }) {
         poke_id,
         status_code,
         place_code,
-        today_wish
+        today_wish,
+        cared_on,
+        wish_favorite,
+        wish_on
       FROM pokemon_status
     `)
     .all();
@@ -80,11 +84,26 @@ export async function onRequestGet({ env }) {
       specialty2: masterMap.get(p.specialty2) || null,
       environment: masterMap.get(p.environment) || null,
       favorites,
+      // 編集・欲しいもの選択用に favorite1〜6 の生ID（スロット位置を保つ）
+      favorite_ids: [
+        p.favorite1 ?? null,
+        p.favorite2 ?? null,
+        p.favorite3 ?? null,
+        p.favorite4 ?? null,
+        p.favorite5 ?? null,
+        p.favorite6 ?? null,
+      ],
+      show_in_progress: p.show_in_progress ?? 1,
       status: st
         ? {
             status_code: masterMap.get(st.status_code) || null,
             place_code: masterMap.get(st.place_code) || null,
             today_wish: masterMap.get(st.today_wish) || null,
+            status_code_id: st.status_code ?? null,
+            place_code_id: st.place_code ?? null,
+            cared_on: st.cared_on ?? null,
+            wish_favorite: masterMap.get(st.wish_favorite) || null,
+            wish_on: st.wish_on ?? null,
           }
         : null,
     };

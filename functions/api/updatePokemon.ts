@@ -1,5 +1,7 @@
 // /pocoapoke/functions/api/updatePokemon.ts
-// 登録済みポケモン(pokemon_ms)の情報を更新する。pokemon_status は変更しない。
+// 登録済みポケモン(pokemon_ms)の情報を更新する。
+// placeCode が指定された場合のみ pokemon_status.place_code（住んでる街）も更新する。
+import { ensureStatusRow, isMasterOf } from "../lib/status";
 export async function onRequestPost(context) {
   const { env, request } = context;
   const body = await request.json();
@@ -14,6 +16,8 @@ export async function onRequestPost(context) {
     specialty2,
     environment,
     favorites,
+    placeCode,
+    showInProgress,
   } = body;
 
   // サーバーサイドバリデーション（registerPokemon と同じルール）
@@ -42,6 +46,13 @@ export async function onRequestPost(context) {
     }
   }
 
+  if (placeCode !== undefined && !(await isMasterOf(env.DB, placeCode, "place"))) {
+    return Response.json({ success: false, error: "住んでる街が不正です" }, { status: 400 });
+  }
+  if (showInProgress !== undefined && typeof showInProgress !== "boolean") {
+    return Response.json({ success: false, error: "showInProgressが不正です" }, { status: 400 });
+  }
+
   // category に応じて number / local_number の片方は必ず null にする
   const finalNumber = category === "main" ? number : null;
   const finalLocalNumber = category === "main" ? null : localNumber;
@@ -66,6 +77,7 @@ export async function onRequestPost(context) {
         favorite4    = ?,
         favorite5    = ?,
         favorite6    = ?,
+        show_in_progress = COALESCE(?, show_in_progress),
         updated_at   = datetime('now')
       WHERE id = ?
     `
@@ -84,12 +96,21 @@ export async function onRequestPost(context) {
       fav[3] ?? null,
       fav[4] ?? null,
       fav[5] ?? null,
+      showInProgress === undefined ? null : showInProgress ? 1 : 0,
       id
     )
     .run();
 
   if (!result.meta.changes) {
     return Response.json({ success: false, error: "ポケモンが見つかりません" }, { status: 404 });
+  }
+
+  if (placeCode !== undefined) {
+    await ensureStatusRow(env.DB, id);
+    await env.DB
+      .prepare("UPDATE pokemon_status SET place_code = ?, updated_at = datetime('now') WHERE poke_id = ?")
+      .bind(placeCode, id)
+      .run();
   }
 
   return Response.json({ success: true });
