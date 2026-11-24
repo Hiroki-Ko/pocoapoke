@@ -45,3 +45,16 @@ describe("progress", () => {
     expect(wishOptions(p, favs).map((x) => x.id)).toEqual([10, 12]);
   });
 });
+
+describe("wishOptions（今日の欲しいものが好きなものから外れた場合）", () => {
+  it("今日の欲しいものが好きなもの以外でも、選択肢の最後に残す", () => {
+    const favs = [m(10, 7, "favorite"), m(12, 9, "favorite"), m(99, 30, "favorite", "外れた")];
+    const p = poke(1, 1, 3, { wish_favorite: m(99, 30, "favorite", "外れた"), wish_on: "2026-11-26" }, [10, null, 12, null, null, 3]);
+    expect(wishOptions(p, favs, NOW).map((x) => x.id)).toEqual([10, 12, 99]);
+  });
+  it("昨日の欲しいものは残さない", () => {
+    const favs = [m(10, 7, "favorite"), m(99, 30, "favorite")];
+    const p = poke(1, 1, 3, { wish_favorite: m(99, 30, "favorite"), wish_on: "2026-11-25" }, [10, null, null, null, null, 3]);
+    expect(wishOptions(p, favs, NOW).map((x) => x.id)).toEqual([10]);
+  });
+});

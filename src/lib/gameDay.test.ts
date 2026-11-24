@@ -16,3 +16,13 @@ describe("gameDay", () => {
     expect(isToday(null, now)).toBe(false);
   });
 });
+
+import { msUntilNextGameDay } from "./gameDay";
+describe("msUntilNextGameDay", () => {
+  it("JST 3:59:00 なら 60秒後", () => {
+    expect(msUntilNextGameDay(new Date("2026-11-25T18:59:00Z"))).toBe(60_000);
+  });
+  it("JST 4:00 ちょうどなら 24時間後", () => {
+    expect(msUntilNextGameDay(new Date("2026-11-25T19:00:00Z"))).toBe(24 * 3600_000);
+  });
+});

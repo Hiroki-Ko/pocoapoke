@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { usePokemonData } from "../api/usePokemonData";
 import { useUpdateCare, useUpdateProgress } from "../api/mutations";
+import { useGameDay } from "../api/useGameDay";
 import { AppHeader } from "../components/AppHeader";
 import { ProgressRow } from "../components/ProgressRow";
 import { ProgressSheet } from "../components/ProgressSheet";
@@ -26,6 +27,8 @@ function loadTown(): number {
 
 export default function PokemonProgress() {
   const { data, isLoading, isError } = usePokemonData();
+  // 4:00 をまたいだら再描画して、昨日のチェック・欲しいものを外して見せる
+  const today = useGameDay();
   const care = useUpdateCare();
   const progress = useUpdateProgress();
   const [town, setTown] = useState<number>(loadTown);
@@ -63,7 +66,7 @@ export default function PokemonProgress() {
 
   const row = (p: Pokemon) => (
     <ProgressRow
-      key={p.id}
+      key={`${p.id}-${today}`}
       pokemon={p}
       taste={favById.get(p.favorite_ids[5] ?? -1) ?? null}
       showNumber={mode === "number"}

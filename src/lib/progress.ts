@@ -20,13 +20,16 @@ export function todayWish(p: Pokemon, now: Date = new Date()): MasterItem | null
   return isToday(p.status?.wish_on, now) ? (p.status?.wish_favorite ?? null) : null;
 }
 
-// 欲しいものの選択肢: そのポケモンの好きなもの（favorite1〜5、味は除く）
-export function wishOptions(p: Pokemon, favorites: MasterItem[]): MasterItem[] {
-  return p.favorite_ids
+// 欲しいものの選択肢: そのポケモンの好きなもの（favorite1〜5、味は除く）。
+// 今日すでに入力した欲しいものが好きなものから外れていても、消えないよう最後に残す。
+export function wishOptions(p: Pokemon, favorites: MasterItem[], now: Date = new Date()): MasterItem[] {
+  const options = p.favorite_ids
     .slice(0, 5)
     .filter((id): id is number => id != null)
     .map((id) => favorites.find((f) => f.id === id))
     .filter((f): f is MasterItem => !!f);
+  const current = todayWish(p, now);
+  return current && !options.some((o) => o.id === current.id) ? [...options, current] : options;
 }
 
 export function groupByEval(list: Pokemon[]): { code: number; items: Pokemon[] }[] {

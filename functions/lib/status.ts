@@ -1,19 +1,18 @@
-// pokemon_status の行が無い場合は初期値で作成してから更新するためのヘルパー
-// （poke_id には UNIQUE インデックスがある）
+// pokemon_status の行が無い場合は初期値で作成してから更新するためのヘルパー。
+// 本番DBに poke_id の UNIQUE 制約が無い場合でも動くよう、ON CONFLICT ではなく NOT EXISTS で判定する
 export async function ensureStatusRow(db, pokeId: number) {
   await db
     .prepare(`
       INSERT INTO pokemon_status (poke_id, status_code, place_code, today_wish, created_at)
-      VALUES (
+      SELECT
         ?,
         (SELECT id FROM master_code WHERE class='evaluation' AND code=0),
         (SELECT id FROM master_code WHERE class='place' AND code=0),
         (SELECT id FROM master_code WHERE class='wish' AND code=0),
         datetime('now')
-      )
-      ON CONFLICT(poke_id) DO NOTHING
+      WHERE NOT EXISTS (SELECT 1 FROM pokemon_status WHERE poke_id = ?)
     `)
-    .bind(pokeId)
+    .bind(pokeId, pokeId)
     .run();
 }
 

@@ -24,9 +24,15 @@ export async function onRequestPost({ env, request }) {
   if (!(await isMasterOf(db, place_code, "place"))) {
     return Response.json({ success: false, error: "住んでる街が不正です" }, { status: 400 });
   }
-  // 欲しいものは、そのポケモンの好きなもの（味以外の favorite1〜5）のどれか、または null
+  // 欲しいものは、そのポケモンの好きなもの（味以外の favorite1〜5）のどれか、または null。
+  // ただし今日すでに保存済みの欲しいもの（後から好きなものを編集して外れた場合）はそのまま保存できる
   const favs = [pokemon.favorite1, pokemon.favorite2, pokemon.favorite3, pokemon.favorite4, pokemon.favorite5];
-  if (wish_favorite !== null && wish_favorite !== undefined && !favs.includes(wish_favorite)) {
+  const current = await db
+    .prepare("SELECT wish_favorite, wish_on FROM pokemon_status WHERE poke_id = ?")
+    .bind(poke_id)
+    .first();
+  const unchangedToday = current && current.wish_on === gameDay() && current.wish_favorite === wish_favorite;
+  if (wish_favorite !== null && wish_favorite !== undefined && !favs.includes(wish_favorite) && !unchangedToday) {
     return Response.json({ success: false, error: "欲しいものは好きなものから選んでください" }, { status: 400 });
   }
   const wish = wish_favorite ?? null;
