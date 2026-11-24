@@ -1,30 +1,13 @@
 // /pocoapoke/src/Layout.tsx
-import { NavLink, Outlet } from "react-router-dom";
-import { useEffect, useState } from "react";
-import "./Layout.css";
+// スマホ幅を基準に中央寄せ。ヘッダーは各ページが持ち、タブバーは下部に固定。
+import { Outlet } from "react-router-dom";
+import { TabBar } from "./components/TabBar";
 
 export default function Layout() {
-  const [fade, setFade] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setFade(window.scrollY > 50); // 50px以上スクロールしたら薄くする
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <div>
-      <nav className={`tabs ${fade ? "fade" : ""}`}>
-        <NavLink to="/" end className="tab">List</NavLink>
-        <NavLink to="/register" className="tab">Register</NavLink>
-        <NavLink to="/progress" className="tab">Progress</NavLink>
-      </nav>
-
-      <div className="content">
-        <Outlet />
-      </div>
+    <div className="mx-auto min-h-dvh max-w-md bg-page pb-[calc(4rem+env(safe-area-inset-bottom))] shadow-sm">
+      <Outlet />
+      <TabBar />
     </div>
   );
 }

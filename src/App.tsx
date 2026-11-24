@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PokemonList from "./pages/PokemonList";
 import PokemonRegister from "./pages/PokemonRegister";
 import PokemonProgress from "./pages/PokemonProgress";
-import './App.css';
 import Layout from "./Layout";
 
 export default function App() {
