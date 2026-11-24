@@ -1,359 +1,150 @@
 // /pocoapoke/src/pages/PokemonProgress.tsx
-import { useEffect, useState } from 'react';
-import { useQueryClient } from "@tanstack/react-query";
+// 住みごこちチェック: 街で絞り込み → 住みごこちの低い順に回る → 住みごこち・欲しいものを直す
+import { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { usePokemonData } from '../api/usePokemonData';
-import type { Master } from "../api/useMasterCodes";
-import { MasterSelect } from "../components/MasterSelect";
-import { MASTER_CLASS } from "../constants";
-import ClearIcon from "@mui/icons-material/Clear";
-import { Chip, Box } from "@mui/material";
+import { usePokemonData } from "../api/usePokemonData";
+import { useUpdateCare, useUpdateProgress } from "../api/mutations";
+import { AppHeader } from "../components/AppHeader";
+import { ProgressRow } from "../components/ProgressRow";
+import { ProgressSheet } from "../components/ProgressSheet";
+import { evalStyle } from "../lib/evaluation";
+import { groupByEval, isCared, townCode } from "../lib/progress";
 import { defaultPokemonCompare } from "../lib/pokemonOrder";
+import type { Pokemon } from "../types";
 
-type Pokemon = {
-  id: number;
-  category: string;
-  number: number | null;
-  local_number: number | null;
-  name: string;
-  specialty1: Master | null;
-  specialty2: Master | null;
-  environment: Master | null;
-  favorites: Master[] | null;
-  status: {
-    status_code: Master | null;
-    place_code: Master | null;
-    today_wish: Master | null;
-  } | null;
-  created_at: string;
-  updated_at: string | null;
-};
+const TOWN_KEY = "pocoapoke.progress.town";
+const DEFAULT_TOWN = 1; // パサパサこうや
+
+function loadTown(): number {
+  try {
+    const v = Number(localStorage.getItem(TOWN_KEY));
+    return Number.isInteger(v) && localStorage.getItem(TOWN_KEY) !== null ? v : DEFAULT_TOWN;
+  } catch {
+    return DEFAULT_TOWN;
+  }
+}
 
 export default function PokemonProgress() {
-    const queryClient = useQueryClient();
-    const [view, setView] = useState<boolean>(false);
-    const [sortMode, setSortMode] = useState<"none" | "asc" | "desc">("none");
-    const [nameSortMode, setNameSortMode] = useState<"none" | "reverse" | "asc" | "desc">("none");
-    const [selectedPlace, setSelectedPlace] = useState<number | null>(null);
-    const [selectedEvalution, setSelectedEvalution] = useState<number[]>([]);
-    const [finished, setFinished] = useState<number[]>([]);
-    const [dispPokemonData, setDispPokemonData] = useState<Pokemon[]>([]);
-    const { data, isLoading, isError } = usePokemonData();
-    
+  const { data, isLoading, isError } = usePokemonData();
+  const care = useUpdateCare();
+  const progress = useUpdateProgress();
+  const [town, setTown] = useState<number>(loadTown);
+  const [mode, setMode] = useState<"eval" | "number">("eval");
+  const [closed, setClosed] = useState<Set<number>>(() => new Set([1])); // 「最高」は最初から閉じる
+  const [openId, setOpenId] = useState<number | null>(null);
 
-    // data が未取得の場合は空配列/空オブジェクトで初期化
-    const pokemonData: Pokemon[] = data?.pokemon ?? [];
-    const master: Master = data?.master ?? {};
+  const master = data?.master ?? {};
+  const towns = useMemo(() => [...(master.place ?? [])].sort((a, b) => a.code - b.code), [master.place]);
+  const evalLabel = (code: number) => (master.evaluation ?? []).find((m) => m.code === code)?.label ?? "";
+  const favById = useMemo(() => new Map((master.favorite ?? []).map((m) => [m.id, m])), [master.favorite]);
 
-    // view=true の場合、全て表示
-    const invisibleCol = view ? 6 : 1;
-    const isFiltering = selectedPlace !== null || (selectedEvalution && selectedEvalution.length > 0);
-    const evalColors: Record<number, string> = {
-      0: "#E0E0E0",   // 未登録
-      1: "#FF4D4D",   // 最高
-      2: "#FF8C42",   // めちゃイイ
-      3: "#FFD93D",   // ちょっといい
-      4: "#6BCB77",   // ふつう
-      5: "#4D96FF",   // びみょう
-      6: "#BFBFBF",   // すみかなし
-    };
+  const list = useMemo(
+    () => (data?.pokemon ?? []).filter((p) => p.show_in_progress === 1 && townCode(p) === town),
+    [data, town],
+  );
+  const caredCount = list.filter((p) => isCared(p)).length;
+  const opened = list.find((p) => p.id === openId) ?? (data?.pokemon ?? []).find((p) => p.id === openId) ?? null;
 
-
-    useEffect(() => {
-      // 1. フィルタ
-      let list = pokemonData.filter((p) => {
-        const placeId = p.status?.place_code?.id;
-        const evalId = p.status?.status_code?.id ?? -1;
-
-        const matchPlace = !selectedPlace || placeId === selectedPlace;
-        const matchEval = selectedEvalution.length === 0 || selectedEvalution.includes(evalId);
-
-        return matchPlace && matchEval;
-      });
-
-      // 通常表示順: 本編(番号) → EX(ローカル番号) → DLC(ローカル番号)
-      list = [...list].sort(defaultPokemonCompare);
-
-      // 2. ソート（住みごこち）
-      if (sortMode === "asc") {
-        list.sort((a, b) => (a.status?.status_code?.id ?? 0) - (b.status?.status_code?.id ?? 0));
-      } else if (sortMode === "desc") {
-        list.sort((a, b) => (b.status?.status_code?.id ?? 0) - (a.status?.status_code?.id ?? 0));
-      }
-
-      // 2b. ソート（なまえ）
-      if (nameSortMode === "reverse") {
-        list = [...list].reverse();
-      } else if (nameSortMode === "asc") {
-        list = [...list].sort((a, b) => a.name.localeCompare(b.name, "ja"));
-      } else if (nameSortMode === "desc") {
-        list = [...list].sort((a, b) => b.name.localeCompare(a.name, "ja"));
-      }
-
-      // 3. 反映
-      setDispPokemonData(list);
-    }, [pokemonData, selectedPlace, selectedEvalution, sortMode, nameSortMode]);
-
-
-    if (isLoading) return <div>読み込み中...</div>;
-    if (isError) return <div>データ取得に失敗しました</div>;
-    if (!data) return <div>読み込み中...</div>;
-
-    const changePokemonStatus = async (
-      pokemonId: Number,
-      masterId: Number,
-      field: String
-    ) => {
-        console.log(`${field} change ${pokemonId} ${masterId}`);
-        await fetch("/api/updateStatus", {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            poke_id: pokemonId,
-            field,
-            master_id: masterId
-          })
-        });
-        queryClient.invalidateQueries({ queryKey: ["pokemonData"] });
-        console.log("saved:", field, masterId);
-    };
-
-    // ソート（住みごこち）
-    const sortStatus = () => {
-        setNameSortMode("none");
-        setSortMode((prev) => {
-          if (prev === "none") return "asc";
-          if (prev === "asc") return "desc";
-          return "none";
-        });
-    };
-
-    // ソート（なまえ）
-    const cycleNameSort = () => {
-        setSortMode("none");
-        setNameSortMode((prev) => {
-          if (prev === "none") return "reverse";
-          if (prev === "reverse") return "asc";
-          if (prev === "asc") return "desc";
-          return "none";
-        });
-    };
-
-    const wishFinished = (pokemonId: Number) => {
-        setFinished((prev) =>
-          prev.includes(pokemonId)
-            ? prev.filter((id) => id !== pokemonId)
-            : [...prev, pokemonId]
-        );
-    };
-
-    const allClear = async () => {
-        setFinished([]);
-        await fetch("/api/clearAllWish", { method: "POST" });
-        queryClient.invalidateQueries({ queryKey: ["pokemonData"] });
-        console.log('checkbox all clear!!');
-    };
-
-    const filterClear = () => {
-      setSelectedPlace(null);
-      setSelectedEvalution([]);
+  const selectTown = (code: number) => {
+    setTown(code);
+    try {
+      localStorage.setItem(TOWN_KEY, String(code));
+    } catch {
+      /* 保存できなくても動作は続ける */
     }
+  };
+  const toggleGroup = (code: number) =>
+    setClosed((prev) => {
+      const next = new Set(prev);
+      if (next.has(code)) next.delete(code);
+      else next.add(code);
+      return next;
+    });
 
-    return (
-        <div>
-            <Helmet>
-              <title>Pokemon Progress</title>
-            </Helmet>
-            <h2>Pokemon Progress</h2>
-            <h3>住ポケ数 : {dispPokemonData.length}</h3>
-            <Box sx={{
-              display: "flex",
-              gap: 1,
-              overflowX: "auto",
-              py: 1,
-              mb: 1,
-              "&::-webkit-scrollbar": { height: "6px" },
-            }}>
-                {master.evaluation.map((m) => {
-                  const count = dispPokemonData.filter(
-                    (p) => p.status?.status_code?.id === m.id
-                  ).length;
-                  if (count == 0) return;
+  const row = (p: Pokemon) => (
+    <ProgressRow
+      key={p.id}
+      pokemon={p}
+      taste={favById.get(p.favorite_ids[5] ?? -1) ?? null}
+      showNumber={mode === "number"}
+      onOpen={() => setOpenId(p.id)}
+      onToggleCare={(cared) => care.mutate({ poke_id: p.id, cared })}
+    />
+  );
 
-                  return (
-                    <Box
-                      key={m.id}
-                      sx={{
-                        px: 1.2,
-                        py: 0.3,
-                        borderRadius: "12px",
-                        bgcolor: evalColors[m.code],
-                        color: m.code === 0 ? "#000" : "#fff",
-                        whiteSpace: "nowrap",
-                        fontSize: "0.85rem",
-                        fontWeight: "bold",
-                        flexShrink: 0,
-                      }}
-                    >
-                      {m.label}{" "}
-                      <span style={{
-                          background: "rgba(255,255,255,0.85)",
-                          color: "#000",
-                          padding: "0 6px",
-                          borderRadius: "8px",
-                          fontWeight: 900,
-                        }}
-                      >
-                        {count}
-                      </span> 匹
-                    </Box>
-                  );
-                })}
-            </Box>
-            <Box sx={{ mb: 1 }}>
-                <MasterSelect
-                  className={MASTER_CLASS.PLACE}
-                  label="住んでる街"
-                  masterCodes={master}
-                  value={selectedPlace}
-                  onChange={setSelectedPlace}
-                />
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                    <MasterSelect
-                      className={MASTER_CLASS.EVALUATION}
-                      label="住みごこち"
-                      masterCodes={master}
-                      value={selectedEvalution}
-                      onChange={setSelectedEvalution}
-                    />
-                    {isFiltering && 
-                        (<Chip
-                          label="解除"
-                          onClick={filterClear}
-                          color="secondary"
-                          variant="outlined"
-                          icon={<ClearIcon />}
-                          sx={{
-                              ml: 1,
-                              fontWeight: "bold",
-                              cursor: "pointer",
-                              height: 28,
-                              flexShrink: 0,
-                              marginRight: "15px"
-                          }}
-                        />)
-                    }
-                </Box>
-            </Box>
-            <div className="table-wrapper">
-                <table border={1} className={view ? "table-wide" : ""}>
-                    <thead>
-                    <tr>
-                        <th className="checkbox-cell">
-                          <button onClick={() => allClear()}></button>
-                        </th>
-                        <th onClick={() => cycleNameSort()} style={{ cursor: "pointer" }}>
-                            なまえ
-                            {nameSortMode === "asc" && " ▲"}
-                            {nameSortMode === "desc" && " ▼"}
-                        </th>
-                        <th>住んでる街</th>
-                        <th onClick={() => sortStatus()}>
-                            住みごこち
-                            {sortMode === "asc" && " ▲"}
-                            {sortMode === "desc" && " ▼"}
-                        </th>
-                        <th>欲しいもの</th>
-                        <th
-                          colSpan={invisibleCol}
-                          onClick={() => setView(!view)}
-                        >
-                            好きなもの
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {dispPokemonData.map((p) => (
-                        <tr key={p.id} className={finished.includes(p.id) ? "finished-row" : ""}>
-                        <td className="checkbox-cell">
-                          <input
-                            type="checkbox"
-                            checked={finished.includes(p.id)}
-                            onChange={() => wishFinished(p.id)}
-                          />
-                        </td>
-                        {/* 名前 */}
-                        <td>{p.name}</td>
-                        {/* 住んでる街 */}
-                        <td>
-                            <select
-                                value={p.status?.place_code?.id ?? ""}
-                                onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'place_code')}
-                            >
-                            <option value="">未設定</option>
-                            {master.place?.map((m) => (
-                                <option key={m.id} value={m.id}>
-                                {m.label}
-                                </option>
-                            ))}
-                            </select>
-                        </td>
-                        {/* 住みごこち */}
-                        <td>
-                            <select
-                              value={p.status?.status_code?.id ?? ""}
-                              onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'status_code')}
-                            >
-                            {master.evaluation?.map((m) => (
-                                <option key={m.id} value={m.id}>
-                                {m.label}
-                                </option>
-                            ))}
-                            </select>
-                        </td>
-                        {/* 欲しいもの */}
-                        <td>
-                            <select
-                              value={p.status?.today_wish?.id}
-                              onChange={(e) => changePokemonStatus(p.id, Number(e.target.value), 'today_wish')}
-                            >
-                              <optgroup label="欲しいもの">
-                                {master.wish?.map((m) => (
-                                  <option key={m.id} value={m.id}>{m.label}</option>
-                                ))}
-                              </optgroup>
-                              <optgroup label="環境">
-                                {master.environment?.map((m) => (
-                                  <option key={m.id} value={m.id}>{m.label}</option>
-                                ))}
-                              </optgroup>
-                              <optgroup label="カテゴリ">
-                                {master.category?.map((m) => (
-                                  <option key={m.id} value={m.id}>{m.label}</option>
-                                ))}
-                              </optgroup>
-                            </select>
-                        </td>
-                        {/* 好きなもの */}
-                        {p.favorites
-                          ?.filter((_, i) => view || i === 5)
-                          .map((fav, i) => (
-                            <td key={i}>{fav?.label}</td>
-                          ))
-                        }
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
-                <div className="scroll-buttons">
-                  <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-                    ▲
-                  </button>
-                  <button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })}>
-                    ▼
-                  </button>
-                </div>
-            </div>
+  return (
+    <div>
+      <Helmet>
+        <title>住みごこちチェック | pocoapoke</title>
+      </Helmet>
+      <AppHeader title="住みごこちチェック" subtitle="街ごとのお世話と住みごこち" count={list.length}>
+        <div className="no-scrollbar -mx-3 mt-2 flex gap-1.5 overflow-x-auto px-3 pb-0.5">
+          {towns.map((t) => (
+            <button
+              key={t.id}
+              type="button"
+              onClick={() => selectTown(t.code)}
+              className={`shrink-0 rounded-full border px-3 py-1.5 text-[13px] ${town === t.code ? "border-brand bg-brand font-bold text-white" : "border-black/10 bg-white"}`}
+            >
+              {t.label}
+            </button>
+          ))}
         </div>
-    );
+      </AppHeader>
+
+      <div className="sticky top-0 z-20 flex items-center justify-between border-b border-line bg-white px-3 py-2">
+        <div className="flex rounded-lg bg-slate-100 p-0.5">
+          {(["eval", "number"] as const).map((m) => (
+            <button
+              key={m}
+              type="button"
+              onClick={() => setMode(m)}
+              className={`rounded-md px-2.5 py-1 text-xs font-bold ${mode === m ? "bg-white text-ink shadow-sm" : "text-sub"}`}
+            >
+              {m === "eval" ? "住みごこち順" : "番号順"}
+            </button>
+          ))}
+        </div>
+        <span className="text-xs text-sub">
+          今日のお世話 <b className="text-[15px] text-brand">{caredCount}</b>/{list.length}
+        </span>
+      </div>
+
+      {isLoading && <p className="p-6 text-center text-sub">読み込み中…</p>}
+      {isError && <p className="p-6 text-center text-red-600">データを読み込めませんでした</p>}
+      {data && list.length === 0 && <p className="p-6 text-center text-sub">この街に住んでいるポケモンはいません</p>}
+
+      {mode === "eval"
+        ? groupByEval(list).map((g) => {
+            const s = evalStyle(g.code);
+            const isClosed = closed.has(g.code);
+            return (
+              <section key={g.code}>
+                <button
+                  type="button"
+                  onClick={() => toggleGroup(g.code)}
+                  aria-expanded={!isClosed}
+                  className="sticky top-[45px] z-10 flex w-full justify-between px-3 py-2 text-[13px] font-extrabold"
+                  style={{ background: s.bg, color: s.fg }}
+                >
+                  <span>{isClosed ? "▶" : "▼"} {evalLabel(g.code)}</span>
+                  <span>お世話 {g.items.filter((p) => isCared(p)).length}/{g.items.length}</span>
+                </button>
+                {!isClosed && g.items.map(row)}
+              </section>
+            );
+          })
+        : [...list].sort(defaultPokemonCompare).map(row)}
+
+      <ProgressSheet
+        pokemon={opened}
+        master={master}
+        onClose={() => setOpenId(null)}
+        onSave={(v) => {
+          progress.mutate(v);
+          setOpenId(null);
+        }}
+      />
+    </div>
+  );
 }
