@@ -32,7 +32,6 @@ export async function onRequestGet({ env }) {
         poke_id,
         status_code,
         place_code,
-        today_wish,
         cared_on,
         wish_favorite,
         wish_on
@@ -98,7 +97,6 @@ export async function onRequestGet({ env }) {
         ? {
             status_code: masterMap.get(st.status_code) || null,
             place_code: masterMap.get(st.place_code) || null,
-            today_wish: masterMap.get(st.today_wish) || null,
             status_code_id: st.status_code ?? null,
             place_code_id: st.place_code ?? null,
             cared_on: st.cared_on ?? null,

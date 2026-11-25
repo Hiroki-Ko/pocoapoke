@@ -10,7 +10,7 @@ function poke(id: number, number: number, evCode: number | null, extra: Partial<
     id, category: "main", number, local_number: null, name: `P${id}`,
     specialty1: null, specialty2: null, environment: null, favorites: [], favorite_ids: favIds, show_in_progress: 1,
     status: evCode === null ? null : {
-      status_code: m(100 + evCode, evCode, "evaluation"), place_code: m(200, 2, "place"), today_wish: null,
+      status_code: m(100 + evCode, evCode, "evaluation"), place_code: m(200, 2, "place"),
       status_code_id: 100 + evCode, place_code_id: 200, cared_on: null, wish_favorite: null, wish_on: null, ...extra,
     },
   };

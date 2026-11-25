@@ -7,7 +7,6 @@ export type Master = Record<string, MasterItem[]>;
 export type PokemonStatus = {
   status_code: MasterItem | null;
   place_code: MasterItem | null;
-  today_wish: MasterItem | null;
   status_code_id: number | null;
   place_code_id: number | null;
   cared_on: string | null; // ゲーム日付 YYYY-MM-DD

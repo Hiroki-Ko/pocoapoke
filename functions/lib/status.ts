@@ -3,12 +3,11 @@
 export async function ensureStatusRow(db, pokeId: number) {
   await db
     .prepare(`
-      INSERT INTO pokemon_status (poke_id, status_code, place_code, today_wish, created_at)
+      INSERT INTO pokemon_status (poke_id, status_code, place_code, created_at)
       SELECT
         ?,
         (SELECT id FROM master_code WHERE class='evaluation' AND code=0),
         (SELECT id FROM master_code WHERE class='place' AND code=0),
-        (SELECT id FROM master_code WHERE class='wish' AND code=0),
         datetime('now')
       WHERE NOT EXISTS (SELECT 1 FROM pokemon_status WHERE poke_id = ?)
     `)

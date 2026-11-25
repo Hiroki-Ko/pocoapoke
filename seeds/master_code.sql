@@ -103,9 +103,4 @@ VALUES
   ('evaluation', 3, 'ちょっといい', 'nice',   datetime('now')),
   ('evaluation', 4, 'ふつう',       'normal', datetime('now')),
   ('evaluation', 5, 'びみょう',     'subtle', datetime('now')),
-  ('evaluation', 6, 'すみかなし',   'less',   datetime('now')),
-  ('category', 1, 'かざりつけ', 'decoration', datetime('now')),
-  ('category', 2, 'おもちゃ',   'toys',       datetime('now')),
-  ('category', 3, 'きゅうけい', 'break',      datetime('now')),
-  ('category', 4, 'たべもの',   'food',       datetime('now')),
-  ('wish', 0, 'None', 'none', datetime('now'));
+  ('evaluation', 6, 'すみかなし',   'less',   datetime('now'));

@@ -3,6 +3,8 @@
 # 【このファイルの役割】
 # 毎月1日の朝9時（日本時間）に自動で実行され、
 # 本番データベースのポケモンデータを seeds/pokemon_ms.json に反映してコミットします。
+# あわせて、id・住みごこち・住んでる街まで含めた完全バックアップを
+# seeds/backup/pocoapoke-data.json に保存します（scripts/backup-to-sql.cjs で SQL に戻せる）。
 # 手元のPCを起動していなくても、GitHubのサーバーが自動でやってくれます。
 #
 # 【手動実行する場合】
@@ -43,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add seeds/pokemon_ms.json
+          git add seeds/pokemon_ms.json seeds/backup/pocoapoke-data.json
           git diff --staged --quiet && echo "変更なし、スキップします" || (
             git commit -m "chore: sync pokemon_ms.json from production DB" &&
             git push

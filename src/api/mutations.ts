@@ -15,7 +15,7 @@ async function post(path: string, body: unknown) {
 }
 
 const EMPTY_STATUS: PokemonStatus = {
-  status_code: null, place_code: null, today_wish: null, status_code_id: null, place_code_id: null,
+  status_code: null, place_code: null, status_code_id: null, place_code_id: null,
   cared_on: null, wish_favorite: null, wish_on: null,
 };
 

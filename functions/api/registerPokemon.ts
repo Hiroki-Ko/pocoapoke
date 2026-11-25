@@ -104,14 +104,12 @@ export async function onRequestPost(context) {
         poke_id,
         status_code,
         place_code,
-        today_wish,
         created_at
       )
       VALUES (
         ?,
         (SELECT id FROM master_code WHERE class='evaluation' AND code=0),
         COALESCE(?, (SELECT id FROM master_code WHERE class='place' AND code=0)),
-        (SELECT id FROM master_code WHERE class='wish' AND code=0),
         datetime('now')
       )
     `)

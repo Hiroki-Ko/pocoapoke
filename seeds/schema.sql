@@ -5,8 +5,7 @@ CREATE TABLE master_code (
   label      TEXT,
   value      TEXT,
   created_at TEXT,
-  updated_at TEXT,
-  deleted_at TEXT
+  updated_at TEXT
 );
 
 CREATE TABLE pokemon_ms (
@@ -27,7 +26,6 @@ CREATE TABLE pokemon_ms (
   show_in_progress INTEGER NOT NULL DEFAULT 1, -- 住みごこち画面に表示するか
   created_at   TEXT,
   updated_at   TEXT,
-  deleted_at   TEXT,
 
   FOREIGN KEY (specialty1)  REFERENCES master_code(id),
   FOREIGN KEY (specialty2)  REFERENCES master_code(id),
@@ -41,21 +39,18 @@ CREATE TABLE pokemon_ms (
 );
 
 CREATE TABLE pokemon_status (
-  id          INTEGER PRIMARY KEY AUTOINCREMENT,
-  poke_id     INTEGER NOT NULL UNIQUE,
-  status_code INTEGER NOT NULL,
-  place_code  INTEGER NOT NULL,
-  today_wish  INTEGER NOT NULL,
-  cared_on    TEXT,    -- 最後にお世話した日（ゲーム日付 YYYY-MM-DD）
+  id            INTEGER PRIMARY KEY AUTOINCREMENT,
+  poke_id       INTEGER NOT NULL UNIQUE,
+  status_code   INTEGER NOT NULL,
+  place_code    INTEGER NOT NULL,
+  cared_on      TEXT,    -- 最後にお世話した日（ゲーム日付 YYYY-MM-DD）
   wish_favorite INTEGER, -- 今日の欲しいもの（master_code favorite の id）
-  wish_on     TEXT,    -- 欲しいものを入力した日（ゲーム日付）
-  created_at  TEXT,
-  updated_at  TEXT,
-  deleted_at  TEXT,
+  wish_on       TEXT,    -- 欲しいものを入力した日（ゲーム日付）
+  created_at    TEXT,
+  updated_at    TEXT,
 
-  FOREIGN KEY (poke_id) REFERENCES pokemon_ms(id),
-  FOREIGN KEY (status_code) REFERENCES master_code(id),
-  FOREIGN KEY (place_code) REFERENCES master_code(id),
-  FOREIGN KEY (today_wish) REFERENCES master_code(id),
+  FOREIGN KEY (poke_id)       REFERENCES pokemon_ms(id),
+  FOREIGN KEY (status_code)   REFERENCES master_code(id),
+  FOREIGN KEY (place_code)    REFERENCES master_code(id),
   FOREIGN KEY (wish_favorite) REFERENCES master_code(id)
 );

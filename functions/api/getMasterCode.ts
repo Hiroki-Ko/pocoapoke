@@ -8,8 +8,7 @@ export async function onRequestGet(context) {
     .prepare(`
         SELECT id, class, code, label
         FROM master_code
-        WHERE deleted_at IS NULL
-        AND class IN (?, ?, ?, ?)
+        WHERE class IN (?, ?, ?, ?)
         ORDER BY class, id
     `)
     .bind(

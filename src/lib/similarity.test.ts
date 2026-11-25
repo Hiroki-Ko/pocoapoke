@@ -7,7 +7,7 @@ function poke(id: number, number: number, favs: (number | null)[], town = 1): Po
     id, category: "main", number, local_number: null, name: `P${id}`, specialty1: null, specialty2: null, environment: null,
     favorites: [], favorite_ids: favs, show_in_progress: 1,
     status: {
-      status_code: null, today_wish: null, status_code_id: null, place_code_id: town, cared_on: null, wish_favorite: null, wish_on: null,
+      status_code: null, status_code_id: null, place_code_id: town, cared_on: null, wish_favorite: null, wish_on: null,
       place_code: { id: 200 + town, code: town, label: `T${town}`, class: "place" },
     },
   };
