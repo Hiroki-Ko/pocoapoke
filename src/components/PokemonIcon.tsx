@@ -1,5 +1,6 @@
 // /pocoapoke/src/components/PokemonIcon.tsx
 // ポケモンのアイコン。画像が無い・読み込めない場合は「?」のプレースホルダを出す。
+// ドット絵（PokeAPI）はくっきり拡大、ゲーム内アイコン（custom）はなめらかに表示する。
 import { useState } from "react";
 import { iconSrc } from "../lib/icons";
 
@@ -24,7 +25,7 @@ export function PokemonIcon({ id, name, size = 48, className = "" }: Props) {
         alt={name}
         loading="lazy"
         onError={() => setFailed(true)}
-        className="max-w-[82%] max-h-[82%] object-contain [image-rendering:pixelated]"
+        className={`max-w-[82%] max-h-[82%] object-contain ${src.includes("/custom/") ? "" : "[image-rendering:pixelated]"}`}
       />
     </div>
   );

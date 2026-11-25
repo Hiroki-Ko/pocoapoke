@@ -27,10 +27,10 @@ describe("spriteKey", () => {
 
 describe("iconSrc", () => {
   it("通常はトリム済みスプライト", () => {
-    expect(iconSrc({ id: 1, name: "フシギダネ" })).toBe("/icons/1.png");
+    expect(iconSrc({ id: 9999, name: "フシギダネ" })).toBe("/icons/1.png");
   });
   it("名前が解決できなければ null", () => {
-    expect(iconSrc({ id: 1, name: "存在しないポケモン" })).toBeNull();
+    expect(iconSrc({ id: 9999, name: "存在しないポケモン" })).toBeNull();
   });
   it("customIcons にある id はユーザー提供画像を優先", () => {
     (customIcons as number[]).push(77);
