@@ -6,6 +6,7 @@ import { townCode } from "../lib/progress";
 
 type Props = {
   pokemon: Pokemon;
+  index: number; // 一覧での並び順（50匹送り用）
   favById: Map<number, MasterItem>;
   highlight: { env: number | null; fav: number | null; sp: number | null };
   onOpen: () => void;
@@ -19,14 +20,14 @@ export function displayNo(p: Pokemon) {
   return p.number ?? `${p.category.toUpperCase()}${p.local_number ?? ""}`;
 }
 
-export function ListCard({ pokemon: p, favById, highlight, onOpen, onSimilar }: Props) {
+export function ListCard({ pokemon: p, index, favById, highlight, onOpen, onSimilar }: Props) {
   const town = townCode(p);
   const specialties = [p.specialty1, p.specialty2].filter((s): s is MasterItem => !!s && s.code !== 0);
   const favorites = p.favorite_ids.slice(0, 5).map((id) => (id != null ? favById.get(id) : undefined)).filter((m): m is MasterItem => !!m);
   const taste = p.favorite_ids[5] != null ? favById.get(p.favorite_ids[5]!) : undefined;
 
   return (
-    <div className="mx-2.5 my-2 rounded-2xl bg-white p-2.5 shadow-[0_1px_3px_rgba(0,0,0,.06)]">
+    <div data-index={index} className="mx-2.5 my-2 rounded-2xl bg-white p-2.5 shadow-[0_1px_3px_rgba(0,0,0,.06)]">
       <button type="button" onClick={onOpen} className="block w-full text-left">
         <div className="flex items-center gap-2.5">
           <PokemonIcon id={p.id} name={p.name} size={48} />

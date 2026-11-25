@@ -6,8 +6,9 @@
  * 1. PokeAPI の日本語名データから src/data/speciesJa.json（名前 → 全国図鑑番号）を作る
  * 2. PokeAPI のスプライト（全国図鑑 1〜1025 と姿別の画像）をダウンロードし、
  *    周りの透明な余白を切り取って public/icons/<key>.png に保存する（既にあればスキップ）
- * 3. public/icons/custom/<pokemon_ms.id>.png（ゲーム内アイコンなど手動で置いた画像）を調べ、
- *    src/data/customIcons.json（id の配列）を作る
+ * 3. public/icons/custom/<pokemon_ms.id>.png（ポケモンごとのゲーム内アイコン）と
+ *    public/icons/custom/key-<画像キー>.png（名前で決まるゲーム内アイコン。登録前にも出る）を調べ、
+ *    src/data/customIcons.json（id の配列）と src/data/customKeyIcons.json（キーの配列）を作る
  * 4. メタモンのアイコンから public/favicon.png を作る
  */
 import fs from "node:fs";
@@ -22,7 +23,8 @@ const SPRITE_BASE = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sp
 const NAMES_CSV = "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv";
 const MAX_SPECIES = 1025;
 // 姿別のスプライト（src/lib/icons.ts の FORM_KEYS と揃える）
-const FORM_SPRITES = ["422-east", "423-east", "10253", "10258", "10259", "10184"];
+// "female/592" は public/icons/female-592.png として保存する
+const FORM_SPRITES = ["422-east", "423-east", "10253", "10258", "10259", "10184", "female/592", "female/593"];
 
 fs.mkdirSync(CUSTOM_DIR, { recursive: true });
 fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -43,7 +45,7 @@ async function trimmed(buf) {
 }
 
 async function downloadSprite(key) {
-  const out = path.join(ICON_DIR, `${key}.png`);
+  const out = path.join(ICON_DIR, `${key.replace("/", "-")}.png`);
   if (fs.existsSync(out)) return "skip";
   const res = await fetch(`${SPRITE_BASE}/${key}.png`);
   if (!res.ok) return `missing(${res.status})`;
@@ -71,7 +73,13 @@ function buildCustomList() {
     .map(Number)
     .sort((a, b) => a - b);
   fs.writeFileSync(path.join(DATA_DIR, "customIcons.json"), JSON.stringify(ids) + "\n");
-  console.log(`customIcons.json: ${ids.length} 件`);
+  const keys = fs
+    .readdirSync(CUSTOM_DIR)
+    .map((f) => /^key-(.+)\.png$/.exec(f)?.[1])
+    .filter(Boolean)
+    .sort();
+  fs.writeFileSync(path.join(DATA_DIR, "customKeyIcons.json"), JSON.stringify(keys) + "\n");
+  console.log(`customIcons.json: ${ids.length} 件 / customKeyIcons.json: ${keys.length} 件`);
 }
 
 async function buildFavicon() {

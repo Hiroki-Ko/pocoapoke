@@ -1,5 +1,5 @@
 // /pocoapoke/src/pages/PokemonList.tsx
-// ポケモン一覧（見る専用）: 街ごとの住民数、好きな環境・好きなもの・得意なことで絞り込み、似た好みを探す
+// ポケモン一覧（見る専用）: 街ごとの住民数、好きな環境・好きなもの・得意なことで絞り込み、似た好みを探す、50匹ずつ送る
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -29,7 +29,8 @@ export default function PokemonList() {
 
   const all = data?.pokemon ?? [];
   const master = data?.master ?? {};
-  const towns = [...(master.place ?? [])].filter((m) => m.code !== 0).sort((a, b) => a.code - b.code);
+  // 「未登録」も絞り込めるよう、街は code 0〜6 すべて（未登録は最後）
+  const towns = [...(master.place ?? [])].sort((a, b) => (a.code === 0 ? 99 : a.code) - (b.code === 0 ? 99 : b.code));
   const favById = useMemo(() => new Map((master.favorite ?? []).map((m) => [m.id, m])), [master.favorite]);
   const options: Record<FilterKey, MasterItem[]> = {
     env: (master.environment ?? []).filter((m) => m.code !== 0),
@@ -68,7 +69,7 @@ export default function PokemonList() {
         </div>
       </AppHeader>
 
-      <div className="no-scrollbar sticky top-0 z-20 flex gap-1.5 overflow-x-auto border-b border-line bg-white px-3 py-2">
+      <div data-list-top className="no-scrollbar sticky top-0 z-20 flex gap-1.5 overflow-x-auto border-b border-line bg-white px-3 py-2">
         {FILTERS.map(({ key, label }) => {
           const v = filter[key];
           return (
@@ -88,9 +89,10 @@ export default function PokemonList() {
       {isError && <p className="p-6 text-center text-red-600">データを読み込めませんでした</p>}
       {data && list.length === 0 && <p className="p-6 text-center text-sub">条件に合うポケモンはいません</p>}
 
-      {list.map((p) => (
+      {list.map((p, i) => (
         <ListCard
           key={p.id}
+          index={i}
           pokemon={p}
           favById={favById}
           highlight={filter}
@@ -98,6 +100,8 @@ export default function PokemonList() {
           onSimilar={() => setSimilarId(p.id)}
         />
       ))}
+
+      {list.length > JUMP && <JumpButtons count={list.length} />}
 
       <FilterSheet
         open={sheet !== null}
@@ -117,6 +121,31 @@ export default function PokemonList() {
         onOpen={(id) => navigate(`/edit/${id}`)}
         onClose={() => setSimilarId(null)}
       />
+    </div>
+  );
+}
+
+const JUMP = 50;
+
+// 50匹ずつ前後に送るボタン（タブバーの上に固定）
+function JumpButtons({ count }: { count: number }) {
+  const jump = (dir: 1 | -1) => {
+    const barEl = document.querySelector<HTMLElement>("[data-list-top]");
+    const bar = barEl?.getBoundingClientRect().bottom ?? 0; // 今の絞り込みバーの下端
+    const stuck = barEl?.offsetHeight ?? 0; // スクロール後は最上部に貼りつくので、その高さ
+    const cards = [...document.querySelectorAll<HTMLElement>("[data-index]")];
+    const current = cards.find((e) => e.getBoundingClientRect().bottom > bar + 4);
+    const now = Number(current?.dataset.index ?? 0);
+    const target = Math.max(0, Math.min(count - 1, Math.floor(now / JUMP) * JUMP + (dir === 1 ? JUMP : now % JUMP === 0 ? -JUMP : 0)));
+    if (target === 0) return window.scrollTo({ top: 0 });
+    const el = cards[target];
+    if (el) window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top - stuck - 4 });
+  };
+  const btn = "flex h-11 w-11 items-center justify-center rounded-full bg-white/95 text-[11px] font-extrabold leading-tight text-brand shadow-md border border-brand/30";
+  return (
+    <div className="fixed bottom-[calc(4.25rem+env(safe-area-inset-bottom))] z-30 flex flex-col gap-2 right-[max(0.75rem,calc(50vw-14rem+0.75rem))]">
+      <button type="button" aria-label="50匹前へ" onClick={() => jump(-1)} className={btn}>▲<br />50</button>
+      <button type="button" aria-label="50匹先へ" onClick={() => jump(1)} className={btn}>▼<br />50</button>
     </div>
   );
 }

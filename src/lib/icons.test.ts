@@ -21,6 +21,9 @@ describe("spriteKey", () => {
     ["ポリゴン2", "233"], // 全角/半角の違いを吸収
     ["ポリゴンZ", "474"],
     ["デンジムシ", "737"], // 登録データの表記（正式名はデンヂムシ）
+    ["プルリル(ピンク)", "female-592"], // ピンクはメスの画像
+    ["ブルンゲル(ピンク)", "female-593"],
+    ["ブルンゲル(水色)", "593"],
     ["存在しないポケモン", null],
   ])("%s → %s", (name, key) => expect(spriteKey(name)).toBe(key));
 });
@@ -36,5 +39,16 @@ describe("iconSrc", () => {
     (customIcons as number[]).push(77);
     expect(iconSrc({ id: 77, name: "フシギダネ" })).toBe("/icons/custom/77.png");
     (customIcons as number[]).pop();
+  });
+});
+
+describe("iconSrc（名前で決まるゲーム内アイコン）", () => {
+  it("未登録のカジッチュでもゲーム内アイコンが出る", () => {
+    expect(iconSrc({ id: 9999, name: "カジッチュ" })).toBe("/icons/custom/key-840.png");
+  });
+  it("ブルンゲル(水色)・ブルンゲルはゲーム内アイコン、ピンクはメスの画像", () => {
+    expect(iconSrc({ id: 9999, name: "ブルンゲル(水色)" })).toBe("/icons/custom/key-593.png");
+    expect(iconSrc({ id: 9999, name: "ブルンゲル" })).toBe("/icons/custom/key-593.png");
+    expect(iconSrc({ id: 9999, name: "ブルンゲル(ピンク)" })).toBe("/icons/female-593.png");
   });
 });
