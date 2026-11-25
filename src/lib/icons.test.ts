@@ -49,16 +49,34 @@ describe("iconSrc（名前で決まるゲーム内アイコン）", () => {
   it("ブルンゲル(水色)・ブルンゲルはゲーム内アイコン、ピンクはメスの画像", () => {
     expect(iconSrc({ id: 9999, name: "ブルンゲル(水色)" })).toBe("/icons/custom/key-593.png");
     expect(iconSrc({ id: 9999, name: "ブルンゲル" })).toBe("/icons/custom/key-593.png");
-    expect(iconSrc({ id: 9999, name: "ブルンゲル(ピンク)" })).toBe("/icons/female-593.png");
+    expect(iconSrc({ id: 9999, name: "ブルンゲル(ピンク)" })).toBe("/icons/custom/key-female-593.png");
   });
 });
 
 describe("iconSrc（ブルンゲル・プルリルは登録済みでも名前で色を判定）", () => {
   it("ID 359 でも名前がピンクならピンクの画像", () => {
-    expect(iconSrc({ id: 359, name: "ブルンゲル(ピンク)" })).toBe("/icons/female-593.png");
+    expect(iconSrc({ id: 359, name: "ブルンゲル(ピンク)" })).toBe("/icons/custom/key-female-593.png");
     expect(iconSrc({ id: 359, name: "ブルンゲル(水色)" })).toBe("/icons/custom/key-593.png");
   });
   it("ID 348 でも名前がピンクならピンクの画像", () => {
-    expect(iconSrc({ id: 348, name: "プルリル(ピンク)" })).toBe("/icons/female-592.png");
+    expect(iconSrc({ id: 348, name: "プルリル(ピンク)" })).toBe("/icons/custom/key-female-592.png");
   });
+});
+
+describe("iconSrc（図鑑に合わせた名前・すがた違いのゲーム内アイコン）", () => {
+  it.each([
+    ["ブルンゲル(オスのすがた)", "/icons/custom/key-593.png"],
+    ["ブルンゲル(メスのすがた)", "/icons/custom/key-female-593.png"],
+    ["プルリル(オスのすがた)", "/icons/custom/key-592.png"],
+    ["プルリル(メスのすがた)", "/icons/custom/key-female-592.png"],
+    ["ストリンダー(ローなすがた)", "/icons/custom/key-10184.png"],
+    ["シャリタツ(たれたすがた)", "/icons/custom/key-10258.png"],
+    ["シャリタツ(のびたすがた)", "/icons/custom/key-10259.png"],
+    ["カラナクシ(ひがしのうみ)", "/icons/custom/key-422-east.png"],
+    ["トリトドン(ひがしのうみ)", "/icons/custom/key-423-east.png"],
+    ["モジャンボ", "/icons/custom/key-465.png"],
+    ["ピカチュウ", "/icons/custom/key-25.png"],
+    ["カビゴン", "/icons/custom/key-143.png"],
+  ])("%s → %s", (name, src) => expect(iconSrc({ id: 9999, name })).toBe(src));
+  it("ストリンダー(ハイなすがた) は通常のハイ", () => expect(spriteKey("ストリンダー(ハイなすがた)")).toBe("849"));
 });
