@@ -209,7 +209,7 @@ export default function PokemonRegister() {
         <AppHeader title={title} subtitle="登録内容を修正" />
         <p className="p-6 text-center text-red-600">{loadError}</p>
         <div className="text-center">
-          <button type="button" onClick={() => navigate("/")} className="rounded-xl bg-slate-100 px-4 py-2.5 font-bold">一覧に戻る</button>
+          <button type="button" onClick={() => navigate("/", { state: { restoreList: true } })} className="rounded-xl bg-slate-100 px-4 py-2.5 font-bold">一覧に戻る</button>
         </div>
       </div>
     );
@@ -238,7 +238,7 @@ export default function PokemonRegister() {
       )}
       <div className="fixed inset-x-0 bottom-[calc(3.5rem+env(safe-area-inset-bottom))] z-20 mx-auto flex max-w-md gap-2 border-t border-line bg-white px-2.5 py-2">
         {isEdit ? (
-          <button type="button" onClick={() => navigate("/")} className="w-28 rounded-xl bg-slate-100 py-3 text-sm font-extrabold">一覧に戻る</button>
+          <button type="button" onClick={() => navigate("/", { state: { restoreList: true } })} className="w-28 rounded-xl bg-slate-100 py-3 text-sm font-extrabold">一覧に戻る</button>
         ) : (
           <button type="button" onClick={reset} className="w-28 rounded-xl bg-slate-100 py-3 text-sm font-extrabold">リセット</button>
         )}
