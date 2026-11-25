@@ -1,6 +1,7 @@
 // ポケモン名からアイコン画像のパスを決める。
 // 優先順位:
 //   1. ポケモンごとのゲーム内アイコン public/icons/custom/<pokemon_ms.id>.png
+//      （ブルンゲル・プルリルは色を名前で判定するため、IDごとの画像は置かない）
 //   2. 名前（画像キー）で決まるゲーム内アイコン public/icons/custom/key-<key>.png（登録前のポケモンにも出る）
 //   3. トリム済みPokeAPI画像 public/icons/<key>.png
 //   4. なし(null)

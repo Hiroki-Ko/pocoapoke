@@ -52,3 +52,13 @@ describe("iconSrc（名前で決まるゲーム内アイコン）", () => {
     expect(iconSrc({ id: 9999, name: "ブルンゲル(ピンク)" })).toBe("/icons/female-593.png");
   });
 });
+
+describe("iconSrc（ブルンゲル・プルリルは登録済みでも名前で色を判定）", () => {
+  it("ID 359 でも名前がピンクならピンクの画像", () => {
+    expect(iconSrc({ id: 359, name: "ブルンゲル(ピンク)" })).toBe("/icons/female-593.png");
+    expect(iconSrc({ id: 359, name: "ブルンゲル(水色)" })).toBe("/icons/custom/key-593.png");
+  });
+  it("ID 348 でも名前がピンクならピンクの画像", () => {
+    expect(iconSrc({ id: 348, name: "プルリル(ピンク)" })).toBe("/icons/female-592.png");
+  });
+});
