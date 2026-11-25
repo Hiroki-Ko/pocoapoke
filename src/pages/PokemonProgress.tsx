@@ -9,12 +9,13 @@ import { AppHeader } from "../components/AppHeader";
 import { ProgressRow } from "../components/ProgressRow";
 import { ProgressSheet } from "../components/ProgressSheet";
 import { evalStyle } from "../lib/evaluation";
-import { groupByEval, isCared, townCode } from "../lib/progress";
+import { evalCode, groupByEval, isCared, townCode } from "../lib/progress";
 import { defaultPokemonCompare } from "../lib/pokemonOrder";
 import type { Pokemon } from "../types";
 
 const TOWN_KEY = "pocoapoke.progress.town";
 const DEFAULT_TOWN = 1; // パサパサこうや
+const BEST_EVAL = 1; // 住みごこち「最高」はお世話しなくてよいので、お世話の数から外す
 
 function loadTown(): number {
   try {
@@ -45,7 +46,12 @@ export default function PokemonProgress() {
     () => (data?.pokemon ?? []).filter((p) => p.show_in_progress === 1 && townCode(p) === town),
     [data, town],
   );
-  const caredCount = list.filter((p) => isCared(p)).length;
+  // お世話の対象は「最高」以外。「最高」の匹数は横に別で出す
+  const careTargets = list.filter((p) => evalCode(p) !== BEST_EVAL);
+  const caredCount = careTargets.filter((p) => isCared(p)).length;
+  const bestCount = list.length - careTargets.length;
+  const remaining = careTargets.length - caredCount;
+  const careRate = careTargets.length === 0 ? 100 : (caredCount / careTargets.length) * 100;
   const opened = list.find((p) => p.id === openId) ?? (data?.pokemon ?? []).find((p) => p.id === openId) ?? null;
 
   const selectTown = (code: number) => {
@@ -108,9 +114,25 @@ export default function PokemonProgress() {
             </button>
           ))}
         </div>
-        <span className="text-xs text-sub">
-          今日のお世話 <b className="text-[15px] text-brand">{caredCount}</b>/{list.length}
-        </span>
+        <div className="flex flex-col items-end gap-1">
+          <span className="text-xs text-sub">
+            今日のお世話 <b className="text-[15px] text-brand">{caredCount}</b>/{careTargets.length}
+          </span>
+          <div className="flex items-center gap-1.5 text-[11px] text-sub">
+            <div className="h-1.5 w-20 overflow-hidden rounded-full bg-slate-200">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-[#4f9de0] to-brand transition-[width] duration-300"
+                style={{ width: `${careRate}%` }}
+              />
+            </div>
+            {remaining > 0 ? (
+              <span>あと{remaining}</span>
+            ) : (
+              <span className="font-bold text-[#1b7a3a]">✓ 完了</span>
+            )}
+            {bestCount > 0 && <span>・最高{bestCount}匹</span>}
+          </div>
+        </div>
       </div>
 
       {isLoading && <p className="p-6 text-center text-sub">読み込み中…</p>}
