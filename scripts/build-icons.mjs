@@ -9,7 +9,7 @@
  * 3. public/icons/custom/<pokemon_ms.id>.png（ポケモンごとのゲーム内アイコン）と
  *    public/icons/custom/key-<画像キー>.png（名前で決まるゲーム内アイコン。登録前にも出る）を調べ、
  *    src/data/customIcons.json（id の配列）と src/data/customKeyIcons.json（キーの配列）を作る
- * 4. メタモンのアイコンから public/favicon.png を作る
+ * 4. public/favicon.png（ドット絵のメタモン）と、アプリのアイコン（public/icon-*.png）を作る
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -82,6 +82,7 @@ function buildCustomList() {
   console.log(`customIcons.json: ${ids.length} 件 / customKeyIcons.json: ${keys.length} 件`);
 }
 
+// ファビコン（ブラウザのタブ用）: PokeAPI のメタモンのドット絵から作る
 async function buildFavicon() {
   const src = path.join(ICON_DIR, "132.png");
   await sharp(src)
@@ -91,7 +92,42 @@ async function buildFavicon() {
   console.log("favicon.png: ok");
 }
 
+// インストールしたアプリのアイコン（public/manifest.webmanifest で指定）
+// - icon-maskable-512.png: ホーム画面のアイコン。ゲーム内のメタモン（custom/48.png）を黄色の上に置く
+// - icon-192.png / icon-512.png: 起動画面（スプラッシュ）用。公式の配布画像から切り抜いたフワンテ＆メタモン
+//   （scripts/assets/drifloon-ditto.png）を背景透明で置く。起動画面の背景色は manifest の background_color
+async function buildAppIcons() {
+  const clear = { r: 0, g: 0, b: 0, alpha: 0 };
+
+  const yellow = Buffer.from(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">` +
+      `<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd84d"/><stop offset="1" stop-color="#ffb800"/></linearGradient></defs>` +
+      `<rect width="100%" height="100%" fill="url(#g)"/></svg>`,
+  );
+  const ditto = await sharp(path.join(CUSTOM_DIR, "48.png"))
+    .trim()
+    .resize(256, 256, { fit: "contain", background: clear, kernel: "nearest" })
+    .png()
+    .toBuffer();
+  await sharp(yellow)
+    .composite([{ input: ditto, gravity: "center" }])
+    .png()
+    .toFile(path.join(ROOT, "public/icon-maskable-512.png"));
+
+  const splash = path.join(ROOT, "scripts/assets/drifloon-ditto.png");
+  for (const size of [192, 512]) {
+    const body = Math.round(size * 0.94);
+    const fg = await sharp(splash).resize(body, body, { fit: "contain", background: clear }).png().toBuffer();
+    await sharp({ create: { width: size, height: size, channels: 4, background: clear } })
+      .composite([{ input: fg, gravity: "center" }])
+      .png()
+      .toFile(path.join(ROOT, `public/icon-${size}.png`));
+  }
+  console.log("icon-maskable-512.png / icon-192.png / icon-512.png: ok");
+}
+
 await buildSpeciesNames();
 await buildSprites();
 buildCustomList();
 await buildFavicon();
+await buildAppIcons();
