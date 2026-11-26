@@ -93,33 +93,32 @@ async function buildFavicon() {
 }
 
 // インストールしたアプリのアイコン（public/manifest.webmanifest で指定）
-// - icon-maskable-512.png: ホーム画面のアイコン。ゲーム内のメタモン（custom/48.png）を黄色の上に置く
-// - icon-192.png / icon-512.png: 起動画面（スプラッシュ）用。公式の配布画像から切り抜いたフワンテ＆メタモン
-//   （scripts/assets/drifloon-ditto.png）を背景透明で置く。起動画面の背景色は manifest の background_color
+// 公式の配布画像から切り抜いたフワンテ＆メタモン（scripts/assets/drifloon-ditto.png）を使う
+// - icon-maskable-512.png: ホーム画面のアイコン。黄色のグラデーションの上に置く
+//   Android 12 以降は起動画面にもこのアイコンが出る（起動画面だけ別の画像にはできない）
+//   端が丸く切られるので、高さ 80% に収める
+// - icon-192.png / icon-512.png: インストール画面など用。背景透明
 async function buildAppIcons() {
   const clear = { r: 0, g: 0, b: 0, alpha: 0 };
+  const art = path.join(ROOT, "scripts/assets/drifloon-ditto.png");
 
   const yellow = Buffer.from(
     `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">` +
       `<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd84d"/><stop offset="1" stop-color="#ffb800"/></linearGradient></defs>` +
       `<rect width="100%" height="100%" fill="url(#g)"/></svg>`,
   );
-  const ditto = await sharp(path.join(CUSTOM_DIR, "48.png"))
-    .trim()
-    .resize(256, 256, { fit: "contain", background: clear, kernel: "nearest" })
-    .png()
-    .toBuffer();
+  const body = Math.round(512 * 0.8);
+  const fg = await sharp(art).resize(body, body, { fit: "contain", background: clear }).png().toBuffer();
   await sharp(yellow)
-    .composite([{ input: ditto, gravity: "center" }])
+    .composite([{ input: fg, gravity: "center" }])
     .png()
     .toFile(path.join(ROOT, "public/icon-maskable-512.png"));
 
-  const splash = path.join(ROOT, "scripts/assets/drifloon-ditto.png");
   for (const size of [192, 512]) {
-    const body = Math.round(size * 0.94);
-    const fg = await sharp(splash).resize(body, body, { fit: "contain", background: clear }).png().toBuffer();
+    const h = Math.round(size * 0.94);
+    const img = await sharp(art).resize(h, h, { fit: "contain", background: clear }).png().toBuffer();
     await sharp({ create: { width: size, height: size, channels: 4, background: clear } })
-      .composite([{ input: fg, gravity: "center" }])
+      .composite([{ input: img, gravity: "center" }])
       .png()
       .toFile(path.join(ROOT, `public/icon-${size}.png`));
   }

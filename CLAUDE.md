@@ -33,7 +33,7 @@
 - ゲーム内アイコン（優先）: `public/icons/custom/<pokemon_ms.id>.png`、名前で決まるものは `public/icons/custom/key-<画像キー>.png`
 - 予備: PokeAPI のスプライトを余白を切って `public/icons/<key>.png` に保存
 - 追加・変更したら `node scripts/build-icons.mjs` で `src/data/customIcons.json` などを作り直す（ファビコン・アプリアイコンもここで作られる）
-- アプリのアイコン: ホーム画面はゲーム内のメタモン（`icon-maskable-512.png`）、起動画面は公式配布画像から切り抜いたフワンテ＆メタモン（`icon-192/512.png`、元画像は `scripts/assets/drifloon-ditto.png`）
+- アプリのアイコン: ホーム画面・起動画面とも、公式配布画像から切り抜いたフワンテ＆メタモン（`icon-maskable-512.png`、元画像は `scripts/assets/drifloon-ditto.png`）。Android 12 以降は起動画面にホーム画面のアイコンが出るため、起動画面だけ別にはできない
 
 ## バックアップ
 - 毎月1日の GitHub Action が `seeds/pokemon_ms.json` と完全バックアップ `seeds/backup/pocoapoke-data.json` を保存（`scripts/backup-to-sql.cjs` で SQL に戻せる）
