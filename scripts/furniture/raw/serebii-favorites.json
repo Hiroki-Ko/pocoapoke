@@ -1,0 +1,7156 @@
+[
+ {
+  "en": "Adrenaline Orb",
+  "slug": "adrenaline-orb",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/adrenalineorb.png",
+  "favorites": [
+   "Spooky stuff"
+  ]
+ },
+ {
+  "en": "Adventure kit",
+  "slug": "adventure-kit",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/adventurekit.png",
+  "favorites": [
+   "Containers",
+   "Fabric",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Afternoon tea set",
+  "slug": "afternoon-tea-set",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/afternoonteaset.png",
+  "favorites": [
+   "Colorful stuff",
+   "Gatherings",
+   "Looks like food",
+   "Luxury"
+  ]
+ },
+ {
+  "en": "Air conditioner",
+  "slug": "air-conditioner",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/airconditioner.png",
+  "favorites": [
+   "Electronics",
+   "Metal stuff",
+   "Nice breezes",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Alarm Clock",
+  "slug": "alarm-clock",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/alarmclock.png",
+  "favorites": [
+   "Glass stuff",
+   "Metal stuff",
+   "Noisy stuff",
+   "Round stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Antique bed",
+  "slug": "antique-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/antiquebed.png",
+  "favorites": [
+   "Colorful stuff",
+   "Fabric",
+   "Group Activities",
+   "Luxury",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Antique chair",
+  "slug": "antique-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/antiquechair.png",
+  "favorites": [
+   "Colorful stuff",
+   "Fabric",
+   "Luxury",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Antique chandelier",
+  "slug": "antique-chandelier",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/antiquechandelier.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Luxury"
+  ]
+ },
+ {
+  "en": "Antique chest",
+  "slug": "antique-chest",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/antiquechest.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Luxury",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Antique clock",
+  "slug": "antique-clock",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/antiqueclock.png",
+  "favorites": [
+   "Complicated stuff",
+   "Glass stuff",
+   "Luxury",
+   "Noisy stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Antique closet",
+  "slug": "antique-closet",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/antiquecloset.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Luxury",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Antique dresser",
+  "slug": "antique-dresser",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/antiquedresser.png",
+  "favorites": [
+   "Containers",
+   "Glass stuff",
+   "Luxury"
+  ]
+ },
+ {
+  "en": "Antique sofa",
+  "slug": "antique-sofa",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/antiquesofa.png",
+  "favorites": [
+   "Colorful stuff",
+   "Fabric",
+   "Group Activities",
+   "Luxury",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Antique table",
+  "slug": "antique-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/antiquetable.png",
+  "favorites": [
+   "Luxury",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Apple pie",
+  "slug": "apple-pie",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/applepie.png",
+  "favorites": [
+   "Looks like food",
+   "Luxury"
+  ]
+ },
+ {
+  "en": "Appley blender",
+  "slug": "appley-blender",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/appleyblender.png",
+  "favorites": [
+   "Glass stuff",
+   "Looks like food"
+  ]
+ },
+ {
+  "en": "Arcade machine",
+  "slug": "arcade-machine",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/arcademachine.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Glass stuff",
+   "Group Activities",
+   "Metal stuff",
+   "Play spaces"
+  ]
+ },
+ {
+  "en": "Arcanine doll",
+  "slug": "arcanine-doll",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/arcaninedoll.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Armor Fossil",
+  "slug": "armor-fossil",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/armorfossil.png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Armor fragment",
+  "slug": "armor-fragment",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/armorfragment.png",
+  "favorites": [
+   "Spooky stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Arrow sign",
+  "slug": "arrow-sign",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/arrowsign.png",
+  "favorites": [
+   "Letters and words",
+   "Symbols",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Arrow sign (left)",
+  "slug": "arrow-sign-left",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/arrowsign(left).png",
+  "favorites": [
+   "Blocky stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Arrow sign (right)",
+  "slug": "arrow-sign-right",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/arrowsign(right).png",
+  "favorites": [
+   "Blocky stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Audio mixer",
+  "slug": "audio-mixer",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/audiomixer.png",
+  "favorites": [
+   "Complicated stuff",
+   "Electronics",
+   "Glass stuff",
+   "Metal stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Auspicious Armor",
+  "slug": "auspicious-armor",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/auspiciousarmor.png",
+  "favorites": [
+   "Hard stuff",
+   "Luxury",
+   "Metal stuff",
+   "Shiny stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Balloons",
+  "slug": "balloons",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/balloons.png",
+  "favorites": [
+   "Colorful stuff",
+   "Gatherings",
+   "Play spaces",
+   "Round stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Barrel",
+  "slug": "barrel",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/barrel.png",
+  "favorites": [
+   "Containers",
+   "Metal stuff",
+   "Round stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Bathtime set",
+  "slug": "bathtime-set",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bathtimeset.png",
+  "favorites": [
+   "Cleanliness",
+   "Colorful stuff",
+   "Containers",
+   "Cute stuff",
+   "Gatherings",
+   "Lots of water",
+   "Play spaces",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Bathtub",
+  "slug": "bathtub",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bathtub.png",
+  "favorites": [
+   "Cleanliness",
+   "Lots of water",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Beach chair",
+  "slug": "beach-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/beachchair.png",
+  "favorites": [
+   "Fabric",
+   "Ocean vibes",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Beach parasol",
+  "slug": "beach-parasol",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/beachparasol.png",
+  "favorites": [
+   "Fabric",
+   "Lots of water",
+   "Ocean vibes"
+  ]
+ },
+ {
+  "en": "Beach volleyball set",
+  "slug": "beach-volleyball-set",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/beachvolleyballset.png",
+  "favorites": [
+   "Exercise",
+   "Group Activities",
+   "Lots of dirt",
+   "Ocean vibes",
+   "Play spaces",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Beautiful flower",
+  "slug": "beautiful-flower",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/beautifulflower.png",
+  "favorites": [
+   "Pretty flowers"
+  ]
+ },
+ {
+  "en": "Bell",
+  "slug": "bell",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bell.png",
+  "favorites": [
+   "Luxury",
+   "Metal stuff",
+   "Shiny stuff",
+   "Strange stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Berry basket",
+  "slug": "berry-basket",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/berrybasket.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Containers",
+   "Looks like food",
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Berry bed",
+  "slug": "berry-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/berrybed.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Looks like food",
+   "Lots of nature",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Berry case",
+  "slug": "berry-case",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/berrycase.png",
+  "favorites": [
+   "Containers",
+   "Cute stuff",
+   "Looks like food",
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Berry chair",
+  "slug": "berry-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/berrychair.png",
+  "favorites": [
+   "Cute stuff",
+   "Looks like food",
+   "Lots of nature",
+   "Round stuff",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Berry clock",
+  "slug": "berry-clock",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/berryclock.png",
+  "favorites": [
+   "Cute stuff",
+   "Glass stuff",
+   "Looks like food",
+   "Lots of nature",
+   "Noisy stuff",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Berry hanging lamp",
+  "slug": "berry-hanging-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/berryhanginglamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Looks like food",
+   "Lots of nature",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Berry print",
+  "slug": "berry-print",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/berryprint.png",
+  "favorites": [
+   "Looks like food",
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Berry print (wallpaper)",
+  "slug": "berry-print-wallpaper",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/berryprint(wallpaper).png",
+  "favorites": [
+   "Looks like food",
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Berry table",
+  "slug": "berry-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/berrytable.png",
+  "favorites": [
+   "Looks like food",
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Berry table lamp",
+  "slug": "berry-table-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/berrytablelamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Looks like food",
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Berry wall decoration",
+  "slug": "berry-wall-decoration",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/berrywalldecoration.png",
+  "favorites": [
+   "Colorful stuff",
+   "Gatherings",
+   "Looks like food",
+   "Lots of nature",
+   "Watching stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Big drum",
+  "slug": "big-drum",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bigdrum.png",
+  "favorites": [
+   "Fabric",
+   "Metal stuff",
+   "Noisy stuff",
+   "Play spaces",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Big Nugget",
+  "slug": "big-nugget",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bignugget.png",
+  "favorites": [
+   "Luxury",
+   "Metal stuff",
+   "Round stuff",
+   "Shiny stuff",
+   "Stone stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Big Root",
+  "slug": "big-root",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/bigroot.png",
+  "favorites": [
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Big storage box",
+  "slug": "big-storage-box",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/bigstoragebox.png",
+  "favorites": [
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Big swim ring",
+  "slug": "big-swim-ring",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bigswimring.png",
+  "favorites": [
+   "Group Activities",
+   "Ocean vibes",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Bike",
+  "slug": "bike",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bike.png",
+  "favorites": [
+   "Complicated stuff",
+   "Exercise",
+   "Metal stuff",
+   "Rides",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Black paint",
+  "slug": "black-paint",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/blackpaint.png",
+  "favorites": [
+   "Colorful stuff",
+   "Lots of dirt"
+  ]
+ },
+ {
+  "en": "Black Sludge",
+  "slug": "black-sludge",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/blacksludge.png",
+  "favorites": [
+   "Garbage"
+  ]
+ },
+ {
+  "en": "Blank canvas",
+  "slug": "blank-canvas",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/blankcanvas.png",
+  "favorites": [
+   "Fabric",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Blender",
+  "slug": "blender",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/blender.png",
+  "favorites": [
+   "Containers",
+   "Glass stuff",
+   "Noisy stuff",
+   "Spinning stuff"
+  ]
+ },
+ {
+  "en": "Blue meteor lamp",
+  "slug": "blue-meteor-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bluemeteorlamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Blue paint",
+  "slug": "blue-paint",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/bluepaint.png",
+  "favorites": [
+   "Colorful stuff",
+   "Lots of dirt"
+  ]
+ },
+ {
+  "en": "Bonfire",
+  "slug": "bonfire",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bonfire.png",
+  "favorites": [
+   "Group Activities",
+   "Lots of fire",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Boo-in-the-box",
+  "slug": "boo-in-the-box",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/boo-in-the-box.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Cute stuff",
+   "Group Activities",
+   "Play spaces",
+   "Spooky stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Book",
+  "slug": "book",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/book.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Book stack",
+  "slug": "book-stack",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bookstack.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Gatherings",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Bookcase",
+  "slug": "bookcase",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bookcase.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Complicated stuff",
+   "Containers",
+   "Letters and words",
+   "Watching stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Bottled ship",
+  "slug": "bottled-ship",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bottledship.png",
+  "favorites": [
+   "Glass stuff",
+   "Lots of water",
+   "Ocean vibes",
+   "Rides",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Bouncy blue bathtub",
+  "slug": "bouncy-blue-bathtub",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bouncybluebathtub.png",
+  "favorites": [
+   "Cleanliness",
+   "Cute stuff",
+   "Lots of water",
+   "Round stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Box Sofa",
+  "slug": "box-sofa",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/boxsofa.png",
+  "favorites": [
+   "Blocky stuff",
+   "Fabric",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Brick",
+  "slug": "brick",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/brick.png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Broken streetlight",
+  "slug": "broken-streetlight",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/brokenstreetlight.png",
+  "favorites": [
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Bubble machine",
+  "slug": "bubble-machine",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/bubblemachine.png",
+  "favorites": [
+   "Electronics",
+   "Lots of water",
+   "Spinning stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Café sign",
+  "slug": "cafe-sign",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cafesign.png",
+  "favorites": [
+   "Blocky stuff",
+   "Cute stuff",
+   "Electronics",
+   "Letters and words",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Campfire",
+  "slug": "campfire",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/campfire.png",
+  "favorites": [
+   "Group Activities",
+   "Lots of fire",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Camping chair",
+  "slug": "camping-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/campingchair.png",
+  "favorites": [
+   "Fabric",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Candy bucket",
+  "slug": "candy-bucket",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/candybucket.png",
+  "favorites": [
+   "Containers",
+   "Cute stuff",
+   "Gatherings",
+   "Looks like food",
+   "Spooky stuff"
+  ]
+ },
+ {
+  "en": "Cannon",
+  "slug": "cannon",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cannon.png",
+  "favorites": [
+   "Lots of fire",
+   "Metal stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Canoe",
+  "slug": "canoe",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/canoe.png",
+  "favorites": [
+   "Colorful stuff",
+   "Group Activities",
+   "Lots of water",
+   "Rides",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Card reader",
+  "slug": "card-reader",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cardreader.png",
+  "favorites": [
+   "Complicated stuff",
+   "Electronics",
+   "Glass stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Cardboard boxes",
+  "slug": "cardboard-boxes",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cardboardboxes.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Gatherings"
+  ]
+ },
+ {
+  "en": "Cash register",
+  "slug": "cash-register",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cashregister.png",
+  "favorites": [
+   "Complicated stuff",
+   "Containers",
+   "Metal stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Castform weather charm",
+  "slug": "castform-weather-charm",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/castformweathercharm.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Spinning stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "CD player",
+  "slug": "cd-player",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cdplayer.png",
+  "favorites": [
+   "Containers",
+   "Electronics",
+   "Group Activities",
+   "Noisy stuff"
+  ]
+ },
+ {
+  "en": "CD rack",
+  "slug": "cd-rack",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cdrack.png",
+  "favorites": [
+   "Colorful stuff",
+   "Complicated stuff",
+   "Containers",
+   "Gatherings",
+   "Watching stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Ceiling fan",
+  "slug": "ceiling-fan",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ceilingfan.png",
+  "favorites": [
+   "Electronics",
+   "Metal stuff",
+   "Nice breezes",
+   "Spinning stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Cell phone",
+  "slug": "cell-phone",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cellphone.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Glass stuff",
+   "Metal stuff",
+   "Shiny stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Chain lamp",
+  "slug": "chain-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/chainlamp.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Chansey plant",
+  "slug": "chansey-plant",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/chanseyplant.png",
+  "favorites": [
+   "Blocky stuff",
+   "Cute stuff",
+   "Group Activities",
+   "Luxury",
+   "Pretty flowers",
+   "Round stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Charcoal",
+  "slug": "charcoal",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/charcoal.png",
+  "favorites": [
+   "Lots of fire"
+  ]
+ },
+ {
+  "en": "Chic chair",
+  "slug": "chic-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/chicchair.png",
+  "favorites": [
+   "Fabric",
+   "Luxury",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Chic sofa",
+  "slug": "chic-sofa",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/chicsofa.png",
+  "favorites": [
+   "Fabric",
+   "Group Activities",
+   "Luxury",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Chic streetlight",
+  "slug": "chic-streetlight",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/chicstreetlight.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Hard stuff",
+   "Shiny stuff",
+   "Slender objects",
+   "Spooky stuff"
+  ]
+ },
+ {
+  "en": "Chic table",
+  "slug": "chic-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/chictable.png",
+  "favorites": [
+   "Luxury"
+  ]
+ },
+ {
+  "en": "Chimecho wind chime",
+  "slug": "chimecho-wind-chime",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/chimechowindchime.png",
+  "favorites": [
+   "Cute stuff",
+   "Glass stuff",
+   "Nice breezes",
+   "Noisy stuff",
+   "Slender objects",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Chocolate cookies",
+  "slug": "chocolate-cookies",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/chocolatecookies.png",
+  "favorites": [
+   "Colorful stuff",
+   "Gatherings",
+   "Looks like food",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Cleaning supplies",
+  "slug": "cleaning-supplies",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cleaningsupplies.png",
+  "favorites": [
+   "Cleanliness",
+   "Containers",
+   "Lots of water",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Clear Amulet",
+  "slug": "clear-amulet",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/clearamulet.png",
+  "favorites": [
+   "Glass stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Clear Bell",
+  "slug": "clear-bell",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/clearbell.png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of fire",
+   "Metal stuff",
+   "Noisy stuff",
+   "Round stuff",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Clefairy doll",
+  "slug": "clefairy-doll",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/clefairydoll.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Soft stuff",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Cloud cannon",
+  "slug": "cloud-cannon",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cloudcannon.png",
+  "favorites": [
+   "Noisy stuff"
+  ]
+ },
+ {
+  "en": "Cofagrigus locker",
+  "slug": "cofagrigus-locker",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cofagriguslocker.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Luxury",
+   "Shiny stuff",
+   "Spooky stuff"
+  ]
+ },
+ {
+  "en": "Computer",
+  "slug": "computer",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/computer.png",
+  "favorites": [
+   "Complicated stuff",
+   "Electronics",
+   "Glass stuff",
+   "Group Activities",
+   "Metal stuff",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Concrete",
+  "slug": "concrete",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/concrete.png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Concrete pipe",
+  "slug": "concrete-pipe",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/concretepipe.png",
+  "favorites": [
+   "Round stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Construction supplies",
+  "slug": "construction-supplies",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/constructionsupplies.png",
+  "favorites": [
+   "Construction",
+   "Containers",
+   "Gatherings",
+   "Group Activities",
+   "Metal stuff",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Control unit",
+  "slug": "control-unit",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/controlunit.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Electronics",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Cooking stove",
+  "slug": "cooking-stove",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cookingstove.png",
+  "favorites": [
+   "Blocky stuff",
+   "Lots of fire",
+   "Metal stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Cooking utensils",
+  "slug": "cooking-utensils",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cookingutensils.png",
+  "favorites": [
+   "Slender objects",
+   "Wobbly stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Cool bass guitar",
+  "slug": "cool-bass-guitar",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/coolbassguitar.png",
+  "favorites": [
+   "Electronics",
+   "Metal stuff",
+   "Noisy stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Cool electric guitar",
+  "slug": "cool-electric-guitar",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/coolelectricguitar.png",
+  "favorites": [
+   "Electronics",
+   "Metal stuff",
+   "Noisy stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Cooler",
+  "slug": "cooler",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cooler.png",
+  "favorites": [
+   "Blocky stuff",
+   "Cleanliness",
+   "Group Activities"
+  ]
+ },
+ {
+  "en": "Copper ingot",
+  "slug": "copper-ingot",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/copperingot.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Copper ore",
+  "slug": "copper-ore",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/copperore.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Corkboard",
+  "slug": "corkboard",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/corkboard.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Gatherings",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Cotton Spores",
+  "slug": "cotton-spores",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/cottonspores.png",
+  "favorites": [
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Crystal ball",
+  "slug": "crystal-ball",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/crystalball.png",
+  "favorites": [
+   "Fabric",
+   "Glass stuff",
+   "Round stuff",
+   "Shiny stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Crystal fragment",
+  "slug": "crystal-fragment",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/crystalfragment.png",
+  "favorites": [
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Cursola light",
+  "slug": "cursola-light",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cursolalight.png",
+  "favorites": [
+   "Cute stuff",
+   "Shiny stuff",
+   "Spooky stuff"
+  ]
+ },
+ {
+  "en": "Cushion bed",
+  "slug": "cushion-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cushionbed.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Group Activities",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Cute bed",
+  "slug": "cute-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cutebed.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Group Activities",
+   "Luxury",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Cute chair",
+  "slug": "cute-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cutechair.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Cute dresser",
+  "slug": "cute-dresser",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cutedresser.png",
+  "favorites": [
+   "Colorful stuff",
+   "Containers",
+   "Cute stuff",
+   "Glass stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Cute flower",
+  "slug": "cute-flower",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/cuteflower.png",
+  "favorites": [
+   "Cute stuff",
+   "Pretty flowers"
+  ]
+ },
+ {
+  "en": "Cute lamp",
+  "slug": "cute-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cutelamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Cute sofa",
+  "slug": "cute-sofa",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cutesofa.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Group Activities",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Cute table",
+  "slug": "cute-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/cutetable.png",
+  "favorites": [
+   "Cute stuff"
+  ]
+ },
+ {
+  "en": "Cutting board",
+  "slug": "cutting-board",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/cuttingboard.png",
+  "favorites": [
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Cyan paint",
+  "slug": "cyan-paint",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/cyanpaint.png",
+  "favorites": [
+   "Colorful stuff",
+   "Lots of dirt"
+  ]
+ },
+ {
+  "en": "Cycle shop sign",
+  "slug": "cycle-shop-sign",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/cycleshopsign.png",
+  "favorites": [
+   "Blocky stuff",
+   "Cute stuff",
+   "Electronics",
+   "Letters and words",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Dangling streetlight",
+  "slug": "dangling-streetlight",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/danglingstreetlight.png",
+  "favorites": [
+   "Electronics",
+   "Hard stuff",
+   "Shiny stuff",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Deck chair",
+  "slug": "deck-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/deckchair.png",
+  "favorites": [
+   "Ocean vibes"
+  ]
+ },
+ {
+  "en": "Decorative bookshelf",
+  "slug": "decorative-bookshelf",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativebookshelf.png",
+  "favorites": [
+   "Gatherings",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Decorative cloth",
+  "slug": "decorative-cloth",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativecloth.png",
+  "favorites": [
+   "Fabric",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Decorative Dive Ball",
+  "slug": "decorative-dive-ball",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativediveball.png",
+  "favorites": [
+   "Ocean vibes",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Decorative Great Ball",
+  "slug": "decorative-great-ball",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativegreatball.png",
+  "favorites": [
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Decorative Heal Ball",
+  "slug": "decorative-heal-ball",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativehealball.png",
+  "favorites": [
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Decorative Lure Ball",
+  "slug": "decorative-lure-ball",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativelureball.png",
+  "favorites": [
+   "Ocean vibes",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Decorative Net Ball",
+  "slug": "decorative-net-ball",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativenetball.png",
+  "favorites": [
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Decorative plant shelf",
+  "slug": "decorative-plant-shelf",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativeplantshelf.png",
+  "favorites": [
+   "Gatherings",
+   "Pretty flowers",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Decorative plates",
+  "slug": "decorative-plates",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativeplates.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Gatherings",
+   "Luxury",
+   "Stone stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Decorative Poké Ball",
+  "slug": "decorative-poke-ball",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativepokeball.png",
+  "favorites": [
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Decorative Quick Ball",
+  "slug": "decorative-quick-ball",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativequickball.png",
+  "favorites": [
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Decorative shop shelf",
+  "slug": "decorative-shop-shelf",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativeshopshelf.png",
+  "favorites": [
+   "Blocky stuff"
+  ]
+ },
+ {
+  "en": "Decorative storage shelf",
+  "slug": "decorative-storage-shelf",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/decorativestorageshelf.png",
+  "favorites": [
+   "Colorful stuff",
+   "Gatherings",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Desk light",
+  "slug": "desk-light",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/desklight.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Hard stuff",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Despot Fossil (body)",
+  "slug": "despot-fossil-body",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/despotfossil(body).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Despot Fossil (head)",
+  "slug": "despot-fossil-head",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/despotfossil(head).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Despot Fossil (legs)",
+  "slug": "despot-fossil-legs",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/despotfossil(legs).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Despot Fossil (tail)",
+  "slug": "despot-fossil-tail",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/despotfossil(tail).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Destiny Knot",
+  "slug": "destiny-knot",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/destinyknot.png",
+  "favorites": [
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Digital camera",
+  "slug": "digital-camera",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/digitalcamera.png",
+  "favorites": [
+   "Complicated stuff",
+   "Glass stuff",
+   "Hard stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Dining cabinet",
+  "slug": "dining-cabinet",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/diningcabinet.png",
+  "favorites": [
+   "Containers",
+   "Gatherings",
+   "Glass stuff",
+   "Luxury",
+   "Stone stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Dipplin mixing bowl",
+  "slug": "dipplin-mixing-bowl",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/dipplinmixingbowl.png",
+  "favorites": [
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Ditto doll",
+  "slug": "ditto-doll",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/dittodoll.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Soft stuff",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Ditto Flag",
+  "slug": "ditto-flag",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/dittoflag.png",
+  "favorites": [
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Double streetlight",
+  "slug": "double-streetlight",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/doublestreetlight.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Hard stuff",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Dragonite doll",
+  "slug": "dragonite-doll",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/dragonitedoll.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Soft stuff",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Eerie candle",
+  "slug": "eerie-candle",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/eeriecandle.png",
+  "favorites": [
+   "Cute stuff",
+   "Lots of fire",
+   "Luxury",
+   "Spooky stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Eerie statue",
+  "slug": "eerie-statue",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/eeriestatue.png",
+  "favorites": [
+   "Letters and words",
+   "Spooky stuff",
+   "Stone stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Eevee doll",
+  "slug": "eevee-doll",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/eeveedoll.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Soft stuff",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Elegant flower",
+  "slug": "elegant-flower",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/elegantflower.png",
+  "favorites": [
+   "Pretty flowers"
+  ]
+ },
+ {
+  "en": "Excavation tools",
+  "slug": "excavation-tools",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/excavationtools.png",
+  "favorites": [
+   "Metal stuff",
+   "Sharp stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Extravagant flowers",
+  "slug": "extravagant-flowers",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/extravagantflowers.png",
+  "favorites": [
+   "Containers",
+   "Pretty flowers",
+   "Stone stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Fairy Feather",
+  "slug": "fairy-feather",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/fairyfeather.png",
+  "favorites": [
+   "Cute stuff"
+  ]
+ },
+ {
+  "en": "Fan",
+  "slug": "fan",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/fan.png",
+  "favorites": [
+   "Electronics",
+   "Metal stuff",
+   "Nice breezes",
+   "Round stuff",
+   "Spinning stuff"
+  ]
+ },
+ {
+  "en": "Fancy chair",
+  "slug": "fancy-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/fancychair.png",
+  "favorites": [
+   "Fabric",
+   "Luxury",
+   "Soft stuff",
+   "Spinning stuff"
+  ]
+ },
+ {
+  "en": "Fancy pen",
+  "slug": "fancy-pen",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/fancypen.png",
+  "favorites": [
+   "Complicated stuff",
+   "Hard stuff",
+   "Luxury",
+   "Metal stuff",
+   "Sharp stuff",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Fiery Magby statue",
+  "slug": "fiery-magby-statue",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/fierymagbystatue.png",
+  "favorites": [
+   "Lots of fire",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Fire hydrant",
+  "slug": "fire-hydrant",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/firehydrant.png",
+  "favorites": [
+   "Lots of water",
+   "Metal stuff",
+   "Shiny stuff",
+   "Strange stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Firepit",
+  "slug": "firepit",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/firepit.png",
+  "favorites": [
+   "Group Activities",
+   "Lots of fire",
+   "Luxury",
+   "Metal stuff",
+   "Round stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "First aid kit",
+  "slug": "first-aid-kit",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/firstaidkit.png",
+  "favorites": [
+   "Colorful stuff",
+   "Containers",
+   "Healing",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Fishing rod",
+  "slug": "fishing-rod",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/fishingrod.png",
+  "favorites": [
+   "Metal stuff",
+   "Ocean vibes",
+   "Slender objects",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Flame Orb",
+  "slug": "flame-orb",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/flameorb.png",
+  "favorites": [
+   "Lots of fire"
+  ]
+ },
+ {
+  "en": "Flat-leaf plant",
+  "slug": "flat-leaf-plant",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/flat-leafplant.png",
+  "favorites": [
+   "Containers",
+   "Lots of nature",
+   "Pretty flowers",
+   "Slender objects",
+   "Stone stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Floating lantern",
+  "slug": "floating-lantern",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/floatinglantern.png",
+  "favorites": [
+   "Electronics"
+  ]
+ },
+ {
+  "en": "Floor switch",
+  "slug": "floor-switch",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/floorswitch.png",
+  "favorites": [
+   "Electronics"
+  ]
+ },
+ {
+  "en": "Flower backpack",
+  "slug": "flower-backpack",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/flowerbackpack.png",
+  "favorites": [
+   "Containers",
+   "Cute stuff",
+   "Fabric",
+   "Pretty flowers",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Flower cushion",
+  "slug": "flower-cushion",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/flowercushion.png",
+  "favorites": [
+   "Cute stuff",
+   "Group Activities",
+   "Pretty flowers",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Flower garland",
+  "slug": "flower-garland",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/flowergarland.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Gatherings",
+   "Pretty flowers",
+   "Soft stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Flowery table setting",
+  "slug": "flowery-table-setting",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/flowerytablesetting.png",
+  "favorites": [
+   "Colorful stuff",
+   "Containers",
+   "Cute stuff",
+   "Gatherings",
+   "Group Activities",
+   "Pretty flowers",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Fluff",
+  "slug": "fluff",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/fluff.png",
+  "favorites": [
+   "Fabric",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Fluorescent light",
+  "slug": "fluorescent-light",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/fluorescentlight.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Hard stuff",
+   "Shiny stuff",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Folding chair",
+  "slug": "folding-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/foldingchair.png",
+  "favorites": [
+   "Fabric",
+   "Metal stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Food counter",
+  "slug": "food-counter",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/foodcounter.png",
+  "favorites": [
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Frame",
+  "slug": "frame",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/frame.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Letters and words",
+   "Watching stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Fried potatoes",
+  "slug": "fried-potatoes",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/friedpotatoes.png",
+  "favorites": [
+   "Colorful stuff",
+   "Gatherings",
+   "Looks like food"
+  ]
+ },
+ {
+  "en": "Fun balloons",
+  "slug": "fun-balloons",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/funballoons.png",
+  "favorites": [
+   "Cute stuff",
+   "Gatherings",
+   "Play spaces",
+   "Spooky stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Funky diffuser",
+  "slug": "funky-diffuser",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/funkydiffuser.png",
+  "favorites": [
+   "Lots of water",
+   "Metal stuff",
+   "Round stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Game Boy system",
+  "slug": "game-boy-system",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gameboysystem.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Glass stuff",
+   "Group Activities",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Gaming bed",
+  "slug": "gaming-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gamingbed.png",
+  "favorites": [
+   "Colorful stuff",
+   "Electronics",
+   "Group Activities",
+   "Shiny stuff",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Gaming chair",
+  "slug": "gaming-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gamingchair.png",
+  "favorites": [
+   "Colorful stuff",
+   "Electronics",
+   "Fabric",
+   "Luxury",
+   "Metal stuff",
+   "Shiny stuff",
+   "Soft stuff",
+   "Spinning stuff"
+  ]
+ },
+ {
+  "en": "Gaming fridge",
+  "slug": "gaming-fridge",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gamingfridge.png",
+  "favorites": [
+   "Colorful stuff",
+   "Containers",
+   "Electronics",
+   "Glass stuff",
+   "Metal stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Gaming light",
+  "slug": "gaming-light",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gaminglight.png",
+  "favorites": [
+   "Colorful stuff",
+   "Electronics",
+   "Gatherings",
+   "Glass stuff",
+   "Shiny stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Gaming PC",
+  "slug": "gaming-pc",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gamingpc.png",
+  "favorites": [
+   "Colorful stuff",
+   "Electronics",
+   "Glass stuff",
+   "Metal stuff",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Garbage bags",
+  "slug": "garbage-bags",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/garbagebags.png",
+  "favorites": [
+   "Garbage",
+   "Gatherings"
+  ]
+ },
+ {
+  "en": "Garbage bin",
+  "slug": "garbage-bin",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/garbagebin.png",
+  "favorites": [
+   "Containers",
+   "Garbage",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Garden bench",
+  "slug": "garden-bench",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gardenbench.png",
+  "favorites": [
+   "Group Activities",
+   "Lots of nature",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Garden chair",
+  "slug": "garden-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gardenchair.png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of nature",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Garden flowers",
+  "slug": "garden-flowers",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gardenflowers.png",
+  "favorites": [
+   "Colorful stuff",
+   "Pretty flowers"
+  ]
+ },
+ {
+  "en": "Garden light",
+  "slug": "garden-light",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gardenlight.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Garden ornament",
+  "slug": "garden-ornament",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gardenornament.png",
+  "favorites": [
+   "Gatherings",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Garden table",
+  "slug": "garden-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/gardentable.png",
+  "favorites": [
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Ghost smoke projector",
+  "slug": "ghost-smoke-projector",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ghostsmokeprojector.png",
+  "favorites": [
+   "Spooky stuff"
+  ]
+ },
+ {
+  "en": "Gift shop sign",
+  "slug": "gift-shop-sign",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/giftshopsign.png",
+  "favorites": [
+   "Blocky stuff",
+   "Cute stuff",
+   "Electronics",
+   "Letters and words",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Glass",
+  "slug": "glass",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/glass.png",
+  "favorites": [
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Glass window",
+  "slug": "glass-window",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/glasswindow.png",
+  "favorites": [
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Gold Bottle Cap",
+  "slug": "gold-bottle-cap",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/goldbottlecap.png",
+  "favorites": [
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Gold ingot",
+  "slug": "gold-ingot",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/goldingot.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Gold ore",
+  "slug": "gold-ore",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/goldore.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Gold Teeth",
+  "slug": "gold-teeth",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/goldteeth.png",
+  "favorites": [
+   "Hard stuff",
+   "Metal stuff",
+   "Shiny stuff",
+   "Stone stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Gravestone",
+  "slug": "gravestone",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gravestone.png",
+  "favorites": [
+   "Letters and words",
+   "Spooky stuff",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Green meteor lamp",
+  "slug": "green-meteor-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/greenmeteorlamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Green paint",
+  "slug": "green-paint",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/greenpaint.png",
+  "favorites": [
+   "Colorful stuff",
+   "Lots of dirt"
+  ]
+ },
+ {
+  "en": "Grubby book",
+  "slug": "grubby-book",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/grubbybook.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Garbage",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Grubby cell phone",
+  "slug": "grubby-cell-phone",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/grubbycellphone.png",
+  "favorites": [
+   "Blocky stuff",
+   "Garbage",
+   "Glass stuff",
+   "Metal stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Grubby letter",
+  "slug": "grubby-letter",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/grubbyletter.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Garbage",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Grubby newspaper",
+  "slug": "grubby-newspaper",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/grubbynewspaper.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Garbage",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Grubby notepad",
+  "slug": "grubby-notepad",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/grubbynotepad.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Garbage",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Grubby papers",
+  "slug": "grubby-papers",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/grubbypapers.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Garbage",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Grubby tablet",
+  "slug": "grubby-tablet",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/grubbytablet.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Garbage",
+   "Glass stuff",
+   "Metal stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Guest-room bed",
+  "slug": "guest-room-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/guest-roombed.png",
+  "favorites": [
+   "Fabric",
+   "Group Activities",
+   "Luxury",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Gyarados fountain",
+  "slug": "gyarados-fountain",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gyaradosfountain.png",
+  "favorites": [
+   "Lots of water",
+   "Luxury",
+   "Play spaces",
+   "Stone stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Gym emblem statue",
+  "slug": "gym-emblem-statue",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/gymemblemstatue.png",
+  "favorites": [
+   "Shiny stuff",
+   "Stone stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Hanging banner",
+  "slug": "hanging-banner",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/hangingbanner.png",
+  "favorites": [
+   "Colorful stuff",
+   "Fabric",
+   "Symbols",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Hanging scroll",
+  "slug": "hanging-scroll",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/hangingscroll.png",
+  "favorites": [
+   "Blocky stuff",
+   "Letters and words",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Hanging sign",
+  "slug": "hanging-sign",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/hangingsign.png",
+  "favorites": [
+   "Blocky stuff",
+   "Letters and words",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Harbor streetlight",
+  "slug": "harbor-streetlight",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/harborstreetlight.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Ocean vibes",
+   "Round stuff",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Hard Stone",
+  "slug": "hard-stone",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/hardstone.png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Harp",
+  "slug": "harp",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/harp.png",
+  "favorites": [
+   "Hard stuff",
+   "Luxury",
+   "Noisy stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Harvest basket",
+  "slug": "harvest-basket",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/harvestbasket.png",
+  "favorites": [
+   "Containers",
+   "Gatherings",
+   "Looks like food",
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Headbutt Fossil (body)",
+  "slug": "headbutt-fossil-body",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/headbuttfossil(body).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Headbutt Fossil (head)",
+  "slug": "headbutt-fossil-head",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/headbuttfossil(head).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Headbutt Fossil (tail)",
+  "slug": "headbutt-fossil-tail",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/headbuttfossil(tail).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Heart Scale",
+  "slug": "heart-scale",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/heartscale.png",
+  "favorites": [
+   "Cute stuff"
+  ]
+ },
+ {
+  "en": "Hide-and-sneak trophy",
+  "slug": "hide-and-sneak-trophy",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/hide-and-sneaktrophy.png",
+  "favorites": [
+   "Complicated stuff",
+   "Hard stuff",
+   "Luxury",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Hoppip water bottle",
+  "slug": "hoppip-water-bottle",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/hoppipwaterbottle.png",
+  "favorites": [
+   "Colorful stuff",
+   "Containers",
+   "Cute stuff",
+   "Lots of water"
+  ]
+ },
+ {
+  "en": "Horsea fountain",
+  "slug": "horsea-fountain",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/horseafountain.png",
+  "favorites": [
+   "Lots of water",
+   "Ocean vibes",
+   "Stone stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Humidifier",
+  "slug": "humidifier",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/humidifier.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Group Activities",
+   "Healing",
+   "Lots of water",
+   "Round stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Indigo meteor lamp",
+  "slug": "indigo-meteor-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/indigometeorlamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Industrial bed",
+  "slug": "industrial-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/industrialbed.png",
+  "favorites": [
+   "Fabric",
+   "Group Activities",
+   "Metal stuff",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Industrial bench",
+  "slug": "industrial-bench",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/industrialbench.png",
+  "favorites": [
+   "Group Activities",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Industrial chair",
+  "slug": "industrial-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/industrialchair.png",
+  "favorites": [
+   "Hard stuff",
+   "Metal stuff",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Industrial desk",
+  "slug": "industrial-desk",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/industrialdesk.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Inflatable boat",
+  "slug": "inflatable-boat",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/inflatableboat.png",
+  "favorites": [
+   "Blocky stuff",
+   "Cute stuff",
+   "Group Activities",
+   "Lots of water",
+   "Ocean vibes",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Inflatable Sudowoodo",
+  "slug": "inflatable-sudowoodo",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/inflatablesudowoodo.png",
+  "favorites": [
+   "Slender objects",
+   "Watching stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Information board",
+  "slug": "information-board",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/informationboard.png",
+  "favorites": [
+   "Complicated stuff",
+   "Letters and words",
+   "Metal stuff",
+   "Shiny stuff",
+   "Stone stuff",
+   "Strange stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Iron Ball",
+  "slug": "iron-ball",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/ironball.png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Iron bed",
+  "slug": "iron-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ironbed.png",
+  "favorites": [
+   "Fabric",
+   "Metal stuff",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Iron bench",
+  "slug": "iron-bench",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ironbench.png",
+  "favorites": [
+   "Group Activities",
+   "Hard stuff",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Iron chair",
+  "slug": "iron-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ironchair.png",
+  "favorites": [
+   "Blocky stuff",
+   "Hard stuff",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Iron ingot",
+  "slug": "iron-ingot",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/ironingot.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Iron ore",
+  "slug": "iron-ore",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/ironore.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Iron pipes",
+  "slug": "iron-pipes",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ironpipes.png",
+  "favorites": [
+   "Construction",
+   "Gatherings",
+   "Hard stuff",
+   "Metal stuff",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Iron rack",
+  "slug": "iron-rack",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/ironrack.png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Iron scaffold",
+  "slug": "iron-scaffold",
+  "tag": "road",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ironscaffold.png",
+  "favorites": [
+   "Construction"
+  ]
+ },
+ {
+  "en": "Iron-scaffold plank",
+  "slug": "iron-scaffold-plank",
+  "tag": "road",
+  "image": "https://www.serebii.net/pokemonpokopia/items/iron-scaffoldplank.png",
+  "favorites": [
+   "Construction"
+  ]
+ },
+ {
+  "en": "Iron stand",
+  "slug": "iron-stand",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ironstand.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Glass stuff",
+   "Hard stuff",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Iron table",
+  "slug": "iron-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/irontable.png",
+  "favorites": [
+   "Hard stuff",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Jaw Fossil",
+  "slug": "jaw-fossil",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/jawfossil.png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Jewel wall decoration",
+  "slug": "jewel-wall-decoration",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/jewelwalldecoration.png",
+  "favorites": [
+   "Colorful stuff",
+   "Gatherings",
+   "Luxury",
+   "Stone stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Jirachi lamp",
+  "slug": "jirachi-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/jirachilamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Hard stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Juice trio",
+  "slug": "juice-trio",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/juicetrio.png",
+  "favorites": [
+   "Colorful stuff",
+   "Containers",
+   "Gatherings",
+   "Glass stuff",
+   "Looks like food",
+   "Lots of water"
+  ]
+ },
+ {
+  "en": "Jumbled cords",
+  "slug": "jumbled-cords",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/jumbledcords.png",
+  "favorites": [
+   "Complicated stuff",
+   "Containers",
+   "Electronics",
+   "Garbage",
+   "Gatherings",
+   "Group Activities",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Jump rope trophy",
+  "slug": "jump-rope-trophy",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/jumpropetrophy.png",
+  "favorites": [
+   "Complicated stuff",
+   "Hard stuff",
+   "Luxury",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Knitting supplies",
+  "slug": "knitting-supplies",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/knittingsupplies.png",
+  "favorites": [
+   "Colorful stuff",
+   "Containers",
+   "Fabric",
+   "Gatherings",
+   "Group Activities",
+   "Round stuff",
+   "Soft stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Lagging Tail",
+  "slug": "lagging-tail",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/laggingtail.png",
+  "favorites": [
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Lampion",
+  "slug": "lampion",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/lampion.png",
+  "favorites": [
+   "Hard stuff",
+   "Luxury",
+   "Slender objects",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Lantern",
+  "slug": "lantern",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/lantern.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Laptop",
+  "slug": "laptop",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/laptop.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Glass stuff",
+   "Metal stuff",
+   "Shiny stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Large Lost Relic",
+  "slug": "large-lost-relic",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/largelostrelic.png",
+  "favorites": [
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Large mirror",
+  "slug": "large-mirror",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/largemirror.png",
+  "favorites": [
+   "Blocky stuff",
+   "Cleanliness",
+   "Glass stuff",
+   "Luxury",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Large ventilation fan",
+  "slug": "large-ventilation-fan",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/largeventilationfan.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Metal stuff",
+   "Nice breezes",
+   "Spinning stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Laser sensor",
+  "slug": "laser-sensor",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/lasersensor.png",
+  "favorites": [
+   "Electronics"
+  ]
+ },
+ {
+  "en": "Leafy plant",
+  "slug": "leafy-plant",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/leafyplant.png",
+  "favorites": [
+   "Containers",
+   "Pretty flowers",
+   "Stone stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Leftovers",
+  "slug": "leftovers",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/leftovers.png",
+  "favorites": [
+   "Looks like food"
+  ]
+ },
+ {
+  "en": "Letter",
+  "slug": "letter",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/letter.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Light Clay",
+  "slug": "light-clay",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/lightclay.png",
+  "favorites": [
+   "Soft stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Loaded Dice",
+  "slug": "loaded-dice",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/loadeddice.png",
+  "favorites": [
+   "Blocky stuff"
+  ]
+ },
+ {
+  "en": "Log Bed",
+  "slug": "log-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/logbed.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Fabric",
+   "Lots of nature",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Log chair",
+  "slug": "log-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/logchair.png",
+  "favorites": [
+   "Lots of nature",
+   "Round stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Log table",
+  "slug": "log-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/logtable.png",
+  "favorites": [
+   "Lots of nature",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Lumber",
+  "slug": "lumber",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/lumber.png",
+  "favorites": [
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Lunch box",
+  "slug": "lunch-box",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/lunchbox.png",
+  "favorites": [
+   "Colorful stuff",
+   "Containers",
+   "Cute stuff",
+   "Gatherings",
+   "Looks like food"
+  ]
+ },
+ {
+  "en": "Luxury bed",
+  "slug": "luxury-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/luxurybed.png",
+  "favorites": [
+   "Group Activities",
+   "Luxury",
+   "Soft stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Luxury chair",
+  "slug": "luxury-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/luxurychair.png",
+  "favorites": [
+   "Colorful stuff",
+   "Fabric",
+   "Hard stuff",
+   "Luxury",
+   "Metal stuff",
+   "Spooky stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Luxury dresser",
+  "slug": "luxury-dresser",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/luxurydresser.png",
+  "favorites": [
+   "Containers",
+   "Glass stuff",
+   "Luxury",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Luxury lamp",
+  "slug": "luxury-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/luxurylamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Fabric",
+   "Glass stuff",
+   "Luxury",
+   "Slender objects",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Luxury sofa",
+  "slug": "luxury-sofa",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/luxurysofa.png",
+  "favorites": [
+   "Fabric",
+   "Group Activities",
+   "Luxury",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Luxury table",
+  "slug": "luxury-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/luxurytable.png",
+  "favorites": [
+   "Luxury"
+  ]
+ },
+ {
+  "en": "Magazine rack",
+  "slug": "magazine-rack",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/magazinerack.png",
+  "favorites": [
+   "Colorful stuff",
+   "Complicated stuff",
+   "Containers",
+   "Gatherings",
+   "Letters and words",
+   "Watching stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Mailbox",
+  "slug": "mailbox",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/mailbox.png",
+  "favorites": [
+   "Containers",
+   "Hard stuff",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Malicious Armor",
+  "slug": "malicious-armor",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/maliciousarmor.png",
+  "favorites": [
+   "Hard stuff",
+   "Luxury",
+   "Metal stuff",
+   "Spooky stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Map and compass",
+  "slug": "map-and-compass",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/mapandcompass.png",
+  "favorites": [
+   "Group Activities",
+   "Letters and words",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Marine chair",
+  "slug": "marine-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/marinechair.png",
+  "favorites": [
+   "Ocean vibes",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Marine chest",
+  "slug": "marine-chest",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/marinechest.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Containers",
+   "Ocean vibes",
+   "Shiny stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Marine closet",
+  "slug": "marine-closet",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/marinecloset.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Containers",
+   "Ocean vibes",
+   "Shiny stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Marine dresser",
+  "slug": "marine-dresser",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/marinedresser.png",
+  "favorites": [
+   "Colorful stuff",
+   "Glass stuff",
+   "Ocean vibes"
+  ]
+ },
+ {
+  "en": "Marine sofa",
+  "slug": "marine-sofa",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/marinesofa.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Group Activities",
+   "Ocean vibes",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Marine table",
+  "slug": "marine-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/marinetable.png",
+  "favorites": [
+   "Colorful stuff",
+   "Ocean vibes"
+  ]
+ },
+ {
+  "en": "Menu board",
+  "slug": "menu-board",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/menuboard.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Letters and words",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Metal chain",
+  "slug": "metal-chain",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/metalchain.png",
+  "favorites": [
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Metal Coat",
+  "slug": "metal-coat",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/metalcoat.png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Metal Debris",
+  "slug": "metal-debris",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/metaldebris.png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Metal drum",
+  "slug": "metal-drum",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/metaldrum.png",
+  "favorites": [
+   "Construction",
+   "Containers",
+   "Metal stuff",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Metal Powder",
+  "slug": "metal-powder",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/metalpowder.png",
+  "favorites": [
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Metallic smelting furnace",
+  "slug": "metallic-smelting-furnace",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/metallicsmeltingfurnace.png",
+  "favorites": [
+   "Lots of fire"
+  ]
+ },
+ {
+  "en": "Metronome",
+  "slug": "metronome",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/metronome.png",
+  "favorites": [
+   "Noisy stuff",
+   "Watching stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Microscope",
+  "slug": "microscope",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/microscope.png",
+  "favorites": [
+   "Complicated stuff",
+   "Glass stuff",
+   "Metal stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Microwave oven",
+  "slug": "microwave-oven",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/microwaveoven.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Glass stuff",
+   "Metal stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Mini bookcase",
+  "slug": "mini-bookcase",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/minibookcase.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Complicated stuff",
+   "Containers",
+   "Letters and words",
+   "Watching stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Mini generator",
+  "slug": "mini-generator",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/minigenerator.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Electronics",
+   "Glass stuff",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Mini plain bed",
+  "slug": "mini-plain-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/miniplainbed.png",
+  "favorites": [
+   "Blocky stuff",
+   "Fabric",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Miracle Seed",
+  "slug": "miracle-seed",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/miracleseed.png",
+  "favorites": [
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Mirror ball",
+  "slug": "mirror-ball",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/mirrorball.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Luxury",
+   "Round stuff",
+   "Shiny stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Model planet",
+  "slug": "model-planet",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/modelplanet.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Electronics",
+   "Round stuff",
+   "Spinning stuff",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Model space shuttle",
+  "slug": "model-space-shuttle",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/modelspaceshuttle.png",
+  "favorites": [
+   "Hard stuff",
+   "Metal stuff",
+   "Nice breezes",
+   "Rides",
+   "Shiny stuff",
+   "Stone stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Modern door",
+  "slug": "modern-door",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/moderndoor.png",
+  "favorites": [
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Modern sink",
+  "slug": "modern-sink",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/modernsink.png",
+  "favorites": [
+   "Blocky stuff",
+   "Cleanliness",
+   "Lots of water",
+   "Metal stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Moon clock",
+  "slug": "moon-clock",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/moonclock.png",
+  "favorites": [
+   "Cute stuff",
+   "Watching stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Mountain flowers",
+  "slug": "mountain-flowers",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/mountainflowers.png",
+  "favorites": [
+   "Pretty flowers"
+  ]
+ },
+ {
+  "en": "Mud",
+  "slug": "mud",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/mud.png",
+  "favorites": [
+   "Lots of dirt"
+  ]
+ },
+ {
+  "en": "Mug",
+  "slug": "mug",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/mug.png",
+  "favorites": [
+   "Containers",
+   "Stone stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Munna bank",
+  "slug": "munna-bank",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/munnabank.png",
+  "favorites": [
+   "Containers",
+   "Cute stuff",
+   "Shiny stuff",
+   "Spooky stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Mushroom lamp",
+  "slug": "mushroom-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/mushroomlamp.png",
+  "favorites": [
+   "Electronics",
+   "Round stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Mushroom streetlight",
+  "slug": "mushroom-streetlight",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/mushroomstreetlight.png",
+  "favorites": [
+   "Round stuff",
+   "Shiny stuff",
+   "Slender objects",
+   "Spooky stuff"
+  ]
+ },
+ {
+  "en": "Music box",
+  "slug": "music-box",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/musicbox.png",
+  "favorites": [
+   "Blocky stuff",
+   "Luxury",
+   "Noisy stuff",
+   "Spinning stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Music mat (Fa)",
+  "slug": "music-mat-fa",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/musicmat(fa).png",
+  "favorites": [
+   "Colorful stuff",
+   "Noisy stuff",
+   "Play spaces",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Music mat (High do)",
+  "slug": "music-mat-high-do",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/musicmat(highdo).png",
+  "favorites": [
+   "Colorful stuff",
+   "Noisy stuff",
+   "Play spaces",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Music mat (La)",
+  "slug": "music-mat-la",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/musicmat(la).png",
+  "favorites": [
+   "Colorful stuff",
+   "Noisy stuff",
+   "Play spaces",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Music mat (low do)",
+  "slug": "music-mat-low-do",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/musicmat(lowdo).png",
+  "favorites": [
+   "Colorful stuff",
+   "Noisy stuff",
+   "Play spaces",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Music mat (Mi)",
+  "slug": "music-mat-mi",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/musicmat(mi).png",
+  "favorites": [
+   "Colorful stuff",
+   "Noisy stuff",
+   "Play spaces",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Music mat (Re)",
+  "slug": "music-mat-re",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/musicmat(re).png",
+  "favorites": [
+   "Colorful stuff",
+   "Noisy stuff",
+   "Play spaces",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Music mat (Sol)",
+  "slug": "music-mat-sol",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/musicmat(sol).png",
+  "favorites": [
+   "Colorful stuff",
+   "Noisy stuff",
+   "Play spaces",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Music mat (Ti)",
+  "slug": "music-mat-ti",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/musicmat(ti).png",
+  "favorites": [
+   "Colorful stuff",
+   "Noisy stuff",
+   "Play spaces",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Mysterious statue",
+  "slug": "mysterious-statue",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/mysteriousstatue.png",
+  "favorites": [
+   "Spooky stuff",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Mystic Water",
+  "slug": "mystic-water",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/mysticwater.png",
+  "favorites": [
+   "Lots of water"
+  ]
+ },
+ {
+  "en": "Naptime bed",
+  "slug": "naptime-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/naptimebed.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Group Activities",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Newspaper",
+  "slug": "newspaper",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/newspaper.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Nonburnable garbage",
+  "slug": "nonburnable-garbage",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/nonburnablegarbage.png",
+  "favorites": [
+   "Garbage"
+  ]
+ },
+ {
+  "en": "Nonburnable garbage (outdoor)",
+  "slug": "nonburnable-garbage-outdoor",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/nonburnablegarbage(outdoor).png",
+  "favorites": [
+   "Garbage"
+  ]
+ },
+ {
+  "en": "Notepad",
+  "slug": "notepad",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/notepad.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Nugget",
+  "slug": "nugget",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/nugget.png",
+  "favorites": [
+   "Round stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Office cabinet",
+  "slug": "office-cabinet",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/officecabinet.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Metal stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Office chair",
+  "slug": "office-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/officechair.png",
+  "favorites": [
+   "Fabric",
+   "Metal stuff",
+   "Soft stuff",
+   "Spinning stuff"
+  ]
+ },
+ {
+  "en": "Office desk",
+  "slug": "office-desk",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/officedesk.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Office locker",
+  "slug": "office-locker",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/officelocker.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Office shelf",
+  "slug": "office-shelf",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/officeshelf.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Gatherings",
+   "Glass stuff",
+   "Group Activities",
+   "Letters and words",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Oil lantern",
+  "slug": "oil-lantern",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/oillantern.png",
+  "favorites": [
+   "Containers",
+   "Glass stuff",
+   "Hard stuff",
+   "Lots of fire"
+  ]
+ },
+ {
+  "en": "Open Book",
+  "slug": "open-book",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/openbook.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Orange meteor lamp",
+  "slug": "orange-meteor-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/orangemeteorlamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Ornate bed",
+  "slug": "ornate-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ornatebed.png",
+  "favorites": [
+   "Colorful stuff",
+   "Fabric",
+   "Luxury",
+   "Soft stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Ornate chair",
+  "slug": "ornate-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ornatechair.png",
+  "favorites": [
+   "Colorful stuff",
+   "Fabric",
+   "Luxury",
+   "Ocean vibes",
+   "Soft stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Ornate decorative shelf",
+  "slug": "ornate-decorative-shelf",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ornatedecorativeshelf.png",
+  "favorites": [
+   "Colorful stuff",
+   "Gatherings",
+   "Luxury",
+   "Shiny stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Ornate stand",
+  "slug": "ornate-stand",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ornatestand.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Containers",
+   "Luxury",
+   "Ocean vibes",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Ornate table",
+  "slug": "ornate-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/ornatetable.png",
+  "favorites": [
+   "Luxury"
+  ]
+ },
+ {
+  "en": "Paint balloon (aquamarine)",
+  "slug": "paint-balloon-aquamarine",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(aquamarine).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (beige)",
+  "slug": "paint-balloon-beige",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(beige).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (black)",
+  "slug": "paint-balloon-black",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(black).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (blue)",
+  "slug": "paint-balloon-blue",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(blue).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (brown)",
+  "slug": "paint-balloon-brown",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(brown).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (cyan)",
+  "slug": "paint-balloon-cyan",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(cyan).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (gray)",
+  "slug": "paint-balloon-gray",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(gray).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (green)",
+  "slug": "paint-balloon-green",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(green).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (lime)",
+  "slug": "paint-balloon-lime",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(lime).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (navy)",
+  "slug": "paint-balloon-navy",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(navy).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (orange)",
+  "slug": "paint-balloon-orange",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(orange).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (pink)",
+  "slug": "paint-balloon-pink",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(pink).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (plum)",
+  "slug": "paint-balloon-plum",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(plum).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (purple)",
+  "slug": "paint-balloon-purple",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(purple).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (red)",
+  "slug": "paint-balloon-red",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(red).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (rose)",
+  "slug": "paint-balloon-rose",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(rose).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (white)",
+  "slug": "paint-balloon-white",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(white).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Paint balloon (yellow)",
+  "slug": "paint-balloon-yellow",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paintballoon(yellow).png",
+  "favorites": [
+   "Colorful stuff"
+  ]
+ },
+ {
+  "en": "Painting (landscape)",
+  "slug": "painting-landscape",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/painting(landscape).png",
+  "favorites": [
+   "Colorful stuff",
+   "Fabric",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Painting (portrait)",
+  "slug": "painting-portrait",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/painting(portrait).png",
+  "favorites": [
+   "Colorful stuff",
+   "Fabric",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Painting (still life)",
+  "slug": "painting-still-life",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/painting(stilllife).png",
+  "favorites": [
+   "Colorful stuff",
+   "Fabric",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Paper",
+  "slug": "paper",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/paper.png",
+  "favorites": [
+   "Blocky stuff"
+  ]
+ },
+ {
+  "en": "Paper Party cups",
+  "slug": "paper-party-cups",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/paperpartycups.png",
+  "favorites": [
+   "Containers",
+   "Gatherings",
+   "Group Activities",
+   "Lots of water",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Papers",
+  "slug": "papers",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/papers.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Party ball",
+  "slug": "party-ball",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/partyball.png",
+  "favorites": [
+   "Containers",
+   "Letters and words",
+   "Luxury",
+   "Stone stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Party bunting",
+  "slug": "party-bunting",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/partybunting.png",
+  "favorites": [
+   "Colorful stuff",
+   "Fabric"
+  ]
+ },
+ {
+  "en": "Pearl streetlight",
+  "slug": "pearl-streetlight",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pearlstreetlight.png",
+  "favorites": [
+   "Ocean vibes",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Pencil holder",
+  "slug": "pencil-holder",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pencilholder.png",
+  "favorites": [
+   "Complicated stuff",
+   "Containers",
+   "Gatherings",
+   "Sharp stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Photo cutout board",
+  "slug": "photo-cutout-board",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/photocutoutboard.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Gatherings",
+   "Group Activities",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Photo frame",
+  "slug": "photo-frame",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/photoframe.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Glass stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Picnic basket",
+  "slug": "picnic-basket",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/picnicbasket.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Fabric",
+   "Group Activities"
+  ]
+ },
+ {
+  "en": "Pikachu doll",
+  "slug": "pikachu-doll",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pikachudoll.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Soft stuff",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Pikachu sofa",
+  "slug": "pikachu-sofa",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pikachusofa.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Fabric",
+   "Group Activities",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Pink paint",
+  "slug": "pink-paint",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/pinkpaint.png",
+  "favorites": [
+   "Colorful stuff",
+   "Lots of dirt"
+  ]
+ },
+ {
+  "en": "Pinwheels",
+  "slug": "pinwheels",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pinwheels.png",
+  "favorites": [
+   "Colorful stuff",
+   "Gatherings",
+   "Nice breezes",
+   "Play spaces",
+   "Spinning stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Pitcher-plant pot",
+  "slug": "pitcher-plant-pot",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pitcher-plantpot.png",
+  "favorites": [
+   "Containers",
+   "Spooky stuff",
+   "Stone stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Pizza",
+  "slug": "pizza",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pizza.png",
+  "favorites": [
+   "Colorful stuff",
+   "Looks like food",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Plain bed",
+  "slug": "plain-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/plainbed.png",
+  "favorites": [
+   "Fabric",
+   "Group Activities",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Plain chair",
+  "slug": "plain-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/plainchair.png",
+  "favorites": [
+   "Fabric",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Plain chest",
+  "slug": "plain-chest",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/plainchest.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Fabric",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Plain closet",
+  "slug": "plain-closet",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/plaincloset.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Fabric",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Plain lamp",
+  "slug": "plain-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/plainlamp.png",
+  "favorites": [
+   "Electronics",
+   "Fabric",
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Plain sofa",
+  "slug": "plain-sofa",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/plainsofa.png",
+  "favorites": [
+   "Fabric",
+   "Group Activities",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Plain stand",
+  "slug": "plain-stand",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/plainstand.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Fabric",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Plain stool",
+  "slug": "plain-stool",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/plainstool.png",
+  "favorites": [
+   "Fabric",
+   "Round stuff",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Plain table",
+  "slug": "plain-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/plaintable.png",
+  "favorites": [
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Poké Ball bed",
+  "slug": "poke-ball-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pokeballbed.png",
+  "favorites": [
+   "Fabric",
+   "Group Activities",
+   "Metal stuff",
+   "Round stuff",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Poké Ball Chest",
+  "slug": "poke-ball-chest",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pokeballchest.png",
+  "favorites": [
+   "Colorful stuff",
+   "Containers",
+   "Cute stuff",
+   "Metal stuff",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Poké Ball lamp",
+  "slug": "poke-ball-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pokeballlamp.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Luxury",
+   "Round stuff",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Poké Ball light",
+  "slug": "poke-ball-light",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pokeballlight.png",
+  "favorites": [
+   "Colorful stuff",
+   "Electronics",
+   "Glass stuff",
+   "Luxury",
+   "Round stuff",
+   "Shiny stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Poké Ball Sofa",
+  "slug": "poke-ball-sofa",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pokeballsofa.png",
+  "favorites": [
+   "Group Activities",
+   "Metal stuff",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Pokémetal",
+  "slug": "pokemetal",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/pokemetal.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Pokémetal fragment",
+  "slug": "pokemetal-fragment",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/pokemetalfragment.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Polygonal Shelf",
+  "slug": "polygonal-shelf",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/polygonalshelf.png",
+  "favorites": [
+   "Colorful stuff",
+   "Containers",
+   "Cute stuff",
+   "Hard stuff",
+   "Luxury",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Pop art bed",
+  "slug": "pop-art-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/popartbed.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Fabric",
+   "Group Activities",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Pop art chair",
+  "slug": "pop-art-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/popartchair.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Fabric",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Pop art lamp",
+  "slug": "pop-art-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/popartlamp.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Pop art sofa",
+  "slug": "pop-art-sofa",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/popartsofa.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Fabric",
+   "Group Activities",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Pop art table",
+  "slug": "pop-art-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/poparttable.png",
+  "favorites": [
+   "Cute stuff"
+  ]
+ },
+ {
+  "en": "Primarina statue",
+  "slug": "primarina-statue",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/primarinastatue.png",
+  "favorites": [
+   "Cute stuff",
+   "Luxury",
+   "Ocean vibes",
+   "Stone stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Printer",
+  "slug": "printer",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/printer.png",
+  "favorites": [
+   "Complicated stuff",
+   "Electronics",
+   "Glass stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Prism scale",
+  "slug": "prism-scale",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/prismscale.png",
+  "favorites": [
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Public seat",
+  "slug": "public-seat",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/publicseat.png",
+  "favorites": [
+   "Blocky stuff",
+   "Hard stuff",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Pumpkin lantern",
+  "slug": "pumpkin-lantern",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pumpkinlantern.png",
+  "favorites": [
+   "Looks like food",
+   "Shiny stuff",
+   "Spooky stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Pumpkin lantern tower",
+  "slug": "pumpkin-lantern-tower",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/pumpkinlanterntower.png",
+  "favorites": [
+   "Looks like food",
+   "Shiny stuff",
+   "Spooky stuff"
+  ]
+ },
+ {
+  "en": "Punching bag",
+  "slug": "punching-bag",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/punchingbag.png",
+  "favorites": [
+   "Exercise",
+   "Fabric",
+   "Group Activities",
+   "Lots of dirt",
+   "Metal stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Punching game",
+  "slug": "punching-game",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/punchinggame.png",
+  "favorites": [
+   "Colorful stuff",
+   "Electronics",
+   "Exercise",
+   "Play spaces",
+   "Strange stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Raichu sign",
+  "slug": "raichu-sign",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/raichusign.png",
+  "favorites": [
+   "Colorful stuff",
+   "Electronics",
+   "Glass stuff",
+   "Letters and words",
+   "Metal stuff",
+   "Shiny stuff",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Rainbow Feather",
+  "slug": "rainbow-feather",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/rainbowfeather.png",
+  "favorites": [
+   "Luxury",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Rare Bone",
+  "slug": "rare-bone",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/rarebone.png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Rare Pokémetal",
+  "slug": "rare-pokemetal",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/rarepokemetal.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Rare Pokémetal fragment",
+  "slug": "rare-pokemetal-fragment",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/rarepokemetalfragment.png",
+  "favorites": [
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Recycling bin",
+  "slug": "recycling-bin",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/recyclingbin.png",
+  "favorites": [
+   "Containers",
+   "Garbage",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Red crystal fragment",
+  "slug": "red-crystal-fragment",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/redcrystalfragment.png",
+  "favorites": [
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Red meteor lamp",
+  "slug": "red-meteor-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/redmeteorlamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Red paint",
+  "slug": "red-paint",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/redpaint.png",
+  "favorites": [
+   "Colorful stuff",
+   "Lots of dirt"
+  ]
+ },
+ {
+  "en": "Refrigerator",
+  "slug": "refrigerator",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/refrigerator.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Electronics",
+   "Metal stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Repel",
+  "slug": "repel",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/repel.png",
+  "favorites": [
+   "Hard stuff",
+   "Metal stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Resort bed",
+  "slug": "resort-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/resortbed.png",
+  "favorites": [
+   "Fabric",
+   "Ocean vibes",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Resort chair",
+  "slug": "resort-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/resortchair.png",
+  "favorites": [
+   "Fabric",
+   "Ocean vibes",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Resort hammock",
+  "slug": "resort-hammock",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/resorthammock.png",
+  "favorites": [
+   "Fabric",
+   "Group Activities",
+   "Lots of water",
+   "Ocean vibes",
+   "Soft stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Resort light",
+  "slug": "resort-light",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/resortlight.png",
+  "favorites": [
+   "Electronics",
+   "Fabric",
+   "Ocean vibes"
+  ]
+ },
+ {
+  "en": "Resort sofa",
+  "slug": "resort-sofa",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/resortsofa.png",
+  "favorites": [
+   "Fabric",
+   "Group Activities",
+   "Ocean vibes",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Resort stool",
+  "slug": "resort-stool",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/resortstool.png",
+  "favorites": [
+   "Fabric",
+   "Ocean vibes",
+   "Round stuff",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Restaurant sign",
+  "slug": "restaurant-sign",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/restaurantsign.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Letters and words",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Ribbon cake",
+  "slug": "ribbon-cake",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ribboncake.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Looks like food",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Robust flower",
+  "slug": "robust-flower",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/robustflower.png",
+  "favorites": [
+   "Pretty flowers"
+  ]
+ },
+ {
+  "en": "Room Service",
+  "slug": "room-service",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/roomservice.png",
+  "favorites": [
+   "Fabric",
+   "Looks like food"
+  ]
+ },
+ {
+  "en": "Rope",
+  "slug": "rope",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/rope.png",
+  "favorites": [
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Rowlet clock",
+  "slug": "rowlet-clock",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/rowletclock.png",
+  "favorites": [
+   "Complicated stuff",
+   "Cute stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Running shoes",
+  "slug": "running-shoes",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/runningshoes.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Fabric",
+   "Lots of dirt",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Sail Fossil",
+  "slug": "sail-fossil",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sailfossil.png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Sand bed",
+  "slug": "sand-bed",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sandbed.png",
+  "favorites": [
+   "Fabric",
+   "Lots of dirt",
+   "Ocean vibes",
+   "Play spaces",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Sand toys",
+  "slug": "sand-toys",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sandtoys.png",
+  "favorites": [
+   "Ocean vibes",
+   "Play spaces"
+  ]
+ },
+ {
+  "en": "Sandbags",
+  "slug": "sandbags",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sandbags.png",
+  "favorites": [
+   "Construction",
+   "Fabric",
+   "Gatherings",
+   "Lots of dirt"
+  ]
+ },
+ {
+  "en": "Sandbox",
+  "slug": "sandbox",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sandbox.png",
+  "favorites": [
+   "Blocky stuff",
+   "Group Activities",
+   "Lots of dirt",
+   "Ocean vibes",
+   "Play spaces"
+  ]
+ },
+ {
+  "en": "Sandwiches",
+  "slug": "sandwiches",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sandwiches.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Gatherings",
+   "Looks like food"
+  ]
+ },
+ {
+  "en": "Sash window",
+  "slug": "sash-window",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/sashwindow.png",
+  "favorites": [
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Science experiment",
+  "slug": "science-experiment",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/scienceexperiment.png",
+  "favorites": [
+   "Complicated stuff",
+   "Gatherings",
+   "Glass stuff",
+   "Group Activities",
+   "Letters and words",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Sea glass fragments",
+  "slug": "sea-glass-fragments",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/seaglassfragments.png",
+  "favorites": [
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Seashell",
+  "slug": "seashell",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/seashell.png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Seashell seat",
+  "slug": "seashell-seat",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/seashellseat.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Fabric",
+   "Soft stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Seashore flowers",
+  "slug": "seashore-flowers",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/seashoreflowers.png",
+  "favorites": [
+   "Pretty flowers"
+  ]
+ },
+ {
+  "en": "Security camera",
+  "slug": "security-camera",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/securitycamera.png",
+  "favorites": [
+   "Electronics"
+  ]
+ },
+ {
+  "en": "Seedot Lamp",
+  "slug": "seedot-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/seedotlamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Lots of nature",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Servers",
+  "slug": "servers",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/servers.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Shaved ice",
+  "slug": "shaved-ice",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/shavedice.png",
+  "favorites": [
+   "Colorful stuff",
+   "Looks like food",
+   "Lots of water"
+  ]
+ },
+ {
+  "en": "Shell lamp",
+  "slug": "shell-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/shelllamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Ocean vibes",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Shield Fossil (body)",
+  "slug": "shield-fossil-body",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/shieldfossil(body).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Shield Fossil (Head)",
+  "slug": "shield-fossil-head",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/shieldfossil(head).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Shield Fossil (tail)",
+  "slug": "shield-fossil-tail",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/shieldfossil(tail).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Ship's Wheel",
+  "slug": "ships-wheel",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/ship'swheel.png",
+  "favorites": [
+   "Colorful stuff",
+   "Metal stuff",
+   "Ocean vibes",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Shop display case",
+  "slug": "shop-display-case",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/shopdisplaycase.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Gatherings",
+   "Glass stuff",
+   "Hard stuff",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Shop fridge",
+  "slug": "shop-fridge",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/shopfridge.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Containers",
+   "Electronics",
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Shop shelf",
+  "slug": "shop-shelf",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/shopshelf.png",
+  "favorites": [
+   "Colorful stuff",
+   "Containers",
+   "Healing",
+   "Letters and words",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Shower",
+  "slug": "shower",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/shower.png",
+  "favorites": [
+   "Cleanliness",
+   "Lots of water",
+   "Metal stuff",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Sign",
+  "slug": "sign",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sign.png",
+  "favorites": [
+   "Letters and words",
+   "Symbols",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Signpost",
+  "slug": "signpost",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/signpost.png",
+  "favorites": [
+   "Complicated stuff",
+   "Letters and words",
+   "Metal stuff",
+   "Shiny stuff",
+   "Stone stuff",
+   "Strange stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Silk Scarf",
+  "slug": "silk-scarf",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/silkscarf.png",
+  "favorites": [
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Silver Bottle Cap",
+  "slug": "silver-bottle-cap",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/silverbottlecap.png",
+  "favorites": [
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Silver Feather",
+  "slug": "silver-feather",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/silverfeather.png",
+  "favorites": [
+   "Luxury",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Silver Powder",
+  "slug": "silver-powder",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/silverpowder.png",
+  "favorites": [
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Simple cushion",
+  "slug": "simple-cushion",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/simplecushion.png",
+  "favorites": [
+   "Fabric",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Sink",
+  "slug": "sink",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sink.png",
+  "favorites": [
+   "Blocky stuff",
+   "Cleanliness",
+   "Lots of water",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Skull Fossil",
+  "slug": "skull-fossil",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/skullfossil.png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Skyland flowers",
+  "slug": "skyland-flowers",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/skylandflowers.png",
+  "favorites": [
+   "Pretty flowers"
+  ]
+ },
+ {
+  "en": "Sleeping bag",
+  "slug": "sleeping-bag",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sleepingbag.png",
+  "favorites": [
+   "Fabric",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Slender candle",
+  "slug": "slender-candle",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/slendercandle.png",
+  "favorites": [
+   "Lots of fire",
+   "Luxury",
+   "Slender objects",
+   "Spooky stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Slide",
+  "slug": "slide",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/slide.png",
+  "favorites": [
+   "Group Activities",
+   "Play spaces",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Slim information board",
+  "slug": "slim-information-board",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sliminformationboard.png",
+  "favorites": [
+   "Blocky stuff",
+   "Hard stuff",
+   "Letters and words",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Small garbage can",
+  "slug": "small-garbage-can",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/smallgarbagecan.png",
+  "favorites": [
+   "Containers",
+   "Garbage",
+   "Metal stuff",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Small log",
+  "slug": "small-log",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/smalllog.png",
+  "favorites": [
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Small Lost Relic",
+  "slug": "small-lost-relic",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/smalllostrelic.png",
+  "favorites": [
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Small stage",
+  "slug": "small-stage",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/smallstage.png",
+  "favorites": [
+   "Group Activities",
+   "Metal stuff",
+   "Play spaces",
+   "Round stuff",
+   "Spinning stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Small vase",
+  "slug": "small-vase",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/smallvase.png",
+  "favorites": [
+   "Containers",
+   "Pretty flowers",
+   "Slender objects",
+   "Stone stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Smelting furnace",
+  "slug": "smelting-furnace",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/smeltingfurnace.png",
+  "favorites": [
+   "Lots of fire"
+  ]
+ },
+ {
+  "en": "Soda float",
+  "slug": "soda-float",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sodafloat.png",
+  "favorites": [
+   "Colorful stuff",
+   "Looks like food",
+   "Lots of water"
+  ]
+ },
+ {
+  "en": "Soft Sand",
+  "slug": "soft-sand",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/softsand.png",
+  "favorites": [
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Soft seat",
+  "slug": "soft-seat",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/softseat.png",
+  "favorites": [
+   "Blocky stuff",
+   "Fabric",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Spaceship",
+  "slug": "spaceship",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/spaceship.png",
+  "favorites": [
+   "Glass stuff",
+   "Metal stuff",
+   "Rides",
+   "Round stuff",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Spacesuit",
+  "slug": "spacesuit",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/spacesuit.png",
+  "favorites": [
+   "Complicated stuff",
+   "Glass stuff",
+   "Metal stuff",
+   "Shiny stuff",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Sparkling jewelry",
+  "slug": "sparkling-jewelry",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sparklingjewelry.png",
+  "favorites": [
+   "Luxury",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Speaker",
+  "slug": "speaker",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/speaker.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Metal stuff",
+   "Noisy stuff"
+  ]
+ },
+ {
+  "en": "Spectator chair",
+  "slug": "spectator-chair",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/spectatorchair.png",
+  "favorites": [
+   "Hard stuff",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Spell Tag",
+  "slug": "spell-tag",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/spelltag.png",
+  "favorites": [
+   "Spooky stuff"
+  ]
+ },
+ {
+  "en": "Spotlight",
+  "slug": "spotlight",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/spotlight.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Sprinkler",
+  "slug": "sprinkler",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/sprinkler.png",
+  "favorites": [
+   "Lots of water",
+   "Metal stuff",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Squishy clay",
+  "slug": "squishy-clay",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/squishyclay.png",
+  "favorites": [
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Stained-glass window (lower)",
+  "slug": "stained-glass-window-lower",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stained-glasswindow(lower).png",
+  "favorites": [
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Stained-glass window (middle)",
+  "slug": "stained-glass-window-middle",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stained-glasswindow(middle).png",
+  "favorites": [
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Stained-glass window (upper)",
+  "slug": "stained-glass-window-upper",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stained-glasswindow(upper).png",
+  "favorites": [
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Standing frame",
+  "slug": "standing-frame",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/standingframe.png",
+  "favorites": [
+   "Blocky stuff",
+   "Hard stuff",
+   "Watching stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Standing mic",
+  "slug": "standing-mic",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/standingmic.png",
+  "favorites": [
+   "Electronics",
+   "Group Activities",
+   "Metal stuff",
+   "Noisy stuff",
+   "Play spaces",
+   "Shiny stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Star closet",
+  "slug": "star-closet",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/starcloset.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Cute stuff",
+   "Hard stuff",
+   "Shiny stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Star Piece",
+  "slug": "star-piece",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/starpiece.png",
+  "favorites": [
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Star-shaped Dresser",
+  "slug": "star-shaped-dresser",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/star-shapeddresser.png",
+  "favorites": [
+   "Containers",
+   "Cute stuff",
+   "Glass stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Star wall decoration",
+  "slug": "star-wall-decoration",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/starwalldecoration.png",
+  "favorites": [
+   "Cute stuff",
+   "Gatherings",
+   "Glass stuff",
+   "Hard stuff",
+   "Shiny stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Stardust",
+  "slug": "stardust",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stardust.png",
+  "favorites": [
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Starmie doll",
+  "slug": "starmie-doll",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/starmiedoll.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Soft stuff",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Starry-sky bed",
+  "slug": "starry-sky-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/starry-skybed.png",
+  "favorites": [
+   "Blocky stuff",
+   "Cute stuff",
+   "Fabric",
+   "Group Activities",
+   "Shiny stuff",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Step stool",
+  "slug": "step-stool",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/stepstool.png",
+  "favorites": [
+   "Hard stuff",
+   "Metal stuff",
+   "Rides"
+  ]
+ },
+ {
+  "en": "Stone",
+  "slug": "stone",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stone.png",
+  "favorites": [
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone bench",
+  "slug": "stone-bench",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonebench.png",
+  "favorites": [
+   "Group Activities",
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone brick wall",
+  "slug": "stone-brick-wall",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonebrickwall.png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone brick wall (wallpaper)",
+  "slug": "stone-brick-wall-wallpaper",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonebrickwall(wallpaper).png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Stone debris",
+  "slug": "stone-debris",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonedebris.png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone fireplace",
+  "slug": "stone-fireplace",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonefireplace.png",
+  "favorites": [
+   "Blocky stuff",
+   "Colorful stuff",
+   "Hard stuff",
+   "Lots of fire",
+   "Luxury",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone flooring",
+  "slug": "stone-flooring",
+  "tag": "road",
+  "image": "https://www.serebii.net/pokemonpokopia/items/stoneflooring.png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone flooring (wallpaper)",
+  "slug": "stone-flooring-wallpaper",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stoneflooring(wallpaper).png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Stone fragments",
+  "slug": "stone-fragments",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonefragments.png",
+  "favorites": [
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Stone hipped roof",
+  "slug": "stone-hipped-roof",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonehippedroof.png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone pillar (lower)",
+  "slug": "stone-pillar-lower",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonepillar(lower).png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone pillar (middle)",
+  "slug": "stone-pillar-middle",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonepillar(middle).png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone pillar (upper)",
+  "slug": "stone-pillar-upper",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonepillar(upper).png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone roof decoration",
+  "slug": "stone-roof-decoration",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stoneroofdecoration.png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone roof valley",
+  "slug": "stone-roof-valley",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stoneroofvalley.png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone sign",
+  "slug": "stone-sign",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonesign.png",
+  "favorites": [
+   "Blocky stuff",
+   "Letters and words",
+   "Stone stuff",
+   "Symbols"
+  ]
+ },
+ {
+  "en": "Stone steps",
+  "slug": "stone-steps",
+  "tag": "road",
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonesteps.png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone table",
+  "slug": "stone-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonetable.png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Stone tiling",
+  "slug": "stone-tiling",
+  "tag": "road",
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonetiling.png",
+  "favorites": [
+   "Hard stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Stone tiling (wallpaper)",
+  "slug": "stone-tiling-wallpaper",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/stonetiling(wallpaper).png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Storage box",
+  "slug": "storage-box",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/storagebox.png",
+  "favorites": [
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Straw bed",
+  "slug": "straw-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/strawbed.png",
+  "favorites": [
+   "Lots of nature",
+   "Round stuff",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Straw stool",
+  "slug": "straw-stool",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/strawstool.png",
+  "favorites": [
+   "Round stuff",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Straw table",
+  "slug": "straw-table",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/strawtable.png",
+  "favorites": [
+   "Lots of nature"
+  ]
+ },
+ {
+  "en": "Strength rock",
+  "slug": "strength-rock",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/strengthrock.png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "String lights",
+  "slug": "string-lights",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/stringlights.png",
+  "favorites": [
+   "Electronics",
+   "Gatherings",
+   "Glass stuff",
+   "Round stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Study desk",
+  "slug": "study-desk",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/studydesk.png",
+  "favorites": [
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Sturdy stick",
+  "slug": "sturdy-stick",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/sturdystick.png",
+  "favorites": [
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Stylish stool",
+  "slug": "stylish-stool",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/stylishstool.png",
+  "favorites": [
+   "Colorful stuff",
+   "Cute stuff",
+   "Fabric",
+   "Round stuff",
+   "Soft stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Substitute doll",
+  "slug": "substitute-doll",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/substitutedoll.png",
+  "favorites": [
+   "Cute stuff",
+   "Fabric",
+   "Soft stuff",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Supermarket sign",
+  "slug": "supermarket-sign",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/supermarketsign.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Letters and words",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Surface light",
+  "slug": "surface-light",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/surfacelight.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Swim ring",
+  "slug": "swim-ring",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/swimring.png",
+  "favorites": [
+   "Ocean vibes",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Table setting",
+  "slug": "table-setting",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/tablesetting.png",
+  "favorites": [
+   "Fabric",
+   "Gatherings",
+   "Group Activities",
+   "Looks like food",
+   "Lots of water",
+   "Luxury",
+   "Metal stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Tablet",
+  "slug": "tablet",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/tablet.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Glass stuff",
+   "Metal stuff",
+   "Shiny stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Tabletop mic",
+  "slug": "tabletop-mic",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/tabletopmic.png",
+  "favorites": [
+   "Electronics",
+   "Metal stuff",
+   "Noisy stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Tall potted plant",
+  "slug": "tall-potted-plant",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/tallpottedplant.png",
+  "favorites": [
+   "Containers",
+   "Lots of nature",
+   "Pretty flowers",
+   "Slender objects",
+   "Stone stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Tea set",
+  "slug": "tea-set",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/teaset.png",
+  "favorites": [
+   "Containers",
+   "Gatherings",
+   "Group Activities"
+  ]
+ },
+ {
+  "en": "Team Rocket Wall Hanging",
+  "slug": "team-rocket-wall-hanging",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/teamrocketwallhanging.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Strange stuff",
+   "Symbols",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Teaware set",
+  "slug": "teaware-set",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/teawareset.png",
+  "favorites": [
+   "Colorful stuff",
+   "Looks like food",
+   "Lots of water",
+   "Luxury"
+  ]
+ },
+ {
+  "en": "Telescope",
+  "slug": "telescope",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/telescope.png",
+  "favorites": [
+   "Glass stuff",
+   "Slender objects",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Television",
+  "slug": "television",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/television.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Glass stuff",
+   "Group Activities",
+   "Letters and words",
+   "Metal stuff",
+   "Shiny stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Throat Spray",
+  "slug": "throat-spray",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/throatspray.png",
+  "favorites": [
+   "Healing"
+  ]
+ },
+ {
+  "en": "Tidal Bell",
+  "slug": "tidal-bell",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/tidalbell.png",
+  "favorites": [
+   "Hard stuff",
+   "Metal stuff",
+   "Nice breezes",
+   "Noisy stuff",
+   "Round stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Tinkagear",
+  "slug": "tinkagear",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/tinkagear.png",
+  "favorites": [
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Tire toy",
+  "slug": "tire-toy",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/tiretoy.png",
+  "favorites": [
+   "Group Activities",
+   "Play spaces",
+   "Round stuff",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Tires",
+  "slug": "tires",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/tires.png",
+  "favorites": [
+   "Gatherings",
+   "Rides",
+   "Round stuff"
+  ]
+ },
+ {
+  "en": "Toilet",
+  "slug": "toilet",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/toilet.png",
+  "favorites": [
+   "Cleanliness",
+   "Electronics",
+   "Lots of water",
+   "Stone stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Toolbox",
+  "slug": "toolbox",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/toolbox.png",
+  "favorites": [
+   "Blocky stuff",
+   "Construction",
+   "Containers",
+   "Hard stuff"
+  ]
+ },
+ {
+  "en": "Torch",
+  "slug": "torch",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/torch.png",
+  "favorites": [
+   "Lots of fire"
+  ]
+ },
+ {
+  "en": "Towel rack",
+  "slug": "towel-rack",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/towelrack.png",
+  "favorites": [
+   "Cleanliness",
+   "Fabric",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Town map",
+  "slug": "town-map",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/townmap.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Town streetlight",
+  "slug": "town-streetlight",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/townstreetlight.png",
+  "favorites": [
+   "Electronics",
+   "Glass stuff",
+   "Hard stuff",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Toy blocks",
+  "slug": "toy-blocks",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/toyblocks.png",
+  "favorites": [
+   "Gatherings",
+   "Play spaces",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Treasure",
+  "slug": "treasure",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/treasure.png",
+  "favorites": [
+   "Colorful stuff",
+   "Group Activities",
+   "Luxury",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Trevenant streetlight",
+  "slug": "trevenant-streetlight",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/trevenantstreetlight.png",
+  "favorites": [
+   "Shiny stuff",
+   "Slender objects",
+   "Spooky stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Tundra Fossil (body)",
+  "slug": "tundra-fossil-body",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/tundrafossil(body).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Tundra Fossil (head)",
+  "slug": "tundra-fossil-head",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/tundrafossil(head).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Tundra Fossil (tail)",
+  "slug": "tundra-fossil-tail",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/tundrafossil(tail).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Twine",
+  "slug": "twine",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/twine.png",
+  "favorites": [
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Twisted potted plant",
+  "slug": "twisted-potted-plant",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/twistedpottedplant.png",
+  "favorites": [
+   "Containers",
+   "Lots of nature",
+   "Pretty flowers",
+   "Slender objects",
+   "Spooky stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Twisted Spoon",
+  "slug": "twisted-spoon",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/twistedspoon.png",
+  "favorites": [
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Utility pole",
+  "slug": "utility-pole",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/utilitypole.png",
+  "favorites": [
+   "Electronics"
+  ]
+ },
+ {
+  "en": "Vending machine",
+  "slug": "vending-machine",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/vendingmachine.png",
+  "favorites": [
+   "Blocky stuff",
+   "Glass stuff",
+   "Group Activities",
+   "Metal stuff"
+  ]
+ },
+ {
+  "en": "Vine rope",
+  "slug": "vine-rope",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/vinerope.png",
+  "favorites": [
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Vine wall decoration",
+  "slug": "vine-wall-decoration",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/vinewalldecoration.png",
+  "favorites": [
+   "Lots of nature",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Violet meteor lamp",
+  "slug": "violet-meteor-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/violetmeteorlamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Wall Calendar",
+  "slug": "wall-calendar",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wallcalendar.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Letters and words",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Wall clock",
+  "slug": "wall-clock",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wallclock.png",
+  "favorites": [
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Wall light",
+  "slug": "wall-light",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/walllight.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Wall mirror",
+  "slug": "wall-mirror",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wallmirror.png",
+  "favorites": [
+   "Blocky stuff",
+   "Glass stuff",
+   "Luxury",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Wall monitor",
+  "slug": "wall-monitor",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wallmonitor.png",
+  "favorites": [
+   "Blocky stuff",
+   "Electronics",
+   "Glass stuff",
+   "Group Activities",
+   "Letters and words",
+   "Metal stuff",
+   "Shiny stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Wall-mounted flowers",
+  "slug": "wall-mounted-flowers",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wall-mountedflowers.png",
+  "favorites": [
+   "Colorful stuff",
+   "Pretty flowers"
+  ]
+ },
+ {
+  "en": "Wall-mounted tools",
+  "slug": "wall-mounted-tools",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wall-mountedtools.png",
+  "favorites": [
+   "Colorful stuff",
+   "Construction"
+  ]
+ },
+ {
+  "en": "Wall photo frame",
+  "slug": "wall-photo-frame",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wallphotoframe.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Wall plant",
+  "slug": "wall-plant",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wallplant.png",
+  "favorites": [
+   "Containers",
+   "Gatherings",
+   "Looks like food",
+   "Pretty flowers",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Wall storage box",
+  "slug": "wall-storage-box",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wallstoragebox.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Wall switch",
+  "slug": "wall-switch",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/wallswitch.png",
+  "favorites": [
+   "Electronics"
+  ]
+ },
+ {
+  "en": "Wall torch",
+  "slug": "wall-torch",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/walltorch.png",
+  "favorites": [
+   "Lots of fire",
+   "Metal stuff",
+   "Stone stuff"
+  ]
+ },
+ {
+  "en": "Washing machine",
+  "slug": "washing-machine",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/washingmachine.png",
+  "favorites": [
+   "Blocky stuff",
+   "Cleanliness",
+   "Containers",
+   "Electronics",
+   "Glass stuff",
+   "Metal stuff",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Wastepaper",
+  "slug": "wastepaper",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/wastepaper.png",
+  "favorites": [
+   "Garbage"
+  ]
+ },
+ {
+  "en": "Water basin",
+  "slug": "water-basin",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/waterbasin.png",
+  "favorites": [
+   "Cleanliness",
+   "Colorful stuff",
+   "Containers",
+   "Lots of water",
+   "Round stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Water pillar quarter",
+  "slug": "water-pillar-quarter",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/waterpillarquarter.png",
+  "favorites": [
+   "Glass stuff",
+   "Lots of water",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Waterproof seat",
+  "slug": "waterproof-seat",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/waterproofseat.png",
+  "favorites": [
+   "Cleanliness"
+  ]
+ },
+ {
+  "en": "Weakness Policy",
+  "slug": "weakness-policy",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/weaknesspolicy.png",
+  "favorites": [
+   "Letters and words"
+  ]
+ },
+ {
+  "en": "Weather vane",
+  "slug": "weather-vane",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/weathervane.png",
+  "favorites": [
+   "Metal stuff",
+   "Nice breezes",
+   "Spinning stuff"
+  ]
+ },
+ {
+  "en": "Wheelbarrow",
+  "slug": "wheelbarrow",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wheelbarrow.png",
+  "favorites": [
+   "Construction",
+   "Containers",
+   "Lots of dirt",
+   "Metal stuff",
+   "Spinning stuff"
+  ]
+ },
+ {
+  "en": "White paint",
+  "slug": "white-paint",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/whitepaint.png",
+  "favorites": [
+   "Colorful stuff",
+   "Lots of dirt"
+  ]
+ },
+ {
+  "en": "Whiteboard",
+  "slug": "whiteboard",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/whiteboard.png",
+  "favorites": [
+   "Blocky stuff",
+   "Complicated stuff",
+   "Gatherings",
+   "Group Activities",
+   "Letters and words"
+  ]
+ },
+ {
+  "en": "Wiggly mirror",
+  "slug": "wiggly-mirror",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wigglymirror.png",
+  "favorites": [
+   "Cute stuff",
+   "Glass stuff",
+   "Hard stuff",
+   "Strange stuff",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Wildflowers",
+  "slug": "wildflowers",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/wildflowers.png",
+  "favorites": [
+   "Pretty flowers"
+  ]
+ },
+ {
+  "en": "Window pane",
+  "slug": "window-pane",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/windowpane.png",
+  "favorites": [
+   "Glass stuff"
+  ]
+ },
+ {
+  "en": "Windup Inkay",
+  "slug": "windup-inkay",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/windupinkay.png",
+  "favorites": [
+   "Cute stuff",
+   "Noisy stuff",
+   "Ocean vibes",
+   "Play spaces",
+   "Watching stuff"
+  ]
+ },
+ {
+  "en": "Wing fossil (body)",
+  "slug": "wing-fossil-body",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wingfossil(body).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Wing Fossil (head)",
+  "slug": "wing-fossil-head",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wingfossil(head).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Wing Fossil (left wing)",
+  "slug": "wing-fossil-left-wing",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wingfossil(leftwing).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Wing Fossil (right wing)",
+  "slug": "wing-fossil-right-wing",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wingfossil(rightwing).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Wing Fossil (tail)",
+  "slug": "wing-fossil-tail",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wingfossil(tail).png",
+  "favorites": [
+   "Hard stuff",
+   "Lots of dirt",
+   "Slender objects",
+   "Strange stuff"
+  ]
+ },
+ {
+  "en": "Wire",
+  "slug": "wire",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/wire.png",
+  "favorites": [
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Wireless power transmitter",
+  "slug": "wireless-power-transmitter",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/wirelesspowertransmitter.png",
+  "favorites": [
+   "Electronics"
+  ]
+ },
+ {
+  "en": "Wireless power-transmitter switch",
+  "slug": "wireless-power-transmitter-switch",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/wirelesspower-transmitterswitch.png",
+  "favorites": [
+   "Electronics"
+  ]
+ },
+ {
+  "en": "Wobbuffet Wobbler",
+  "slug": "wobbuffet-wobbler",
+  "tag": "toy",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wobbuffetwobbler.png",
+  "favorites": [
+   "Cute stuff",
+   "Exercise",
+   "Play spaces",
+   "Round stuff",
+   "Strange stuff",
+   "Watching stuff",
+   "Wobbly stuff"
+  ]
+ },
+ {
+  "en": "Wooden Bed",
+  "slug": "wooden-bed",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/woodenbed.png",
+  "favorites": [
+   "Group Activities",
+   "Lots of nature",
+   "Soft stuff"
+  ]
+ },
+ {
+  "en": "Wooden bench",
+  "slug": "wooden-bench",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/woodenbench.png",
+  "favorites": [
+   "Group Activities"
+  ]
+ },
+ {
+  "en": "Wooden birdhouse",
+  "slug": "wooden-birdhouse",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/woodenbirdhouse.png",
+  "favorites": [
+   "Containers",
+   "Slender objects"
+  ]
+ },
+ {
+  "en": "Wooden crate",
+  "slug": "wooden-crate",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/woodencrate.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Wooden plate",
+  "slug": "wooden-plate",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/woodenplate.png",
+  "favorites": [
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Wooden stool",
+  "slug": "wooden-stool",
+  "tag": "relaxation",
+  "image": "https://www.serebii.net/pokemonpokopia/items/woodenstool.png",
+  "favorites": [
+   "Blocky stuff",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Worn wooden crate",
+  "slug": "worn-wooden-crate",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wornwoodencrate.png",
+  "favorites": [
+   "Blocky stuff",
+   "Containers",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Wreath",
+  "slug": "wreath",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/wreath.png",
+  "favorites": [
+   "Round stuff",
+   "Symbols",
+   "Wooden stuff"
+  ]
+ },
+ {
+  "en": "Yellow meteor lamp",
+  "slug": "yellow-meteor-lamp",
+  "tag": "decoration",
+  "image": "https://www.serebii.net/pokemonpokopia/items/yellowmeteorlamp.png",
+  "favorites": [
+   "Cute stuff",
+   "Electronics",
+   "Glass stuff",
+   "Shiny stuff"
+  ]
+ },
+ {
+  "en": "Yellow paint",
+  "slug": "yellow-paint",
+  "tag": null,
+  "image": "https://www.serebii.net/pokemonpokopia/items/yellowpaint.png",
+  "favorites": [
+   "Colorful stuff",
+   "Lots of dirt"
+  ]
+ }
+]

@@ -1,0 +1,58 @@
+Sturdy stick|-
+Small log|-
+Lumber|-
+Storage box|-
+Wall storage box|D
+Big storage box|-
+Plain chest|D
+Office cabinet|D
+Antique chest|D
+Plain closet|D
+Antique closet|D
+Log table|-
+Plain stand|D
+Food counter|-
+Plain table|-
+Antique table|-
+Study desk|-
+Log chair|R
+Plain stool|R
+Resort stool|R
+Stylish stool|R
+Wooden stool|R
+Plain chair|R
+Resort chair|R
+Chic chair|R
+Plain sofa|R
+Resort sofa|R
+Chic sofa|R
+Antique sofa|R
+Log Bed|R
+Mini plain bed|R
+Guest-room bed|R
+Wooden plate|-
+CD rack|D
+Magazine rack|D
+Mini bookcase|D
+Bookcase|D
+Dining cabinet|D
+Toy blocks|T
+Wreath|D
+Antique clock|T
+Slide|T
+Water basin|D
+Arrow sign|D
+Menu board|D
+Sign|D
+Worn wooden crate|D
+Wooden crate|D
+Barrel|D
+Frame|D
+Cutting board|-
+Mushroom lamp|D
+Stone fragments|-
+Star closet|D
+Music box|T
+Harp|T
+Standing frame|D
+Cooking utensils|D

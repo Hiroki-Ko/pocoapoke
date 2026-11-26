@@ -1,0 +1,43 @@
+Mug|D
+Big Nugget|T
+Gym emblem statue|D
+Wreath|D
+Hanging banner|D
+Eevee doll|T
+Pikachu doll|T
+Clefairy doll|T
+Arcanine doll|T
+Dragonite doll|T
+Ditto doll|T
+Substitute doll|T
+Chansey plant|D
+Arrow sign|D
+Sign|D
+Signpost|D
+Information board|D
+Raichu sign|D
+Photo cutout board|T
+Fire hydrant|D
+Poké Ball light|D
+Mirror ball|D
+Gaming light|D
+Team Rocket Wall Hanging|D
+Map and compass|T
+Shop display case|D
+Shop shelf|D
+Decorative Great Ball|D
+Decorative Heal Ball|D
+Decorative Quick Ball|D
+Decorative Dive Ball|D
+Decorative Net Ball|D
+Decorative Lure Ball|D
+Starmie doll|T
+Arrow sign (left)|D
+Arrow sign (right)|D
+Stone sign|D
+Slim information board|D
+Cycle shop sign|D
+Supermarket sign|D
+Café sign|D
+Restaurant sign|D
+Gift shop sign|D

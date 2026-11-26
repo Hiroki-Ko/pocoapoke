@@ -1,0 +1,4 @@
+Humidifier|D
+First aid kit|T
+Throat Spray|-
+Shop shelf|D

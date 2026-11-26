@@ -1,0 +1,54 @@
+Poké Ball Chest|D
+Straw stool|R
+Berry chair|R
+Log chair|R
+Plain stool|R
+Resort stool|R
+Stylish stool|R
+Industrial chair|R
+Poké Ball Sofa|R
+Straw bed|R
+Poké Ball bed|R
+Pizza|D
+Chocolate cookies|D
+Ribbon cake|D
+Small garbage can|D
+Fan|T
+Bouncy blue bathtub|D
+Alarm Clock|T
+Knitting supplies|T
+Humidifier|D
+Funky diffuser|T
+Crystal ball|T
+Big drum|T
+Big Nugget|T
+Balloons|T
+Wobbuffet Wobbler|T
+Clear Bell|T
+Tidal Bell|T
+Ship's Wheel|T
+Spaceship|T
+Wreath|D
+Berry clock|T
+Firepit|D
+Tire toy|T
+Concrete pipe|D
+Chansey plant|D
+Small stage|T
+Water basin|D
+Canoe|T
+Barrel|D
+Tires|T
+Metal drum|D
+Construction supplies|D
+Mushroom streetlight|D
+Harbor streetlight|D
+Mushroom lamp|D
+Poké Ball light|D
+Poké Ball lamp|D
+Model planet|T
+Seedot Lamp|D
+Mirror ball|D
+String lights|D
+Surface light|D
+Nugget|-

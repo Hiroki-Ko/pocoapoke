@@ -1,0 +1,16 @@
+Nonburnable garbage|-
+Wastepaper|-
+Small garbage can|D
+Jumbled cords|T
+Grubby letter|T
+Grubby notepad|T
+Grubby book|T
+Grubby papers|T
+Grubby newspaper|T
+Grubby tablet|T
+Grubby cell phone|T
+Garbage bags|D
+Garbage bin|D
+Recycling bin|D
+Nonburnable garbage (outdoor)|-
+Black Sludge|-

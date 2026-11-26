@@ -1,0 +1,104 @@
+Wall mirror|T
+Wiggly mirror|T
+Small vase|D
+Leafy plant|D
+Pitcher-plant pot|D
+Extravagant flowers|D
+Tall potted plant|D
+Flat-leaf plant|D
+Twisted potted plant|D
+Letter|T
+Notepad|T
+Book|T
+Open Book|T
+Papers|T
+Newspaper|T
+Photo frame|D
+Wall photo frame|D
+Corkboard|D
+CD rack|D
+Magazine rack|D
+Mini bookcase|D
+Bookcase|D
+Tablet|T
+Cell phone|T
+Laptop|T
+Television|T
+Wall monitor|T
+Pinwheels|T
+Crystal ball|T
+Microscope|T
+Gold Teeth|T
+Boo-in-the-box|T
+Wobbuffet Wobbler|T
+Auspicious Armor|D
+Malicious Armor|D
+Model space shuttle|T
+Wall Calendar|D
+Decorative bookshelf|D
+Rowlet clock|T
+Berry wall decoration|D
+Hanging scroll|D
+Eevee doll|T
+Pikachu doll|T
+Clefairy doll|T
+Arcanine doll|T
+Dragonite doll|T
+Ditto doll|T
+Substitute doll|T
+Grubby letter|T
+Grubby notepad|T
+Grubby book|T
+Grubby papers|T
+Grubby newspaper|T
+Grubby tablet|T
+Grubby cell phone|T
+Bonfire|D
+Blank canvas|D
+Painting (landscape)|D
+Painting (portrait)|D
+Painting (still life)|D
+Horsea fountain|T
+Raichu sign|D
+Photo cutout board|T
+Frame|D
+Town map|T
+Team Rocket Wall Hanging|D
+Water pillar quarter|D
+Flower garland|D
+Inflatable Sudowoodo|T
+Jump rope trophy|D
+Jewel wall decoration|D
+Telescope|T
+Moon clock|T
+Star wall decoration|D
+Hide-and-sneak trophy|D
+Decorative Poké Ball|D
+Decorative plates|D
+Book stack|T
+Shop display case|D
+Ornate decorative shelf|D
+Bottled ship|T
+Metronome|T
+Decorative Great Ball|D
+Decorative Heal Ball|D
+Decorative Quick Ball|D
+Decorative Dive Ball|D
+Decorative Net Ball|D
+Decorative Lure Ball|D
+Windup Inkay|T
+Wall plant|D
+Party ball|D
+Starmie doll|T
+Gyarados fountain|T
+Primarina statue|T
+Cycle shop sign|D
+Supermarket sign|D
+Café sign|D
+Restaurant sign|D
+Gift shop sign|D
+Standing frame|D
+Bubble machine|T
+Lampion|D
+Trevenant streetlight|T
+Pumpkin lantern|T

@@ -1,0 +1,49 @@
+Office shelf|D
+Tea set|D
+Table setting|D
+Paper Party cups|D
+Fried potatoes|D
+Afternoon tea set|D
+Chocolate cookies|D
+Sandwiches|D
+Pencil holder|T
+Corkboard|D
+CD rack|D
+Magazine rack|D
+Dining cabinet|D
+Bathtime set|T
+Toy blocks|T
+Pinwheels|T
+Knitting supplies|T
+Science experiment|T
+Jumbled cords|T
+Balloons|T
+Cardboard boxes|D
+Whiteboard|D
+Decorative bookshelf|D
+Decorative storage shelf|D
+Decorative plant shelf|D
+Berry wall decoration|D
+Garden ornament|D
+Photo cutout board|T
+Garbage bags|D
+Sandbags|D
+Tires|T
+Construction supplies|D
+Iron pipes|D
+Gaming light|D
+String lights|D
+Flowery table setting|D
+Lunch box|D
+Juice trio|D
+Flower garland|D
+Jewel wall decoration|D
+Star wall decoration|D
+Decorative plates|D
+Book stack|T
+Shop display case|D
+Ornate decorative shelf|D
+Wall plant|D
+Candy bucket|D
+Fun balloons|T
+Harvest basket|D

@@ -1,0 +1,51 @@
+Vine rope|-
+Twine|-
+Paper Party cups|D
+Small vase|D
+Tall potted plant|D
+Flat-leaf plant|D
+Twisted potted plant|D
+Fancy pen|D
+Shower|T
+Decorative plant shelf|D
+Vine wall decoration|D
+Slender candle|D
+Wooden birdhouse|D
+Fishing rod|T
+Iron pipes|D
+Mushroom streetlight|D
+Town streetlight|D
+Harbor streetlight|D
+Chic streetlight|D
+Double streetlight|D
+Desk light|D
+Luxury lamp|D
+Fluorescent light|D
+Berry hanging lamp|D
+Destiny Knot|-
+Wing Fossil (right wing)|D
+Wing Fossil (left wing)|D
+Wing fossil (body)|D
+Wing Fossil (tail)|D
+Headbutt Fossil (body)|D
+Headbutt Fossil (tail)|D
+Shield Fossil (body)|D
+Shield Fossil (tail)|D
+Despot Fossil (body)|D
+Despot Fossil (legs)|D
+Despot Fossil (tail)|D
+Tundra Fossil (head)|D
+Tundra Fossil (body)|D
+Tundra Fossil (tail)|D
+Wire|-
+Metal chain|-
+Rope|-
+Broken streetlight|-
+Inflatable Sudowoodo|T
+Telescope|T
+Chimecho wind chime|T
+Dangling streetlight|D
+Pearl streetlight|D
+Lampion|D
+Trevenant streetlight|T
+Cooking utensils|D

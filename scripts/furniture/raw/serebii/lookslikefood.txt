@@ -1,0 +1,32 @@
+Berry case|D
+Berry table|-
+Berry chair|R
+Berry bed|R
+Table setting|D
+Pizza|D
+Fried potatoes|D
+Soda float|D
+Afternoon tea set|D
+Chocolate cookies|D
+Sandwiches|D
+Shaved ice|D
+Ribbon cake|D
+Berry basket|D
+Berry clock|T
+Berry wall decoration|D
+Berry table lamp|D
+Berry hanging lamp|D
+Berry print (wallpaper)|-
+Leftovers|-
+Room Service|-
+Berry print|-
+Lunch box|D
+Juice trio|D
+Teaware set|D
+Wall plant|D
+Candy bucket|D
+Pumpkin lantern|T
+Pumpkin lantern tower|T
+Apple pie|D
+Harvest basket|D
+Appley blender|T

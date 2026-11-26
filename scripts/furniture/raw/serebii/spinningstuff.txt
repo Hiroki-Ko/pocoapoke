@@ -1,0 +1,15 @@
+Fancy chair|R
+Office chair|R
+Gaming chair|R
+Fan|T
+Pinwheels|T
+Ceiling fan|D
+Castform weather charm|T
+Weather vane|T
+Small stage|T
+Wheelbarrow|D
+Large ventilation fan|D
+Model planet|T
+Music box|T
+Blender|T
+Bubble machine|T

@@ -1,0 +1,24 @@
+Armor fragment|-
+Luxury chair|R
+Pitcher-plant pot|D
+Twisted potted plant|D
+Munna bank|T
+Boo-in-the-box|T
+Malicious Armor|D
+Mysterious statue|D
+Slender candle|D
+Eerie candle|D
+Gravestone|D
+Mushroom streetlight|D
+Chic streetlight|D
+Spell Tag|-
+Adrenaline Orb|-
+Cursola light|D
+Cofagrigus locker|T
+Candy bucket|D
+Fun balloons|T
+Ghost smoke projector|T
+Eerie statue|T
+Trevenant streetlight|T
+Pumpkin lantern|T
+Pumpkin lantern tower|T

@@ -1,0 +1,35 @@
+Resort stool|R
+Resort chair|R
+Resort sofa|R
+Resort bed|R
+Deck chair|R
+Beach chair|R
+Resort hammock|R
+Ship's Wheel|T
+Sandbox|T
+Inflatable boat|R
+Beach parasol|R
+Horsea fountain|T
+Fishing rod|T
+Harbor streetlight|D
+Shell lamp|D
+Resort light|D
+Marine chest|D
+Marine closet|D
+Marine table|-
+Ornate stand|D
+Marine chair|R
+Ornate chair|R
+Marine sofa|R
+Marine dresser|T
+Bottled ship|T
+Decorative Dive Ball|D
+Decorative Lure Ball|D
+Windup Inkay|T
+Sand toys|T
+Primarina statue|T
+Pearl streetlight|D
+Sand bed|T
+Swim ring|R
+Big swim ring|R
+Beach volleyball set|T

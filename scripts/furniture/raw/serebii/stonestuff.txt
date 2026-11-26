@@ -1,0 +1,77 @@
+Stone|-
+Luxury chair|R
+Stone bench|R
+Luxury bed|R
+Luxury dresser|T
+Mug|D
+Table setting|D
+Small vase|D
+Leafy plant|D
+Pitcher-plant pot|D
+Extravagant flowers|D
+Tall potted plant|D
+Flat-leaf plant|D
+Munna bank|T
+Pencil holder|T
+Stone fireplace|R
+Dining cabinet|D
+Toilet|D
+Sink|T
+Bathtub|D
+Gold Teeth|T
+Big Nugget|T
+Mysterious statue|D
+Fiery Magby statue|T
+Gym emblem statue|D
+Spacesuit|T
+Model space shuttle|T
+Spaceship|T
+Decorative storage shelf|D
+Campfire|R
+Slender candle|D
+Eerie candle|D
+Wall torch|D
+Firepit|D
+Concrete pipe|D
+Garden ornament|D
+Gravestone|D
+Horsea fountain|T
+Signpost|D
+Information board|D
+Ditto Flag|-
+Sprinkler|T
+Model planet|T
+Luxury lamp|D
+Shell lamp|D
+Light Clay|-
+Skull Fossil|D
+Armor Fossil|D
+Jaw Fossil|D
+Sail Fossil|D
+Stone brick wall|-
+Stone pillar (upper)|-
+Stone pillar (middle)|-
+Stone pillar (lower)|-
+Stone flooring|W
+Stone tiling|W
+Stone steps|W
+Stone hipped roof|-
+Stone roof valley|-
+Stone roof decoration|-
+Stone debris|-
+Metal Debris|-
+Jewel wall decoration|D
+Treasure|T
+Marine chest|D
+Marine closet|D
+Ornate stand|D
+Seashell seat|R
+Marine chair|R
+Ornate chair|R
+Ornate bed|R
+Decorative plates|D
+Party ball|D
+Gyarados fountain|T
+Primarina statue|T
+Stone sign|D
+Eerie statue|T

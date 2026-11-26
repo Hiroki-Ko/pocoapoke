@@ -1,0 +1,98 @@
+Sea glass fragments|-
+Glass|-
+Gaming fridge|D
+Office shelf|D
+Iron stand|D
+Wall mirror|T
+Large mirror|T
+Antique dresser|T
+Luxury dresser|T
+Cute dresser|T
+Wiggly mirror|T
+Photo frame|D
+Dining cabinet|D
+Microwave oven|T
+Printer|D
+Washing machine|T
+Tablet|T
+Cell phone|T
+Laptop|T
+Computer|T
+Gaming PC|T
+Television|T
+Wall monitor|T
+Arcade machine|T
+Alarm Clock|T
+Game Boy system|T
+Humidifier|D
+Crystal ball|T
+Microscope|T
+Science experiment|T
+Audio mixer|T
+Spacesuit|T
+Spaceship|T
+Antique clock|T
+Berry clock|T
+Grubby tablet|T
+Grubby cell phone|T
+Vending machine|T
+Raichu sign|D
+Mini generator|D
+Card reader|D
+Town streetlight|D
+Harbor streetlight|D
+Chic streetlight|D
+Double streetlight|D
+Plain lamp|D
+Desk light|D
+Poké Ball light|D
+Berry table lamp|D
+Cute lamp|D
+Poké Ball lamp|D
+Red meteor lamp|D
+Orange meteor lamp|D
+Yellow meteor lamp|D
+Green meteor lamp|D
+Blue meteor lamp|D
+Indigo meteor lamp|D
+Violet meteor lamp|D
+Luxury lamp|D
+Garden light|D
+Lantern|D
+Seedot Lamp|D
+Mirror ball|D
+Wall light|D
+Shell lamp|D
+Fluorescent light|D
+Gaming light|D
+String lights|D
+Pop art lamp|D
+Berry hanging lamp|D
+Surface light|D
+Spotlight|D
+Antique chandelier|D
+Clear Amulet|-
+Modern door|-
+Glass window|-
+Window pane|-
+Stained-glass window (upper)|-
+Stained-glass window (middle)|-
+Stained-glass window (lower)|-
+Sash window|-
+Water pillar quarter|D
+Juice trio|D
+Digital camera|T
+Oil lantern|D
+Star-shaped Dresser|T
+Telescope|T
+Star wall decoration|D
+Jirachi lamp|D
+Marine dresser|T
+Shop display case|D
+Shop fridge|D
+Bottled ship|T
+Wall clock|T
+Chimecho wind chime|T
+Blender|T
+Chain lamp|D
+Appley blender|T

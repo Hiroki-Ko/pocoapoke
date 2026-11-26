@@ -1,0 +1,30 @@
+Resort hammock|R
+Table setting|D
+Paper Party cups|D
+Soda float|D
+Shaved ice|D
+Modern sink|T
+Toilet|D
+Sink|T
+Bathtime set|T
+Cleaning supplies|T
+Shower|T
+Bathtub|D
+Bouncy blue bathtub|D
+Humidifier|D
+Funky diffuser|T
+Water basin|D
+Canoe|T
+Inflatable boat|R
+Beach parasol|R
+Horsea fountain|T
+Fire hydrant|D
+Sprinkler|T
+Mystic Water|-
+Water pillar quarter|D
+Hoppip water bottle|D
+Juice trio|D
+Teaware set|D
+Bottled ship|T
+Gyarados fountain|T
+Bubble machine|T

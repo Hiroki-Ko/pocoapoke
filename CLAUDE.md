@@ -10,7 +10,7 @@
 - API: Cloudflare Pages Functions（`functions/api/*.ts`）。`functions/` には `onRequest*` を持つファイルだけを置く（共通処理は `functions/lib/`、定数は `src/`）
 - DB: Cloudflare D1（db 名 `pocoapoke`）。スキーマは `seeds/schema.sql`、変更は `migrations/` に連番で追加
 - 本番: https://pocoapoke.pages.dev （master に push すると自動デプロイ）
-- 画面: 一覧 `/`、住みごこち `/progress`、登録 `/register`、編集 `/edit/:id`
+- 画面: 一覧 `/`、住みごこち `/progress`、家具さがし `/furniture`、登録 `/register`、編集 `/edit/:id`
 - ホーム画面にインストールできる（`public/manifest.webmanifest`、`theme-color` は #ffd84d）
 
 ## 開発
@@ -34,6 +34,12 @@
 - 予備: PokeAPI のスプライトを余白を切って `public/icons/<key>.png` に保存
 - 追加・変更したら `node scripts/build-icons.mjs` で `src/data/customIcons.json` などを作り直す（ファビコン・アプリアイコンもここで作られる）
 - アプリのアイコン: ホーム画面・起動画面とも、公式配布画像から切り抜いたフワンテ＆メタモン（`icon-maskable-512.png`、元画像は `scripts/assets/drifloon-ditto.png`）。Android 12 以降は起動画面にホーム画面のアイコンが出るため、起動画面だけ別にはできない
+
+## 家具さがし
+- 家具データは `src/data/furniture.json`（読み取り専用。属性は master_code favorite の code）。画像は `public/items/<slug>.png`
+- 作り方は `scripts/furniture/`: Serebii の属性（`raw/serebii/*.txt` → `parse-serebii.mjs`）と op.gg の日本語名（`raw/opgg-names.json`）を `build-data.mjs` で合わせる。日本語名の追加・修正は `overrides.json` の `names`
+- 画像は本人の PC で `node scripts/furniture/download-images.mjs`
+- Game8 のデータは取り込まない（無断使用禁止のため）
 
 ## バックアップ
 - 毎月1日の GitHub Action が `seeds/pokemon_ms.json` と完全バックアップ `seeds/backup/pocoapoke-data.json` を保存（`scripts/backup-to-sql.cjs` で SQL に戻せる）

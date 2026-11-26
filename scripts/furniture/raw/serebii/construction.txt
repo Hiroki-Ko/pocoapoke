@@ -1,0 +1,9 @@
+Sandbags|D
+Metal drum|D
+Construction supplies|D
+Iron pipes|D
+Wheelbarrow|D
+Iron-scaffold plank|W
+Iron scaffold|W
+Toolbox|T
+Wall-mounted tools|T

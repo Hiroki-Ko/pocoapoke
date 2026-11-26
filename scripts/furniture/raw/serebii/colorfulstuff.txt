@@ -1,0 +1,112 @@
+Red paint|-
+Blue paint|-
+Green paint|-
+Yellow paint|-
+Pink paint|-
+Cyan paint|-
+White paint|-
+Black paint|-
+Gaming fridge|D
+Poké Ball Chest|D
+Polygonal Shelf|D
+Stylish stool|R
+Antique chair|R
+Luxury chair|R
+Pop art chair|R
+Gaming chair|R
+Antique sofa|R
+Pop art sofa|R
+Pikachu sofa|R
+Log Bed|R
+Pop art bed|R
+Antique bed|R
+Gaming bed|R
+Cute dresser|T
+Pizza|D
+Fried potatoes|D
+Soda float|D
+Afternoon tea set|D
+Chocolate cookies|D
+Sandwiches|D
+Shaved ice|D
+Ribbon cake|D
+Berry basket|D
+Corkboard|D
+CD rack|D
+Magazine rack|D
+Mini bookcase|D
+Bookcase|D
+Stone fireplace|R
+Bathtime set|T
+Gaming PC|T
+Pinwheels|T
+Knitting supplies|T
+First aid kit|T
+Balloons|T
+Punching game|T
+Ship's Wheel|T
+Decorative storage shelf|D
+Hanging banner|D
+Party bunting|D
+Berry wall decoration|D
+Wall-mounted flowers|D
+Garden flowers|D
+Painting (landscape)|D
+Painting (portrait)|D
+Painting (still life)|D
+Water basin|D
+Canoe|T
+Raichu sign|D
+Photo cutout board|T
+Poké Ball light|D
+Model planet|T
+Gaming light|D
+Music mat (low do)|T
+Music mat (Re)|T
+Music mat (Mi)|T
+Music mat (Fa)|T
+Music mat (Sol)|T
+Music mat (La)|T
+Music mat (Ti)|T
+Music mat (High do)|T
+Paint balloon (white)|-
+Paint balloon (red)|-
+Paint balloon (yellow)|-
+Paint balloon (green)|-
+Paint balloon (rose)|-
+Paint balloon (pink)|-
+Paint balloon (orange)|-
+Paint balloon (purple)|-
+Paint balloon (brown)|-
+Paint balloon (beige)|-
+Paint balloon (black)|-
+Paint balloon (lime)|-
+Paint balloon (plum)|-
+Paint balloon (navy)|-
+Paint balloon (blue)|-
+Paint balloon (cyan)|-
+Paint balloon (gray)|-
+Paint balloon (aquamarine)|-
+Flowery table setting|D
+Lunch box|D
+Hoppip water bottle|D
+Juice trio|D
+Flower garland|D
+Jewel wall decoration|D
+Treasure|T
+Marine chest|D
+Marine closet|D
+Marine table|-
+Ornate stand|D
+Seashell seat|R
+Ornate chair|R
+Ornate bed|R
+Marine dresser|T
+Teaware set|D
+Decorative plates|D
+Book stack|T
+Shop shelf|D
+Shop fridge|D
+Ornate decorative shelf|D
+Wall-mounted tools|T
+Running shoes|D

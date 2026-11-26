@@ -1,0 +1,44 @@
+Office shelf|D
+Letter|T
+Notepad|T
+Book|T
+Open Book|T
+Papers|T
+Newspaper|T
+Magazine rack|D
+Mini bookcase|D
+Bookcase|D
+Television|T
+Wall monitor|T
+Science experiment|T
+Whiteboard|D
+Wall Calendar|D
+Decorative bookshelf|D
+Hanging scroll|D
+Grubby letter|T
+Grubby notepad|T
+Grubby book|T
+Grubby papers|T
+Grubby newspaper|T
+Gravestone|D
+Arrow sign|D
+Menu board|D
+Sign|D
+Signpost|D
+Information board|D
+Raichu sign|D
+Frame|D
+Weakness Policy|-
+Map and compass|T
+Book stack|T
+Shop shelf|D
+Party ball|D
+Hanging sign|D
+Stone sign|D
+Slim information board|D
+Cycle shop sign|D
+Supermarket sign|D
+Café sign|D
+Restaurant sign|D
+Gift shop sign|D
+Eerie statue|T

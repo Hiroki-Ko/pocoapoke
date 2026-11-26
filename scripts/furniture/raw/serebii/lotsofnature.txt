@@ -1,0 +1,29 @@
+Berry case|D
+Straw table|-
+Log table|-
+Garden table|-
+Berry table|-
+Berry chair|R
+Log chair|R
+Garden chair|R
+Garden bench|R
+Log Bed|R
+Straw bed|R
+Berry bed|R
+Wooden Bed|R
+Berry basket|D
+Tall potted plant|D
+Flat-leaf plant|D
+Twisted potted plant|D
+Berry clock|T
+Vine wall decoration|D
+Berry wall decoration|D
+Berry table lamp|D
+Seedot Lamp|D
+Berry hanging lamp|D
+Berry print (wallpaper)|-
+Miracle Seed|-
+Silver Powder|-
+Big Root|-
+Berry print|-
+Harvest basket|D

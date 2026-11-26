@@ -1,0 +1,94 @@
+Seashell|-
+Brick|-
+Concrete|-
+Tinkagear|-
+Polygonal Shelf|D
+Iron stand|D
+Iron table|-
+Iron rack|-
+Stone table|-
+Industrial chair|R
+Iron chair|R
+Public seat|R
+Spectator chair|R
+Luxury chair|R
+Garden chair|R
+Stone bench|R
+Iron bench|R
+Wiggly mirror|T
+Fancy pen|D
+Stone fireplace|R
+Gold Teeth|T
+Repel|T
+Step stool|T
+Auspicious Armor|D
+Malicious Armor|D
+Clear Bell|T
+Tidal Bell|T
+Model space shuttle|T
+Mailbox|D
+Iron pipes|D
+Town streetlight|D
+Chic streetlight|D
+Double streetlight|D
+Desk light|D
+Lantern|D
+Fluorescent light|D
+Spotlight|D
+Strength rock|-
+Stone tiling (wallpaper)|-
+Stone flooring (wallpaper)|-
+Stone brick wall (wallpaper)|-
+Rare Bone|-
+Hard Stone|-
+Metal Coat|-
+Iron Ball|-
+Skull Fossil|D
+Armor Fossil|D
+Jaw Fossil|D
+Sail Fossil|D
+Wing Fossil (head)|D
+Wing Fossil (right wing)|D
+Wing Fossil (left wing)|D
+Wing fossil (body)|D
+Wing Fossil (tail)|D
+Headbutt Fossil (head)|D
+Headbutt Fossil (body)|D
+Headbutt Fossil (tail)|D
+Shield Fossil (Head)|D
+Shield Fossil (body)|D
+Shield Fossil (tail)|D
+Despot Fossil (head)|D
+Despot Fossil (body)|D
+Despot Fossil (legs)|D
+Despot Fossil (tail)|D
+Tundra Fossil (head)|D
+Tundra Fossil (body)|D
+Tundra Fossil (tail)|D
+Stone brick wall|-
+Stone pillar (upper)|-
+Stone pillar (middle)|-
+Stone pillar (lower)|-
+Stone flooring|W
+Stone tiling|W
+Stone steps|W
+Stone hipped roof|-
+Stone roof valley|-
+Stone roof decoration|-
+Stone debris|-
+Metal Debris|-
+Jump rope trophy|D
+Digital camera|T
+Oil lantern|D
+Star closet|D
+Star wall decoration|D
+Jirachi lamp|D
+Hide-and-sneak trophy|D
+Shop display case|D
+Harp|T
+Toolbox|T
+Servers|D
+Slim information board|D
+Standing frame|D
+Dangling streetlight|D
+Lampion|D

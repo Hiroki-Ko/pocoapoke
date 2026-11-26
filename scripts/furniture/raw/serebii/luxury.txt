@@ -1,0 +1,63 @@
+Antique chest|D
+Antique closet|D
+Polygonal Shelf|D
+Antique table|-
+Chic table|-
+Luxury table|-
+Chic chair|R
+Fancy chair|R
+Antique chair|R
+Luxury chair|R
+Gaming chair|R
+Chic sofa|R
+Antique sofa|R
+Luxury sofa|R
+Guest-room bed|R
+Antique bed|R
+Luxury bed|R
+Cute bed|R
+Wall mirror|T
+Large mirror|T
+Antique dresser|T
+Luxury dresser|T
+Table setting|D
+Afternoon tea set|D
+Fancy pen|D
+Stone fireplace|R
+Dining cabinet|D
+Big Nugget|T
+Auspicious Armor|D
+Malicious Armor|D
+Antique clock|T
+Slender candle|D
+Eerie candle|D
+Firepit|D
+Chansey plant|D
+Bell|T
+Poké Ball light|D
+Poké Ball lamp|D
+Luxury lamp|D
+Mirror ball|D
+Antique chandelier|D
+Rainbow Feather|-
+Silver Feather|-
+Jump rope trophy|D
+Jewel wall decoration|D
+Treasure|T
+Hide-and-sneak trophy|D
+Ornate stand|D
+Ornate table|-
+Ornate chair|R
+Ornate bed|R
+Teaware set|D
+Decorative plates|D
+Ornate decorative shelf|D
+Sparkling jewelry|D
+Music box|T
+Harp|T
+Party ball|D
+Gyarados fountain|T
+Primarina statue|T
+Lampion|D
+Cofagrigus locker|T
+Apple pie|D

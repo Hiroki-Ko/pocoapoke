@@ -1,0 +1,14 @@
+Waterproof seat|R
+Large mirror|T
+Modern sink|T
+Washing machine|T
+Toilet|D
+Sink|T
+Towel rack|D
+Bathtime set|T
+Cleaning supplies|T
+Shower|T
+Bathtub|D
+Bouncy blue bathtub|D
+Water basin|D
+Cooler|D

@@ -1,0 +1,68 @@
+Office shelf|D
+Wooden bench|R
+Stone bench|R
+Plain sofa|R
+Resort sofa|R
+Chic sofa|R
+Antique sofa|R
+Iron bench|R
+Industrial bench|R
+Luxury sofa|R
+Garden bench|R
+Cute sofa|R
+Pop art sofa|R
+Poké Ball Sofa|R
+Pikachu sofa|R
+Pop art bed|R
+Poké Ball bed|R
+Wooden Bed|R
+Plain bed|R
+Resort hammock|R
+Guest-room bed|R
+Antique bed|R
+Industrial bed|R
+Luxury bed|R
+Cute bed|R
+Gaming bed|R
+Naptime bed|R
+Picnic basket|-
+Tea set|D
+Table setting|D
+Paper Party cups|D
+Computer|T
+Television|T
+Wall monitor|T
+Arcade machine|T
+Knitting supplies|T
+Game Boy system|T
+Humidifier|D
+Science experiment|T
+Jumbled cords|T
+CD player|T
+Standing mic|T
+Boo-in-the-box|T
+Whiteboard|D
+Campfire|R
+Firepit|D
+Bonfire|D
+Sandbox|T
+Tire toy|T
+Punching bag|T
+Slide|T
+Vending machine|T
+Chansey plant|D
+Small stage|T
+Canoe|T
+Inflatable boat|R
+Photo cutout board|T
+Construction supplies|D
+Flower cushion|R
+Flowery table setting|D
+Map and compass|T
+Treasure|T
+Starry-sky bed|R
+Marine sofa|R
+Cushion bed|R
+Cooler|D
+Big swim ring|R
+Beach volleyball set|T

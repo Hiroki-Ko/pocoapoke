@@ -1,0 +1,77 @@
+Squishy clay|-
+Fluff|-
+Straw stool|R
+Berry chair|R
+Simple cushion|R
+Plain stool|R
+Resort stool|R
+Stylish stool|R
+Soft seat|R
+Box Sofa|R
+Plain chair|R
+Resort chair|R
+Chic chair|R
+Fancy chair|R
+Antique chair|R
+Office chair|R
+Cute chair|R
+Pop art chair|R
+Gaming chair|R
+Plain sofa|R
+Resort sofa|R
+Chic sofa|R
+Antique sofa|R
+Luxury sofa|R
+Cute sofa|R
+Pop art sofa|R
+Pikachu sofa|R
+Log Bed|R
+Mini plain bed|R
+Resort bed|R
+Iron bed|R
+Beach chair|R
+Straw bed|R
+Pop art bed|R
+Poké Ball bed|R
+Berry bed|R
+Wooden Bed|R
+Plain bed|R
+Resort hammock|R
+Guest-room bed|R
+Antique bed|R
+Industrial bed|R
+Luxury bed|R
+Cute bed|R
+Gaming bed|R
+Naptime bed|R
+Towel rack|D
+Knitting supplies|T
+Eevee doll|T
+Pikachu doll|T
+Clefairy doll|T
+Dragonite doll|T
+Ditto doll|T
+Substitute doll|T
+Tire toy|T
+Inflatable boat|R
+Soft Sand|-
+Light Clay|-
+Cotton Spores|-
+Flower cushion|R
+Flowery table setting|D
+Flower garland|D
+Flower backpack|D
+Camping chair|R
+Sleeping bag|R
+Adventure kit|T
+Starry-sky bed|R
+Seashell seat|R
+Ornate chair|R
+Marine sofa|R
+Ornate bed|R
+Cushion bed|R
+Running shoes|D
+Starmie doll|T
+Sand bed|T
+Swim ring|R
+Big swim ring|R

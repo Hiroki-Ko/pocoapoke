@@ -1,0 +1,38 @@
+Red paint|-
+Blue paint|-
+Green paint|-
+Yellow paint|-
+Pink paint|-
+Cyan paint|-
+White paint|-
+Black paint|-
+Sandbox|T
+Punching bag|T
+Sandbags|D
+Wheelbarrow|D
+Skull Fossil|D
+Armor Fossil|D
+Jaw Fossil|D
+Sail Fossil|D
+Wing Fossil (head)|D
+Wing Fossil (right wing)|D
+Wing Fossil (left wing)|D
+Wing fossil (body)|D
+Wing Fossil (tail)|D
+Headbutt Fossil (head)|D
+Headbutt Fossil (body)|D
+Headbutt Fossil (tail)|D
+Shield Fossil (Head)|D
+Shield Fossil (body)|D
+Shield Fossil (tail)|D
+Despot Fossil (head)|D
+Despot Fossil (body)|D
+Despot Fossil (legs)|D
+Despot Fossil (tail)|D
+Tundra Fossil (head)|D
+Tundra Fossil (body)|D
+Tundra Fossil (tail)|D
+Mud|-
+Running shoes|D
+Sand bed|T
+Beach volleyball set|T

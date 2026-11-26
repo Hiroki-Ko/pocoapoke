@@ -1,0 +1,27 @@
+Alarm Clock|T
+CD player|T
+Tabletop mic|T
+Standing mic|T
+Big drum|T
+Cool electric guitar|T
+Cool bass guitar|T
+Speaker|T
+Clear Bell|T
+Tidal Bell|T
+Antique clock|T
+Berry clock|T
+Music mat (low do)|T
+Music mat (Re)|T
+Music mat (Mi)|T
+Music mat (Fa)|T
+Music mat (Sol)|T
+Music mat (La)|T
+Music mat (Ti)|T
+Music mat (High do)|T
+Cloud cannon|T
+Metronome|T
+Music box|T
+Harp|T
+Windup Inkay|T
+Chimecho wind chime|T
+Blender|T

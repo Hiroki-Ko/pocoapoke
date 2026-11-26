@@ -2,10 +2,10 @@
 import type { ReactNode } from "react";
 import { PokemonIcon } from "./PokemonIcon";
 
-type Props = { title: string; subtitle: string; count?: number; children?: ReactNode };
+type Props = { title: string; subtitle: string; count?: number; unit?: string; children?: ReactNode };
 
 // 各ページ上部の黄色いヘッダー。children（街チップなど）はヘッダー内に置く
-export function AppHeader({ title, subtitle, count, children }: Props) {
+export function AppHeader({ title, subtitle, count, unit = "匹", children }: Props) {
   return (
     <header className="bg-gradient-to-br from-[#ffd84d] via-sun to-[#ffb800] px-3 pt-2.5 pb-2">
       {/* 左: 見出しと説明 / 右: メタモン＋pocoapoke（見出しと同じ高さ）、その下に匹数 */}
@@ -20,7 +20,7 @@ export function AppHeader({ title, subtitle, count, children }: Props) {
             <span>pocoapoke</span>
           </div>
           {count !== undefined && (
-            <span className="rounded-full bg-white/70 px-2 py-0.5 text-xs font-bold">{count}匹</span>
+            <span className="rounded-full bg-white/70 px-2 py-0.5 text-xs font-bold">{count}{unit}</span>
           )}
         </div>
       </div>

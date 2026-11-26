@@ -1,0 +1,107 @@
+Armor fragment|-
+Polygonal Shelf|D
+Wall mirror|T
+Large mirror|T
+Luxury dresser|T
+Cute dresser|T
+Wiggly mirror|T
+Pitcher-plant pot|D
+Modern sink|T
+Cooking stove|D
+Microwave oven|T
+Refrigerator|T
+Air conditioner|D
+Printer|D
+Washing machine|T
+Toilet|D
+Sink|T
+Shower|T
+Bathtub|D
+Bouncy blue bathtub|D
+Tablet|T
+Cell phone|T
+Laptop|T
+Computer|T
+Gaming PC|T
+Alarm Clock|T
+Humidifier|D
+Funky diffuser|T
+Crystal ball|T
+Microscope|T
+Standing mic|T
+Cool electric guitar|T
+Cool bass guitar|T
+Audio mixer|T
+Gold Teeth|T
+Repel|T
+Punching game|T
+Boo-in-the-box|T
+Wobbuffet Wobbler|T
+Auspicious Armor|D
+Malicious Armor|D
+Clear Bell|T
+Tidal Bell|T
+Mysterious statue|D
+Fiery Magby statue|T
+Spacesuit|T
+Model space shuttle|T
+Spaceship|T
+Decorative storage shelf|D
+Rowlet clock|T
+Hanging scroll|D
+Ceiling fan|D
+Castform weather charm|T
+Grubby tablet|T
+Grubby cell phone|T
+Bike|T
+Gravestone|D
+Cannon|T
+Bell|T
+Small stage|T
+Horsea fountain|T
+Signpost|D
+Information board|D
+Fire hydrant|D
+Excavation tools|T
+Large ventilation fan|D
+Cash register|T
+Sprinkler|T
+Mini generator|D
+Card reader|D
+Poké Ball lamp|D
+Model planet|T
+Music mat (low do)|T
+Music mat (Re)|T
+Music mat (Mi)|T
+Music mat (Fa)|T
+Music mat (Sol)|T
+Music mat (La)|T
+Music mat (Ti)|T
+Music mat (High do)|T
+Large Lost Relic|-
+Small Lost Relic|-
+Twisted Spoon|-
+Town map|T
+Team Rocket Wall Hanging|D
+Skull Fossil|D
+Armor Fossil|D
+Jaw Fossil|D
+Sail Fossil|D
+Wing Fossil (head)|D
+Wing Fossil (right wing)|D
+Wing Fossil (left wing)|D
+Wing fossil (body)|D
+Wing Fossil (tail)|D
+Headbutt Fossil (head)|D
+Headbutt Fossil (body)|D
+Headbutt Fossil (tail)|D
+Shield Fossil (Head)|D
+Shield Fossil (body)|D
+Shield Fossil (tail)|D
+Despot Fossil (head)|D
+Despot Fossil (body)|D
+Despot Fossil (legs)|D
+Despot Fossil (tail)|D
+Tundra Fossil (head)|D
+Tundra Fossil (body)|D
+Tundra Fossil (tail)|D

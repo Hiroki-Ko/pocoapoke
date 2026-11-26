@@ -1,0 +1,89 @@
+Gaming fridge|D
+Gaming chair|R
+Gaming bed|R
+Microwave oven|T
+Refrigerator|T
+Fan|T
+Air conditioner|D
+Printer|D
+Washing machine|T
+Toilet|D
+Tablet|T
+Cell phone|T
+Laptop|T
+Computer|T
+Gaming PC|T
+Television|T
+Wall monitor|T
+Arcade machine|T
+Game Boy system|T
+Humidifier|D
+Jumbled cords|T
+CD player|T
+Tabletop mic|T
+Standing mic|T
+Cool electric guitar|T
+Cool bass guitar|T
+Audio mixer|T
+Speaker|T
+Punching game|T
+Control unit|T
+Ceiling fan|D
+Raichu sign|D
+Large ventilation fan|D
+Utility pole|-
+Wireless power-transmitter switch|-
+Wireless power transmitter|-
+Mini generator|D
+Floor switch|-
+Wall switch|-
+Card reader|D
+Laser sensor|-
+Security camera|-
+Town streetlight|D
+Harbor streetlight|D
+Chic streetlight|D
+Double streetlight|D
+Mushroom lamp|D
+Plain lamp|D
+Desk light|D
+Poké Ball light|D
+Berry table lamp|D
+Cute lamp|D
+Poké Ball lamp|D
+Model planet|T
+Red meteor lamp|D
+Orange meteor lamp|D
+Yellow meteor lamp|D
+Green meteor lamp|D
+Blue meteor lamp|D
+Indigo meteor lamp|D
+Violet meteor lamp|D
+Luxury lamp|D
+Garden light|D
+Lantern|D
+Seedot Lamp|D
+Mirror ball|D
+Wall light|D
+Shell lamp|D
+Fluorescent light|D
+Gaming light|D
+Resort light|D
+String lights|D
+Pop art lamp|D
+Berry hanging lamp|D
+Surface light|D
+Spotlight|D
+Antique chandelier|D
+Jirachi lamp|D
+Shop fridge|D
+Servers|D
+Cycle shop sign|D
+Supermarket sign|D
+Café sign|D
+Restaurant sign|D
+Gift shop sign|D
+Bubble machine|T
+Dangling streetlight|D
+Chain lamp|D
+Floating lantern|D

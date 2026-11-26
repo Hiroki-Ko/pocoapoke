@@ -1,0 +1,23 @@
+Small vase|D
+Leafy plant|D
+Extravagant flowers|D
+Tall potted plant|D
+Flat-leaf plant|D
+Twisted potted plant|D
+Decorative plant shelf|D
+Wall-mounted flowers|D
+Chansey plant|D
+Garden flowers|D
+Wildflowers|-
+Seashore flowers|-
+Mountain flowers|-
+Skyland flowers|-
+Beautiful flower|-
+Cute flower|-
+Elegant flower|-
+Robust flower|-
+Flower cushion|R
+Flowery table setting|D
+Flower garland|D
+Flower backpack|D
+Wall plant|D

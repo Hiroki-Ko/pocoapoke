@@ -1,0 +1,110 @@
+Copper ore|-
+Iron ore|-
+Gold ore|-
+Pokémetal fragment|-
+Rare Pokémetal fragment|-
+Copper ingot|-
+Iron ingot|-
+Gold ingot|-
+Pokémetal|-
+Rare Pokémetal|-
+Office cabinet|D
+Gaming fridge|D
+Poké Ball Chest|D
+Office locker|D
+Office shelf|D
+Iron stand|D
+Industrial desk|-
+Iron table|-
+Office desk|-
+Industrial chair|R
+Iron chair|R
+Public seat|R
+Spectator chair|R
+Luxury chair|R
+Garden chair|R
+Folding chair|R
+Office chair|R
+Gaming chair|R
+Iron bench|R
+Industrial bench|R
+Garden bench|R
+Poké Ball Sofa|R
+Iron bed|R
+Poké Ball bed|R
+Industrial bed|R
+Table setting|D
+Small garbage can|D
+Fancy pen|D
+Modern sink|T
+Cooking stove|D
+Microwave oven|T
+Refrigerator|T
+Fan|T
+Air conditioner|D
+Washing machine|T
+Shower|T
+Tablet|T
+Cell phone|T
+Laptop|T
+Computer|T
+Gaming PC|T
+Television|T
+Wall monitor|T
+Arcade machine|T
+Alarm Clock|T
+Game Boy system|T
+Funky diffuser|T
+First aid kit|T
+Microscope|T
+Science experiment|T
+Jumbled cords|T
+Tabletop mic|T
+Standing mic|T
+Big drum|T
+Cool electric guitar|T
+Cool bass guitar|T
+Audio mixer|T
+Speaker|T
+Gold Teeth|T
+Repel|T
+Big Nugget|T
+Step stool|T
+Control unit|T
+Auspicious Armor|D
+Malicious Armor|D
+Clear Bell|T
+Tidal Bell|T
+Ship's Wheel|T
+Spacesuit|T
+Model space shuttle|T
+Spaceship|T
+Ceiling fan|D
+Grubby tablet|T
+Grubby cell phone|T
+Wall torch|D
+Firepit|D
+Punching bag|T
+Vending machine|T
+Bike|T
+Mailbox|D
+Weather vane|T
+Cannon|T
+Bell|T
+Small stage|T
+Fishing rod|T
+Signpost|D
+Information board|D
+Raichu sign|D
+Barrel|D
+Garbage bin|D
+Recycling bin|D
+Fire hydrant|D
+Excavation tools|T
+Metal drum|D
+Construction supplies|D
+Iron pipes|D
+Wheelbarrow|D
+Large ventilation fan|D
+Cash register|T
+Sprinkler|T

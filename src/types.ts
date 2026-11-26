@@ -30,3 +30,7 @@ export type Pokemon = {
 };
 
 export type PokemonData = { pokemon: Pokemon[]; master: Master };
+
+// src/data/furniture.json の 1 件（家具さがし）。favorites は master_code favorite の code
+// noJa: 日本語名がまだ見つかっていない（name は英語名。画面では別枠に出す）
+export type FurnitureItem = { slug: string; name: string; en: string; tag: string; favorites: number[]; image: string | null; noJa?: boolean };

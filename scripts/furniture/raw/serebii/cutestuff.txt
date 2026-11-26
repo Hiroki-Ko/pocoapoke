@@ -1,0 +1,82 @@
+Poké Ball Chest|D
+Berry case|D
+Polygonal Shelf|D
+Cute table|-
+Pop art table|-
+Berry chair|R
+Stylish stool|R
+Cute chair|R
+Pop art chair|R
+Cute sofa|R
+Pop art sofa|R
+Pikachu sofa|R
+Pop art bed|R
+Berry bed|R
+Cute bed|R
+Naptime bed|R
+Cute dresser|T
+Wiggly mirror|T
+Ribbon cake|D
+Munna bank|T
+Bathtime set|T
+Bouncy blue bathtub|D
+Boo-in-the-box|T
+Wobbuffet Wobbler|T
+Berry clock|T
+Rowlet clock|T
+Castform weather charm|T
+Eevee doll|T
+Pikachu doll|T
+Clefairy doll|T
+Arcanine doll|T
+Dragonite doll|T
+Ditto doll|T
+Substitute doll|T
+Eerie candle|D
+Chansey plant|D
+Inflatable boat|R
+Photo cutout board|T
+Berry table lamp|D
+Cute lamp|D
+Model planet|T
+Red meteor lamp|D
+Orange meteor lamp|D
+Yellow meteor lamp|D
+Green meteor lamp|D
+Blue meteor lamp|D
+Indigo meteor lamp|D
+Violet meteor lamp|D
+Luxury lamp|D
+Seedot Lamp|D
+Shell lamp|D
+Berry hanging lamp|D
+Cute flower|-
+Heart Scale|-
+Fairy Feather|-
+Flower cushion|R
+Flowery table setting|D
+Lunch box|D
+Hoppip water bottle|D
+Flower garland|D
+Flower backpack|D
+Star closet|D
+Starry-sky bed|R
+Star-shaped Dresser|T
+Moon clock|T
+Star wall decoration|D
+Jirachi lamp|D
+Seashell seat|R
+Marine sofa|R
+Cushion bed|R
+Decorative plates|D
+Windup Inkay|T
+Chimecho wind chime|T
+Running shoes|D
+Starmie doll|T
+Primarina statue|T
+Cycle shop sign|D
+Café sign|D
+Gift shop sign|D
+Cursola light|D
+Candy bucket|D
+Fun balloons|T

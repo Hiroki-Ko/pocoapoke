@@ -1,0 +1,101 @@
+Paper | -
+Wall storage box | Decoration
+Plain chest | Decoration
+Office cabinet | Decoration
+Antique chest | Decoration
+Plain closet | Decoration
+Office locker | Decoration
+Antique closet | Decoration
+Office shelf | Decoration
+Plain stand | Decoration
+Iron stand | Decoration
+Wooden stool | Relaxation
+Iron chair | Relaxation
+Public seat | Relaxation
+Soft seat | Relaxation
+Box Sofa | Relaxation
+Log Bed | Relaxation
+Mini plain bed | Relaxation
+Wall mirror | Toy
+Large mirror | Toy
+Picnic basket | -
+Sandwiches | Decoration
+Berry basket | Decoration
+Letter | Toy
+Notepad | Toy
+Book | Toy
+Open Book | Toy
+Papers | Toy
+Newspaper | Toy
+Photo frame | Decoration
+Wall photo frame | Decoration
+Corkboard | Decoration
+Mini bookcase | Decoration
+Bookcase | Decoration
+Stone fireplace | Relaxation
+Modern sink | Toy
+Cooking stove | Decoration
+Microwave oven | Toy
+Refrigerator | Toy
+Washing machine | Toy
+Sink | Toy
+Tablet | Toy
+Cell phone | Toy
+Laptop | Toy
+Television | Toy
+Wall monitor | Toy
+Arcade machine | Toy
+Game Boy system | Toy
+Speaker | Toy
+Boo-in-the-box | Toy
+Cardboard boxes | Decoration
+Whiteboard | Decoration
+Control unit | Toy
+Wall Calendar | Decoration
+Hanging scroll | Decoration
+Grubby letter | Toy
+Grubby notepad | Toy
+Grubby book | Toy
+Grubby papers | Toy
+Grubby newspaper | Toy
+Grubby tablet | Toy
+Grubby cell phone | Toy
+Sandbox | Toy
+Vending machine | Toy
+Chansey plant | Decoration
+Inflatable boat | Relaxation
+Menu board | Decoration
+Worn wooden crate | Decoration
+Wooden crate | Decoration
+Large ventilation fan | Decoration
+Frame | Decoration
+Mini generator | Decoration
+Wall light | Decoration
+Loaded Dice | -
+Town map | Toy
+Team Rocket Wall Hanging | Decoration
+Star closet | Decoration
+Starry-sky bed | Relaxation
+Marine chest | Decoration
+Marine closet | Decoration
+Ornate stand | Decoration
+Book stack | Toy
+Shop display case | Decoration
+Shop fridge | Decoration
+Music box | Toy
+Toolbox | Toy
+Servers | Decoration
+Decorative shop shelf | Decoration
+Arrow sign (left) | Decoration
+Arrow sign (right) | Decoration
+Hanging sign | Decoration
+Stone sign | Decoration
+Slim information board | Decoration
+Cycle shop sign | Decoration
+Supermarket sign | Decoration
+Café sign | Decoration
+Restaurant sign | Decoration
+Gift shop sign | Decoration
+Standing frame | Decoration
+Cooler | Decoration
+Cofagrigus locker | Toy

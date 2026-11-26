@@ -1,0 +1,81 @@
+Crystal fragment|-
+Stardust|-
+Gaming fridge|D
+Gaming chair|R
+Gaming bed|R
+Munna bank|T
+Bathtime set|T
+Cleaning supplies|T
+Tablet|T
+Cell phone|T
+Laptop|T
+Computer|T
+Gaming PC|T
+Television|T
+Wall monitor|T
+Crystal ball|T
+Tabletop mic|T
+Standing mic|T
+Gold Teeth|T
+Big Nugget|T
+Auspicious Armor|D
+Clear Bell|T
+Gym emblem statue|D
+Spacesuit|T
+Model space shuttle|T
+Bell|T
+Signpost|D
+Information board|D
+Raichu sign|D
+Fire hydrant|D
+Mini generator|D
+Mushroom streetlight|D
+Chic streetlight|D
+Poké Ball light|D
+Poké Ball lamp|D
+Red meteor lamp|D
+Orange meteor lamp|D
+Yellow meteor lamp|D
+Green meteor lamp|D
+Blue meteor lamp|D
+Indigo meteor lamp|D
+Violet meteor lamp|D
+Mirror ball|D
+Fluorescent light|D
+Gaming light|D
+String lights|D
+Music mat (low do)|T
+Music mat (Re)|T
+Music mat (Mi)|T
+Music mat (Fa)|T
+Music mat (Sol)|T
+Music mat (La)|T
+Music mat (Ti)|T
+Music mat (High do)|T
+Star Piece|-
+Nugget|-
+Silver Bottle Cap|-
+Gold Bottle Cap|-
+Metal Powder|-
+Clear Amulet|-
+Rainbow Feather|-
+Silver Feather|-
+Red crystal fragment|-
+Digital camera|T
+Star closet|D
+Starry-sky bed|R
+Star-shaped Dresser|T
+Star wall decoration|D
+Jirachi lamp|D
+Marine chest|D
+Marine closet|D
+Ornate decorative shelf|D
+Sparkling jewelry|D
+Dangling streetlight|D
+Cursola light|D
+Decorative cloth|D
+Prism scale|-
+Cofagrigus locker|T
+Trevenant streetlight|T
+Pumpkin lantern|T
+Pumpkin lantern tower|T

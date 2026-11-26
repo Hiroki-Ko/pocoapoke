@@ -1,0 +1,84 @@
+Wall storage box|D
+Plain chest|D
+Office cabinet|D
+Gaming fridge|D
+Poké Ball Chest|D
+Berry case|D
+Antique chest|D
+Plain closet|D
+Office locker|D
+Antique closet|D
+Office shelf|D
+Polygonal Shelf|D
+Plain stand|D
+Iron stand|D
+Antique dresser|T
+Luxury dresser|T
+Cute dresser|T
+Picnic basket|-
+Mug|D
+Tea set|D
+Paper Party cups|D
+Berry basket|D
+Small vase|D
+Leafy plant|D
+Pitcher-plant pot|D
+Extravagant flowers|D
+Tall potted plant|D
+Flat-leaf plant|D
+Twisted potted plant|D
+Small garbage can|D
+Munna bank|T
+Pencil holder|T
+Photo frame|D
+Wall photo frame|D
+CD rack|D
+Magazine rack|D
+Mini bookcase|D
+Bookcase|D
+Dining cabinet|D
+Refrigerator|T
+Washing machine|T
+Bathtime set|T
+Cleaning supplies|T
+Knitting supplies|T
+First aid kit|T
+Jumbled cords|T
+CD player|T
+Boo-in-the-box|T
+Cardboard boxes|D
+Wooden birdhouse|D
+Mailbox|D
+Water basin|D
+Worn wooden crate|D
+Wooden crate|D
+Barrel|D
+Garbage bin|D
+Recycling bin|D
+Metal drum|D
+Construction supplies|D
+Wheelbarrow|D
+Frame|D
+Cash register|T
+Flowery table setting|D
+Lunch box|D
+Hoppip water bottle|D
+Juice trio|D
+Flower backpack|D
+Adventure kit|T
+Oil lantern|D
+Star closet|D
+Star-shaped Dresser|T
+Marine chest|D
+Marine closet|D
+Ornate stand|D
+Shop display case|D
+Shop shelf|D
+Shop fridge|D
+Toolbox|T
+Wall plant|D
+Party ball|D
+Blender|T
+Cofagrigus locker|T
+Candy bucket|D
+Harvest basket|D

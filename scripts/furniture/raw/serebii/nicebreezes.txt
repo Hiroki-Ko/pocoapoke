@@ -1,0 +1,9 @@
+Fan|T
+Air conditioner|D
+Pinwheels|T
+Tidal Bell|T
+Model space shuttle|T
+Ceiling fan|D
+Weather vane|T
+Large ventilation fan|D
+Chimecho wind chime|T

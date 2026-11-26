@@ -4,6 +4,7 @@ import { NavLink, useLocation } from "react-router-dom";
 const TABS = [
   { to: "/", label: "一覧", icon: "☰", end: true },
   { to: "/progress", label: "住みごこち", icon: "🏠", end: false },
+  { to: "/furniture", label: "家具", icon: "🪑", end: false },
   { to: "/register", label: "登録", icon: "＋", end: false },
 ];
 

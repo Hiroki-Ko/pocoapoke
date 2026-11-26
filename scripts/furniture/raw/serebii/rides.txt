@@ -1,0 +1,7 @@
+Step stool|T
+Model space shuttle|T
+Spaceship|T
+Bike|T
+Canoe|T
+Tires|T
+Bottled ship|T

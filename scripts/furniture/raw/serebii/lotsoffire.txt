@@ -1,0 +1,17 @@
+Stone fireplace|R
+Cooking stove|D
+Clear Bell|T
+Fiery Magby statue|T
+Campfire|R
+Torch|R
+Slender candle|D
+Eerie candle|D
+Wall torch|D
+Firepit|D
+Bonfire|D
+Cannon|T
+Smelting furnace|-
+Metallic smelting furnace|-
+Charcoal|-
+Flame Orb|-
+Oil lantern|D
