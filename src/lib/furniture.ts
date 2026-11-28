@@ -43,11 +43,18 @@ export function hasKanji(s: string): boolean {
   return /[\u4e00-\u9fff々]/.test(s.replaceAll("うえ木", ""));
 }
 
-// 日本語名がない家具に、ブラウザで入力した名前を当てる（正式な日本語名がある家具には使わない）
+// ブラウザで入力した名前を当てる（日本語名がない家具の登録と、まちがった名前の修正）。
+// 今の名前と同じなら（Claude が正式に反映したあとなら）何もしない
 export function applyLocalNames(items: FurnitureItem[], names: Record<string, string>): FurnitureItem[] {
   return items
-    .map((i) => (i.noJa && names[i.slug] ? { ...i, name: names[i.slug], noJa: false, localName: true } : i))
+    .map((i) => (names[i.slug] && names[i.slug] !== i.name ? { ...i, name: names[i.slug], noJa: false, localName: true } : i))
     .sort(compareFurniture);
+}
+
+// Claude に送る名前: 今の名前と違う入力だけ（反映済みや、データにない家具は除く）
+export function pendingNames(items: FurnitureItem[], names: Record<string, string>): Record<string, string> {
+  const current = new Map(items.map((i) => [i.slug, i.name]));
+  return Object.fromEntries(Object.entries(names).filter(([slug, name]) => current.has(slug) && current.get(slug) !== name));
 }
 
 // 日本語名がある家具は名前順、ない家具（英語名）はアイテムの番号順で後ろへ（scripts/furniture/merge.mjs と同じ）

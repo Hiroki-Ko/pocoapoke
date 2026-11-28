@@ -10,7 +10,7 @@ import { FurnitureCard } from "../components/FurnitureCard";
 import { LikersSheet } from "../components/LikersSheet";
 import { PICKER_ID, PokemonPicker } from "../components/PokemonPicker";
 import { PokemonIcon } from "../components/PokemonIcon";
-import { applyLocalNames, favoriteCodes, filterFurniture, pokemonWhoLike, rankFurniture, TAG_LABEL, usedTags, kanaRow } from "../lib/furniture";
+import { applyLocalNames, pendingNames, favoriteCodes, filterFurniture, pokemonWhoLike, rankFurniture, TAG_LABEL, usedTags, kanaRow } from "../lib/furniture";
 import { exportNames, loadNames, saveName } from "../lib/localNames";
 import { registerBackHandler } from "../lib/backGuard";
 import { NameSheet } from "../components/NameSheet";
@@ -47,7 +47,8 @@ export default function Furniture() {
   useEffect(() => (copyText === null ? undefined : registerBackHandler(() => setCopyText(null))), [copyText]);
   const tag = TAGS.find((t) => t.id === tagId)?.tag ?? null;
   // 正式な日本語名がまだない家具に入力した名前だけを数える・送る
-  const pending = useMemo(() => Object.fromEntries(Object.entries(names).filter(([slug]) => FURNITURE.some((f) => f.slug === slug && f.noJa))), [names]);
+  // まだ正式に反映していない入力（新しい日本語名・名前の修正）だけを数える・送る
+  const pending = useMemo(() => pendingNames(FURNITURE, names), [names]);
   const pendingCount = Object.keys(pending).length;
   const copyNames = async () => {
     const text = exportNames(pending);
@@ -218,6 +219,7 @@ export default function Furniture() {
       <NameSheet
         item={editing}
         current={editing ? (names[editing.slug] ?? "") : ""}
+        official={editing ? (FURNITURE.find((f) => f.slug === editing.slug) ?? null) : null}
         onSave={(name) => {
           if (editing) setNames(saveName(editing.slug, name));
           setEditing(null);
@@ -267,7 +269,7 @@ function WithNoJaSection<T extends { noJa?: boolean; name?: string; item?: Furni
                 </button>
               )}
             </div>
-            <div className="mt-0.5 text-[10px] font-semibold">名前をタップすると、ゲームでの名前を入力できます</div>
+            <div className="mt-0.5 text-[10px] font-semibold">家具の名前をタップすると、ゲームでの名前を入力・修正できます</div>
           </div>
           {unknown.map(render)}
         </>

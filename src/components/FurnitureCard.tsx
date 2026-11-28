@@ -12,7 +12,7 @@ type Props = {
   perPokemon?: RankedFurniture["perPokemon"];
   total?: number;
   onTapFavorite: (code: number) => void;
-  onEditName?: () => void; // 日本語名がない・入力済みの家具だけ名前をタップして入力できる
+  onEditName?: () => void; // 名前をタップして入力・修正できる（日本語名がない・入力済みの家具は点線で目立たせる）
 };
 
 const tag = "rounded-md px-1.5 py-px text-[11px]";
@@ -27,15 +27,19 @@ const TAG_STYLE: Record<string, string> = {
 };
 
 export function FurnitureCard({ item, labelByCode, highlight, perPokemon, total, onTapFavorite, onEditName }: Props) {
-  const editable = !!onEditName && (item.noJa || item.localName);
+  const marked = item.noJa || item.localName;
   return (
     <div className="mx-2.5 my-2 rounded-2xl bg-white p-2.5 shadow-[0_1px_3px_rgba(0,0,0,.06)]">
       <div className="flex items-center gap-2.5">
         <FurnitureIcon item={item} />
         <div className="min-w-0 flex-1">
           <div className="flex min-w-0 items-center gap-1.5">
-            {editable ? (
-              <button type="button" onClick={onEditName} className="min-w-0 truncate text-left text-[15px] font-extrabold underline decoration-dotted underline-offset-4">
+            {onEditName ? (
+              <button
+                type="button"
+                onClick={onEditName}
+                className={`min-w-0 truncate text-left text-[15px] font-extrabold ${marked ? "underline decoration-dotted underline-offset-4" : ""}`}
+              >
                 {item.name}
               </button>
             ) : (

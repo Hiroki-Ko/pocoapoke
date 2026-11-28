@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { favoriteCodes, normalizeKana, filterFurniture, rankFurniture, pokemonWhoLike, tagLabel, hasKanji, applyLocalNames, usedTags, kanaRow } from "./furniture";
+import { favoriteCodes, normalizeKana, filterFurniture, rankFurniture, pokemonWhoLike, tagLabel, hasKanji, applyLocalNames, usedTags, kanaRow, pendingNames } from "./furniture";
 import type { FurnitureItem, MasterItem, Pokemon } from "../types";
 
 // master_code favorite: id = 100 + code（味は code 1〜5）
@@ -117,14 +117,26 @@ describe("hasKanji", () => {
 
 describe("applyLocalNames", () => {
   const items = [item("a", "かね", [WOOD]), { ...item("z", "Zebra rug", [WOOD]), noJa: true }, { ...item("y", "Yarn", [WOOD]), noJa: true }];
-  it("日本語名がない家具だけ入力名にし、入力済みの印を付けて日本語名順に並べ直す", () => {
+  it("入力した名前を当て（日本語名がある家具も直せる）、入力済みの印を付けて日本語名順に並べ直す", () => {
     const r = applyLocalNames(items, { z: "あみもの", a: "ちがうなまえ" });
     // 英語名の家具（noJa）は画面で別枠に出すので、日本語名どうしの順番だけ確かめる
     expect(r.filter((i) => !i.noJa).map((i) => [i.slug, i.name, !!i.localName])).toEqual([
       ["z", "あみもの", true],
-      ["a", "かね", false],
+      ["a", "ちがうなまえ", true],
     ]);
     expect(r.find((i) => i.slug === "y")).toMatchObject({ name: "Yarn", noJa: true });
+  });
+  it("入力した名前が今の名前と同じなら何もしない（正式に反映済み）", () => {
+    const r = applyLocalNames(items, { a: "かね" });
+    expect(r.find((i) => i.slug === "a")).toEqual(items[0]);
+  });
+});
+
+describe("pendingNames", () => {
+  const items = [item("a", "かね", [WOOD]), { ...item("z", "Zebra rug", [WOOD]), noJa: true }];
+  it("今の名前と違う入力だけを送る対象にする（反映済み・知らない家具は除く）", () => {
+    expect(pendingNames(items, { a: "かね", z: "しまうまラグ", gone: "なにか" })).toEqual({ z: "しまうまラグ" });
+    expect(pendingNames(items, { a: "かねー" })).toEqual({ a: "かねー" });
   });
 });
 
