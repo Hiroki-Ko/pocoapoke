@@ -1,33 +1,63 @@
 // /pocoapoke/src/components/PokemonPicker.tsx
 // 家具さがし「ポケモンから」: 街で絞ってポケモンにチェックを付ける。選んだポケモンは上に並び、タップで外せる
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { MasterItem, Pokemon } from "../types";
 import { PokemonIcon } from "./PokemonIcon";
 import { townCode } from "../lib/progress";
 import { defaultPokemonCompare } from "../lib/pokemonOrder";
 
-type Props = { all: Pokemon[]; towns: MasterItem[]; selected: number[]; onChange: (ids: number[]) => void };
+type Props = {
+  all: Pokemon[];
+  towns: MasterItem[];
+  selected: number[];
+  onChange: (ids: number[]) => void;
+  onVisibleChange?: (visible: boolean) => void; // 選択部分が画面に見えているか（見えなければ上にたたんだバーを出す）
+};
 
-const TOWN_KEY = "pocoapoke.progress.town"; // 住みごこち画面で最後に選んだ街
+const TOWN_KEY = "pocoapoke.furniture.town"; // この画面で最後に選んだ街
+const PROGRESS_TOWN_KEY = "pocoapoke.progress.town"; // 初回は住みごこち画面の街
 
-function initialTown(): number {
+function readTown(key: string): number | null {
   try {
-    const raw = localStorage.getItem(TOWN_KEY);
+    const raw = localStorage.getItem(key);
     const v = Number(raw);
-    return raw !== null && Number.isInteger(v) ? v : 1;
+    return raw !== null && Number.isInteger(v) ? v : null;
   } catch {
-    return 1;
+    return null;
   }
 }
 
-export function PokemonPicker({ all, towns, selected, onChange }: Props) {
-  const [town, setTown] = useState<number>(initialTown);
+function initialTown(): number {
+  return readTown(TOWN_KEY) ?? readTown(PROGRESS_TOWN_KEY) ?? 1;
+}
+
+export const PICKER_ID = "pokemon-picker";
+
+export function PokemonPicker({ all, towns, selected, onChange, onVisibleChange }: Props) {
+  const [town, setTownState] = useState<number>(initialTown);
+  const setTown = (code: number) => {
+    setTownState(code);
+    try {
+      localStorage.setItem(TOWN_KEY, String(code));
+    } catch {
+      /* 保存できなくても動作は続ける */
+    }
+  };
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || !onVisibleChange || typeof IntersectionObserver === "undefined") return;
+    // 上の固定バーに隠れる分を引いて判定する
+    const io = new IntersectionObserver(([e]) => onVisibleChange(e.isIntersecting), { rootMargin: "-100px 0px 0px 0px" });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [onVisibleChange]);
   const list = all.filter((p) => townCode(p) === town).sort(defaultPokemonCompare);
   const chosen = selected.map((id) => all.find((p) => p.id === id)).filter((p): p is Pokemon => !!p);
   const toggle = (id: number) => onChange(selected.includes(id) ? selected.filter((x) => x !== id) : [...selected, id]);
 
   return (
-    <div className="border-b border-line bg-white px-3 pb-2">
+    <div ref={ref} id={PICKER_ID} className="scroll-mt-28 border-b border-line bg-white px-3 pb-2">
       <div className="flex min-h-10 flex-wrap items-center gap-1.5 py-1.5">
         {chosen.length === 0 && <span className="text-xs text-sub">ポケモンを選んでください</span>}
         {chosen.map((p) => (
@@ -42,13 +72,14 @@ export function PokemonPicker({ all, towns, selected, onChange }: Props) {
           </button>
         )}
       </div>
-      <div className="no-scrollbar -mx-3 flex gap-1.5 overflow-x-auto px-3 pb-1.5">
+      {/* 街は下線のタブ（ポケモンの丸いチップと見分けやすくする） */}
+      <div className="no-scrollbar -mx-3 mb-2 flex overflow-x-auto border-b border-line px-1">
         {towns.map((t) => (
           <button
             key={t.id}
             type="button"
             onClick={() => setTown(t.code)}
-            className={`shrink-0 rounded-full border px-3 py-1 text-[12px] ${town === t.code ? "border-brand bg-brand font-bold text-white" : "border-black/10 bg-white"}`}
+            className={`-mb-px shrink-0 border-b-[3px] px-2.5 py-1.5 text-[13px] ${town === t.code ? "border-brand font-extrabold text-brand" : "border-transparent text-sub"}`}
           >
             {t.label}
           </button>

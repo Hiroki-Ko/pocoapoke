@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { favoriteCodes, normalizeKana, filterFurniture, rankFurniture, pokemonWhoLike } from "./furniture";
+import { favoriteCodes, normalizeKana, filterFurniture, rankFurniture, pokemonWhoLike, tagLabel, hasKanji, applyLocalNames, usedTags } from "./furniture";
 import type { FurnitureItem, MasterItem, Pokemon } from "../types";
 
 // master_code favorite: id = 100 + code（味は code 1〜5）
@@ -38,16 +38,16 @@ describe("normalizeKana", () => {
 describe("filterFurniture", () => {
   const items = [item("log-chair", "まるたのイス", [WOOD]), item("soft-seat", "ふかふかイス", [SOFT], "Soft seat"), item("bell", "かね", [ROUND])];
   it("ひらがなで検索してもカタカナの名前に当たる", () => {
-    expect(filterFurniture(items, { query: "いす", code: null }).map((i) => i.slug)).toEqual(["log-chair", "soft-seat"]);
+    expect(filterFurniture(items, { query: "いす", code: null, tag: null }).map((i) => i.slug)).toEqual(["log-chair", "soft-seat"]);
   });
   it("英語名でも当たる", () => {
-    expect(filterFurniture(items, { query: "SOFT", code: null }).map((i) => i.slug)).toEqual(["soft-seat"]);
+    expect(filterFurniture(items, { query: "SOFT", code: null, tag: null }).map((i) => i.slug)).toEqual(["soft-seat"]);
   });
   it("属性を指定するとその属性を持つものだけ", () => {
-    expect(filterFurniture(items, { query: "", code: WOOD }).map((i) => i.slug)).toEqual(["log-chair"]);
+    expect(filterFurniture(items, { query: "", code: WOOD, tag: null }).map((i) => i.slug)).toEqual(["log-chair"]);
   });
   it("空の検索・属性なしなら全件", () => {
-    expect(filterFurniture(items, { query: " ", code: null })).toHaveLength(3);
+    expect(filterFurniture(items, { query: " ", code: null, tag: null })).toHaveLength(3);
   });
 });
 
@@ -88,5 +88,45 @@ describe("pokemonWhoLike", () => {
     const p2 = poke(2, 10, [SOFT, WOOD]);
     const p3 = poke(3, 5, [SOFT], 145); // 味の位置に木製（対象外）
     expect(pokemonWhoLike(WOOD, [p1, p2, p3], favById).map((p) => p.id)).toEqual([2, 1]);
+  });
+});
+
+describe("種類（tag）", () => {
+  it("tagLabel は英語の分類を日本語にし、空はそのほか", () => {
+    expect(["decoration", "toy", "relaxation", "food", "road", ""].map(tagLabel)).toEqual(["かざりつけ", "おもちゃ", "きゅうけい", "たべもの", "どうろ", "そのほか"]);
+  });
+  it("filterFurniture は tag で絞り込み、空文字はそのほか", () => {
+    const items = [{ ...item("a", "あ", [WOOD]), tag: "toy" }, { ...item("b", "い", [WOOD]), tag: "" }];
+    expect(filterFurniture(items, { query: "", code: null, tag: "toy" }).map((i) => i.slug)).toEqual(["a"]);
+    expect(filterFurniture(items, { query: "", code: null, tag: "" }).map((i) => i.slug)).toEqual(["b"]);
+    expect(filterFurniture(items, { query: "", code: null, tag: null })).toHaveLength(2);
+  });
+});
+
+describe("hasKanji", () => {
+  it("漢字・々を見つけ、かな・カナ・英数字は false", () => {
+    expect(hasKanji("木のベッド")).toBe(true);
+    expect(hasKanji("ひとびと々")).toBe(true);
+    expect(hasKanji("きのベッド ABC 1")).toBe(false);
+  });
+});
+
+describe("applyLocalNames", () => {
+  const items = [item("a", "かね", [WOOD]), { ...item("z", "Zebra rug", [WOOD]), noJa: true }, { ...item("y", "Yarn", [WOOD]), noJa: true }];
+  it("日本語名がない家具だけ入力名にし、入力済みの印を付けて日本語名順に並べ直す", () => {
+    const r = applyLocalNames(items, { z: "あみもの", a: "ちがうなまえ" });
+    // 英語名の家具（noJa）は画面で別枠に出すので、日本語名どうしの順番だけ確かめる
+    expect(r.filter((i) => !i.noJa).map((i) => [i.slug, i.name, !!i.localName])).toEqual([
+      ["z", "あみもの", true],
+      ["a", "かね", false],
+    ]);
+    expect(r.find((i) => i.slug === "y")).toMatchObject({ name: "Yarn", noJa: true });
+  });
+});
+
+describe("usedTags", () => {
+  it("家具がある種類だけを TAG_LABEL の順で返す", () => {
+    const items = [{ ...item("a", "あ", [WOOD]), tag: "toy" }, { ...item("b", "い", [WOOD]), tag: "" }, { ...item("c", "う", [WOOD]), tag: "toy" }];
+    expect(usedTags(items)).toEqual(["toy", ""]);
   });
 });

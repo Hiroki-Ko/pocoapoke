@@ -18,11 +18,44 @@ export function normalizeKana(s: string): string {
     .toLowerCase();
 }
 
-export function filterFurniture(items: FurnitureItem[], opts: { query: string; code: number | null }): FurnitureItem[] {
+// 家具の種類（Serebii の分類）→ 画面の表示名。分類なし（空文字）は「そのほか」
+export const TAG_LABEL: Record<string, string> = {
+  decoration: "かざりつけ",
+  toy: "おもちゃ",
+  relaxation: "きゅうけい",
+  food: "たべもの",
+  road: "どうろ",
+  "": "そのほか",
+};
+
+// 家具がある種類だけ（絞り込みの選択肢に、結果が必ず0件になる種類を出さない）
+export function usedTags(items: FurnitureItem[]): string[] {
+  const used = new Set(items.map((i) => i.tag));
+  return Object.keys(TAG_LABEL).filter((t) => used.has(t));
+}
+
+export function tagLabel(tag: string): string {
+  return TAG_LABEL[tag] ?? "そのほか";
+}
+
+// 名前はかな・カナにそろえる（漢字が入っていたら入力させない）
+export function hasKanji(s: string): boolean {
+  return /[\u4e00-\u9fff々]/.test(s);
+}
+
+// 日本語名がない家具に、ブラウザで入力した名前を当てる（正式な日本語名がある家具には使わない）
+export function applyLocalNames(items: FurnitureItem[], names: Record<string, string>): FurnitureItem[] {
+  return items
+    .map((i) => (i.noJa && names[i.slug] ? { ...i, name: names[i.slug], noJa: false, localName: true } : i))
+    .sort((a, b) => a.name.localeCompare(b.name, "ja"));
+}
+
+export function filterFurniture(items: FurnitureItem[], opts: { query: string; code: number | null; tag: string | null }): FurnitureItem[] {
   const q = normalizeKana(opts.query.trim());
   return items.filter(
     (i) =>
       (opts.code == null || i.favorites.includes(opts.code)) &&
+      (opts.tag == null || i.tag === opts.tag) &&
       (q === "" || normalizeKana(i.name).includes(q) || normalizeKana(i.en).includes(q)),
   );
 }

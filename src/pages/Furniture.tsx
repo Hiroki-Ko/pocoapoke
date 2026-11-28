@@ -8,12 +8,18 @@ import { AppHeader } from "../components/AppHeader";
 import { FilterSheet } from "../components/FilterSheet";
 import { FurnitureCard } from "../components/FurnitureCard";
 import { LikersSheet } from "../components/LikersSheet";
-import { PokemonPicker } from "../components/PokemonPicker";
-import { favoriteCodes, filterFurniture, pokemonWhoLike, rankFurniture } from "../lib/furniture";
+import { PICKER_ID, PokemonPicker } from "../components/PokemonPicker";
+import { PokemonIcon } from "../components/PokemonIcon";
+import { applyLocalNames, favoriteCodes, filterFurniture, pokemonWhoLike, rankFurniture, TAG_LABEL, usedTags } from "../lib/furniture";
+import { exportNames, loadNames, saveName } from "../lib/localNames";
+import { NameSheet } from "../components/NameSheet";
+import { useToast } from "../components/Toast";
 import type { FurnitureItem } from "../types";
 import furnitureData from "../data/furniture.json";
 
 const FURNITURE = furnitureData as FurnitureItem[];
+// 種類の絞り込みの選択肢（FilterSheet は id で選ぶので、並び順の番号を id にする）
+const TAGS = usedTags(FURNITURE).map((tag, i) => ({ id: i + 1, code: i + 1, label: TAG_LABEL[tag], class: "tag", tag }));
 const NO_HIGHLIGHT = new Set<number>();
 
 export default function Furniture() {
@@ -28,6 +34,27 @@ export default function Furniture() {
   const [favId, setFavId] = useState<number | null>(null); // 絞り込み中の属性（master id）
   const [sheet, setSheet] = useState(false);
   const [likerCode, setLikerCode] = useState<number | null>(null);
+  const [pickerVisible, setPickerVisible] = useState(true);
+  const [tagId, setTagId] = useState<number | null>(null);
+  const [tagSheet, setTagSheet] = useState(false);
+  const [names, setNames] = useState<Record<string, string>>(loadNames);
+  const [editing, setEditing] = useState<FurnitureItem | null>(null);
+  const [copyText, setCopyText] = useState<string | null>(null); // コピーできなかったときに選べるよう表示する
+  const toast = useToast();
+  const furniture = useMemo(() => applyLocalNames(FURNITURE, names), [names]);
+  const tag = TAGS.find((t) => t.id === tagId)?.tag ?? null;
+  // 正式な日本語名がまだない家具に入力した名前だけを数える・送る
+  const pending = useMemo(() => Object.fromEntries(Object.entries(names).filter(([slug]) => FURNITURE.some((f) => f.slug === slug && f.noJa))), [names]);
+  const pendingCount = Object.keys(pending).length;
+  const copyNames = async () => {
+    const text = exportNames(pending);
+    try {
+      await navigator.clipboard.writeText(text);
+      toast.show(`${pendingCount}件の名前をコピーしました`, "success");
+    } catch {
+      setCopyText(text);
+    }
+  };
 
   const all = data?.pokemon ?? [];
   const favorites = useMemo(() => (data?.master.favorite ?? []).filter((m) => m.code > 5), [data]);
@@ -35,7 +62,7 @@ export default function Furniture() {
   const labelByCode = useMemo(() => new Map(favorites.map((m) => [m.code, m.label])), [favorites]);
   const favCode = favorites.find((m) => m.id === favId)?.code ?? null;
 
-  const items = filterFurniture(FURNITURE, { query, code: favCode });
+  const items = filterFurniture(furniture, { query, code: favCode, tag });
   const likers = likerCode === null ? [] : pokemonWhoLike(likerCode, all, favById);
   const towns = useMemo(() => [...(data?.master.place ?? [])].sort((a, b) => (a.code === 0 ? 99 : a.code) - (b.code === 0 ? 99 : b.code)), [data]);
   // 存在しない id は選ばれていないものとして扱う
@@ -43,7 +70,7 @@ export default function Furniture() {
     .map((id) => all.find((p) => p.id === id))
     .filter((p): p is NonNullable<typeof p> => !!p)
     .map((p) => ({ pokemon: p, codes: favoriteCodes(p, favById) }));
-  const ranked = mode === "pokemon" ? rankFurniture(FURNITURE, picks) : [];
+  const ranked = mode === "pokemon" ? rankFurniture(filterFurniture(furniture, { query: "", code: null, tag }), picks) : [];
 
   return (
     <div>
@@ -65,6 +92,32 @@ export default function Furniture() {
             </button>
           ))}
         </div>
+        {mode === "pokemon" && (
+          <div className="mt-2 flex items-center gap-1.5">
+            {/* 選択部分が見えないときだけ、選んだポケモンを1行にたたんで出す。タップで選択部分へ戻る */}
+            {!pickerVisible && picks.length > 0 ? (
+              <>
+                <button
+                  type="button"
+                  aria-label="ポケモンの選択を開く"
+                  onClick={() => document.getElementById(PICKER_ID)?.scrollIntoView({ behavior: "smooth" })}
+                  className="no-scrollbar flex min-w-0 flex-1 items-center gap-1 overflow-x-auto"
+                >
+                  {picks.map(({ pokemon: p }) => (
+                    <PokemonIcon key={p.id} id={p.id} name={p.name} size={28} />
+                  ))}
+                  <span className="ml-1 shrink-0 text-sm text-sub">▾</span>
+                </button>
+                <button type="button" onClick={() => setSelected([])} className="shrink-0 text-xs font-bold text-sub">
+                  すべて外す
+                </button>
+              </>
+            ) : (
+              <span className="flex-1" />
+            )}
+            <TagButton tagId={tagId} onOpen={() => setTagSheet(true)} onClear={() => setTagId(null)} />
+          </div>
+        )}
         {mode === "items" && (
           <div className="mt-2 flex gap-1.5">
             <input
@@ -81,6 +134,7 @@ export default function Furniture() {
             >
               {favId === null ? "属性 ▾" : `${favById.get(favId)?.label} ✕`}
             </button>
+            <TagButton tagId={tagId} onOpen={() => setTagSheet(true)} onClear={() => setTagId(null)} />
           </div>
         )}
       </div>
@@ -89,6 +143,8 @@ export default function Furniture() {
         <>
           {items.length === 0 && <p className="p-6 text-center text-sub">条件に合う家具はありません</p>}
           <WithNoJaSection
+            pendingCount={pendingCount}
+            onCopy={copyNames}
             list={items}
             render={(item) => (
               <FurnitureCard
@@ -97,6 +153,7 @@ export default function Furniture() {
                 labelByCode={labelByCode}
                 highlight={favCode === null ? NO_HIGHLIGHT : new Set([favCode])}
                 onTapFavorite={setLikerCode}
+                onEditName={() => setEditing(item)}
               />
             )}
           />
@@ -105,9 +162,11 @@ export default function Furniture() {
 
       {mode === "pokemon" && (
         <>
-          <PokemonPicker all={all} towns={towns} selected={selected} onChange={setSelected} />
+          <PokemonPicker all={all} towns={towns} selected={selected} onChange={setSelected} onVisibleChange={setPickerVisible} />
           {picks.length > 0 && ranked.length === 0 && <p className="p-6 text-center text-sub">好きなものに当てはまる家具はありません</p>}
           <WithNoJaSection
+            pendingCount={pendingCount}
+            onCopy={copyNames}
             list={ranked.map((r) => ({ ...r, noJa: r.item.noJa }))}
             render={(r) => (
               <FurnitureCard
@@ -118,6 +177,7 @@ export default function Furniture() {
                 perPokemon={r.perPokemon}
                 total={r.total}
                 onTapFavorite={setLikerCode}
+                onEditName={() => setEditing(r.item)}
               />
             )}
           />
@@ -139,26 +199,77 @@ export default function Furniture() {
         }}
         onClose={() => setSheet(false)}
       />
+      <FilterSheet
+        open={tagSheet}
+        title="種類"
+        items={TAGS}
+        selected={tagId}
+        onSelect={(id) => {
+          setTagId(id);
+          setTagSheet(false);
+        }}
+        onClose={() => setTagSheet(false)}
+      />
+      <NameSheet
+        item={editing}
+        current={editing ? (names[editing.slug] ?? "") : ""}
+        onSave={(name) => {
+          if (editing) setNames(saveName(editing.slug, name));
+          setEditing(null);
+        }}
+        onClose={() => setEditing(null)}
+      />
+      {copyText !== null && (
+        <div className="fixed inset-0 z-[55] flex items-center justify-center bg-black/30 p-4" onClick={() => setCopyText(null)}>
+          <div className="w-full max-w-sm rounded-2xl bg-white p-4" onClick={(e) => e.stopPropagation()}>
+            <div className="mb-2 text-sm font-extrabold">コピーできなかったので、長押しで選んでコピーしてください</div>
+            <textarea readOnly value={copyText} className="h-40 w-full rounded-lg border border-line p-2 text-xs" onFocus={(e) => e.currentTarget.select()} />
+            <button type="button" onClick={() => setCopyText(null)} className="mt-2 w-full rounded-xl border border-line py-2 text-sm font-bold">閉じる</button>
+          </div>
+        </div>
+      )}
       <LikersSheet code={likerCode} label={likerCode === null ? "" : labelByCode.get(likerCode) ?? ""} pokemon={likers} onClose={() => setLikerCode(null)} />
     </div>
   );
 }
 
 // 日本語名がまだない家具（英語名）は、一覧の下に別枠でまとめて出す
-function WithNoJaSection<T extends { noJa?: boolean }>({ list, render }: { list: T[]; render: (v: T) => ReactNode }) {
+type SectionProps<T> = { list: T[]; render: (v: T) => ReactNode; pendingCount: number; onCopy: () => void };
+function WithNoJaSection<T extends { noJa?: boolean }>({ list, render, pendingCount, onCopy }: SectionProps<T>) {
   const known = list.filter((v) => !v.noJa);
   const unknown = list.filter((v) => v.noJa);
   return (
     <>
       {known.map(render)}
-      {unknown.length > 0 && (
+      {(unknown.length > 0 || pendingCount > 0) && (
         <>
           <div className="mx-2.5 mt-5 mb-1 rounded-lg bg-slate-200/70 px-3 py-1.5 text-xs font-extrabold text-sub">
-            日本語名がまだない家具（英語名） {unknown.length}件
+            <div className="flex items-center justify-between gap-2">
+              <span>日本語名がまだない家具（英語名） {unknown.length}件</span>
+              {pendingCount > 0 && (
+                <button type="button" onClick={onCopy} className="shrink-0 rounded-full bg-white px-2.5 py-1 text-[11px] font-bold text-brand">
+                  入力した名前をコピー（{pendingCount}件）
+                </button>
+              )}
+            </div>
+            <div className="mt-0.5 text-[10px] font-semibold">名前をタップすると、ゲームでの名前を入力できます</div>
           </div>
           {unknown.map(render)}
         </>
       )}
     </>
+  );
+}
+
+function TagButton({ tagId, onOpen, onClear }: { tagId: number | null; onOpen: () => void; onClear: () => void }) {
+  const label = TAGS.find((t) => t.id === tagId)?.label;
+  return (
+    <button
+      type="button"
+      onClick={() => (tagId === null ? onOpen() : onClear())}
+      className={`shrink-0 rounded-full border px-2.5 py-1.5 text-xs font-bold ${tagId === null ? "border-line bg-white" : "border-brand bg-sky-50 text-brand"}`}
+    >
+      {tagId === null ? "種類 ▾" : `${label} ✕`}
+    </button>
   );
 }
