@@ -22,7 +22,7 @@ export function mergeFurniture(serebii, names, favMap, allowUntagged = [], hasIm
     const name = nameByKey.get(key(s.slug));
     // 日本語名が見つからないものは英語名で入れ、画面では別枠に出す
     if (!name) missing.push({ slug: s.slug, reason: "no-name" });
-    else if (/[\u4e00-\u9fff々]/.test(name)) kanji.push({ slug: s.slug, name });
+    else if (/[\u4e00-\u9fff々]/.test(name.replaceAll("うえ木", ""))) kanji.push({ slug: s.slug, name }); // 「うえ木」はゲームの表記どおり
     const favorites = [...new Set(s.favorites.map((f) => favMap[f]).filter((c) => c != null))].sort((a, b) => a - b);
     if (favorites.length === 0) {
       missing.push({ slug: s.slug, reason: "no-favorite" });

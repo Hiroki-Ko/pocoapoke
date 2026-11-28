@@ -69,4 +69,9 @@ describe("mergeFurniture", () => {
     );
     expect(items.filter((i) => i.noJa).map((i) => [i.slug, i.order])).toEqual([["zeta", 5], ["mid", 9], ["alpha", undefined]]);
   });
+
+  it("「うえ木」は漢字の確認から外す", () => {
+    const { kanji } = mergeFurniture([item("Tall potted plant", "decoration", ["Wooden stuff"])], { "tall-potted-plant": "のっぽなうえ木" }, favMap);
+    expect(kanji).toEqual([]);
+  });
 });

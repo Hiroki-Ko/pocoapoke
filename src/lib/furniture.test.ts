@@ -109,6 +109,10 @@ describe("hasKanji", () => {
     expect(hasKanji("ひとびと々")).toBe(true);
     expect(hasKanji("きのベッド ABC 1")).toBe(false);
   });
+  it("ゲームの表記どおり「うえ木」だけは漢字として扱わない", () => {
+    expect(hasKanji("のっぽなうえ木")).toBe(false);
+    expect(hasKanji("木のうえ木")).toBe(true);
+  });
 });
 
 describe("applyLocalNames", () => {

@@ -38,9 +38,9 @@ export function tagLabel(tag: string): string {
   return TAG_LABEL[tag] ?? "そのほか";
 }
 
-// 名前はかな・カナにそろえる（漢字が入っていたら入力させない）
+// 名前はかな・カナにそろえる（漢字が入っていたら入力させない）。ゲームの表記どおり「うえ木」だけは許す
 export function hasKanji(s: string): boolean {
-  return /[\u4e00-\u9fff々]/.test(s);
+  return /[\u4e00-\u9fff々]/.test(s.replaceAll("うえ木", ""));
 }
 
 // 日本語名がない家具に、ブラウザで入力した名前を当てる（正式な日本語名がある家具には使わない）

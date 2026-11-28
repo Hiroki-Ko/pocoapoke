@@ -286,7 +286,7 @@ function TagButton({ tagId, onOpen, onClear }: { tagId: number | null; onOpen: (
   );
 }
 
-// 家具一覧の行ジャンプ（ア行→カ行→…）。ポケモン一覧の50匹送りと同じ見た目で、一番上・一番下では押せない
+// 家具一覧の行ジャンプ（ア行→カ行→…）。ポケモン一覧の50匹送りと同じ見た目。一番下では▼を押せず、一番上の▲は一番下へ移動
 function RowJump({ deps }: { deps: unknown }) {
   const [atTop, setAtTop] = useState(true);
   const [atBottom, setAtBottom] = useState(false);
@@ -326,8 +326,14 @@ function RowJump({ deps }: { deps: unknown }) {
     "flex h-11 w-11 flex-col items-center justify-center rounded-full border border-brand/30 bg-white/95 text-[10px] font-extrabold leading-tight text-brand shadow-md transition-opacity disabled:opacity-35 disabled:shadow-none";
   return (
     <div className="fixed bottom-[calc(4.25rem+env(safe-area-inset-bottom))] z-30 flex flex-col gap-2 right-[max(0.75rem,calc(50vw-14rem+0.75rem))]">
-      <button type="button" aria-label="前の行へ" disabled={atTop} onClick={() => jump(-1)} className={btn}>
-        ▲<span>{labels.prev || "上"}</span>
+      {/* 一番上では押せなくする代わりに、一番下へ移動する */}
+      <button
+        type="button"
+        aria-label={atTop ? "一番下へ" : "前の行へ"}
+        onClick={() => (atTop ? window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" }) : jump(-1))}
+        className={btn}
+      >
+        ▲<span>{atTop ? "最後へ" : labels.prev || "上"}</span>
       </button>
       <button type="button" aria-label="次の行へ" disabled={atBottom} onClick={() => jump(1)} className={btn}>
         ▼<span>{labels.next || "下"}</span>

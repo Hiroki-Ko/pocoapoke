@@ -151,7 +151,7 @@ export default function PokemonList() {
 
 const JUMP = 50;
 
-// 50匹ずつ前後に送るボタン（タブバーの上に固定）。一番上・一番下では押せない（半透明）
+// 50匹ずつ前後に送るボタン（タブバーの上に固定）。一番下では▼を押せない（半透明）。一番上の▲は一番下へ移動
 function JumpButtons({ count }: { count: number }) {
   const [atTop, setAtTop] = useState(true);
   const [atBottom, setAtBottom] = useState(false);
@@ -185,7 +185,15 @@ function JumpButtons({ count }: { count: number }) {
     "flex h-11 w-11 items-center justify-center rounded-full border border-brand/30 bg-white/95 text-[11px] font-extrabold leading-tight text-brand shadow-md transition-opacity disabled:opacity-35 disabled:shadow-none";
   return (
     <div className="fixed bottom-[calc(4.25rem+env(safe-area-inset-bottom))] z-30 flex flex-col gap-2 right-[max(0.75rem,calc(50vw-14rem+0.75rem))]">
-      <button type="button" aria-label="50匹前へ" disabled={atTop} onClick={() => jump(-1)} className={btn}>▲<br />50</button>
+      {/* 一番上では押せなくする代わりに、一番下へ移動する */}
+      <button
+        type="button"
+        aria-label={atTop ? "一番下へ" : "50匹前へ"}
+        onClick={() => (atTop ? window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" }) : jump(-1))}
+        className={btn}
+      >
+        ▲<br />{atTop ? "最後へ" : "50"}
+      </button>
       <button type="button" aria-label="50匹先へ" disabled={atBottom} onClick={() => jump(1)} className={btn}>▼<br />50</button>
     </div>
   );
