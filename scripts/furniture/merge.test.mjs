@@ -51,4 +51,22 @@ describe("mergeFurniture", () => {
     const { items } = mergeFurniture([item("Bell", "toy", ["Cute stuff"])], { bell: "かね" }, favMap, [], () => false);
     expect(items[0].image).toBeNull();
   });
+
+  it("どうろ（road）の家具は入れない", () => {
+    const { items, missing } = mergeFurniture([item("Stone steps", "road", ["Wooden stuff"])], { "stone-steps": "いしだん" }, favMap);
+    expect(items).toEqual([]);
+    expect(missing).toEqual([]);
+  });
+
+  it("日本語名がない家具はアイテムの番号順（op.gg の並び）、番号がないものは最後", () => {
+    const { items } = mergeFurniture(
+      [item("Zeta", "toy", ["Cute stuff"]), item("Alpha", "toy", ["Cute stuff"]), item("Mid", "toy", ["Cute stuff"]), item("Bell", "toy", ["Cute stuff"])],
+      { bell: "かね" },
+      favMap,
+      [],
+      () => true,
+      { zeta: 5, mid: 9 },
+    );
+    expect(items.filter((i) => i.noJa).map((i) => [i.slug, i.order])).toEqual([["zeta", 5], ["mid", 9], ["alpha", undefined]]);
+  });
 });

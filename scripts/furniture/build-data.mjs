@@ -20,7 +20,7 @@ const overrides = fs.existsSync(overridesPath) ? JSON.parse(fs.readFileSync(over
 // 画像は download-images.mjs で public/items/ に保存する。まだ一度も取得していなければ全件ファイル名を入れておく
 const IMG = path.join(ROOT, "public/items");
 const hasImage = fs.existsSync(IMG) ? (slug) => fs.existsSync(path.join(IMG, `${slug}.png`)) : () => true;
-const { items, missing, kanji } = mergeFurniture(serebii, { ...names, ...overrides.names }, favMap, allow, hasImage);
+const { items, missing, kanji } = mergeFurniture(serebii, { ...names, ...overrides.names }, favMap, allow, hasImage, read("raw/opgg-order.json"));
 
 // 好きなものの日本語名（seeds/master_code.sql の favorite）
 const labelByCode = {};

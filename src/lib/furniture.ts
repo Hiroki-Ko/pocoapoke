@@ -47,7 +47,14 @@ export function hasKanji(s: string): boolean {
 export function applyLocalNames(items: FurnitureItem[], names: Record<string, string>): FurnitureItem[] {
   return items
     .map((i) => (i.noJa && names[i.slug] ? { ...i, name: names[i.slug], noJa: false, localName: true } : i))
-    .sort((a, b) => a.name.localeCompare(b.name, "ja"));
+    .sort(compareFurniture);
+}
+
+// 日本語名がある家具は名前順、ない家具（英語名）はアイテムの番号順で後ろへ（scripts/furniture/merge.mjs と同じ）
+export function compareFurniture(a: FurnitureItem, b: FurnitureItem): number {
+  if (!!a.noJa !== !!b.noJa) return a.noJa ? 1 : -1;
+  if (!a.noJa) return a.name.localeCompare(b.name, "ja");
+  return (a.order ?? Infinity) - (b.order ?? Infinity) || a.name.localeCompare(b.name, "en");
 }
 
 export function filterFurniture(items: FurnitureItem[], opts: { query: string; code: number | null; tag: string | null }): FurnitureItem[] {
@@ -84,4 +91,26 @@ export function rankFurniture(items: FurnitureItem[], picks: Pick[]): RankedFurn
 
 export function pokemonWhoLike(code: number, all: Pokemon[], favById: Map<number, MasterItem>): Pokemon[] {
   return all.filter((p) => favoriteCodes(p, favById).includes(code)).sort(defaultPokemonCompare);
+}
+
+// 50音の行（ア行・カ行…）。家具一覧のジャンプ用。かなで始まらない名前は「英数」
+const ROWS: [string, string][] = [
+  ["ア", "ぁあぃいぅうぇえぉおゔ"],
+  ["カ", "かきくけこ"],
+  ["サ", "さしすせそ"],
+  ["タ", "たちっつてと"],
+  ["ナ", "なにぬねの"],
+  ["ハ", "はひふへほ"],
+  ["マ", "まみむめも"],
+  ["ヤ", "ゃやゅゆょよ"],
+  ["ラ", "らりるれろ"],
+  ["ワ", "ゎわをん"],
+];
+
+export function kanaRow(name: string): string {
+  // カタカナ→ひらがな、濁点・半濁点を外す
+  const ch = (name.normalize("NFKC")[0] ?? "")
+    .replace(/[ァ-ヶ]/, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60))
+    .normalize("NFD")[0];
+  return ROWS.find(([, chars]) => chars.includes(ch))?.[0] ?? "英数";
 }

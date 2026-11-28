@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { favoriteCodes, normalizeKana, filterFurniture, rankFurniture, pokemonWhoLike, tagLabel, hasKanji, applyLocalNames, usedTags } from "./furniture";
+import { favoriteCodes, normalizeKana, filterFurniture, rankFurniture, pokemonWhoLike, tagLabel, hasKanji, applyLocalNames, usedTags, kanaRow } from "./furniture";
 import type { FurnitureItem, MasterItem, Pokemon } from "../types";
 
 // master_code favorite: id = 100 + code（味は code 1〜5）
@@ -128,5 +128,27 @@ describe("usedTags", () => {
   it("家具がある種類だけを TAG_LABEL の順で返す", () => {
     const items = [{ ...item("a", "あ", [WOOD]), tag: "toy" }, { ...item("b", "い", [WOOD]), tag: "" }, { ...item("c", "う", [WOOD]), tag: "toy" }];
     expect(usedTags(items)).toEqual(["toy", ""]);
+  });
+});
+
+describe("kanaRow", () => {
+  it("名前の最初の文字で行を決める（濁点・小さい字・カタカナもまとめる）", () => {
+    expect(["あみもの", "ウインディ", "ガーデン", "ゴミ", "しんぶん", "ジラーチ", "ちいさな", "ネジネジ", "ポップ", "ミラー", "ゆかつき", "ランタン", "わくせい"].map(kanaRow)).toEqual([
+      "ア", "ア", "カ", "カ", "サ", "サ", "タ", "ナ", "ハ", "マ", "ヤ", "ラ", "ワ",
+    ]);
+  });
+  it("かなで始まらない名前は「英数」", () => {
+    expect(kanaRow("CDラック")).toBe("英数");
+  });
+});
+
+describe("applyLocalNames の並び", () => {
+  it("日本語名がない家具は order 順のまま残す", () => {
+    const items = [
+      { ...item("b", "Bravo", [WOOD]), noJa: true, order: 2 },
+      { ...item("a", "Alpha", [WOOD]), noJa: true, order: 10 },
+      { ...item("c", "Charlie", [WOOD]), noJa: true, order: 5 },
+    ];
+    expect(applyLocalNames(items, { c: "ちゃーりー" }).filter((i) => i.noJa).map((i) => i.slug)).toEqual(["b", "a"]);
   });
 });

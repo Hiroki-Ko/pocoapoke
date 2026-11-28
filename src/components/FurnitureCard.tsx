@@ -19,9 +19,9 @@ const tag = "rounded-md px-1.5 py-px text-[11px]";
 
 // 種類ごとのバッジの色
 const TAG_STYLE: Record<string, string> = {
-  decoration: "bg-pink-50 text-pink-700",
+  decoration: "bg-green-50 text-green-700",
   toy: "bg-amber-50 text-amber-700",
-  relaxation: "bg-teal-50 text-teal-700",
+  relaxation: "bg-white text-slate-600 ring-1 ring-slate-300",
   food: "bg-orange-50 text-orange-700",
   road: "bg-stone-100 text-stone-600",
 };

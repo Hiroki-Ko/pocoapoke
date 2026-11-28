@@ -1,6 +1,6 @@
 // /pocoapoke/src/pages/Furniture.tsx
 // 家具さがし: 家具から（名前・属性で絞り込み）／ポケモンから（好きなものに当てはまる家具を多い順に）
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { usePokemonData } from "../api/usePokemonData";
@@ -10,7 +10,7 @@ import { FurnitureCard } from "../components/FurnitureCard";
 import { LikersSheet } from "../components/LikersSheet";
 import { PICKER_ID, PokemonPicker } from "../components/PokemonPicker";
 import { PokemonIcon } from "../components/PokemonIcon";
-import { applyLocalNames, favoriteCodes, filterFurniture, pokemonWhoLike, rankFurniture, TAG_LABEL, usedTags } from "../lib/furniture";
+import { applyLocalNames, favoriteCodes, filterFurniture, pokemonWhoLike, rankFurniture, TAG_LABEL, usedTags, kanaRow } from "../lib/furniture";
 import { exportNames, loadNames, saveName } from "../lib/localNames";
 import { NameSheet } from "../components/NameSheet";
 import { useToast } from "../components/Toast";
@@ -79,7 +79,7 @@ export default function Furniture() {
       </Helmet>
       <AppHeader title="家具さがし" subtitle="好きなものに合う家具をさがす" unit="件" count={mode === "items" ? items.length : picks.length ? ranked.length : undefined} />
 
-      <div className="sticky top-0 z-20 border-b border-line bg-white px-3 py-2">
+      <div data-furniture-top className="sticky top-0 z-20 border-b border-line bg-white px-3 py-2">
         <div className="flex rounded-lg bg-slate-100 p-0.5">
           {(["items", "pokemon"] as const).map((m) => (
             <button
@@ -139,10 +139,12 @@ export default function Furniture() {
         )}
       </div>
 
+      {mode === "items" && items.length > 0 && <RowJump deps={items} />}
       {mode === "items" && (
         <>
           {items.length === 0 && <p className="p-6 text-center text-sub">条件に合う家具はありません</p>}
           <WithNoJaSection
+            jump
             pendingCount={pendingCount}
             onCopy={copyNames}
             list={items}
@@ -234,16 +236,26 @@ export default function Furniture() {
 }
 
 // 日本語名がまだない家具（英語名）は、一覧の下に別枠でまとめて出す
-type SectionProps<T> = { list: T[]; render: (v: T) => ReactNode; pendingCount: number; onCopy: () => void };
-function WithNoJaSection<T extends { noJa?: boolean }>({ list, render, pendingCount, onCopy }: SectionProps<T>) {
+type SectionProps<T> = { list: T[]; render: (v: T) => ReactNode; pendingCount: number; onCopy: () => void; jump?: boolean };
+function WithNoJaSection<T extends { noJa?: boolean; name?: string; item?: FurnitureItem }>({ list, render, pendingCount, onCopy, jump }: SectionProps<T>) {
   const known = list.filter((v) => !v.noJa);
   const unknown = list.filter((v) => v.noJa);
+  // ジャンプ用: 各行（ア行・カ行…）の最初の家具に印を付ける
+  const rowOf = (v: T) => kanaRow(v.name ?? v.item?.name ?? "");
   return (
     <>
-      {known.map(render)}
+      {known.map((v, i) =>
+        jump && (i === 0 || rowOf(known[i - 1]) !== rowOf(v)) ? (
+          <div key={`row-${i}`} data-jump={rowOf(v) === "英数" ? "英数" : `${rowOf(v)}行`}>
+            {render(v)}
+          </div>
+        ) : (
+          render(v)
+        ),
+      )}
       {(unknown.length > 0 || pendingCount > 0) && (
         <>
-          <div className="mx-2.5 mt-5 mb-1 rounded-lg bg-slate-200/70 px-3 py-1.5 text-xs font-extrabold text-sub">
+          <div data-jump={jump ? "英語名" : undefined} className="mx-2.5 mt-5 mb-1 rounded-lg bg-slate-200/70 px-3 py-1.5 text-xs font-extrabold text-sub">
             <div className="flex items-center justify-between gap-2">
               <span>日本語名がまだない家具（英語名） {unknown.length}件</span>
               {pendingCount > 0 && (
@@ -271,5 +283,55 @@ function TagButton({ tagId, onOpen, onClear }: { tagId: number | null; onOpen: (
     >
       {tagId === null ? "種類 ▾" : `${label} ✕`}
     </button>
+  );
+}
+
+// 家具一覧の行ジャンプ（ア行→カ行→…）。ポケモン一覧の50匹送りと同じ見た目で、一番上・一番下では押せない
+function RowJump({ deps }: { deps: unknown }) {
+  const [atTop, setAtTop] = useState(true);
+  const [atBottom, setAtBottom] = useState(false);
+  const [labels, setLabels] = useState<{ prev: string; next: string }>({ prev: "", next: "" });
+
+  useEffect(() => {
+    const stops = () => [...document.querySelectorAll<HTMLElement>("[data-jump]")];
+    const barBottom = () => document.querySelector<HTMLElement>("[data-furniture-top]")?.getBoundingClientRect().bottom ?? 0;
+    const update = () => {
+      setAtTop(window.scrollY <= 2);
+      setAtBottom(window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2);
+      const s = stops();
+      const bar = barBottom();
+      const nextEl = s.find((e) => e.getBoundingClientRect().top > bar + 8);
+      const prevEl = [...s].reverse().find((e) => e.getBoundingClientRect().top < bar - 8);
+      setLabels({ prev: prevEl?.dataset.jump ?? "", next: nextEl?.dataset.jump ?? "" });
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, [deps]);
+
+  const jump = (dir: 1 | -1) => {
+    const top = document.querySelector<HTMLElement>("[data-furniture-top]");
+    const bar = top?.getBoundingClientRect().bottom ?? 0;
+    const stuck = top?.offsetHeight ?? 0;
+    const s = [...document.querySelectorAll<HTMLElement>("[data-jump]")];
+    const el = dir === 1 ? s.find((e) => e.getBoundingClientRect().top > bar + 8) : [...s].reverse().find((e) => e.getBoundingClientRect().top < bar - 8);
+    if (!el) return window.scrollTo({ top: dir === 1 ? document.documentElement.scrollHeight : 0, behavior: "smooth" });
+    window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top - stuck - 4, behavior: "smooth" });
+  };
+  const btn =
+    "flex h-11 w-11 flex-col items-center justify-center rounded-full border border-brand/30 bg-white/95 text-[10px] font-extrabold leading-tight text-brand shadow-md transition-opacity disabled:opacity-35 disabled:shadow-none";
+  return (
+    <div className="fixed bottom-[calc(4.25rem+env(safe-area-inset-bottom))] z-30 flex flex-col gap-2 right-[max(0.75rem,calc(50vw-14rem+0.75rem))]">
+      <button type="button" aria-label="前の行へ" disabled={atTop} onClick={() => jump(-1)} className={btn}>
+        ▲<span>{labels.prev || "上"}</span>
+      </button>
+      <button type="button" aria-label="次の行へ" disabled={atBottom} onClick={() => jump(1)} className={btn}>
+        ▼<span>{labels.next || "下"}</span>
+      </button>
+    </div>
   );
 }
