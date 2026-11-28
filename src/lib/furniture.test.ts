@@ -105,13 +105,14 @@ describe("種類（tag）", () => {
 
 describe("hasKanji", () => {
   it("漢字・々を見つけ、かな・カナ・英数字は false", () => {
-    expect(hasKanji("木のベッド")).toBe(true);
+    expect(hasKanji("豪華なベッド")).toBe(true);
     expect(hasKanji("ひとびと々")).toBe(true);
     expect(hasKanji("きのベッド ABC 1")).toBe(false);
   });
-  it("ゲームの表記どおり「うえ木」だけは漢字として扱わない", () => {
+  it("ゲームの表記どおり「木」だけは漢字として扱わない", () => {
     expect(hasKanji("のっぽなうえ木")).toBe(false);
-    expect(hasKanji("木のうえ木")).toBe(true);
+    expect(hasKanji("木のベッド")).toBe(false);
+    expect(hasKanji("古びた木箱")).toBe(true);
   });
 });
 

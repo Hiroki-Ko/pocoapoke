@@ -1668,17 +1668,6 @@
     "image": "cooking-utensils.png"
   },
   {
-    "slug": "wooden-stool",
-    "name": "きのこしかけ",
-    "en": "Wooden stool",
-    "tag": "relaxation",
-    "favorites": [
-      22,
-      45
-    ],
-    "image": "wooden-stool.png"
-  },
-  {
     "slug": "mushroom-streetlight",
     "name": "キノコのがいとう",
     "en": "Mushroom streetlight",
@@ -1702,39 +1691,6 @@
       45
     ],
     "image": "mushroom-lamp.png"
-  },
-  {
-    "slug": "wooden-birdhouse",
-    "name": "きのすばこ",
-    "en": "Wooden birdhouse",
-    "tag": "decoration",
-    "favorites": [
-      9,
-      36
-    ],
-    "image": "wooden-birdhouse.png"
-  },
-  {
-    "slug": "wooden-bench",
-    "name": "きのながイス",
-    "en": "Wooden bench",
-    "tag": "relaxation",
-    "favorites": [
-      42
-    ],
-    "image": "wooden-bench.png"
-  },
-  {
-    "slug": "wooden-bed",
-    "name": "きのベッド",
-    "en": "Wooden Bed",
-    "tag": "relaxation",
-    "favorites": [
-      23,
-      42,
-      47
-    ],
-    "image": "wooden-bed.png"
   },
   {
     "slug": "berry-basket",
@@ -6302,6 +6258,50 @@
       39
     ],
     "image": "model-planet.png"
+  },
+  {
+    "slug": "wooden-stool",
+    "name": "木のこしかけ",
+    "en": "Wooden stool",
+    "tag": "relaxation",
+    "favorites": [
+      22,
+      45
+    ],
+    "image": "wooden-stool.png"
+  },
+  {
+    "slug": "wooden-birdhouse",
+    "name": "木のすばこ",
+    "en": "Wooden birdhouse",
+    "tag": "decoration",
+    "favorites": [
+      9,
+      36
+    ],
+    "image": "wooden-birdhouse.png"
+  },
+  {
+    "slug": "wooden-bench",
+    "name": "木のながイス",
+    "en": "Wooden bench",
+    "tag": "relaxation",
+    "favorites": [
+      42
+    ],
+    "image": "wooden-bench.png"
+  },
+  {
+    "slug": "wooden-bed",
+    "name": "木のベッド",
+    "en": "Wooden Bed",
+    "tag": "relaxation",
+    "favorites": [
+      23,
+      42,
+      47
+    ],
+    "image": "wooden-bed.png"
   },
   {
     "slug": "chain-lamp",

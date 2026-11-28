@@ -29,8 +29,8 @@ describe("mergeFurniture", () => {
   });
 
   it("漢字をふくむ日本語名は kanji に出す（かな・カナにそろえるため）", () => {
-    const { kanji } = mergeFurniture([item("Wooden bed", "relaxation", ["Wooden stuff"])], { "wooden-bed": "木のベッド" }, favMap);
-    expect(kanji).toEqual([{ slug: "wooden-bed", name: "木のベッド" }]);
+    const { kanji } = mergeFurniture([item("Wooden bed", "relaxation", ["Wooden stuff"])], { "wooden-bed": "豪華なベッド" }, favMap);
+    expect(kanji).toEqual([{ slug: "wooden-bed", name: "豪華なベッド" }]);
   });
 
   it("op.gg のスラッグの表記ゆれ（記号の有無）でも日本語名を見つける", () => {
@@ -70,7 +70,7 @@ describe("mergeFurniture", () => {
     expect(items.filter((i) => i.noJa).map((i) => [i.slug, i.order])).toEqual([["zeta", 5], ["mid", 9], ["alpha", undefined]]);
   });
 
-  it("「うえ木」は漢字の確認から外す", () => {
+  it("「木」は漢字の確認から外す", () => {
     const { kanji } = mergeFurniture([item("Tall potted plant", "decoration", ["Wooden stuff"])], { "tall-potted-plant": "のっぽなうえ木" }, favMap);
     expect(kanji).toEqual([]);
   });

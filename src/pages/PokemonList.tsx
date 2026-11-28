@@ -11,6 +11,7 @@ import { SimilarSheet } from "../components/SimilarSheet";
 import { defaultPokemonCompare } from "../lib/pokemonOrder";
 import { townCode } from "../lib/progress";
 import type { MasterItem, Pokemon } from "../types";
+import { isNumOrNull, usePersistentState } from "../lib/persist";
 
 type FilterKey = "env" | "fav" | "sp";
 const FILTERS: { key: FilterKey; label: string }[] = [
@@ -19,20 +20,20 @@ const FILTERS: { key: FilterKey; label: string }[] = [
   { key: "sp", label: "得意なこと" },
 ];
 
-// 編集画面から「一覧に戻る」で帰ってきたときに元の位置・絞り込みに戻すための保存先（ページを開いている間だけ）
-const saved: { town: number | null; filter: Record<FilterKey, number | null>; scrollY: number } = {
-  town: null,
-  filter: { env: null, fav: null, sp: null },
-  scrollY: 0,
-};
+// 編集画面から「一覧に戻る」で帰ってきたときに元の位置に戻すための保存先（ページを開いている間だけ）
+const saved: { scrollY: number } = { scrollY: 0 };
+
+const isFilter = (v: unknown): v is Record<FilterKey, number | null> =>
+  !!v && typeof v === "object" && (["env", "fav", "sp"] as const).every((k) => isNumOrNull((v as Record<string, unknown>)[k]));
 
 export default function PokemonList() {
   const { data, isLoading, isError } = usePokemonData();
   const navigate = useNavigate();
   const location = useLocation();
   const restore = (location.state as { restoreList?: boolean } | null)?.restoreList === true;
-  const [town, setTown] = useState<number | null>(restore ? saved.town : null);
-  const [filter, setFilter] = useState<Record<FilterKey, number | null>>(restore ? saved.filter : { env: null, fav: null, sp: null });
+  // 住んでる街・絞り込みは、ほかの画面に移っても、アプリを開き直しても残す
+  const [town, setTown] = usePersistentState<number | null>("pocoapoke.list.town", null, isNumOrNull);
+  const [filter, setFilter] = usePersistentState<Record<FilterKey, number | null>>("pocoapoke.list.filter", { env: null, fav: null, sp: null }, isFilter);
   const [sheet, setSheet] = useState<FilterKey | null>(null);
   const [similarId, setSimilarId] = useState<number | null>(null);
 
@@ -66,8 +67,6 @@ export default function PokemonList() {
 
   // 編集画面へ行く前に今の状態を覚えておく
   const openEdit = (id: number) => {
-    saved.town = town;
-    saved.filter = filter;
     saved.scrollY = window.scrollY;
     navigate(`/edit/${id}`, { state: { fromList: true } });
   };

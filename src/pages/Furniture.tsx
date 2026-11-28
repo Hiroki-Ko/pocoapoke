@@ -13,6 +13,8 @@ import { PokemonIcon } from "../components/PokemonIcon";
 import { applyLocalNames, pendingNames, favoriteCodes, filterFurniture, pokemonWhoLike, rankFurniture, TAG_LABEL, usedTags, kanaRow } from "../lib/furniture";
 import { exportNames, loadNames, saveName } from "../lib/localNames";
 import { registerBackHandler } from "../lib/backGuard";
+import { loadSelection, saveSelection, withPoke } from "../lib/furnitureSelection";
+import { isNumOrNull, usePersistentState } from "../lib/persist";
 import { NameSheet } from "../components/NameSheet";
 import { useToast } from "../components/Toast";
 import type { FurnitureItem } from "../types";
@@ -28,15 +30,21 @@ export default function Furniture() {
   // /furniture?poke=<id> で開くと「ポケモンから」でそのポケモンを選んだ状態にする（数でない値は無視）
   const [params] = useSearchParams();
   const pokeParam = Number(params.get("poke"));
-  const initialPoke = params.get("poke") && Number.isInteger(pokeParam) && pokeParam > 0 ? [pokeParam] : [];
-  const [mode, setMode] = useState<"items" | "pokemon">(initialPoke.length ? "pokemon" : "items");
-  const [selected, setSelected] = useState<number[]>(initialPoke);
-  const [query, setQuery] = useState("");
-  const [favId, setFavId] = useState<number | null>(null); // 絞り込み中の属性（master id）
+  // 前に開いたときの「家具から／ポケモンから」と選んだポケモンを引き継ぐ（住みごこちから来たらそのポケモンを足す）
+  const [initial] = useState(() => {
+    const saved = loadSelection();
+    return params.get("poke") && Number.isInteger(pokeParam) && pokeParam > 0 ? withPoke(saved, pokeParam) : saved;
+  });
+  const [mode, setMode] = useState<"items" | "pokemon">(initial.mode);
+  const [selected, setSelected] = useState<number[]>(initial.ids);
+  useEffect(() => saveSelection({ mode, ids: selected }), [mode, selected]);
+  // 名前の検索・属性・種類の絞り込みも、ほかの画面に移っても残す
+  const [query, setQuery] = usePersistentState("pocoapoke.furniture.query", "", (v): v is string => typeof v === "string");
+  const [favId, setFavId] = usePersistentState<number | null>("pocoapoke.furniture.fav", null, isNumOrNull); // 絞り込み中の属性（master id）
   const [sheet, setSheet] = useState(false);
   const [likerCode, setLikerCode] = useState<number | null>(null);
   const [pickerVisible, setPickerVisible] = useState(true);
-  const [tagId, setTagId] = useState<number | null>(null);
+  const [tagId, setTagId] = usePersistentState<number | null>("pocoapoke.furniture.tag", null, (v): v is number | null => v === null || TAGS.some((t) => t.id === v));
   const [tagSheet, setTagSheet] = useState(false);
   const [names, setNames] = useState<Record<string, string>>(loadNames);
   const [editing, setEditing] = useState<FurnitureItem | null>(null);

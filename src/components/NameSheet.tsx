@@ -1,5 +1,5 @@
 // /pocoapoke/src/components/NameSheet.tsx
-// 家具の名前を入力・修正するパネル（かな・カナのみ、「うえ木」は可。ブラウザに一時保存）
+// 家具の名前を入力・修正するパネル（かな・カナのみ、「木」は可。ブラウザに一時保存）
 import { useState } from "react";
 import type { FurnitureItem } from "../types";
 import { BottomSheet } from "./BottomSheet";

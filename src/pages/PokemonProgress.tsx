@@ -12,6 +12,8 @@ import { evalStyle } from "../lib/evaluation";
 import { evalCode, groupByEval, isCared, townCode } from "../lib/progress";
 import { defaultPokemonCompare } from "../lib/pokemonOrder";
 import type { Pokemon } from "../types";
+import { loadSelection } from "../lib/furnitureSelection";
+import { usePersistentState } from "../lib/persist";
 
 const TOWN_KEY = "pocoapoke.progress.town";
 const DEFAULT_TOWN = 1; // パサパサこうや
@@ -33,9 +35,14 @@ export default function PokemonProgress() {
   const care = useUpdateCare();
   const progress = useUpdateProgress();
   const [town, setTown] = useState<number>(loadTown);
-  const [mode, setMode] = useState<"eval" | "number">("eval");
-  const [closed, setClosed] = useState<Set<number>>(() => new Set([1])); // 「最高」は最初から閉じる
+  // 並び順と閉じたグループも、ほかの画面に移っても残す
+  const [mode, setMode] = usePersistentState<"eval" | "number">("pocoapoke.progress.mode", "eval", (v): v is "eval" | "number" => v === "eval" || v === "number");
+  const [closedList, setClosedList] = usePersistentState<number[]>("pocoapoke.progress.closed", [1], (v): v is number[] => Array.isArray(v) && v.every((x) => Number.isInteger(x))); // 「最高」は最初から閉じる
+  const closed = useMemo(() => new Set(closedList), [closedList]);
+  const setClosed = (f: (prev: Set<number>) => Set<number>) => setClosedList((prev) => [...f(new Set(prev))]);
   const [openId, setOpenId] = useState<number | null>(null);
+  // 家具さがしの「ポケモンから」で選んでいるポケモン（目立たせる）
+  const [picked] = useState(() => new Set(loadSelection().ids));
 
   const master = data?.master ?? {};
   const towns = useMemo(() => [...(master.place ?? [])].sort((a, b) => a.code - b.code), [master.place]);
@@ -78,6 +85,7 @@ export default function PokemonProgress() {
       showNumber={mode === "number"}
       onOpen={() => setOpenId(p.id)}
       onToggleCare={(cared) => care.mutate({ poke_id: p.id, cared })}
+      picked={picked.has(p.id)}
     />
   );
 

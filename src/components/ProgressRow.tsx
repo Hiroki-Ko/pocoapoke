@@ -10,23 +10,25 @@ type Props = {
   showNumber: boolean;
   onOpen: () => void;
   onToggleCare: (cared: boolean) => void;
+  picked?: boolean; // 家具さがしの「ポケモンから」で選んでいる（引っ越し・家具の配置の確認用に目立たせる）
 };
 
 function displayNo(p: Pokemon) {
   return p.number ?? `${p.category.toUpperCase()}${p.local_number ?? ""}`;
 }
 
-export function ProgressRow({ pokemon: p, taste, showNumber, onOpen, onToggleCare }: Props) {
+export function ProgressRow({ pokemon: p, taste, showNumber, onOpen, onToggleCare, picked = false }: Props) {
   const cared = isCared(p);
   const wish = todayWish(p);
   return (
-    <div className="flex items-center border-b border-line bg-white">
+    <div className={`flex items-center border-b border-line ${picked ? "border-l-4 border-l-amber-400 bg-amber-50" : "bg-white"}`}>
       <button type="button" onClick={onOpen} className={`flex min-w-0 flex-1 items-center gap-2.5 py-2 pl-3 text-left ${cared ? "opacity-45" : ""}`}>
         <PokemonIcon id={p.id} name={p.name} size={48} />
         <div className="min-w-0 flex-1">
           <div className="truncate text-[15px] font-extrabold">
             {showNumber && <span className="mr-1.5 text-[11px] font-semibold text-sub">No.{displayNo(p)}</span>}
             {p.name}
+            {picked && <span className="ml-1.5 rounded bg-amber-400 px-1 align-middle text-[10px] font-bold text-white">🪑家具さがし中</span>}
           </div>
           <div className="mt-0.5 flex flex-wrap gap-1">
             {taste && <span className="rounded-md bg-orange-50 px-1.5 text-[11px] text-orange-800">{taste.label}</span>}
