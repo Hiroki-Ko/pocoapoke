@@ -12,6 +12,7 @@ import { PICKER_ID, PokemonPicker } from "../components/PokemonPicker";
 import { PokemonIcon } from "../components/PokemonIcon";
 import { applyLocalNames, favoriteCodes, filterFurniture, pokemonWhoLike, rankFurniture, TAG_LABEL, usedTags, kanaRow } from "../lib/furniture";
 import { exportNames, loadNames, saveName } from "../lib/localNames";
+import { registerBackHandler } from "../lib/backGuard";
 import { NameSheet } from "../components/NameSheet";
 import { useToast } from "../components/Toast";
 import type { FurnitureItem } from "../types";
@@ -42,6 +43,8 @@ export default function Furniture() {
   const [copyText, setCopyText] = useState<string | null>(null); // コピーできなかったときに選べるよう表示する
   const toast = useToast();
   const furniture = useMemo(() => applyLocalNames(FURNITURE, names), [names]);
+  // コピーできなかったときの画面も、スマホの戻るで閉じる
+  useEffect(() => (copyText === null ? undefined : registerBackHandler(() => setCopyText(null))), [copyText]);
   const tag = TAGS.find((t) => t.id === tagId)?.tag ?? null;
   // 正式な日本語名がまだない家具に入力した名前だけを数える・送る
   const pending = useMemo(() => Object.fromEntries(Object.entries(names).filter(([slug]) => FURNITURE.some((f) => f.slug === slug && f.noJa))), [names]);

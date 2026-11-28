@@ -673,6 +673,19 @@
     "image": "large-ventilation-fan.png"
   },
   {
+    "slug": "leafy-plant",
+    "name": "おおきなはっぱのうえ木",
+    "en": "Leafy plant",
+    "tag": "decoration",
+    "favorites": [
+      8,
+      9,
+      33,
+      41
+    ],
+    "image": "leafy-plant.png"
+  },
+  {
     "slug": "big-drum",
     "name": "おおだいこ",
     "en": "Big drum",
@@ -4805,6 +4818,21 @@
     "image": "open-book.png"
   },
   {
+    "slug": "flat-leaf-plant",
+    "name": "ひらべったいうえ木",
+    "en": "Flat-leaf plant",
+    "tag": "decoration",
+    "favorites": [
+      8,
+      9,
+      23,
+      33,
+      36,
+      41
+    ],
+    "image": "flat-leaf-plant.png"
+  },
+  {
     "slug": "sail-fossil",
     "name": "ヒレのカセキ",
     "en": "Sail Fossil",
@@ -6288,38 +6316,6 @@
     "image": "chain-lamp.png",
     "noJa": true,
     "order": 345
-  },
-  {
-    "slug": "leafy-plant",
-    "name": "Leafy plant",
-    "en": "Leafy plant",
-    "tag": "decoration",
-    "favorites": [
-      8,
-      9,
-      33,
-      41
-    ],
-    "image": "leafy-plant.png",
-    "noJa": true,
-    "order": 1272
-  },
-  {
-    "slug": "flat-leaf-plant",
-    "name": "Flat-leaf plant",
-    "en": "Flat-leaf plant",
-    "tag": "decoration",
-    "favorites": [
-      8,
-      9,
-      23,
-      33,
-      36,
-      41
-    ],
-    "image": "flat-leaf-plant.png",
-    "noJa": true,
-    "order": 1275
   },
   {
     "slug": "teaware-set",

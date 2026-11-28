@@ -1,10 +1,17 @@
 // /pocoapoke/src/components/BottomSheet.tsx
 import { useEffect, type ReactNode } from "react";
+import { registerBackHandler } from "../lib/backGuard";
 
 type Props = { open: boolean; onClose: () => void; title?: ReactNode; children: ReactNode };
 
 // 画面下から出るパネル。暗幕タップで閉じる。sticky 見出しやタブバーより前面（z-50）
 export function BottomSheet({ open, onClose, title, children }: Props) {
+  // 開いている間は、スマホの戻るでこのパネルを閉じる
+  useEffect(() => {
+    if (!open) return;
+    return registerBackHandler(onClose);
+  }, [open, onClose]);
+
   useEffect(() => {
     if (!open) return;
     const prev = document.body.style.overflow;
